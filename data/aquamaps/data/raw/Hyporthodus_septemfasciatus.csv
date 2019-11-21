@@ -1,0 +1,253 @@
+Mapping parameters for Hyporthodus septemfasciatus (Convict grouper)
+
+"Cite AquaMaps itself as: Kaschner, K., K. Kesner-Reyes, C. Garilao, J. Rius-Barile, T. Rees, and R. Froese. 2019. AquaMaps: Predicted range maps for aquatic species. World wide web electronic publication, www.aquamaps.org, version 10/2019. "
+
+Map type: Computer-generated,
+Map Option: In FAO and Bounding Box
+FAOAreas: 51 |  61 |  71,
+Bounding Box (NSWE): ,40,24,121,142
+
+Pelagic: False,
+Layer used to generate probabilities: Surface,
+
+Species Envelope (HSPEN):
+ ,Used,Min,Pref Min (10th),Pref Max (90th),Max
+Depth (m),1,5,7,18,30
+Temperature (°C),1,13.27,17.67,23.04,24.6
+Salinity (psu),1,30.98,32.96,34.22,34.96
+Primary Production (mgC·m-3·day-1) ,1,7.03,9.87,62.42,67.73
+Sea Ice Concentration (0-1 fraction),1,-1,0,0,0
+Dissolved Bottom Oxygen (mmol·m-3),0,69.69,93.73,235.46,301
+Distance to Land (km),0,1,4,93,117
+ 
+
+Map data (HSPEC) for predicted occurrences (n = 190): 
+
+"To get individual probabilities (i.e. Depth, Temperature, Salinity, Primary Production, Sea Ice Concentration, Distance to Land):"
+1. Click on the Create-Your-Own-Map at the bottom left part of the species map page.
+2. Click on the Regenerate Map Data and View Map button then click OK.
+3. In the resulting User-Specified Map for the species click on the Download data (as csv) link.
+4. Select HSPEC then Submit.
+
+Genus,Species,Center Lat,Center Long,C-Square Code,Overall Probability
+Hyporthodus,septemfasciatus,39.75,141.75,1314:391:4,0.16
+Hyporthodus,septemfasciatus,35.25,139.25,1313:459:1,0.06
+Hyporthodus,septemfasciatus,32.25,139.75,1313:229:2,0.06
+Hyporthodus,septemfasciatus,30.25,131.25,1313:101:1,0.01
+Hyporthodus,septemfasciatus,30.25,130.75,1313:100:2,0.11
+Hyporthodus,septemfasciatus,30.25,130.25,1313:100:1,0.02
+Hyporthodus,septemfasciatus,39.75,128.25,1312:498:3,0.04
+Hyporthodus,septemfasciatus,39.25,127.75,1312:497:2,0.12
+Hyporthodus,septemfasciatus,38.75,127.75,1312:487:4,0.11
+Hyporthodus,septemfasciatus,34.75,128.25,1312:248:3,0.02
+Hyporthodus,septemfasciatus,34.25,127.75,1312:247:2,0.06
+Hyporthodus,septemfasciatus,30.75,129.25,1312:209:3,0.16
+Hyporthodus,septemfasciatus,26.75,122.75,1212:362:4,0.08
+Hyporthodus,septemfasciatus,25.25,121.75,1212:351:2,0.12
+Hyporthodus,septemfasciatus,39.25,141.75,1314:391:2,0.26
+Hyporthodus,septemfasciatus,38.75,141.75,1314:381:4,0.34
+Hyporthodus,septemfasciatus,36.25,133.25,1313:363:1,0.26
+Hyporthodus,septemfasciatus,36.25,132.75,1313:362:2,0.32
+Hyporthodus,septemfasciatus,33.25,139.75,1313:239:2,0.34
+Hyporthodus,septemfasciatus,34.25,130.25,1313:140:1,0.33
+Hyporthodus,septemfasciatus,30.75,131.25,1313:101:3,0.37
+Hyporthodus,septemfasciatus,30.75,130.25,1313:100:3,0.25
+Hyporthodus,septemfasciatus,39.25,128.25,1312:498:1,0.20
+Hyporthodus,septemfasciatus,38.75,128.25,1312:488:3,0.34
+Hyporthodus,septemfasciatus,35.25,129.75,1312:459:2,0.38
+Hyporthodus,septemfasciatus,34.75,128.75,1312:248:4,0.35
+Hyporthodus,septemfasciatus,30.75,129.75,1312:209:4,0.25
+Hyporthodus,septemfasciatus,27.75,125.25,1212:475:3,0.25
+Hyporthodus,septemfasciatus,27.75,121.75,1212:371:4,0.20
+Hyporthodus,septemfasciatus,27.25,121.75,1212:371:2,0.33
+Hyporthodus,septemfasciatus,27.25,121.25,1212:371:1,0.30
+Hyporthodus,septemfasciatus,26.75,121.25,1212:361:3,0.24
+Hyporthodus,septemfasciatus,25.75,121.75,1212:351:4,0.21
+Hyporthodus,septemfasciatus,25.75,121.25,1212:351:3,0.27
+Hyporthodus,septemfasciatus,25.25,121.25,1212:351:1,0.30
+Hyporthodus,septemfasciatus,38.75,141.25,1314:381:3,0.44
+Hyporthodus,septemfasciatus,38.25,141.75,1314:381:2,0.48
+Hyporthodus,septemfasciatus,38.25,141.25,1314:381:1,0.48
+Hyporthodus,septemfasciatus,37.75,141.25,1314:371:3,0.58
+Hyporthodus,septemfasciatus,38.75,139.25,1313:489:3,0.52
+Hyporthodus,septemfasciatus,38.25,138.75,1313:488:2,0.58
+Hyporthodus,septemfasciatus,38.25,128.75,1312:488:2,0.59
+Hyporthodus,septemfasciatus,37.75,128.75,1312:478:4,0.51
+Hyporthodus,septemfasciatus,35.25,129.25,1312:459:1,0.59
+Hyporthodus,septemfasciatus,35.25,128.75,1312:458:2,0.40
+Hyporthodus,septemfasciatus,34.25,128.75,1312:248:2,0.46
+Hyporthodus,septemfasciatus,34.25,128.25,1312:248:1,0.50
+Hyporthodus,septemfasciatus,33.75,125.25,1312:235:3,0.41
+Hyporthodus,septemfasciatus,32.25,129.75,1312:229:2,0.58
+Hyporthodus,septemfasciatus,32.25,128.25,1312:228:1,0.43
+Hyporthodus,septemfasciatus,31.25,129.75,1312:219:2,0.44
+Hyporthodus,septemfasciatus,31.25,129.25,1312:219:1,0.43
+Hyporthodus,septemfasciatus,29.25,122.75,1212:392:2,0.56
+Hyporthodus,septemfasciatus,28.25,122.25,1212:382:1,0.50
+Hyporthodus,septemfasciatus,39.75,140.25,1314:390:3,0.60
+Hyporthodus,septemfasciatus,39.25,140.25,1314:390:1,0.67
+Hyporthodus,septemfasciatus,38.25,140.75,1314:380:2,0.62
+Hyporthodus,septemfasciatus,37.75,140.75,1314:370:4,0.72
+Hyporthodus,septemfasciatus,39.75,139.75,1313:499:4,0.67
+Hyporthodus,septemfasciatus,35.25,131.25,1313:351:1,0.66
+Hyporthodus,septemfasciatus,33.75,139.75,1313:239:4,0.76
+Hyporthodus,septemfasciatus,33.25,135.75,1313:235:2,0.65
+Hyporthodus,septemfasciatus,31.75,131.75,1313:111:4,0.64
+Hyporthodus,septemfasciatus,30.75,130.75,1313:100:4,0.65
+Hyporthodus,septemfasciatus,37.75,129.25,1312:479:3,0.76
+Hyporthodus,septemfasciatus,36.75,129.25,1312:469:3,0.79
+Hyporthodus,septemfasciatus,36.25,129.25,1312:469:1,0.76
+Hyporthodus,septemfasciatus,35.75,129.25,1312:459:3,0.67
+Hyporthodus,septemfasciatus,33.25,126.25,1312:236:1,0.62
+Hyporthodus,septemfasciatus,30.75,123.25,1312:103:3,0.78
+Hyporthodus,septemfasciatus,37.25,141.25,1314:371:1,0.81
+Hyporthodus,septemfasciatus,36.75,141.25,1314:361:3,1.00
+Hyporthodus,septemfasciatus,36.75,140.75,1314:360:4,1.00
+Hyporthodus,septemfasciatus,36.25,140.75,1314:360:2,1.00
+Hyporthodus,septemfasciatus,35.75,140.75,1314:350:4,1.00
+Hyporthodus,septemfasciatus,35.75,140.25,1314:350:3,1.00
+Hyporthodus,septemfasciatus,35.25,140.75,1314:350:2,0.96
+Hyporthodus,septemfasciatus,35.25,140.25,1314:350:1,1.00
+Hyporthodus,septemfasciatus,34.75,140.25,1314:140:3,0.89
+Hyporthodus,septemfasciatus,39.25,139.75,1313:499:2,0.82
+Hyporthodus,septemfasciatus,38.75,139.75,1313:489:4,0.81
+Hyporthodus,septemfasciatus,38.25,139.25,1313:489:1,0.92
+Hyporthodus,septemfasciatus,37.75,139.25,1313:479:3,0.97
+Hyporthodus,septemfasciatus,37.75,138.75,1313:478:4,0.97
+Hyporthodus,septemfasciatus,37.75,138.25,1313:478:3,0.98
+Hyporthodus,septemfasciatus,37.25,138.75,1313:478:2,1.00
+Hyporthodus,septemfasciatus,37.25,138.25,1313:478:1,1.00
+Hyporthodus,septemfasciatus,37.25,137.75,1313:477:2,1.00
+Hyporthodus,septemfasciatus,37.25,137.25,1313:477:1,1.00
+Hyporthodus,septemfasciatus,37.25,136.75,1313:476:2,1.00
+Hyporthodus,septemfasciatus,36.75,137.25,1313:467:3,1.00
+Hyporthodus,septemfasciatus,36.75,136.75,1313:466:4,1.00
+Hyporthodus,septemfasciatus,36.75,136.25,1313:466:3,1.00
+Hyporthodus,septemfasciatus,36.25,136.25,1313:466:1,1.00
+Hyporthodus,septemfasciatus,35.25,139.75,1313:459:2,1.00
+Hyporthodus,septemfasciatus,35.25,138.75,1313:458:2,1.00
+Hyporthodus,septemfasciatus,35.75,136.25,1313:456:3,1.00
+Hyporthodus,septemfasciatus,35.25,136.75,1313:456:2,0.97
+Hyporthodus,septemfasciatus,35.75,135.75,1313:455:4,1.00
+Hyporthodus,septemfasciatus,35.75,135.25,1313:455:3,1.00
+Hyporthodus,septemfasciatus,35.75,134.75,1313:354:4,1.00
+Hyporthodus,septemfasciatus,35.75,134.25,1313:354:3,1.00
+Hyporthodus,septemfasciatus,35.75,133.75,1313:353:4,1.00
+Hyporthodus,septemfasciatus,35.75,133.25,1313:353:3,1.00
+Hyporthodus,septemfasciatus,35.75,132.75,1313:352:4,1.00
+Hyporthodus,septemfasciatus,35.25,132.75,1313:352:2,1.00
+Hyporthodus,septemfasciatus,35.25,132.25,1313:352:1,1.00
+Hyporthodus,septemfasciatus,34.75,139.75,1313:249:4,1.00
+Hyporthodus,septemfasciatus,34.75,139.25,1313:249:3,1.00
+Hyporthodus,septemfasciatus,34.25,139.75,1313:249:2,0.85
+Hyporthodus,septemfasciatus,34.25,139.25,1313:249:1,0.91
+Hyporthodus,septemfasciatus,34.75,138.75,1313:248:4,1.00
+Hyporthodus,septemfasciatus,34.75,138.25,1313:248:3,1.00
+Hyporthodus,septemfasciatus,34.75,137.75,1313:247:4,1.00
+Hyporthodus,septemfasciatus,34.75,137.25,1313:247:3,0.86
+Hyporthodus,septemfasciatus,34.25,136.75,1313:246:2,1.00
+Hyporthodus,septemfasciatus,34.25,136.25,1313:246:1,1.00
+Hyporthodus,septemfasciatus,34.25,135.25,1313:245:1,1.00
+Hyporthodus,septemfasciatus,33.75,136.25,1313:236:3,1.00
+Hyporthodus,septemfasciatus,33.75,135.75,1313:235:4,1.00
+Hyporthodus,septemfasciatus,33.75,135.25,1313:235:3,1.00
+Hyporthodus,septemfasciatus,34.75,134.75,1313:144:4,0.85
+Hyporthodus,septemfasciatus,34.75,134.25,1313:144:3,1.00
+Hyporthodus,septemfasciatus,34.25,134.75,1313:144:2,1.00
+Hyporthodus,septemfasciatus,34.25,134.25,1313:144:1,1.00
+Hyporthodus,septemfasciatus,34.75,133.75,1313:143:4,1.00
+Hyporthodus,septemfasciatus,34.25,133.75,1313:143:2,1.00
+Hyporthodus,septemfasciatus,34.25,133.25,1313:143:1,1.00
+Hyporthodus,septemfasciatus,34.75,132.25,1313:142:3,1.00
+Hyporthodus,septemfasciatus,34.25,132.75,1313:142:2,1.00
+Hyporthodus,septemfasciatus,34.25,132.25,1313:142:1,1.00
+Hyporthodus,septemfasciatus,34.75,131.75,1313:141:4,1.00
+Hyporthodus,septemfasciatus,34.75,131.25,1313:141:3,1.00
+Hyporthodus,septemfasciatus,34.25,131.75,1313:141:2,1.00
+Hyporthodus,septemfasciatus,34.25,131.25,1313:141:1,1.00
+Hyporthodus,septemfasciatus,34.25,130.75,1313:140:2,1.00
+Hyporthodus,septemfasciatus,33.75,134.75,1313:134:4,1.00
+Hyporthodus,septemfasciatus,33.75,134.25,1313:134:3,1.00
+Hyporthodus,septemfasciatus,33.25,134.25,1313:134:1,0.96
+Hyporthodus,septemfasciatus,33.75,133.75,1313:133:4,1.00
+Hyporthodus,septemfasciatus,33.75,133.25,1313:133:3,1.00
+Hyporthodus,septemfasciatus,33.25,133.75,1313:133:2,1.00
+Hyporthodus,septemfasciatus,33.25,133.25,1313:133:1,1.00
+Hyporthodus,septemfasciatus,33.75,132.75,1313:132:4,1.00
+Hyporthodus,septemfasciatus,33.75,132.25,1313:132:3,1.00
+Hyporthodus,septemfasciatus,33.25,132.25,1313:132:1,1.00
+Hyporthodus,septemfasciatus,33.75,131.75,1313:131:4,1.00
+Hyporthodus,septemfasciatus,33.75,131.25,1313:131:3,1.00
+Hyporthodus,septemfasciatus,33.25,131.75,1313:131:2,1.00
+Hyporthodus,septemfasciatus,33.75,130.75,1313:130:4,1.00
+Hyporthodus,septemfasciatus,33.75,130.25,1313:130:3,1.00
+Hyporthodus,septemfasciatus,33.25,130.25,1313:130:1,1.00
+Hyporthodus,septemfasciatus,32.75,133.25,1313:123:3,0.83
+Hyporthodus,septemfasciatus,32.75,132.75,1313:122:4,1.00
+Hyporthodus,septemfasciatus,32.75,132.25,1313:122:3,1.00
+Hyporthodus,septemfasciatus,32.75,131.75,1313:121:4,1.00
+Hyporthodus,septemfasciatus,32.25,131.75,1313:121:2,1.00
+Hyporthodus,septemfasciatus,32.75,130.75,1313:120:4,1.00
+Hyporthodus,septemfasciatus,32.75,130.25,1313:120:3,1.00
+Hyporthodus,septemfasciatus,32.25,130.75,1313:120:2,1.00
+Hyporthodus,septemfasciatus,32.25,130.25,1313:120:1,0.95
+Hyporthodus,septemfasciatus,31.75,131.25,1313:111:3,1.00
+Hyporthodus,septemfasciatus,31.25,131.25,1313:111:1,0.86
+Hyporthodus,septemfasciatus,31.75,130.75,1313:110:4,1.00
+Hyporthodus,septemfasciatus,31.75,130.25,1313:110:3,1.00
+Hyporthodus,septemfasciatus,31.25,130.75,1313:110:2,1.00
+Hyporthodus,septemfasciatus,31.25,130.25,1313:110:1,1.00
+Hyporthodus,septemfasciatus,37.25,129.25,1312:479:1,0.82
+Hyporthodus,septemfasciatus,36.75,129.75,1312:469:4,1.00
+Hyporthodus,septemfasciatus,36.25,129.75,1312:469:2,0.92
+Hyporthodus,septemfasciatus,35.75,129.75,1312:459:4,0.86
+Hyporthodus,septemfasciatus,34.75,129.75,1312:249:4,0.93
+Hyporthodus,septemfasciatus,34.75,129.25,1312:249:3,0.89
+Hyporthodus,septemfasciatus,34.25,129.25,1312:249:1,1.00
+Hyporthodus,septemfasciatus,33.75,129.75,1312:239:4,1.00
+Hyporthodus,septemfasciatus,33.25,129.75,1312:239:2,1.00
+Hyporthodus,septemfasciatus,33.25,129.25,1312:239:1,1.00
+Hyporthodus,septemfasciatus,33.25,128.75,1312:238:2,0.84
+Hyporthodus,septemfasciatus,33.75,127.75,1312:237:4,0.92
+Hyporthodus,septemfasciatus,33.75,127.25,1312:237:3,1.00
+Hyporthodus,septemfasciatus,33.25,127.25,1312:237:1,0.90
+Hyporthodus,septemfasciatus,33.75,126.75,1312:236:4,0.84
+Hyporthodus,septemfasciatus,33.75,126.25,1312:236:3,0.89
+Hyporthodus,septemfasciatus,33.25,126.75,1312:236:2,1.00
+Hyporthodus,septemfasciatus,32.75,129.75,1312:229:4,1.00
+Hyporthodus,septemfasciatus,32.75,129.25,1312:229:3,1.00
+Hyporthodus,septemfasciatus,32.75,128.75,1312:228:4,0.91
+Hyporthodus,septemfasciatus,31.75,129.75,1312:219:4,1.00
+Hyporthodus,septemfasciatus,30.25,123.25,1312:103:1,0.81
+Hyporthodus,septemfasciatus,28.75,122.75,1212:382:4,0.83
+
+
+Occurrence cells used for creating environmental envelope (n = 27)
+Genus,Species,Center Lat,Center Long,C-Square,Depth (m),Surface Water Temp. (°C),Bottom Water Temp. (°C),Surface Salinity (psu),Bottom Salinity (psu),Primary Production (mgC·m-3·day-1),Sea Ice Concentration (0-1 fraction),Dissolved Bottom Oxygen (mmol·m-3),Distance to Land (km)
+Hyporthodus,septemfasciatus,28.25,129.75,1212:489:2,422,24.6011924743652,18.0919380187988,34.5399742126465,34.7232818603516,7.0290002040565,0,180.145645141602,24
+Hyporthodus,septemfasciatus,31.25,130.75,1313:110:2,71,23.0426540374756,21.415864944458,34.0927505493164,34.5317268371582,12.9669988527894,0,201.929138183594,15
+Hyporthodus,septemfasciatus,32.25,130.75,1313:120:2,14,21.6998443603516,21.1751461029053,33.4956817626953,34.2666969299316,23.2107825577259,0,216.921508789063,1
+Hyporthodus,septemfasciatus,32.75,133.25,1313:123:3,383,23.2902908325195,6.52648496627808,34.2246055603027,34.2880592346191,16.7289990931749,0,104.453498840332,94
+Hyporthodus,septemfasciatus,32.75,129.75,1312:229:4,49,20.8159923553467,21.2480487823486,33.5378341674805,34.1162643432617,13.8400001451373,0,226.71076965332,20
+Hyporthodus,septemfasciatus,33.25,133.75,1313:133:2,384,22.5214977264404,5.68497180938721,34.2124671936035,34.2737007141113,16.3080003112555,0,93.7332458496094,93
+Hyporthodus,septemfasciatus,33.25,129.25,1312:239:1,39,20.1845645904541,19.5868587493896,33.8441734313965,34.4381980895996,12.5740002840757,0,221.930130004883,23
+Hyporthodus,septemfasciatus,33.75,130.75,1313:130:4,7,19.6342220306396,19.7055015563965,33.7363739013672,34.0313262939453,20.001130178570698,0,230.077621459961,4
+Hyporthodus,septemfasciatus,34.25,130.25,1313:140:1,88,19.9867839813232,17.0917205810547,33.5427589416504,34.3955383300781,13.1339998915792,0,212.698684692383,92
+Hyporthodus,septemfasciatus,34.25,127.25,1312:247:1,5,17.5038261413574,16.4968872070313,30.980167388916,33.7441062927246,8.13999958336353,0,252.190628051758,22
+Hyporthodus,septemfasciatus,34.25,135.25,1313:245:1,28,20.6903209686279,21.3146934509277,33.4786720275879,34.2188568115234,44.4744639098644,0,226.55290222168,10
+Hyporthodus,septemfasciatus,34.25,129.25,1312:249:1,83,20.11842918396,20.1532382965088,33.4180641174316,33.7231216430664,13.2750002667308,0,229.920425415039,21
+Hyporthodus,septemfasciatus,34.25,136.75,1313:246:2,390,20.6538410186768,20.1880264282227,33.832950592041,34.4922714233398,25.033000856638,0,215.318161010742,17
+Hyporthodus,septemfasciatus,34.75,139.75,1313:249:4,1164,21.0143165588379,1.6035829782486,34.156307220459,34.5905609130859,20.7759998738766,0,103.253868103027,22
+Hyporthodus,septemfasciatus,34.75,138.75,1313:248:4,818,20.3874740600586,20.9808406829834,33.941593170166,34.1423301696777,21.8039993196726,0,222.845520019531,17
+Hyporthodus,septemfasciatus,34.75,139.25,1313:249:3,468,20.5840072631836,10.6458072662354,33.9682922363281,34.3685607910156,28.2240007072687,0,149.50244140625,20
+Hyporthodus,septemfasciatus,35.25,139.25,1313:459:1,421,19.9884414672852,3.30730891227722,33.3090744018555,34.3662719726563,67.4270018935204,0,69.6856155395508,11
+Hyporthodus,septemfasciatus,35.25,139.75,1313:459:2,172,19.8990631103516,18.4869174957275,33.2385025024414,34.4219436645508,62.4210014939308,0,217.804840087891,15
+Hyporthodus,septemfasciatus,35.25,140.25,1314:350:1,162,20.509391784668,13.312216758728,33.8446502685547,34.439769744873,40.2425564825535,0,185.269485473633,10
+Hyporthodus,septemfasciatus,35.25,141.25,1314:351:1,1787,21.9608726501465,1.90826201438904,34.3462562561035,34.5468826293945,14.1949998214841,0,73.7782821655273,117
+Hyporthodus,septemfasciatus,35.25,129.25,1312:459:1,57,18.842113494873,16.3253154754639,32.1529006958008,34.3356781005859,32.7150002121925,0,217.530090332031,14
+Hyporthodus,septemfasciatus,35.75,135.25,1313:455:3,124,18.625617980957,18.7120323181152,33.5139808654785,33.8037414550781,10.6380004435778,0,235.461898803711,15
+Hyporthodus,septemfasciatus,35.75,139.75,1313:459:4,38,19.5307369232178,19.7224750518799,33.476490020752,34.146427154541,67.7300021052361,0,228.488830566406,4
+Hyporthodus,septemfasciatus,36.25,140.75,1314:360:2,150,18.3984451293945,13.3505458831787,33.6268463134766,34.2413787841797,39.5999997854233,0,213.900192260742,18
+Hyporthodus,septemfasciatus,36.75,137.25,1313:467:3,51,18.2894039154053,4.5017237663269,33.3076515197754,34.0847549438477,26.505025103688197,0,215.679733276367,8
+Hyporthodus,septemfasciatus,36.75,129.75,1312:469:4,260,17.6694583892822,4.1413722038269,32.9564895629883,34.1106758117676,9.86700039356947,0,233.909851074219,67
+Hyporthodus,septemfasciatus,39.75,127.75,1312:497:4,44,13.2734403610229,9.02740097045898,33.022834777832,33.8576545715332,16.9239994138479,0,251.553466796875,17

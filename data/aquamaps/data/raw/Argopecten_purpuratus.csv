@@ -1,0 +1,229 @@
+Mapping parameters for Argopecten purpuratus (Peruvian calico scallop)
+
+"Cite AquaMaps itself as: Kaschner, K., K. Kesner-Reyes, C. Garilao, J. Rius-Barile, T. Rees, and R. Froese. 2019. AquaMaps: Predicted range maps for aquatic species. World wide web electronic publication, www.aquamaps.org, version 10/2019. "
+
+Map type: Computer-generated,
+Map Option: In FAO and Bounding Box
+FAOAreas: 77 |  87,
+Bounding Box (NSWE): ,-5,-42,-81,-70
+
+Pelagic: False,
+Layer used to generate probabilities: Surface,
+
+Species Envelope (HSPEN):
+ ,Used,Min,Pref Min (10th),Pref Max (90th),Max
+Depth (m),1,0,59,226,500
+Temperature (°C),1,11.18,14.43,19.57,23.05
+Salinity (psu),1,32.63,33.77,34.98,36.09
+Primary Production (mgC·m-3·day-1) ,1,9.79,15.11,86.4,115.67
+Sea Ice Concentration (0-1 fraction),1,-1,0,0,0
+Dissolved Bottom Oxygen (mmol·m-3),0,2.31,18.54,181.7,276.9
+Distance to Land (km),0,1,3,133,292
+ 
+
+Map data (HSPEC) for predicted occurrences (n = 161): 
+
+"To get individual probabilities (i.e. Depth, Temperature, Salinity, Primary Production, Sea Ice Concentration, Distance to Land):"
+1. Click on the Create-Your-Own-Map at the bottom left part of the species map page.
+2. Click on the Regenerate Map Data and View Map button then click OK.
+3. In the resulting User-Specified Map for the species click on the Download data (as csv) link.
+4. Select HSPEC then Submit.
+
+Genus,Species,Center Lat,Center Long,C-Square Code,Overall Probability
+Argopecten,purpuratus,-8.75,-80.25,5008:380:3,0.19
+Argopecten,purpuratus,-16.25,-72.75,5107:362:2,0.05
+Argopecten,purpuratus,-17.25,-71.75,5107:371:2,0.15
+Argopecten,purpuratus,-31.75,-71.25,5307:111:3,0.12
+Argopecten,purpuratus,-37.25,-73.25,5307:373:1,0.15
+Argopecten,purpuratus,-37.75,-73.25,5307:373:3,0.12
+Argopecten,purpuratus,-38.25,-73.25,5307:383:1,0.01
+Argopecten,purpuratus,-41.75,-73.75,5407:113:4,0.05
+Argopecten,purpuratus,-41.75,-74.25,5407:114:3,0.15
+Argopecten,purpuratus,-6.25,-80.25,5008:360:1,0.39
+Argopecten,purpuratus,-15.75,-73.75,5107:353:4,0.23
+Argopecten,purpuratus,-36.75,-72.75,5307:362:4,0.32
+Argopecten,purpuratus,-38.75,-74.25,5307:384:3,0.32
+Argopecten,purpuratus,-39.25,-73.75,5307:393:2,0.37
+Argopecten,purpuratus,-39.75,-73.75,5307:393:4,0.28
+Argopecten,purpuratus,-39.25,-74.25,5307:394:1,0.26
+Argopecten,purpuratus,-39.75,-74.25,5307:394:3,0.34
+Argopecten,purpuratus,-40.25,-73.75,5407:103:2,0.23
+Argopecten,purpuratus,-40.25,-74.25,5407:104:1,0.36
+Argopecten,purpuratus,-40.75,-74.25,5407:104:3,0.28
+Argopecten,purpuratus,-41.25,-74.25,5407:114:1,0.24
+Argopecten,purpuratus,-41.75,-74.75,5407:114:4,0.30
+Argopecten,purpuratus,-27.25,-71.25,5207:371:1,0.59
+Argopecten,purpuratus,-9.75,-79.75,5007:499:4,0.55
+Argopecten,purpuratus,-6.25,-80.75,5008:360:2,0.53
+Argopecten,purpuratus,-7.75,-80.75,5008:370:4,0.53
+Argopecten,purpuratus,-10.75,-78.75,5107:208:4,0.52
+Argopecten,purpuratus,-11.75,-78.25,5107:218:3,0.41
+Argopecten,purpuratus,-14.25,-76.75,5107:246:2,0.54
+Argopecten,purpuratus,-16.75,-72.25,5107:362:3,0.42
+Argopecten,purpuratus,-17.75,-71.75,5107:371:4,0.49
+Argopecten,purpuratus,-18.25,-71.25,5107:381:1,0.51
+Argopecten,purpuratus,-34.75,-72.75,5307:142:4,0.54
+Argopecten,purpuratus,-35.75,-72.75,5307:352:4,0.56
+Argopecten,purpuratus,-36.25,-72.75,5307:362:2,0.41
+Argopecten,purpuratus,-36.25,-73.25,5307:363:1,0.43
+Argopecten,purpuratus,-36.25,-73.75,5307:363:2,0.49
+Argopecten,purpuratus,-36.75,-73.75,5307:363:4,0.47
+Argopecten,purpuratus,-37.25,-73.75,5307:373:2,0.46
+Argopecten,purpuratus,-37.75,-73.75,5307:373:4,0.49
+Argopecten,purpuratus,-38.25,-73.75,5307:383:2,0.44
+Argopecten,purpuratus,-38.75,-73.75,5307:383:4,0.43
+Argopecten,purpuratus,-9.25,-79.75,5007:499:2,0.77
+Argopecten,purpuratus,-5.25,-80.75,5008:350:2,0.73
+Argopecten,purpuratus,-8.25,-80.25,5008:380:1,0.79
+Argopecten,purpuratus,-10.25,-79.25,5107:209:1,0.68
+Argopecten,purpuratus,-11.75,-77.25,5107:217:3,0.74
+Argopecten,purpuratus,-25.25,-70.25,5207:350:1,0.75
+Argopecten,purpuratus,-32.25,-71.25,5307:121:1,0.69
+Argopecten,purpuratus,-32.75,-71.25,5307:121:3,0.79
+Argopecten,purpuratus,-34.75,-72.25,5307:142:3,0.73
+Argopecten,purpuratus,-35.25,-72.25,5307:352:1,0.68
+Argopecten,purpuratus,-35.25,-72.75,5307:352:2,0.65
+Argopecten,purpuratus,-35.75,-73.25,5307:353:3,0.68
+Argopecten,purpuratus,-38.25,-74.25,5307:384:1,0.62
+Argopecten,purpuratus,-26.25,-70.75,5207:360:2,1.00
+Argopecten,purpuratus,-26.75,-70.75,5207:360:4,1.00
+Argopecten,purpuratus,-27.25,-70.75,5207:370:2,1.00
+Argopecten,purpuratus,-27.75,-70.75,5207:370:4,0.91
+Argopecten,purpuratus,-27.75,-71.25,5207:371:3,1.00
+Argopecten,purpuratus,-6.75,-79.75,5007:469:4,0.96
+Argopecten,purpuratus,-7.25,-79.75,5007:479:2,1.00
+Argopecten,purpuratus,-7.75,-79.25,5007:479:3,1.00
+Argopecten,purpuratus,-7.75,-79.75,5007:479:4,1.00
+Argopecten,purpuratus,-8.25,-78.75,5007:488:2,1.00
+Argopecten,purpuratus,-8.75,-78.75,5007:488:4,1.00
+Argopecten,purpuratus,-8.25,-79.25,5007:489:1,1.00
+Argopecten,purpuratus,-8.25,-79.75,5007:489:2,1.00
+Argopecten,purpuratus,-8.75,-79.25,5007:489:3,1.00
+Argopecten,purpuratus,-8.75,-79.75,5007:489:4,0.89
+Argopecten,purpuratus,-9.25,-78.25,5007:498:1,1.00
+Argopecten,purpuratus,-9.25,-78.75,5007:498:2,1.00
+Argopecten,purpuratus,-9.75,-78.25,5007:498:3,1.00
+Argopecten,purpuratus,-9.75,-78.75,5007:498:4,1.00
+Argopecten,purpuratus,-9.25,-79.25,5007:499:1,0.99
+Argopecten,purpuratus,-9.75,-79.25,5007:499:3,0.85
+Argopecten,purpuratus,-5.75,-80.75,5008:350:4,0.92
+Argopecten,purpuratus,-6.75,-80.25,5008:360:3,0.92
+Argopecten,purpuratus,-6.75,-80.75,5008:360:4,1.00
+Argopecten,purpuratus,-7.25,-80.25,5008:370:1,1.00
+Argopecten,purpuratus,-7.25,-80.75,5008:370:2,0.88
+Argopecten,purpuratus,-7.75,-80.25,5008:370:3,0.93
+Argopecten,purpuratus,-10.25,-77.75,5107:207:2,1.00
+Argopecten,purpuratus,-10.75,-77.75,5107:207:4,1.00
+Argopecten,purpuratus,-10.25,-78.25,5107:208:1,1.00
+Argopecten,purpuratus,-10.25,-78.75,5107:208:2,0.96
+Argopecten,purpuratus,-10.75,-78.25,5107:208:3,1.00
+Argopecten,purpuratus,-11.25,-77.25,5107:217:1,1.00
+Argopecten,purpuratus,-11.25,-77.75,5107:217:2,1.00
+Argopecten,purpuratus,-11.75,-77.75,5107:217:4,0.99
+Argopecten,purpuratus,-11.25,-78.25,5107:218:1,0.91
+Argopecten,purpuratus,-12.25,-76.75,5107:226:2,1.00
+Argopecten,purpuratus,-12.75,-76.25,5107:226:3,1.00
+Argopecten,purpuratus,-12.75,-76.75,5107:226:4,1.00
+Argopecten,purpuratus,-12.25,-77.25,5107:227:1,1.00
+Argopecten,purpuratus,-12.25,-77.75,5107:227:2,0.97
+Argopecten,purpuratus,-12.75,-77.25,5107:227:3,0.98
+Argopecten,purpuratus,-13.25,-76.25,5107:236:1,1.00
+Argopecten,purpuratus,-13.25,-76.75,5107:236:2,0.99
+Argopecten,purpuratus,-13.75,-76.25,5107:236:3,1.00
+Argopecten,purpuratus,-13.75,-76.75,5107:236:4,0.98
+Argopecten,purpuratus,-14.25,-75.75,5107:245:2,1.00
+Argopecten,purpuratus,-14.75,-75.25,5107:245:3,1.00
+Argopecten,purpuratus,-14.75,-75.75,5107:245:4,1.00
+Argopecten,purpuratus,-14.25,-76.25,5107:246:1,1.00
+Argopecten,purpuratus,-14.75,-76.25,5107:246:3,1.00
+Argopecten,purpuratus,-15.25,-74.75,5107:354:2,1.00
+Argopecten,purpuratus,-15.75,-74.25,5107:354:3,1.00
+Argopecten,purpuratus,-15.75,-74.75,5107:354:4,1.00
+Argopecten,purpuratus,-16.75,-72.75,5107:362:4,1.00
+Argopecten,purpuratus,-16.25,-73.25,5107:363:1,0.86
+Argopecten,purpuratus,-16.25,-73.75,5107:363:2,0.99
+Argopecten,purpuratus,-16.75,-73.25,5107:363:3,1.00
+Argopecten,purpuratus,-16.25,-74.25,5107:364:1,1.00
+Argopecten,purpuratus,-17.75,-70.75,5107:370:4,1.00
+Argopecten,purpuratus,-17.25,-71.25,5107:371:1,0.81
+Argopecten,purpuratus,-17.75,-71.25,5107:371:3,1.00
+Argopecten,purpuratus,-17.25,-72.25,5107:372:1,1.00
+Argopecten,purpuratus,-18.25,-70.25,5107:380:1,1.00
+Argopecten,purpuratus,-18.25,-70.75,5107:380:2,1.00
+Argopecten,purpuratus,-18.75,-70.25,5107:380:3,1.00
+Argopecten,purpuratus,-19.25,-70.25,5107:390:1,1.00
+Argopecten,purpuratus,-19.75,-70.25,5107:390:3,1.00
+Argopecten,purpuratus,-15.25,-75.25,5107:455:1,1.00
+Argopecten,purpuratus,-15.25,-75.75,5107:455:2,1.00
+Argopecten,purpuratus,-20.25,-70.25,5207:100:1,1.00
+Argopecten,purpuratus,-20.75,-70.25,5207:100:3,1.00
+Argopecten,purpuratus,-21.25,-70.25,5207:110:1,1.00
+Argopecten,purpuratus,-21.75,-70.25,5207:110:3,1.00
+Argopecten,purpuratus,-22.25,-70.25,5207:120:1,1.00
+Argopecten,purpuratus,-22.75,-70.25,5207:120:3,1.00
+Argopecten,purpuratus,-22.75,-70.75,5207:120:4,0.97
+Argopecten,purpuratus,-23.25,-70.25,5207:130:1,1.00
+Argopecten,purpuratus,-23.25,-70.75,5207:130:2,1.00
+Argopecten,purpuratus,-23.75,-70.25,5207:130:3,1.00
+Argopecten,purpuratus,-23.75,-70.75,5207:130:4,1.00
+Argopecten,purpuratus,-24.25,-70.25,5207:140:1,1.00
+Argopecten,purpuratus,-24.25,-70.75,5207:140:2,1.00
+Argopecten,purpuratus,-24.75,-70.25,5207:140:3,0.87
+Argopecten,purpuratus,-24.75,-70.75,5207:140:4,1.00
+Argopecten,purpuratus,-25.25,-70.75,5207:350:2,1.00
+Argopecten,purpuratus,-25.75,-70.75,5207:350:4,1.00
+Argopecten,purpuratus,-28.25,-71.25,5207:381:1,1.00
+Argopecten,purpuratus,-28.75,-71.25,5207:381:3,1.00
+Argopecten,purpuratus,-28.75,-71.75,5207:381:4,1.00
+Argopecten,purpuratus,-29.25,-71.25,5207:391:1,1.00
+Argopecten,purpuratus,-29.25,-71.75,5207:391:2,1.00
+Argopecten,purpuratus,-29.75,-71.25,5207:391:3,1.00
+Argopecten,purpuratus,-29.75,-71.75,5207:391:4,1.00
+Argopecten,purpuratus,-30.25,-71.25,5307:101:1,0.84
+Argopecten,purpuratus,-30.25,-71.75,5307:101:2,1.00
+Argopecten,purpuratus,-30.75,-71.75,5307:101:4,1.00
+Argopecten,purpuratus,-31.25,-71.75,5307:111:2,1.00
+Argopecten,purpuratus,-31.75,-71.75,5307:111:4,1.00
+Argopecten,purpuratus,-32.25,-71.75,5307:121:2,1.00
+Argopecten,purpuratus,-32.75,-71.75,5307:121:4,0.93
+Argopecten,purpuratus,-33.25,-71.75,5307:131:2,0.88
+Argopecten,purpuratus,-33.75,-71.75,5307:131:4,0.84
+Argopecten,purpuratus,-33.75,-72.25,5307:132:3,0.92
+Argopecten,purpuratus,-34.25,-71.75,5307:141:2,0.81
+Argopecten,purpuratus,-34.25,-72.25,5307:142:1,0.84
+
+
+Occurrence cells used for creating environmental envelope (n = 32)
+Genus,Species,Center Lat,Center Long,C-Square,Depth (m),Surface Water Temp. (°C),Bottom Water Temp. (°C),Surface Salinity (psu),Bottom Salinity (psu),Primary Production (mgC·m-3·day-1),Sea Ice Concentration (0-1 fraction),Dissolved Bottom Oxygen (mmol·m-3),Distance to Land (km)
+Argopecten,purpuratus,-36.75,-73.25,5307:363:3,139,12.7341899871826,11.696400642395,32.6299171447754,34.0956649780273,84.696002304554,0,83.1979827880859,19
+Argopecten,purpuratus,-36.25,-75.25,5307:465:1,4124,14.4325914382935,1.30343496799469,33.9293785095215,34.6951599121094,9.793000295758251,0,167.888412475586,219
+Argopecten,purpuratus,-32.75,-71.75,5307:121:4,1210,14.2182397842407,5.81501007080078,34.1778182983398,34.3138809204102,51.731001585722,0,98.8412017822266,23
+Argopecten,purpuratus,-31.25,-71.75,5307:111:2,1275,14.7638111114502,7.15620708465576,34.4018783569336,34.3711700439453,49.497999250888796,0,67.84130859375,19
+Argopecten,purpuratus,-30.25,-71.25,5307:101:1,114,14.9940071105957,9.71956157684326,33.5847434997559,34.2129898071289,50.5536198616028,0,103.212020874023,3
+Argopecten,purpuratus,-30.25,-71.75,5307:101:2,1844,14.5563144683838,9.04991245269775,34.4653739929199,34.5012893676758,45.1829992234707,0,37.5173110961914,21
+Argopecten,purpuratus,-29.75,-71.25,5207:391:3,304,15.0601215362549,10.4829120635986,33.7653732299805,34.2428398132324,50.1873642206192,0,105.957374572754,11
+Argopecten,purpuratus,-28.25,-71.75,5207:381:2,4011,15.6315536499023,1.39797794818878,34.5456581115723,34.6909561157227,30.2380006760359,0,162.819290161133,73
+Argopecten,purpuratus,-27.75,-72.25,5207:372:3,4538,16.2219944000244,1.33632504940033,34.558666229248,34.6957244873047,13.1740001961589,0,164.373168945313,133
+Argopecten,purpuratus,-27.25,-70.75,5207:370:2,262,15.9734497070313,12.5804443359375,33.9630699157715,34.3030738830566,52.3407533764839,0,109.198280334473,7
+Argopecten,purpuratus,-23.75,-70.25,5207:130:3,135,17.6213150024414,8.84118556976318,33.9579811096191,34.5312309265137,53.5389743745327,0,83.5275726318359,4
+Argopecten,purpuratus,-23.25,-70.25,5207:130:1,138,17.8090858459473,8.908935546875,34.1494827270508,34.5949096679688,53.8072474300861,0,70.6635589599609,2
+Argopecten,purpuratus,-23.25,-70.75,5207:130:2,2532,17.5889472961426,2.78435492515564,34.6276435852051,34.5805931091309,52.8189986944199,0,104.503341674805,24
+Argopecten,purpuratus,-22.75,-70.25,5207:120:3,518,17.9912948608398,9.42699337005615,34.3540840148926,34.6651992797852,54.2743094265461,0,55.0858840942383,13
+Argopecten,purpuratus,-22.25,-70.25,5207:120:1,788,18.1642990112305,10.6741485595703,34.5670776367188,34.7487602233887,55.158257484436,0,41.1367530822754,16
+Argopecten,purpuratus,-20.25,-70.25,5207:100:1,614,18.5972442626953,12.6888027191162,34.7680511474609,34.8502044677734,65.7939985394478,0,18.5415649414063,21
+Argopecten,purpuratus,-17.75,-71.25,5107:371:3,471,19.3970279693604,19.3074588775635,34.7934646606445,35.0859298706055,80.4890021681786,0,224.781539916992,18
+Argopecten,purpuratus,-17.25,-72.25,5107:372:1,1060,19.5666332244873,4.46338987350464,34.8373336791992,34.5104789733887,80.1049992442131,0,57.035099029541,50
+Argopecten,purpuratus,-15.25,-75.25,5107:455:1,426,17.2725811004639,17.7507591247559,34.9425811767578,34.9931297302246,53.1059987843037,0,216.2265625,18
+Argopecten,purpuratus,-14.25,-75.75,5107:245:2,37,17.7846260070801,15.3227424621582,34.9439392089844,34.9380722045898,65.7258629798889,0,98.4999465942383,1
+Argopecten,purpuratus,-14.25,-76.25,5107:246:1,291,17.1838054656982,16.2321910858154,34.9791221618652,34.9869956970215,55.893998593092,0,160.092102050781,22
+Argopecten,purpuratus,-13.75,-76.25,5107:236:3,76,17.7254295349121,15.1913366317749,34.9596939086914,34.9406814575195,62.9179030656815,0,92.701545715332,15
+Argopecten,purpuratus,-13.25,-76.25,5107:236:1,107,18.136510848999,15.2010402679443,34.942512512207,34.968677520752,76.3788819313049,0,79.4307861328125,13
+Argopecten,purpuratus,-12.25,-77.25,5107:227:1,173,18.2420444488525,13.7115068435669,34.9794998168945,34.9337692260742,65.3809979557991,0,7.27287292480469,26
+Argopecten,purpuratus,-12.25,-79.75,5107:229:2,4739,20.8563785552979,1.42138600349426,35.1689987182617,34.6941719055176,15.107000246643999,0,139.674530029297,292
+Argopecten,purpuratus,-12.25,-76.75,5107:226:2,95,18.3044910430908,16.3991241455078,34.9317169189453,35.034236907959,86.1272215843201,0,121.422309875488,7
+Argopecten,purpuratus,-11.75,-77.25,5107:217:3,87,18.2189998626709,17.7786464691162,34.9571685791016,35.1131286621094,93.9470008015633,0,181.702758789063,19
+Argopecten,purpuratus,-11.25,-77.75,5107:217:2,137,18.5337257385254,15.1847133636475,34.9672966003418,35.0749588012695,86.4040032029152,0,45.1016273498535,25
+Argopecten,purpuratus,-9.25,-78.75,5007:498:2,96,18.7633209228516,14.7173385620117,34.8626594543457,34.9812889099121,67.9370015859604,0,22.1063423156738,27
+Argopecten,purpuratus,-8.25,-78.75,5007:488:2,148,19.4149513244629,16.8932228088379,34.5563430786133,34.8692245483398,73.8329663872719,0,86.0381011962891,4
+Argopecten,purpuratus,-8.25,-80.25,5008:380:1,681,20.2972030639648,10.2251930236816,34.9066886901855,34.7274131774902,28.6870002746582,0,2.31024599075317,129
+Argopecten,purpuratus,-6.75,-80.25,5008:360:3,28,18.8965110778809,18.3234481811523,34.5692100524902,35.027400970459,88.6730030179024,0,143.810241699219,25

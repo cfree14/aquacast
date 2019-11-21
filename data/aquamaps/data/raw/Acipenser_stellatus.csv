@@ -1,0 +1,251 @@
+Mapping parameters for Acipenser stellatus (Starry sturgeon)
+
+"Cite AquaMaps itself as: Kaschner, K., K. Kesner-Reyes, C. Garilao, J. Rius-Barile, T. Rees, and R. Froese. 2016. AquaMaps: Predicted range maps for aquatic species. World wide web electronic publication, www.aquamaps.org, Version 08/2016. "
+
+Map type: Computer-generated,
+Map Option: In FAO and Bounding Box
+FAOAreas: 37,
+Bounding Box (NSWE): ,61,36,22,54
+
+Pelagic: False,
+Layer used to generate probabilities: Surface,
+
+Species Envelope (HSPEN):
+ ,Used,Min,Pref Min (10th),Pref Max (90th),Max
+Depth (m),1,10,19,55,100
+Temperature (°C),1,12.82,13.83,17.48,21.17
+Salinity (psu),1,16.21,16.71,22.41,39.11
+Primary Production,1,413,725.8,1885.4,2592.5
+Sea Ice Concentration,1,-1,0,0,0
+Distance to Land (km),0,4.5,10.6,33,97
+ 
+
+Map data (HSPEC) for predicted occurrences (n = 207): 
+
+"To get individual probabilities (i.e. Depth, Temperature, Salinity, Primary Production, Sea Ice Concentration, Distance to Land):"
+1. Click on the Create-Your-Own-Map at the bottom left part of the species map page.
+2. Click on the Regenerate Map Data and View Map button then click OK.
+3. In the resulting User-Specified Map for the species click on the Download data (as csv) link.
+4. Select HSPEC then Submit.
+
+Genus,Species,Center Lat,Center Long,C-Square Code,Overall Probability
+Acipenser,stellatus,38.25,22.25,1302:382:1,0.01
+Acipenser,stellatus,38.25,22.75,1302:382:2,0.01
+Acipenser,stellatus,38.75,22.75,1302:382:4,0.01
+Acipenser,stellatus,38.25,23.25,1302:383:1,0.01
+Acipenser,stellatus,38.75,23.75,1302:383:4,0.01
+Acipenser,stellatus,39.75,22.75,1302:392:4,0.01
+Acipenser,stellatus,39.25,23.25,1302:393:1,0.01
+Acipenser,stellatus,39.25,23.75,1302:393:2,0.02
+Acipenser,stellatus,39.75,23.25,1302:393:3,0.03
+Acipenser,stellatus,39.75,23.75,1302:393:4,0.02
+Acipenser,stellatus,39.25,24.25,1302:394:1,0.02
+Acipenser,stellatus,39.25,24.75,1302:394:2,0.01
+Acipenser,stellatus,39.75,24.25,1302:394:3,0.03
+Acipenser,stellatus,39.75,24.75,1302:394:4,0.02
+Acipenser,stellatus,38.25,26.75,1302:486:2,0.01
+Acipenser,stellatus,38.75,26.25,1302:486:3,0.01
+Acipenser,stellatus,38.75,26.75,1302:486:4,0.02
+Acipenser,stellatus,38.25,27.25,1302:487:1,0.01
+Acipenser,stellatus,38.75,27.25,1302:487:3,0.01
+Acipenser,stellatus,39.25,25.75,1302:495:2,0.01
+Acipenser,stellatus,39.75,25.25,1302:495:3,0.05
+Acipenser,stellatus,39.75,25.75,1302:495:4,0.01
+Acipenser,stellatus,39.25,26.25,1302:496:1,0.02
+Acipenser,stellatus,39.25,26.75,1302:496:2,0.02
+Acipenser,stellatus,39.75,26.25,1302:496:3,0.05
+Acipenser,stellatus,39.75,26.75,1302:496:4,0.05
+Acipenser,stellatus,40.25,22.75,1402:102:2,0.03
+Acipenser,stellatus,40.75,22.75,1402:102:4,0.03
+Acipenser,stellatus,40.25,23.25,1402:103:1,0.01
+Acipenser,stellatus,40.25,23.75,1402:103:2,0.02
+Acipenser,stellatus,40.75,23.75,1402:103:4,0.01
+Acipenser,stellatus,40.25,24.25,1402:104:1,0.04
+Acipenser,stellatus,40.75,24.25,1402:104:3,0.04
+Acipenser,stellatus,40.75,24.75,1402:104:4,0.02
+Acipenser,stellatus,40.25,25.25,1402:205:1,0.07
+Acipenser,stellatus,40.25,25.75,1402:205:2,0.07
+Acipenser,stellatus,40.75,25.75,1402:205:4,0.07
+Acipenser,stellatus,40.25,26.25,1402:206:1,0.07
+Acipenser,stellatus,40.25,26.75,1402:206:2,0.05
+Acipenser,stellatus,40.75,26.25,1402:206:3,0.07
+Acipenser,stellatus,40.75,26.75,1402:206:4,0.07
+Acipenser,stellatus,40.25,27.25,1402:207:1,0.05
+Acipenser,stellatus,41.25,25.25,1402:215:1,0.02
+Acipenser,stellatus,41.75,29.25,1402:219:3,0.09
+Acipenser,stellatus,41.75,31.25,1403:111:3,0.13
+Acipenser,stellatus,46.75,38.25,1403:468:3,0.10
+Acipenser,stellatus,42.25,41.25,1404:121:1,0.02
+Acipenser,stellatus,41.25,27.75,1402:217:2,0.33
+Acipenser,stellatus,45.25,29.75,1402:459:2,0.21
+Acipenser,stellatus,44.25,30.75,1403:140:2,0.38
+Acipenser,stellatus,46.25,30.25,1403:360:1,0.37
+Acipenser,stellatus,46.25,30.75,1403:360:2,0.37
+Acipenser,stellatus,46.75,30.75,1403:360:4,0.37
+Acipenser,stellatus,47.25,37.75,1403:477:2,0.39
+Acipenser,stellatus,45.75,29.75,1402:459:4,0.54
+Acipenser,stellatus,44.75,31.25,1403:141:3,0.49
+Acipenser,stellatus,45.25,30.25,1403:350:1,0.50
+Acipenser,stellatus,45.25,30.75,1403:350:2,0.50
+Acipenser,stellatus,45.75,30.25,1403:350:3,0.50
+Acipenser,stellatus,45.75,30.75,1403:350:4,0.50
+Acipenser,stellatus,46.25,32.75,1403:362:2,0.51
+Acipenser,stellatus,45.75,37.25,1403:457:3,0.59
+Acipenser,stellatus,47.25,38.25,1403:478:1,0.42
+Acipenser,stellatus,47.25,38.75,1403:478:2,0.57
+Acipenser,stellatus,47.25,39.25,1403:479:1,0.44
+Acipenser,stellatus,40.25,29.25,1402:209:1,0.74
+Acipenser,stellatus,44.75,29.25,1402:249:3,0.64
+Acipenser,stellatus,46.25,31.25,1403:361:1,0.67
+Acipenser,stellatus,46.25,31.75,1403:361:2,0.67
+Acipenser,stellatus,46.75,31.25,1403:361:3,0.67
+Acipenser,stellatus,46.75,31.75,1403:361:4,0.67
+Acipenser,stellatus,46.25,32.25,1403:362:1,0.65
+Acipenser,stellatus,46.75,32.25,1403:362:3,0.65
+Acipenser,stellatus,46.25,33.25,1403:363:1,0.70
+Acipenser,stellatus,46.25,33.75,1403:363:2,0.70
+Acipenser,stellatus,46.25,34.75,1403:364:2,0.78
+Acipenser,stellatus,46.25,35.25,1403:465:1,0.78
+Acipenser,stellatus,46.25,35.75,1403:465:2,0.71
+Acipenser,stellatus,46.75,35.75,1403:465:4,0.78
+Acipenser,stellatus,46.25,36.25,1403:466:1,0.74
+Acipenser,stellatus,41.75,41.25,1404:111:3,0.64
+Acipenser,stellatus,40.25,27.75,1402:207:2,1.00
+Acipenser,stellatus,40.75,27.25,1402:207:3,1.00
+Acipenser,stellatus,40.75,27.75,1402:207:4,1.00
+Acipenser,stellatus,40.25,28.25,1402:208:1,1.00
+Acipenser,stellatus,40.25,28.75,1402:208:2,0.98
+Acipenser,stellatus,40.75,28.25,1402:208:3,1.00
+Acipenser,stellatus,40.75,28.75,1402:208:4,1.00
+Acipenser,stellatus,40.75,29.25,1402:209:3,1.00
+Acipenser,stellatus,40.75,29.75,1402:209:4,1.00
+Acipenser,stellatus,41.25,28.25,1402:218:1,1.00
+Acipenser,stellatus,41.25,28.75,1402:218:2,1.00
+Acipenser,stellatus,41.75,28.25,1402:218:3,1.00
+Acipenser,stellatus,41.75,28.75,1402:218:4,0.96
+Acipenser,stellatus,41.25,29.25,1402:219:1,1.00
+Acipenser,stellatus,41.25,29.75,1402:219:2,1.00
+Acipenser,stellatus,42.25,27.75,1402:227:2,1.00
+Acipenser,stellatus,42.75,27.75,1402:227:4,1.00
+Acipenser,stellatus,42.25,28.25,1402:228:1,1.00
+Acipenser,stellatus,42.75,28.25,1402:228:3,1.00
+Acipenser,stellatus,43.25,27.75,1402:237:2,1.00
+Acipenser,stellatus,43.25,28.25,1402:238:1,1.00
+Acipenser,stellatus,43.25,28.75,1402:238:2,1.00
+Acipenser,stellatus,43.75,28.75,1402:238:4,1.00
+Acipenser,stellatus,43.75,29.25,1402:239:3,0.87
+Acipenser,stellatus,43.75,29.75,1402:239:4,1.00
+Acipenser,stellatus,44.25,28.75,1402:248:2,1.00
+Acipenser,stellatus,44.75,28.75,1402:248:4,1.00
+Acipenser,stellatus,44.25,29.25,1402:249:1,0.93
+Acipenser,stellatus,44.25,29.75,1402:249:2,1.00
+Acipenser,stellatus,44.75,29.75,1402:249:4,0.88
+Acipenser,stellatus,41.25,30.25,1403:110:1,1.00
+Acipenser,stellatus,41.25,30.75,1403:110:2,1.00
+Acipenser,stellatus,41.25,31.25,1403:111:1,1.00
+Acipenser,stellatus,41.25,31.75,1403:111:2,1.00
+Acipenser,stellatus,41.75,31.75,1403:111:4,1.00
+Acipenser,stellatus,41.75,32.25,1403:112:3,1.00
+Acipenser,stellatus,41.75,32.75,1403:112:4,1.00
+Acipenser,stellatus,41.75,33.25,1403:113:3,1.00
+Acipenser,stellatus,41.75,34.25,1403:114:3,1.00
+Acipenser,stellatus,41.75,34.75,1403:114:4,1.00
+Acipenser,stellatus,42.25,33.25,1403:123:1,1.00
+Acipenser,stellatus,42.25,33.75,1403:123:2,1.00
+Acipenser,stellatus,42.25,34.25,1403:124:1,1.00
+Acipenser,stellatus,42.25,34.75,1403:124:2,1.00
+Acipenser,stellatus,43.75,30.25,1403:130:3,0.82
+Acipenser,stellatus,44.25,30.25,1403:140:1,0.80
+Acipenser,stellatus,44.75,30.25,1403:140:3,1.00
+Acipenser,stellatus,44.75,30.75,1403:140:4,1.00
+Acipenser,stellatus,44.25,33.25,1403:143:1,1.00
+Acipenser,stellatus,44.25,33.75,1403:143:2,1.00
+Acipenser,stellatus,44.75,33.25,1403:143:3,1.00
+Acipenser,stellatus,44.75,33.75,1403:143:4,1.00
+Acipenser,stellatus,44.25,34.25,1403:144:1,1.00
+Acipenser,stellatus,44.75,34.25,1403:144:3,1.00
+Acipenser,stellatus,44.75,34.75,1403:144:4,1.00
+Acipenser,stellatus,40.75,38.25,1403:208:3,1.00
+Acipenser,stellatus,40.75,38.75,1403:208:4,1.00
+Acipenser,stellatus,41.75,35.25,1403:215:3,1.00
+Acipenser,stellatus,41.75,35.75,1403:215:4,1.00
+Acipenser,stellatus,41.25,36.25,1403:216:1,1.00
+Acipenser,stellatus,41.25,36.75,1403:216:2,1.00
+Acipenser,stellatus,41.75,36.25,1403:216:3,1.00
+Acipenser,stellatus,41.25,37.25,1403:217:1,1.00
+Acipenser,stellatus,41.25,37.75,1403:217:2,1.00
+Acipenser,stellatus,41.25,38.25,1403:218:1,1.00
+Acipenser,stellatus,41.25,38.75,1403:218:2,1.00
+Acipenser,stellatus,41.25,39.25,1403:219:1,1.00
+Acipenser,stellatus,41.25,39.75,1403:219:2,1.00
+Acipenser,stellatus,42.25,35.25,1403:225:1,1.00
+Acipenser,stellatus,43.25,39.75,1403:239:2,1.00
+Acipenser,stellatus,43.75,39.25,1403:239:3,1.00
+Acipenser,stellatus,43.75,39.75,1403:239:4,1.00
+Acipenser,stellatus,44.75,35.25,1403:245:3,1.00
+Acipenser,stellatus,44.75,35.75,1403:245:4,1.00
+Acipenser,stellatus,44.75,36.25,1403:246:3,1.00
+Acipenser,stellatus,44.75,36.75,1403:246:4,1.00
+Acipenser,stellatus,44.75,37.25,1403:247:3,1.00
+Acipenser,stellatus,44.75,37.75,1403:247:4,1.00
+Acipenser,stellatus,44.25,38.25,1403:248:1,1.00
+Acipenser,stellatus,44.25,38.75,1403:248:2,1.00
+Acipenser,stellatus,44.75,38.25,1403:248:3,1.00
+Acipenser,stellatus,44.25,39.25,1403:249:1,1.00
+Acipenser,stellatus,45.25,31.25,1403:351:1,0.92
+Acipenser,stellatus,45.25,31.75,1403:351:2,0.92
+Acipenser,stellatus,45.75,31.25,1403:351:3,0.92
+Acipenser,stellatus,45.75,31.75,1403:351:4,0.92
+Acipenser,stellatus,45.25,32.25,1403:352:1,0.93
+Acipenser,stellatus,45.25,32.75,1403:352:2,0.93
+Acipenser,stellatus,45.75,32.25,1403:352:3,0.93
+Acipenser,stellatus,45.75,32.75,1403:352:4,0.93
+Acipenser,stellatus,45.25,33.25,1403:353:1,1.00
+Acipenser,stellatus,45.25,33.75,1403:353:2,1.00
+Acipenser,stellatus,45.75,33.25,1403:353:3,1.00
+Acipenser,stellatus,45.75,33.75,1403:353:4,1.00
+Acipenser,stellatus,45.75,34.75,1403:354:4,1.00
+Acipenser,stellatus,45.25,35.25,1403:455:1,1.00
+Acipenser,stellatus,45.25,35.75,1403:455:2,1.00
+Acipenser,stellatus,45.75,35.25,1403:455:3,1.00
+Acipenser,stellatus,45.75,35.75,1403:455:4,1.00
+Acipenser,stellatus,45.25,36.25,1403:456:1,1.00
+Acipenser,stellatus,45.25,36.75,1403:456:2,1.00
+Acipenser,stellatus,45.75,36.25,1403:456:3,1.00
+Acipenser,stellatus,45.75,36.75,1403:456:4,1.00
+Acipenser,stellatus,45.25,37.25,1403:457:1,1.00
+Acipenser,stellatus,45.75,37.75,1403:457:4,1.00
+Acipenser,stellatus,46.25,36.75,1403:466:2,0.93
+Acipenser,stellatus,46.75,36.25,1403:466:3,0.93
+Acipenser,stellatus,46.75,36.75,1403:466:4,0.93
+Acipenser,stellatus,46.25,37.25,1403:467:1,1.00
+Acipenser,stellatus,46.25,37.75,1403:467:2,1.00
+Acipenser,stellatus,46.75,37.25,1403:467:3,1.00
+Acipenser,stellatus,46.75,37.75,1403:467:4,0.91
+Acipenser,stellatus,46.25,38.25,1403:468:1,1.00
+Acipenser,stellatus,46.25,38.75,1403:468:2,1.00
+Acipenser,stellatus,46.75,38.75,1403:468:4,1.00
+Acipenser,stellatus,40.75,40.25,1404:100:3,1.00
+Acipenser,stellatus,41.25,40.25,1404:110:1,1.00
+Acipenser,stellatus,41.25,40.75,1404:110:2,1.00
+Acipenser,stellatus,41.25,41.25,1404:111:1,1.00
+Acipenser,stellatus,41.75,41.75,1404:111:4,1.00
+Acipenser,stellatus,42.75,40.75,1404:120:4,1.00
+Acipenser,stellatus,42.25,41.75,1404:121:2,1.00
+Acipenser,stellatus,42.75,41.25,1404:121:3,1.00
+Acipenser,stellatus,42.75,41.75,1404:121:4,1.00
+Acipenser,stellatus,43.25,40.25,1404:130:1,1.00
+Acipenser,stellatus,43.25,40.75,1404:130:2,1.00
+
+
+Occurrence cells used for creating environmental envelope (n = 9)
+Genus,Species,Center Lat,Center Long,C-Square,Depth,SST,Salinity,Primary Production,Sea Ice Conc.,Distance to Land
+Acipenser,stellatus,36.75,30.75,1303:360:4,587,21.17,39.11,413,0,15
+Acipenser,stellatus,41.75,29.25,1402:219:3,1216,15.14,18.23,895,0,97
+Acipenser,stellatus,42.75,41.25,1404:121:3,493,16.56,17.87,1364,0,15
+Acipenser,stellatus,43.25,28.25,1402:238:1,67,14.5,18.1,1330,0,17
+Acipenser,stellatus,44.25,28.75,1402:248:2,55,14.23,17.57,1777,0,13
+Acipenser,stellatus,44.75,28.75,1402:248:4,22,14.23,17.57,1574,0,5
+Acipenser,stellatus,45.25,29.75,1402:459:2,21,13.85,16.48,2319,0,12
+Acipenser,stellatus,45.75,37.75,1403:457:4,22,14.21,17.76,1551,0,12
+Acipenser,stellatus,45.75,32.75,1403:352:4,29,13.76,16.77,804,0,17

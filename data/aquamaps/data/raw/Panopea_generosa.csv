@@ -1,0 +1,262 @@
+Mapping parameters for Panopea generosa (Pacific geoduck)
+
+"Cite AquaMaps itself as: Kaschner, K., K. Kesner-Reyes, C. Garilao, J. Rius-Barile, T. Rees, and R. Froese. 2016. AquaMaps: Predicted range maps for aquatic species. World wide web electronic publication, www.aquamaps.org, Version 08/2016. "
+
+Map type: Computer-generated,
+Map Option: In FAO and Bounding Box
+FAOAreas: 67 |  77,
+Bounding Box (NSWE): ,60,27,-145,-113
+
+Pelagic: False,
+Layer used to generate probabilities: Surface,
+
+Species Envelope (HSPEN):
+ ,Used,Min,Pref Min (10th),Pref Max (90th),Max
+Depth (m),1,0,11,54,110
+Temperature (°C),1,6.01,9.91,14.48,17.45
+Salinity (psu),1,28.13,30.27,33.29,35.03
+Primary Production,1,703.5,1428.6,2288.2,2919.5
+Sea Ice Concentration,1,-1,0,0,0
+Distance to Land (km),0,0,1.2,16.2000007629395,31.5
+ 
+
+Map data (HSPEC) for predicted occurrences (n = 220): 
+
+"To get individual probabilities (i.e. Depth, Temperature, Salinity, Primary Production, Sea Ice Concentration, Distance to Land):"
+1. Click on the Create-Your-Own-Map at the bottom left part of the species map page.
+2. Click on the Regenerate Map Data and View Map button then click OK.
+3. In the resulting User-Specified Map for the species click on the Download data (as csv) link.
+4. Select HSPEC then Submit.
+
+Genus,Species,Center Lat,Center Long,C-Square Code,Overall Probability
+Panopea,generosa,32.25,-117.25,7311:227:1,0.01
+Panopea,generosa,32.75,-117.25,7311:227:3,0.01
+Panopea,generosa,32.75,-118.25,7311:228:3,0.01
+Panopea,generosa,32.75,-118.75,7311:228:4,0.04
+Panopea,generosa,32.25,-119.25,7311:229:1,0.03
+Panopea,generosa,32.75,-119.25,7311:229:3,0.14
+Panopea,generosa,33.25,-117.25,7311:237:1,0.06
+Panopea,generosa,33.25,-117.75,7311:237:2,0.03
+Panopea,generosa,33.75,-117.75,7311:237:4,0.07
+Panopea,generosa,33.25,-118.25,7311:238:1,0.06
+Panopea,generosa,33.25,-118.75,7311:238:2,0.06
+Panopea,generosa,33.75,-118.75,7311:238:4,0.13
+Panopea,generosa,34.25,-120.75,7312:140:2,0.14
+Panopea,generosa,35.25,-121.25,7312:351:1,0.18
+Panopea,generosa,46.25,-123.25,7412:363:1,0.09
+Panopea,generosa,47.25,-122.75,7412:372:2,0.18
+Panopea,generosa,47.25,-123.25,7412:373:1,0.09
+Panopea,generosa,47.75,-123.25,7412:373:3,0.09
+Panopea,generosa,49.75,-123.25,7412:393:3,0.04
+Panopea,generosa,48.25,-125.25,7412:485:1,0.18
+Panopea,generosa,48.25,-125.75,7412:485:2,0.04
+Panopea,generosa,49.25,-125.25,7412:495:1,0.17
+Panopea,generosa,49.75,-126.25,7412:496:3,0.09
+Panopea,generosa,50.25,-123.75,7512:103:2,0.04
+Panopea,generosa,50.25,-124.25,7512:104:1,0.04
+Panopea,generosa,50.75,-124.75,7512:104:4,0.09
+Panopea,generosa,50.75,-125.25,7512:205:3,0.09
+Panopea,generosa,50.75,-125.75,7512:205:4,0.09
+Panopea,generosa,51.25,-125.75,7512:215:2,0.09
+Panopea,generosa,51.25,-126.75,7512:216:2,0.09
+Panopea,generosa,51.75,-127.25,7512:217:3,0.18
+Panopea,generosa,51.75,-129.75,7512:219:4,0.14
+Panopea,generosa,52.25,-127.25,7512:227:1,0.09
+Panopea,generosa,52.75,-127.25,7512:227:3,0.09
+Panopea,generosa,52.75,-127.75,7512:227:4,0.09
+Panopea,generosa,52.25,-129.75,7512:229:2,0.01
+Panopea,generosa,53.25,-128.25,7512:238:1,0.09
+Panopea,generosa,53.25,-128.75,7512:238:2,0.18
+Panopea,generosa,53.75,-128.25,7512:238:3,0.09
+Panopea,generosa,54.25,-128.75,7512:248:2,0.07
+Panopea,generosa,55.75,-129.75,7512:459:4,0.06
+Panopea,generosa,52.75,-130.25,7513:120:3,0.06
+Panopea,generosa,33.75,-118.25,7311:238:3,0.22
+Panopea,generosa,33.25,-119.25,7311:239:1,0.25
+Panopea,generosa,33.25,-119.75,7311:239:2,0.30
+Panopea,generosa,33.75,-119.25,7311:239:3,0.22
+Panopea,generosa,33.75,-119.75,7311:239:4,0.26
+Panopea,generosa,43.25,-124.75,7412:134:2,0.20
+Panopea,generosa,44.25,-124.75,7412:144:2,0.21
+Panopea,generosa,49.25,-123.25,7412:393:1,0.28
+Panopea,generosa,51.75,-131.25,7513:111:3,0.39
+Panopea,generosa,52.25,-131.75,7513:121:2,0.28
+Panopea,generosa,52.75,-132.25,7513:122:3,0.24
+Panopea,generosa,53.25,-132.75,7513:132:2,0.30
+Panopea,generosa,34.25,-118.25,7311:248:1,0.41
+Panopea,generosa,34.25,-118.75,7311:248:2,0.41
+Panopea,generosa,34.25,-119.25,7311:249:1,0.59
+Panopea,generosa,33.75,-120.25,7312:130:3,0.44
+Panopea,generosa,36.25,-121.25,7312:361:1,0.51
+Panopea,generosa,42.25,-124.75,7412:124:2,0.41
+Panopea,generosa,46.75,-124.75,7412:364:4,0.54
+Panopea,generosa,48.75,-123.75,7412:383:4,0.52
+Panopea,generosa,49.25,-122.75,7412:392:2,0.41
+Panopea,generosa,49.25,-123.75,7412:393:2,0.44
+Panopea,generosa,49.75,-123.75,7412:393:4,0.47
+Panopea,generosa,48.75,-125.25,7412:485:3,0.58
+Panopea,generosa,51.75,-130.75,7513:110:4,0.58
+Panopea,generosa,52.25,-131.25,7513:121:1,0.47
+Panopea,generosa,52.75,-131.25,7513:121:3,0.57
+Panopea,generosa,52.75,-131.75,7513:121:4,0.48
+Panopea,generosa,53.25,-131.25,7513:131:1,0.46
+Panopea,generosa,53.25,-132.25,7513:132:1,0.56
+Panopea,generosa,53.75,-133.25,7513:133:3,0.46
+Panopea,generosa,54.25,-133.25,7513:143:1,0.51
+Panopea,generosa,55.25,-134.25,7513:354:1,0.47
+Panopea,generosa,34.25,-119.75,7311:249:2,0.61
+Panopea,generosa,34.25,-120.25,7312:140:1,0.70
+Panopea,generosa,34.75,-120.25,7312:140:3,0.68
+Panopea,generosa,34.75,-120.75,7312:140:4,0.73
+Panopea,generosa,35.25,-120.75,7312:350:2,0.64
+Panopea,generosa,35.75,-121.25,7312:351:3,0.71
+Panopea,generosa,36.25,-121.75,7312:361:2,0.68
+Panopea,generosa,40.75,-124.75,7412:104:4,0.68
+Panopea,generosa,41.25,-124.75,7412:114:2,0.62
+Panopea,generosa,45.25,-124.25,7412:354:1,0.77
+Panopea,generosa,48.75,-122.25,7412:382:3,0.71
+Panopea,generosa,48.75,-124.75,7412:384:4,0.78
+Panopea,generosa,49.25,-124.75,7412:394:2,0.61
+Panopea,generosa,48.75,-125.75,7412:485:4,0.74
+Panopea,generosa,48.75,-126.25,7412:486:3,0.71
+Panopea,generosa,49.25,-125.75,7412:495:2,0.76
+Panopea,generosa,51.25,-129.25,7512:219:1,0.74
+Panopea,generosa,55.25,-129.75,7512:459:2,0.67
+Panopea,generosa,52.25,-130.75,7513:120:2,0.63
+Panopea,generosa,52.75,-130.75,7513:120:4,0.66
+Panopea,generosa,53.25,-130.75,7513:130:2,0.73
+Panopea,generosa,53.25,-131.75,7513:131:2,0.64
+Panopea,generosa,53.75,-132.75,7513:132:4,0.78
+Panopea,generosa,54.75,-133.75,7513:143:4,0.62
+Panopea,generosa,55.25,-130.25,7513:350:1,0.78
+Panopea,generosa,55.25,-130.75,7513:350:2,0.78
+Panopea,generosa,55.25,-131.25,7513:351:1,0.78
+Panopea,generosa,55.25,-133.25,7513:353:1,0.78
+Panopea,generosa,36.75,-121.75,7312:361:4,1.00
+Panopea,generosa,36.75,-122.25,7312:362:3,1.00
+Panopea,generosa,37.25,-122.25,7312:372:1,1.00
+Panopea,generosa,37.25,-122.75,7312:372:2,1.00
+Panopea,generosa,37.75,-122.25,7312:372:3,1.00
+Panopea,generosa,37.75,-122.75,7312:372:4,1.00
+Panopea,generosa,37.75,-123.25,7312:373:3,1.00
+Panopea,generosa,38.25,-122.25,7312:382:1,1.00
+Panopea,generosa,38.25,-122.75,7312:382:2,1.00
+Panopea,generosa,38.25,-123.25,7312:383:1,1.00
+Panopea,generosa,38.75,-123.25,7312:383:3,1.00
+Panopea,generosa,38.75,-123.75,7312:383:4,1.00
+Panopea,generosa,39.25,-123.75,7312:393:2,1.00
+Panopea,generosa,39.75,-123.75,7312:393:4,1.00
+Panopea,generosa,39.75,-124.25,7312:394:3,1.00
+Panopea,generosa,40.25,-124.25,7412:104:1,1.00
+Panopea,generosa,40.75,-124.25,7412:104:3,1.00
+Panopea,generosa,41.25,-124.25,7412:114:1,1.00
+Panopea,generosa,41.75,-124.25,7412:114:3,1.00
+Panopea,generosa,42.25,-124.25,7412:124:1,1.00
+Panopea,generosa,42.75,-124.25,7412:124:3,1.00
+Panopea,generosa,42.75,-124.75,7412:124:4,1.00
+Panopea,generosa,43.25,-124.25,7412:134:1,1.00
+Panopea,generosa,43.75,-124.25,7412:134:3,1.00
+Panopea,generosa,44.25,-124.25,7412:144:1,1.00
+Panopea,generosa,44.75,-124.25,7412:144:3,1.00
+Panopea,generosa,45.25,-123.75,7412:353:2,1.00
+Panopea,generosa,45.75,-123.75,7412:353:4,1.00
+Panopea,generosa,45.75,-124.25,7412:354:3,1.00
+Panopea,generosa,46.25,-123.75,7412:363:2,0.99
+Panopea,generosa,46.75,-123.75,7412:363:4,1.00
+Panopea,generosa,46.25,-124.25,7412:364:1,1.00
+Panopea,generosa,46.75,-124.25,7412:364:3,1.00
+Panopea,generosa,47.25,-122.25,7412:372:1,1.00
+Panopea,generosa,47.75,-122.25,7412:372:3,0.82
+Panopea,generosa,47.75,-122.75,7412:372:4,1.00
+Panopea,generosa,47.25,-124.25,7412:374:1,1.00
+Panopea,generosa,47.25,-124.75,7412:374:2,1.00
+Panopea,generosa,47.75,-124.25,7412:374:3,1.00
+Panopea,generosa,47.75,-124.75,7412:374:4,1.00
+Panopea,generosa,48.25,-122.25,7412:382:1,1.00
+Panopea,generosa,48.25,-122.75,7412:382:2,1.00
+Panopea,generosa,48.75,-122.75,7412:382:4,1.00
+Panopea,generosa,48.25,-123.25,7412:383:1,1.00
+Panopea,generosa,48.25,-123.75,7412:383:2,0.95
+Panopea,generosa,48.75,-123.25,7412:383:3,0.84
+Panopea,generosa,48.25,-124.25,7412:384:1,1.00
+Panopea,generosa,48.25,-124.75,7412:384:2,0.97
+Panopea,generosa,48.75,-124.25,7412:384:3,0.91
+Panopea,generosa,49.25,-124.25,7412:394:1,0.81
+Panopea,generosa,49.75,-124.25,7412:394:3,0.95
+Panopea,generosa,49.75,-124.75,7412:394:4,0.96
+Panopea,generosa,49.75,-125.25,7412:495:3,1.00
+Panopea,generosa,49.25,-126.25,7412:496:1,1.00
+Panopea,generosa,49.25,-126.75,7412:496:2,1.00
+Panopea,generosa,49.75,-126.75,7412:496:4,1.00
+Panopea,generosa,49.75,-127.25,7412:497:3,1.00
+Panopea,generosa,49.75,-127.75,7412:497:4,0.82
+Panopea,generosa,50.25,-124.75,7512:104:2,1.00
+Panopea,generosa,50.25,-125.25,7512:205:1,1.00
+Panopea,generosa,50.25,-125.75,7512:205:2,1.00
+Panopea,generosa,50.25,-126.25,7512:206:1,1.00
+Panopea,generosa,50.75,-126.25,7512:206:3,1.00
+Panopea,generosa,50.75,-126.75,7512:206:4,1.00
+Panopea,generosa,50.25,-127.25,7512:207:1,1.00
+Panopea,generosa,50.25,-127.75,7512:207:2,1.00
+Panopea,generosa,50.75,-127.25,7512:207:3,1.00
+Panopea,generosa,50.75,-127.75,7512:207:4,1.00
+Panopea,generosa,50.25,-128.25,7512:208:1,1.00
+Panopea,generosa,50.75,-128.25,7512:208:3,1.00
+Panopea,generosa,50.75,-128.75,7512:208:4,1.00
+Panopea,generosa,50.75,-129.25,7512:209:3,1.00
+Panopea,generosa,51.25,-127.25,7512:217:1,1.00
+Panopea,generosa,51.25,-127.75,7512:217:2,1.00
+Panopea,generosa,51.75,-127.75,7512:217:4,1.00
+Panopea,generosa,51.25,-128.25,7512:218:1,1.00
+Panopea,generosa,51.25,-128.75,7512:218:2,0.82
+Panopea,generosa,51.75,-128.25,7512:218:3,1.00
+Panopea,generosa,51.75,-128.75,7512:218:4,0.92
+Panopea,generosa,51.75,-129.25,7512:219:3,0.86
+Panopea,generosa,52.25,-127.75,7512:227:2,1.00
+Panopea,generosa,52.25,-128.25,7512:228:1,1.00
+Panopea,generosa,52.25,-128.75,7512:228:2,1.00
+Panopea,generosa,52.75,-128.25,7512:228:3,1.00
+Panopea,generosa,52.75,-128.75,7512:228:4,1.00
+Panopea,generosa,52.25,-129.25,7512:229:1,0.99
+Panopea,generosa,52.75,-129.25,7512:229:3,1.00
+Panopea,generosa,52.75,-129.75,7512:229:4,1.00
+Panopea,generosa,53.75,-128.75,7512:238:4,0.97
+Panopea,generosa,53.25,-129.25,7512:239:1,0.95
+Panopea,generosa,53.25,-129.75,7512:239:2,0.95
+Panopea,generosa,53.75,-129.25,7512:239:3,0.94
+Panopea,generosa,53.75,-129.75,7512:239:4,0.80
+Panopea,generosa,54.25,-129.75,7512:249:2,0.87
+Panopea,generosa,54.75,-129.75,7512:249:4,0.87
+Panopea,generosa,53.25,-130.25,7513:130:1,0.93
+Panopea,generosa,53.75,-130.25,7513:130:3,0.90
+Panopea,generosa,53.75,-130.75,7513:130:4,0.93
+Panopea,generosa,53.75,-131.25,7513:131:3,0.94
+Panopea,generosa,53.75,-131.75,7513:131:4,0.83
+Panopea,generosa,53.75,-132.25,7513:132:3,0.86
+Panopea,generosa,54.25,-130.25,7513:140:1,0.85
+Panopea,generosa,54.25,-130.75,7513:140:2,0.85
+Panopea,generosa,54.75,-130.25,7513:140:3,0.85
+Panopea,generosa,54.75,-130.75,7513:140:4,0.85
+Panopea,generosa,54.25,-131.25,7513:141:1,0.85
+Panopea,generosa,54.25,-131.75,7513:141:2,0.85
+Panopea,generosa,54.75,-131.25,7513:141:3,0.85
+Panopea,generosa,54.75,-131.75,7513:141:4,0.85
+Panopea,generosa,54.25,-132.25,7513:142:1,0.88
+Panopea,generosa,54.25,-132.75,7513:142:2,0.85
+Panopea,generosa,54.75,-132.25,7513:142:3,0.88
+Panopea,generosa,54.75,-132.75,7513:142:4,0.88
+Panopea,generosa,54.75,-133.25,7513:143:3,0.81
+Panopea,generosa,55.25,-132.25,7513:352:1,0.81
+Panopea,generosa,55.25,-132.75,7513:352:2,0.81
+Panopea,generosa,55.25,-133.75,7513:353:2,0.81
+
+
+Occurrence cells used for creating environmental envelope (n = 7)
+Genus,Species,Center Lat,Center Long,C-Square,Depth,SST,Salinity,Primary Production,Sea Ice Conc.,Distance to Land
+Panopea,generosa,34.75,-120.25,7312:140:3,11,15.27,33.29,1374,0,0
+Panopea,generosa,36.75,-121.75,7312:361:4,200,13.96,33.29,1465,0,8
+Panopea,generosa,44.25,-124.25,7412:144:1,85,12.36,31.48,1830,0,18
+Panopea,generosa,47.25,-122.25,7412:372:1,8,10.3,30.27,2219,0,2
+Panopea,generosa,47.75,-122.75,7412:372:4,7,10.3,30.27,1958,0,6
+Panopea,generosa,48.75,-123.25,7412:383:3,37,10.78,31.6,2392,0,15
+Panopea,generosa,54.25,-130.75,7513:140:2,45,9.33,31.17,1604,0,15

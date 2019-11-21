@@ -1,0 +1,274 @@
+Mapping parameters for Crassostrea madrasensis (Indian backwater oyster)
+
+"Cite AquaMaps itself as: Kaschner, K., K. Kesner-Reyes, C. Garilao, J. Rius-Barile, T. Rees, and R. Froese. 2019. AquaMaps: Predicted range maps for aquatic species. World wide web electronic publication, www.aquamaps.org, version 10/2019. "
+
+Map type: Computer-generated,
+Map Option: In FAO and Bounding Box
+FAOAreas: 51 |  57,
+Bounding Box (NSWE): ,26,5,64,94
+
+Pelagic: False,
+Layer used to generate probabilities: Surface,
+
+Species Envelope (HSPEN):
+ ,Used,Min,Pref Min (10th),Pref Max (90th),Max
+Depth (m),1,0,0,2,4
+Temperature (°C),1,26.41,26.96,28.6,32.8
+Salinity (psu),1,13.31,22.29,35.23,36.41
+Primary Production (mgC·m-3·day-1) ,1,2,3,119.96,195.85
+Sea Ice Concentration (0-1 fraction),1,-1,0,0,0
+Dissolved Bottom Oxygen (mmol·m-3),0,68.88,121.96,231.31,261.4
+Distance to Land (km),0,12,17,25,26
+ 
+
+Map data (HSPEC) for predicted occurrences (n = 232): 
+
+"To get individual probabilities (i.e. Depth, Temperature, Salinity, Primary Production, Sea Ice Concentration, Distance to Land):"
+1. Click on the Create-Your-Own-Map at the bottom left part of the species map page.
+2. Click on the Regenerate Map Data and View Map button then click OK.
+3. In the resulting User-Specified Map for the species click on the Download data (as csv) link.
+4. Select HSPEC then Submit.
+
+Genus,Species,Center Lat,Center Long,C-Square Code,Overall Probability
+Crassostrea,madrasensis,6.75,73.25,1007:363:3,0.17
+Crassostrea,madrasensis,7.25,72.75,1007:372:2,0.02
+Crassostrea,madrasensis,7.25,73.25,1007:373:1,0.02
+Crassostrea,madrasensis,7.25,93.75,1009:373:2,0.19
+Crassostrea,madrasensis,7.75,93.75,1009:373:4,0.19
+Crassostrea,madrasensis,8.25,93.75,1009:383:2,0.05
+Crassostrea,madrasensis,8.75,93.25,1009:383:3,0.07
+Crassostrea,madrasensis,8.75,93.75,1009:383:4,0.06
+Crassostrea,madrasensis,10.25,73.75,1107:103:2,0.04
+Crassostrea,madrasensis,10.75,73.75,1107:103:4,0.13
+Crassostrea,madrasensis,18.75,70.75,1107:380:4,0.03
+Crassostrea,madrasensis,18.75,71.25,1107:381:3,0.02
+Crassostrea,madrasensis,10.25,92.25,1109:102:1,0.14
+Crassostrea,madrasensis,10.25,92.75,1109:102:2,0.06
+Crassostrea,madrasensis,10.75,92.25,1109:102:3,0.12
+Crassostrea,madrasensis,10.75,92.75,1109:102:4,0.12
+Crassostrea,madrasensis,11.25,92.25,1109:112:1,0.09
+Crassostrea,madrasensis,11.75,92.25,1109:112:3,0.13
+Crassostrea,madrasensis,11.25,93.25,1109:113:1,0.02
+Crassostrea,madrasensis,12.25,93.75,1109:123:2,0.17
+Crassostrea,madrasensis,23.75,67.75,1206:237:4,0.14
+Crassostrea,madrasensis,23.75,68.25,1206:238:3,0.16
+Crassostrea,madrasensis,24.75,66.75,1206:246:4,0.06
+Crassostrea,madrasensis,24.25,67.25,1206:247:1,0.15
+Crassostrea,madrasensis,24.25,67.75,1206:247:2,0.15
+Crassostrea,madrasensis,24.75,67.25,1206:247:3,0.03
+Crassostrea,madrasensis,22.25,90.25,1209:120:1,0.16
+Crassostrea,madrasensis,5.75,73.75,1007:353:4,0.23
+Crassostrea,madrasensis,6.75,72.75,1007:362:4,0.22
+Crassostrea,madrasensis,6.25,73.25,1007:363:1,0.34
+Crassostrea,madrasensis,6.75,93.75,1009:363:4,0.38
+Crassostrea,madrasensis,7.75,93.25,1009:373:3,0.28
+Crassostrea,madrasensis,8.75,92.75,1009:382:4,0.24
+Crassostrea,madrasensis,8.25,93.25,1009:383:1,0.27
+Crassostrea,madrasensis,9.25,92.75,1009:392:2,0.29
+Crassostrea,madrasensis,16.75,72.75,1107:362:4,0.32
+Crassostrea,madrasensis,11.25,92.75,1109:112:2,0.30
+Crassostrea,madrasensis,18.25,93.75,1109:383:2,0.39
+Crassostrea,madrasensis,20.75,69.75,1206:209:4,0.22
+Crassostrea,madrasensis,21.75,68.75,1206:218:4,0.22
+Crassostrea,madrasensis,22.75,68.25,1206:228:3,0.37
+Crassostrea,madrasensis,23.25,68.75,1206:238:2,0.38
+Crassostrea,madrasensis,23.75,68.75,1206:238:4,0.24
+Crassostrea,madrasensis,23.25,70.25,1207:130:1,0.30
+Crassostrea,madrasensis,21.75,92.25,1209:112:3,0.21
+Crassostrea,madrasensis,5.75,72.75,1007:352:4,0.52
+Crassostrea,madrasensis,5.25,73.75,1007:353:2,0.42
+Crassostrea,madrasensis,5.75,73.25,1007:353:3,0.51
+Crassostrea,madrasensis,6.25,72.75,1007:362:2,0.45
+Crassostrea,madrasensis,7.75,78.25,1007:478:3,0.50
+Crassostrea,madrasensis,8.75,78.75,1007:488:4,0.50
+Crassostrea,madrasensis,11.75,74.75,1107:114:4,0.50
+Crassostrea,madrasensis,12.25,74.75,1107:124:2,0.50
+Crassostrea,madrasensis,14.75,73.25,1107:143:3,0.46
+Crassostrea,madrasensis,11.25,75.25,1107:215:1,0.50
+Crassostrea,madrasensis,10.25,80.25,1108:100:1,0.49
+Crassostrea,madrasensis,11.75,93.25,1109:113:3,0.50
+Crassostrea,madrasensis,21.75,69.25,1206:219:3,0.58
+Crassostrea,madrasensis,22.75,69.25,1206:229:3,0.55
+Crassostrea,madrasensis,22.75,69.75,1206:229:4,0.57
+Crassostrea,madrasensis,23.25,67.75,1206:237:2,0.49
+Crassostrea,madrasensis,23.25,68.25,1206:238:1,0.49
+Crassostrea,madrasensis,22.75,70.25,1207:120:3,0.56
+Crassostrea,madrasensis,22.25,72.75,1207:122:2,0.48
+Crassostrea,madrasensis,21.25,87.75,1208:217:2,0.50
+Crassostrea,madrasensis,21.25,89.75,1208:219:2,0.50
+Crassostrea,madrasensis,22.25,89.25,1208:229:1,0.49
+Crassostrea,madrasensis,22.25,89.75,1208:229:2,0.41
+Crassostrea,madrasensis,21.25,90.75,1209:110:2,0.50
+Crassostrea,madrasensis,21.25,91.25,1209:111:1,0.50
+Crassostrea,madrasensis,21.25,91.75,1209:111:2,0.40
+Crassostrea,madrasensis,21.75,91.75,1209:111:4,0.42
+Crassostrea,madrasensis,5.25,72.75,1007:352:2,0.69
+Crassostrea,madrasensis,5.25,73.25,1007:353:1,0.67
+Crassostrea,madrasensis,18.25,72.75,1107:382:2,0.71
+Crassostrea,madrasensis,18.75,72.75,1107:382:4,0.76
+Crassostrea,madrasensis,11.75,92.75,1109:112:4,0.69
+Crassostrea,madrasensis,21.25,69.75,1206:219:2,0.75
+Crassostrea,madrasensis,22.25,68.75,1206:228:2,0.72
+Crassostrea,madrasensis,22.75,68.75,1206:228:4,0.68
+Crassostrea,madrasensis,23.75,67.25,1206:237:3,0.67
+Crassostrea,madrasensis,20.75,70.25,1207:100:3,0.73
+Crassostrea,madrasensis,22.25,72.25,1207:122:1,0.70
+Crassostrea,madrasensis,22.25,88.75,1208:228:2,0.75
+Crassostrea,madrasensis,6.75,79.75,1007:469:4,1.00
+Crassostrea,madrasensis,7.25,79.75,1007:479:2,1.00
+Crassostrea,madrasensis,7.75,79.75,1007:479:4,1.00
+Crassostrea,madrasensis,8.25,76.75,1007:486:2,1.00
+Crassostrea,madrasensis,8.75,76.75,1007:486:4,1.00
+Crassostrea,madrasensis,8.25,77.25,1007:487:1,1.00
+Crassostrea,madrasensis,8.25,77.75,1007:487:2,1.00
+Crassostrea,madrasensis,8.25,78.25,1007:488:1,1.00
+Crassostrea,madrasensis,8.75,78.25,1007:488:3,1.00
+Crassostrea,madrasensis,8.25,79.75,1007:489:2,1.00
+Crassostrea,madrasensis,8.75,79.75,1007:489:4,1.00
+Crassostrea,madrasensis,9.25,76.25,1007:496:1,1.00
+Crassostrea,madrasensis,9.25,76.75,1007:496:2,1.00
+Crassostrea,madrasensis,9.75,76.25,1007:496:3,1.00
+Crassostrea,madrasensis,9.25,78.25,1007:498:1,0.98
+Crassostrea,madrasensis,9.25,78.75,1007:498:2,0.94
+Crassostrea,madrasensis,9.75,78.75,1007:498:4,0.92
+Crassostrea,madrasensis,9.25,79.25,1007:499:1,0.94
+Crassostrea,madrasensis,9.25,79.75,1007:499:2,0.97
+Crassostrea,madrasensis,9.75,79.25,1007:499:3,0.89
+Crassostrea,madrasensis,9.75,79.75,1007:499:4,0.94
+Crassostrea,madrasensis,5.75,80.25,1008:350:3,1.00
+Crassostrea,madrasensis,5.75,80.75,1008:350:4,1.00
+Crassostrea,madrasensis,6.25,80.25,1008:360:1,1.00
+Crassostrea,madrasensis,6.25,80.75,1008:360:2,1.00
+Crassostrea,madrasensis,6.75,80.25,1008:360:3,1.00
+Crassostrea,madrasensis,6.25,81.25,1008:361:1,1.00
+Crassostrea,madrasensis,6.25,81.75,1008:361:2,1.00
+Crassostrea,madrasensis,6.75,81.75,1008:361:4,0.99
+Crassostrea,madrasensis,7.25,81.75,1008:371:2,0.95
+Crassostrea,madrasensis,7.75,81.75,1008:371:4,0.91
+Crassostrea,madrasensis,8.25,81.25,1008:381:1,0.95
+Crassostrea,madrasensis,8.25,81.75,1008:381:2,0.91
+Crassostrea,madrasensis,8.75,81.25,1008:381:3,0.95
+Crassostrea,madrasensis,9.25,80.25,1008:390:1,0.98
+Crassostrea,madrasensis,9.25,80.75,1008:390:2,0.97
+Crassostrea,madrasensis,9.75,80.25,1008:390:3,1.00
+Crassostrea,madrasensis,9.75,80.75,1008:390:4,0.97
+Crassostrea,madrasensis,12.75,74.75,1107:124:4,1.00
+Crassostrea,madrasensis,13.25,74.75,1107:134:2,1.00
+Crassostrea,madrasensis,13.75,74.75,1107:134:4,1.00
+Crassostrea,madrasensis,14.25,74.25,1107:144:1,1.00
+Crassostrea,madrasensis,14.25,74.75,1107:144:2,1.00
+Crassostrea,madrasensis,14.75,74.25,1107:144:3,1.00
+Crassostrea,madrasensis,10.75,75.75,1107:205:4,1.00
+Crassostrea,madrasensis,10.25,76.25,1107:206:1,1.00
+Crassostrea,madrasensis,10.75,76.25,1107:206:3,1.00
+Crassostrea,madrasensis,10.25,79.25,1107:209:1,0.88
+Crassostrea,madrasensis,10.25,79.75,1107:209:2,0.94
+Crassostrea,madrasensis,10.75,79.75,1107:209:4,0.95
+Crassostrea,madrasensis,11.25,75.75,1107:215:2,1.00
+Crassostrea,madrasensis,11.75,75.25,1107:215:3,1.00
+Crassostrea,madrasensis,11.75,75.75,1107:215:4,1.00
+Crassostrea,madrasensis,11.25,79.75,1107:219:2,0.98
+Crassostrea,madrasensis,11.75,79.75,1107:219:4,1.00
+Crassostrea,madrasensis,12.25,75.25,1107:225:1,1.00
+Crassostrea,madrasensis,12.75,75.25,1107:225:3,1.00
+Crassostrea,madrasensis,12.25,79.75,1107:229:2,1.00
+Crassostrea,madrasensis,15.25,73.75,1107:353:2,1.00
+Crassostrea,madrasensis,15.75,73.75,1107:353:4,0.99
+Crassostrea,madrasensis,15.25,74.25,1107:354:1,1.00
+Crassostrea,madrasensis,16.25,73.25,1107:363:1,0.88
+Crassostrea,madrasensis,16.25,73.75,1107:363:2,1.00
+Crassostrea,madrasensis,16.75,73.25,1107:363:3,0.83
+Crassostrea,madrasensis,17.25,73.25,1107:373:1,0.88
+Crassostrea,madrasensis,17.75,73.25,1107:373:3,0.93
+Crassostrea,madrasensis,18.25,73.25,1107:383:1,1.00
+Crassostrea,madrasensis,18.75,73.25,1107:383:3,1.00
+Crassostrea,madrasensis,19.25,72.75,1107:392:2,0.87
+Crassostrea,madrasensis,19.75,72.75,1107:392:4,1.00
+Crassostrea,madrasensis,19.25,73.25,1107:393:1,1.00
+Crassostrea,madrasensis,12.25,80.25,1108:120:1,0.98
+Crassostrea,madrasensis,12.75,80.25,1108:120:3,1.00
+Crassostrea,madrasensis,13.25,80.25,1108:130:1,1.00
+Crassostrea,madrasensis,13.75,80.25,1108:130:3,1.00
+Crassostrea,madrasensis,14.25,80.25,1108:140:1,1.00
+Crassostrea,madrasensis,14.75,80.25,1108:140:3,1.00
+Crassostrea,madrasensis,15.25,80.25,1108:350:1,1.00
+Crassostrea,madrasensis,15.75,80.25,1108:350:3,0.99
+Crassostrea,madrasensis,15.75,80.75,1108:350:4,0.99
+Crassostrea,madrasensis,15.75,81.25,1108:351:3,0.99
+Crassostrea,madrasensis,16.25,81.25,1108:361:1,1.00
+Crassostrea,madrasensis,16.25,81.75,1108:361:2,1.00
+Crassostrea,madrasensis,16.25,82.25,1108:362:1,1.00
+Crassostrea,madrasensis,16.75,82.25,1108:362:3,1.00
+Crassostrea,madrasensis,17.25,82.25,1108:372:1,1.00
+Crassostrea,madrasensis,17.25,82.75,1108:372:2,1.00
+Crassostrea,madrasensis,17.75,83.25,1108:373:3,1.00
+Crassostrea,madrasensis,17.75,83.75,1108:373:4,1.00
+Crassostrea,madrasensis,18.25,83.75,1108:383:2,1.00
+Crassostrea,madrasensis,18.25,84.25,1108:384:1,1.00
+Crassostrea,madrasensis,18.75,84.25,1108:384:3,1.00
+Crassostrea,madrasensis,18.75,84.75,1108:384:4,1.00
+Crassostrea,madrasensis,19.25,84.75,1108:394:2,1.00
+Crassostrea,madrasensis,19.25,85.25,1108:495:1,1.00
+Crassostrea,madrasensis,19.75,85.25,1108:495:3,1.00
+Crassostrea,madrasensis,19.75,85.75,1108:495:4,1.00
+Crassostrea,madrasensis,19.75,86.25,1108:496:3,1.00
+Crassostrea,madrasensis,12.25,92.75,1109:122:2,0.86
+Crassostrea,madrasensis,12.75,92.75,1109:122:4,0.88
+Crassostrea,madrasensis,12.25,93.25,1109:123:1,0.80
+Crassostrea,madrasensis,12.75,93.25,1109:123:3,0.89
+Crassostrea,madrasensis,13.25,92.75,1109:132:2,0.96
+Crassostrea,madrasensis,13.75,92.75,1109:132:4,0.98
+Crassostrea,madrasensis,13.25,93.25,1109:133:1,0.94
+Crassostrea,madrasensis,13.75,93.25,1109:133:3,0.96
+Crassostrea,madrasensis,14.25,93.25,1109:143:1,0.99
+Crassostrea,madrasensis,18.75,93.75,1109:383:4,1.00
+Crassostrea,madrasensis,19.75,92.75,1109:392:4,1.00
+Crassostrea,madrasensis,19.25,93.25,1109:393:1,1.00
+Crassostrea,madrasensis,19.25,93.75,1109:393:2,1.00
+Crassostrea,madrasensis,19.75,93.25,1109:393:3,1.00
+Crassostrea,madrasensis,19.75,93.75,1109:393:4,1.00
+Crassostrea,madrasensis,21.75,69.75,1206:219:4,0.83
+Crassostrea,madrasensis,22.25,69.25,1206:229:1,0.83
+Crassostrea,madrasensis,22.25,69.75,1206:229:2,0.86
+Crassostrea,madrasensis,20.75,70.75,1207:100:4,1.00
+Crassostrea,madrasensis,20.75,71.25,1207:101:3,1.00
+Crassostrea,madrasensis,20.75,71.75,1207:101:4,1.00
+Crassostrea,madrasensis,20.25,72.75,1207:102:2,1.00
+Crassostrea,madrasensis,20.75,72.75,1207:102:4,1.00
+Crassostrea,madrasensis,21.25,70.25,1207:110:1,0.96
+Crassostrea,madrasensis,21.25,71.75,1207:111:2,1.00
+Crassostrea,madrasensis,21.25,72.25,1207:112:1,1.00
+Crassostrea,madrasensis,21.25,72.75,1207:112:2,1.00
+Crassostrea,madrasensis,21.75,72.25,1207:112:3,1.00
+Crassostrea,madrasensis,21.75,72.75,1207:112:4,0.85
+Crassostrea,madrasensis,20.25,86.25,1208:206:1,1.00
+Crassostrea,madrasensis,20.25,86.75,1208:206:2,1.00
+Crassostrea,madrasensis,20.75,86.75,1208:206:4,1.00
+Crassostrea,madrasensis,20.75,87.25,1208:207:3,1.00
+Crassostrea,madrasensis,21.25,86.75,1208:216:2,1.00
+Crassostrea,madrasensis,21.25,87.25,1208:217:1,1.00
+Crassostrea,madrasensis,21.75,87.25,1208:217:3,1.00
+Crassostrea,madrasensis,21.75,87.75,1208:217:4,1.00
+Crassostrea,madrasensis,21.75,88.25,1208:218:3,1.00
+Crassostrea,madrasensis,21.75,88.75,1208:218:4,1.00
+Crassostrea,madrasensis,21.75,89.25,1208:219:3,1.00
+Crassostrea,madrasensis,21.75,89.75,1208:219:4,1.00
+Crassostrea,madrasensis,22.25,88.25,1208:228:1,0.87
+Crassostrea,madrasensis,20.25,92.25,1209:102:1,1.00
+Crassostrea,madrasensis,20.25,92.75,1209:102:2,1.00
+Crassostrea,madrasensis,20.75,92.25,1209:102:3,1.00
+Crassostrea,madrasensis,20.75,92.75,1209:102:4,1.00
+Crassostrea,madrasensis,20.25,93.25,1209:103:1,1.00
+Crassostrea,madrasensis,20.75,93.25,1209:103:3,1.00
+Crassostrea,madrasensis,21.25,90.25,1209:110:1,0.92
+Crassostrea,madrasensis,21.25,92.25,1209:112:1,0.87
+
+
+Occurrence cells used for creating environmental envelope (n = 6)
+Genus,Species,Center Lat,Center Long,C-Square,Depth (m),Surface Water Temp. (°C),Bottom Water Temp. (°C),Surface Salinity (psu),Bottom Salinity (psu),Primary Production (mgC·m-3·day-1),Sea Ice Concentration (0-1 fraction),Dissolved Bottom Oxygen (mmol·m-3),Distance to Land (km)
+Crassostrea,madrasensis,7.25,79.75,1007:479:2,631,28.323802947998,28.2204456329346,34.0554428100586,34.3196868896484,24.4299992918968,0,201.415100097656,22
+Crassostrea,madrasensis,10.75,92.75,1109:102:4,533,28.8711795806885,5.23578691482544,32.3796768188477,34.8883209228516,2.12999992072582,0,68.8815383911133,26
+Crassostrea,madrasensis,18.25,84.25,1108:384:1,237,28.2840595245361,26.3139553070068,31.5356426239014,34.237419128418,14.5899998024106,0,175.037200927734,23
+Crassostrea,madrasensis,21.75,87.75,1208:217:4,19,27.6878128051758,27.9544124603271,23.4981136322021,28.6075420379639,44.0660007297993,0,214.496185302734,12
+Crassostrea,madrasensis,21.75,90.25,1209:110:3,25,27.504997253418,27.6997985839844,21.0915622711182,28.9146556854248,195.849999785423,0,248.126724243164,23
+Crassostrea,madrasensis,25.25,66.25,1206:456:1,68,26.4168910980225,24.7008152008057,36.4103622436523,36.4577407836914,3.86500009335577,0,210.675308227539,24

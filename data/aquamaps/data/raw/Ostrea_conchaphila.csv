@@ -1,0 +1,181 @@
+Mapping parameters for Ostrea conchaphila (Olympia oyster)
+
+"Cite AquaMaps itself as: Kaschner, K., K. Kesner-Reyes, C. Garilao, J. Rius-Barile, T. Rees, and R. Froese. 2019. AquaMaps: Predicted range maps for aquatic species. World wide web electronic publication, www.aquamaps.org, version 10/2019. "
+
+Map type: Computer-generated,
+Map Option: In FAO and Bounding Box
+FAOAreas: 27 |  67 |  77,
+Bounding Box (NSWE): ,26,7,-110,-78
+
+Pelagic: False,
+Layer used to generate probabilities: Surface,
+
+Species Envelope (HSPEN):
+ ,Used,Min,Pref Min (10th),Pref Max (90th),Max
+Depth (m),1,0,5,26,50
+Temperature (°C),1,23.44,26.04,28.62,32.82
+Salinity (psu),1,27.94,31.04,33.71,36.28
+Primary Production (mgC·m-3·day-1) ,1,5.12,7.27,26.87,48.67
+Sea Ice Concentration (0-1 fraction),1,-1,0,0,0
+Dissolved Bottom Oxygen (mmol·m-3),0,42.81,88.26,212.24,294.64
+Distance to Land (km),0,5,7,50,96
+ 
+
+Map data (HSPEC) for predicted occurrences (n = 135): 
+
+"To get individual probabilities (i.e. Depth, Temperature, Salinity, Primary Production, Sea Ice Concentration, Distance to Land):"
+1. Click on the Create-Your-Own-Map at the bottom left part of the species map page.
+2. Click on the Regenerate Map Data and View Map button then click OK.
+3. In the resulting User-Specified Map for the species click on the Download data (as csv) link.
+4. Select HSPEC then Submit.
+
+Genus,Species,Center Lat,Center Long,C-Square Code,Overall Probability
+Ostrea,conchaphila,8.75,-78.75,7007:488:4,0.13
+Ostrea,conchaphila,10.75,-86.25,7108:206:3,0.04
+Ostrea,conchaphila,11.25,-85.75,7108:215:2,0.17
+Ostrea,conchaphila,11.25,-86.25,7108:216:1,0.04
+Ostrea,conchaphila,11.25,-86.75,7108:216:2,0.09
+Ostrea,conchaphila,13.25,-88.75,7108:238:2,0.13
+Ostrea,conchaphila,16.25,-93.75,7109:363:2,0.19
+Ostrea,conchaphila,25.25,-107.75,7210:457:2,0.12
+Ostrea,conchaphila,25.75,-108.75,7210:458:4,0.09
+Ostrea,conchaphila,10.25,-85.75,7108:205:2,0.28
+Ostrea,conchaphila,13.25,-87.75,7108:237:2,0.27
+Ostrea,conchaphila,13.25,-88.25,7108:238:1,0.29
+Ostrea,conchaphila,13.75,-89.75,7108:239:4,0.27
+Ostrea,conchaphila,13.75,-90.75,7109:130:4,0.22
+Ostrea,conchaphila,13.75,-91.25,7109:131:3,0.38
+Ostrea,conchaphila,15.25,-93.75,7109:353:2,0.29
+Ostrea,conchaphila,17.75,-101.75,7110:371:4,0.36
+Ostrea,conchaphila,7.75,-78.75,7007:478:4,0.52
+Ostrea,conchaphila,8.75,-79.25,7007:489:3,0.41
+Ostrea,conchaphila,10.25,-85.25,7108:205:1,0.46
+Ostrea,conchaphila,11.75,-86.25,7108:216:3,0.52
+Ostrea,conchaphila,11.75,-86.75,7108:216:4,0.52
+Ostrea,conchaphila,13.25,-89.25,7108:239:1,0.50
+Ostrea,conchaphila,13.75,-89.25,7108:239:3,0.46
+Ostrea,conchaphila,13.75,-91.75,7109:131:4,0.59
+Ostrea,conchaphila,14.25,-91.25,7109:141:1,0.43
+Ostrea,conchaphila,14.25,-91.75,7109:141:2,0.57
+Ostrea,conchaphila,14.75,-92.75,7109:142:4,0.56
+Ostrea,conchaphila,15.25,-93.25,7109:353:1,0.54
+Ostrea,conchaphila,17.75,-102.25,7110:372:3,0.50
+Ostrea,conchaphila,23.75,-107.25,7210:237:3,0.49
+Ostrea,conchaphila,25.25,-108.25,7210:458:1,0.49
+Ostrea,conchaphila,25.25,-108.75,7210:458:2,0.59
+Ostrea,conchaphila,7.25,-80.75,7008:370:2,0.76
+Ostrea,conchaphila,7.25,-81.25,7008:371:1,0.70
+Ostrea,conchaphila,7.75,-81.25,7008:371:3,0.69
+Ostrea,conchaphila,9.75,-85.25,7008:495:3,0.68
+Ostrea,conchaphila,9.75,-85.75,7008:495:4,0.61
+Ostrea,conchaphila,12.25,-86.75,7108:226:2,0.68
+Ostrea,conchaphila,12.75,-87.25,7108:227:3,0.62
+Ostrea,conchaphila,12.75,-87.75,7108:227:4,0.71
+Ostrea,conchaphila,13.25,-87.25,7108:237:1,0.64
+Ostrea,conchaphila,13.25,-89.75,7108:239:2,0.75
+Ostrea,conchaphila,14.25,-92.25,7109:142:1,0.62
+Ostrea,conchaphila,14.75,-92.25,7109:142:3,0.65
+Ostrea,conchaphila,14.75,-93.25,7109:143:3,0.65
+Ostrea,conchaphila,15.25,-92.75,7109:352:2,0.68
+Ostrea,conchaphila,15.75,-93.25,7109:353:3,0.73
+Ostrea,conchaphila,15.75,-93.75,7109:353:4,0.65
+Ostrea,conchaphila,17.75,-101.25,7110:371:3,0.79
+Ostrea,conchaphila,19.25,-105.25,7110:495:1,0.67
+Ostrea,conchaphila,22.25,-106.25,7210:226:1,0.74
+Ostrea,conchaphila,7.25,-78.25,7007:478:1,0.84
+Ostrea,conchaphila,7.75,-78.25,7007:478:3,0.83
+Ostrea,conchaphila,7.25,-79.75,7007:479:2,1.00
+Ostrea,conchaphila,7.75,-79.75,7007:479:4,1.00
+Ostrea,conchaphila,8.25,-78.25,7007:488:1,0.87
+Ostrea,conchaphila,8.25,-78.75,7007:488:2,0.84
+Ostrea,conchaphila,8.75,-78.25,7007:488:3,1.00
+Ostrea,conchaphila,8.25,-79.25,7007:489:1,1.00
+Ostrea,conchaphila,8.25,-79.75,7007:489:2,0.99
+Ostrea,conchaphila,8.75,-79.75,7007:489:4,0.82
+Ostrea,conchaphila,7.25,-80.25,7008:370:1,1.00
+Ostrea,conchaphila,7.75,-80.25,7008:370:3,0.99
+Ostrea,conchaphila,7.75,-80.75,7008:370:4,0.81
+Ostrea,conchaphila,7.25,-81.75,7008:371:2,0.92
+Ostrea,conchaphila,7.75,-81.75,7008:371:4,1.00
+Ostrea,conchaphila,7.75,-82.25,7008:372:3,1.00
+Ostrea,conchaphila,8.25,-80.25,7008:380:1,0.88
+Ostrea,conchaphila,8.25,-81.75,7008:381:2,1.00
+Ostrea,conchaphila,8.25,-82.25,7008:382:1,0.99
+Ostrea,conchaphila,8.25,-82.75,7008:382:2,0.98
+Ostrea,conchaphila,8.75,-82.25,7008:382:3,1.00
+Ostrea,conchaphila,8.25,-83.25,7008:383:1,0.99
+Ostrea,conchaphila,8.25,-83.75,7008:383:2,1.00
+Ostrea,conchaphila,8.75,-83.25,7008:383:3,1.00
+Ostrea,conchaphila,8.75,-83.75,7008:383:4,0.95
+Ostrea,conchaphila,9.25,-83.75,7008:393:2,1.00
+Ostrea,conchaphila,9.25,-84.25,7008:394:1,0.97
+Ostrea,conchaphila,9.25,-84.75,7008:394:2,0.95
+Ostrea,conchaphila,9.75,-84.25,7008:394:3,1.00
+Ostrea,conchaphila,9.75,-84.75,7008:394:4,0.95
+Ostrea,conchaphila,10.25,-84.75,7108:104:2,0.81
+Ostrea,conchaphila,12.25,-87.25,7108:227:1,0.82
+Ostrea,conchaphila,12.25,-87.75,7108:227:2,1.00
+Ostrea,conchaphila,12.25,-88.25,7108:228:1,1.00
+Ostrea,conchaphila,12.75,-88.25,7108:228:3,0.95
+Ostrea,conchaphila,12.75,-88.75,7108:228:4,0.91
+Ostrea,conchaphila,15.75,-94.25,7109:354:3,0.91
+Ostrea,conchaphila,16.25,-94.25,7109:364:1,1.00
+Ostrea,conchaphila,16.25,-94.75,7109:364:2,0.99
+Ostrea,conchaphila,15.75,-95.25,7109:455:3,1.00
+Ostrea,conchaphila,15.75,-95.75,7109:455:4,1.00
+Ostrea,conchaphila,15.75,-96.25,7109:456:3,0.98
+Ostrea,conchaphila,15.75,-96.75,7109:456:4,0.92
+Ostrea,conchaphila,15.75,-97.25,7109:457:3,0.84
+Ostrea,conchaphila,15.75,-97.75,7109:457:4,0.87
+Ostrea,conchaphila,16.25,-95.25,7109:465:1,1.00
+Ostrea,conchaphila,16.25,-97.75,7109:467:2,0.92
+Ostrea,conchaphila,16.25,-98.25,7109:468:1,0.89
+Ostrea,conchaphila,16.25,-98.75,7109:468:2,0.89
+Ostrea,conchaphila,16.75,-98.75,7109:468:4,0.95
+Ostrea,conchaphila,16.75,-99.25,7109:469:3,0.94
+Ostrea,conchaphila,16.75,-99.75,7109:469:4,0.93
+Ostrea,conchaphila,10.25,-109.25,7110:209:1,0.92
+Ostrea,conchaphila,16.75,-100.25,7110:360:3,0.92
+Ostrea,conchaphila,17.25,-100.25,7110:370:1,0.99
+Ostrea,conchaphila,17.25,-100.75,7110:370:2,0.97
+Ostrea,conchaphila,17.25,-101.25,7110:371:1,0.96
+Ostrea,conchaphila,18.25,-102.25,7110:382:1,0.92
+Ostrea,conchaphila,18.25,-102.75,7110:382:2,1.00
+Ostrea,conchaphila,18.25,-103.25,7110:383:1,1.00
+Ostrea,conchaphila,18.25,-103.75,7110:383:2,1.00
+Ostrea,conchaphila,18.75,-103.75,7110:383:4,1.00
+Ostrea,conchaphila,18.75,-104.25,7110:384:3,1.00
+Ostrea,conchaphila,19.25,-104.25,7110:394:1,1.00
+Ostrea,conchaphila,19.25,-104.75,7110:394:2,1.00
+Ostrea,conchaphila,19.75,-105.25,7110:495:3,1.00
+Ostrea,conchaphila,20.25,-105.25,7210:205:1,1.00
+Ostrea,conchaphila,20.25,-105.75,7210:205:2,0.90
+Ostrea,conchaphila,20.75,-105.25,7210:205:3,1.00
+Ostrea,conchaphila,20.75,-105.75,7210:205:4,1.00
+Ostrea,conchaphila,21.25,-105.25,7210:215:1,0.91
+Ostrea,conchaphila,21.75,-105.25,7210:215:3,1.00
+Ostrea,conchaphila,21.75,-105.75,7210:215:4,0.95
+Ostrea,conchaphila,21.75,-106.25,7210:216:3,0.94
+Ostrea,conchaphila,22.25,-105.75,7210:225:2,1.00
+Ostrea,conchaphila,22.75,-105.75,7210:225:4,1.00
+Ostrea,conchaphila,22.75,-106.25,7210:226:3,0.88
+Ostrea,conchaphila,23.25,-106.25,7210:236:1,1.00
+Ostrea,conchaphila,23.75,-106.75,7210:236:4,1.00
+Ostrea,conchaphila,24.25,-107.25,7210:247:1,1.00
+Ostrea,conchaphila,24.25,-107.75,7210:247:2,1.00
+Ostrea,conchaphila,24.75,-107.75,7210:247:4,0.85
+Ostrea,conchaphila,24.75,-108.25,7210:248:3,0.80
+
+
+Occurrence cells used for creating environmental envelope (n = 10)
+Genus,Species,Center Lat,Center Long,C-Square,Depth (m),Surface Water Temp. (°C),Bottom Water Temp. (°C),Surface Salinity (psu),Bottom Salinity (psu),Primary Production (mgC·m-3·day-1),Sea Ice Concentration (0-1 fraction),Dissolved Bottom Oxygen (mmol·m-3),Distance to Land (km)
+Ostrea,conchaphila,8.25,-79.25,7007:489:1,74,27.4041442871094,15.4834461212158,31.0648574829102,35.3056221008301,26.8729999661446,0,42.8079986572266,27
+Ostrea,conchaphila,8.25,-80.25,7008:380:1,17,27.7641830444336,27.0561046600342,30.7811527252197,33.8444480895996,27.7110002934933,0,201.156265258789,18
+Ostrea,conchaphila,8.25,-83.75,7008:383:2,1398,28.6228160858154,2.20108103752136,31.3933906555176,34.645824432373,25.8050002157688,0,88.2583160400391,96
+Ostrea,conchaphila,8.75,-83.25,7008:383:3,18,28.5991477966309,19.902229309082,31.917594909668,34.0939598083496,19.8901426047087,0,149.57014465332,7
+Ostrea,conchaphila,16.75,-99.75,7109:469:4,705,28.93479347229,29.0848026275635,33.1504974365234,33.9594917297363,12.9270004108548,0,201.078598022461,17
+Ostrea,conchaphila,19.25,-104.25,7110:394:1,111,27.8759899139404,22.3114356994629,32.9144287109375,34.4245338439941,11.8623012676835,0,168.229782104492,5
+Ostrea,conchaphila,22.25,-105.75,7210:225:2,52,27.0923366546631,27.2196292877197,31.036735534668,34.706127166748,20.4920005053282,0,212.238494873047,19
+Ostrea,conchaphila,23.25,-106.25,7210:236:1,63,26.5369644165039,23.7082099914551,32.5613021850586,34.7362365722656,10.5610992759466,0,184.133560180664,8
+Ostrea,conchaphila,24.25,-107.75,7210:247:2,79,26.0433235168457,22.703161239624,33.7109756469727,34.770149230957,7.2679999284446195,0,215.580963134766,50
+Ostrea,conchaphila,25.75,-109.25,7210:459:3,158,25.3409233093262,18.5890350341797,34.2263107299805,34.9358139038086,5.12136984616518,0,138.832717895508,16
