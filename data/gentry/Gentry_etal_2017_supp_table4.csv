@@ -1,0 +1,181 @@
+type,species,comm_name,temp_c_min,temp_c_max,linf_cm,k,references
+fish,Acanthopagrus berda,Goldsilk seabream,14.6,25.7,56,0.29,
+fish,Acanthopagrus latus,Yellowfin seabream,4.9,38.2,35.2,0.17,
+fish,Acanthopagrus schlegeli schlegelii,Blackhead seabream,10.4,26.3,50,0.22,
+fish,Acipenser gueldenstaedtii,Danube (diamond) sturgeon,10,20,236,0.04,www.orchardfisheries.co.uk/
+fish,Acipenser nudiventris,Fringebarbel sturgeon,10,20,200,0.07,
+fish,Acipenser stellatus,Starry sturgeon,10,20,218.7,0.08,www.sturgeon-web.co.uk/
+fish,Acipenser transmontanus,White sturgeon,10,23.3,610,0.04,"Crocker & Cech 64, Conte65"
+fish,Anarhichas lupus,Atlantic wolffish,0,13,152,0.09,O'Dea et al.66
+fish,Anarhichas minor,Spotted wolffish,4,12,190,0.1,Imsland et al.67 ; Foss et al.68
+fish,Anguilla anguilla,European eel,4,33,152.8,0.24,Sadler 69
+fish,Anguilla rostrata,American eel,4,25,120,0.33,
+fish,Anoplopoma fimbria,Sablefish ,1.8,14.6,120,0.25,
+fish,Argyrosomus japonicus,Japanese meagre,12,28,200,0.14,
+fish,Argyrosomus regius,Meagre,11.9,23,185.5,0.14,
+fish,Atherina boyeri,Big-scale sand smelt,6,25,10.9,0.62,
+fish,Bolbometopon muricatum,Green humphead parrotfish,26.3,29,125,0.12,
+fish,Carangoides malabaricus,Malabar trevally,19.9,28.4,37.3,0.82,
+fish,Caranx hippos,Crevalle jack,9.6,27.8,80,0.65,
+fish,Caranx sexfasciatus,Bigeye trevally,21,30,74.1,0.24,Gilbey70
+fish,Centropomus undecimalis,Common snook,25,31,140,0.4,
+fish,Chaetodipterus faber,Atlantic spadefish,2.5,28,50.4,0.34,
+fish,Chanos chanos,Milkfish,15,42.5,180,1.03,https://www.spc.int/aquaculture/ ; http://www.fao.org/fishery/culturedspecies/search
+fish,Chelon macrolepis,Largescale mullet,20,28.9,23,0.1,http://www.fao.org/fishery/culturedspecies/search
+fish,Coregonus lavaretus,European whitefish,4,29.8,59.7,0.38,Vielma et al. 71
+fish,Coryphaena hippurus,Common dolphinfish,21,30,157.9,1.67,
+fish,Cromileptes altivelis,Humpback grouper,26.5,29,65.4,0.35,
+fish,Dentex dentex,Common dentex,9.7,17.6,100,0.09,
+fish,Dentex tumifrons,Yellowback seabream,10.4,26.3,35,0.25,
+fish,Dicentrarchus labrax,European seabass,8,24,77,0.2,
+fish,Dicentrarchus punctatus,Spotted seabass,10.5,23.5,70,0.11,
+fish,Diplodus puntazzo,Sharpsnout seabream,24.3,24.3,60,0.47,Garc’a et al72
+fish,Diplodus sargus sargus,White seabream,14.7,18,42.3,0.16,
+fish,Diplodus vulgaris,Common two-banded seabream,14.7,19.7,40.8,0.26,
+fish,Dormitator latifrons,Pacific fat sleeper,24.6,33,41,0.57,
+fish,Eleutheronema tetradactylum,Fourfinger threadfin,27.6,27.7,128.7,0.37,
+fish,Epinephelus akaara,Hong Kong (redspotted) grouper,19,30.2,54.5,0.36,
+fish,Epinephelus areolatus,Areolate grouper,18.5,28.6,40.6,0.31,http://library.enaca.org/Grouper/Research/Breeding/2000/0803.htm
+fish,Epinephelus coioides,Orange-spotted grouper,17,35,108,0.15,Lin et al. 73
+fish,Epinephelus fuscoguttatus,Brown-marbled grouper,10,36.5,113.3,0.18,Cheng et al. 74
+fish,Epinephelus lanceolatus,Giant grouper,26.3,26.3,270,0.36,Hseu et al.75
+fish,Epinephelus malabaricus,Malabar grouper,19,30.2,163.6,0.8,
+fish,Epinephelus tauvina,Greasy grouper,17,29.2,115.4,0.13,http://library.enaca.org/Grouper/Research/Breeding/2000/0803.htm
+fish,Evynnis japonica,Crimson seabream,10.4,26.3,,0.22,
+fish,Gadus morhua,Atlantic cod,0,15,115,0.19,Schurmann and Steffensen 76;
+fish,Gnathanodon speciosus,Golden trevally,23,29.3,108.2,0.39,saltwater.aqua-fish.net/?gold-trevally
+fish,Hippoglossus hippoglossus,Atlantic halibut,0.9,18,470,0.08,Stuart et al.77
+fish,Huso huso,Beluga ,10,20,800,0.04,
+fish,Konosirus punctatus,Dotted gizzard shad,8.5,27.2,19.7,0.27,
+fish,Larimichthys crocea,Large yellow croaker,9,30,80,0.32,
+fish,Lateolabrax japonicus,Japanese seabass,13,23,25,0.18,
+fish,Lates calcarifer,Barramundi,15,38,176,0.39,
+fish,Lethrinus miniatus,Trumpet emperor,21,29.3,80,0.3,
+fish,Liza aurata,Golden grey mullet,10.8,18.8,56,0.25,
+fish,Liza ramada,Thinlip grey mullet,8,24,62.5,0.26,
+fish,Liza saliens,Leaping mullet,9,32,30.5,0.25,Katselis et al. 78
+fish,Lutjanus argentimaculatus,Mangrove red snapper,16,30,119.5,0.19,
+fish,Lutjanus goldiei,Papuan black snapper,18.3,27.2,100,0.28,
+fish,Lutjanus johnii,John's snapper,20.8,26.8,70,0.21,
+fish,Lutjanus russelli,Russell's snapper,23.3,26.4,45,0.56,
+fish,Megalops atlanticus,Tarpon,4.3,27.5,189.5,0.09,
+fish,Melanogrammus aeglefinus,Haddock,2,15.5,74.5,0.27,
+fish,Miichthys miiuy,Mi-iuy (brown) croaker,6,25,70,0.32,
+fish,Morone saxatilis,Striped bass,6.4,25,200,0.19,Breitburg et al. 79
+fish,Mugil cephalus,Flathead grey mullet,8,24,71.2,0.29,
+fish,Mugil curema,White mullet,10,29.3,28,0.57,txstate.fishesoftexas.org/
+fish,Muraenesox cinereus,Daggertooth pike conger,10,27.9,111.2,0.37,Golani and Ben-Tuvia 80
+fish,Mycteroperca bonaci,Black grouper,16,28,133.3,0.15,www.sms.si.edu/irlspec/Mycter_bonaci.htm
+fish,Oncorhynchus gorbuscha,Pink salmon,0.3,21,76,0.54,Raleigh 81
+fish,Oncorhynchus keta,Chum salmon,0,23.7,95,0.35,Ê
+fish,Oncorhynchus kisutch,Coho salmon,0,24.8,98,0.98,Carter82
+fish,Oncorhynchus mykiss,Rainbow trout,0,29,89.5,0.54,Molony83; Elloitt 84
+fish,Oncorhynchus nerka,Sockeye salmon,0,24.9,84,0.48,
+fish,Oncorhynchus tshawytscha,Chinook salmon,0,24.9,120.8,0.54,
+fish,Pagellus bogaraveo,Blackspot seabream,9.8,19.7,35.3,0.14,
+fish,Pagellus erythrinus,Common pandora,7.1,20.2,37.6,0.2,
+fish,Pagrus auratus,Silver seabream,9.2,29.3,130,0.13,
+fish,Pagrus major,Red (Japanese) seabream,7.7,22,100,0.15,Foscarini 85; Ishibashi et al. 86; Woo and Fung87
+fish,Pagrus pagrus,Red porgy,8.3,25.4,62.9,0.18,
+fish,Paralichthys olivaceus,Bastard halibut,14,23,103,0.15,
+fish,Platax orbicularis,Orbicular batfish,22,28,53.3,0.56,
+fish,Platichthys flesus,European flounder,5,25,43.3,0.37,
+fish,Plectropomus maculatus,Spotted coralgrouper,22,28.9,100.3,0.21,
+fish,Pleurogrammus azonus,Okhotsk atka mackerel,10,29,50,0.35,
+fish,Pleuronectes platessa,European plaice,2,25,100,0.15,Freitas et al.88
+fish,Pollachius pollachius,Pollack,6.5,12.3,130,0.19,
+fish,Polydactylus sexfilis,Sixfinger threadfin (moi),25.3,40,60.7,0.56,Halwart and Gupta89
+fish,Pomatomus saltatrix,Bluefish,6.1,27.4,103,0.17,
+fish,Psetta maxima,Turbot,8,20,60.3,0.29,Imsland et al. 90; Burel et al. 91
+fish,Pseudocaranx dentex,White trevally,13.3,26.3,89.3,0.22,
+fish,Pseudopleuronectes americanus,Winter flounder,0.8,23.9,39.7,0.38,
+fish,Rachycentron canadum,Cobia,26,32,152.8,0.33,Kaiser & Holt 92
+fish,Rhabdosargus sarba,Goldlined seabream,21.1,26.9,63.1,1.36,
+fish,Salmo salar,Atlantic salmon,2,28,128.6,0.37,Elliott & Elliott93 ; http://www.fao.org/fishery/culturedspecies/search
+fish,Salmo trutta,Sea (brown) trout,0,24,69.2,0.29,Elliott94; Molony ; Elliott & Elliott 93; Elliott 84
+fish,Salvelinus alpinus alpinus,Arctic char,4,22,92.5,0.04,Elliott & Elliott 93
+fish,Salvelinus fontinalis,Brook trout,0,25,67.5,0.32,Raleigh95; Elliott 84
+fish,Sciaenops ocellatus,Red drum,9.6,26,104.5,0.4,
+fish,Sebastes schlegelii,Korean (Schlegel's) rockfish,15,24,65,0.27,
+fish,Seriola dumerili,Greater amberjack,3.2,26.8,144,0.23,
+fish,Seriola quinqueradiata,Japanese amberjack,18,29,150,0.44,
+fish,Seriola rivoliana,Longfin yellowtail (Almaco jack),18,26.9,114.7,0.56,
+fish,Siganus canaliculatus,White-spotted spinefoot,21,34,27.7,1.87,Grandcourt et al. 96
+fish,Siganus guttatus,Goldlined spinefoot,24,28,39,1.66,
+fish,Siganus javus,Streaked spinefoot,25,28,44.6,0.56,
+fish,Siganus rivulatus,Marbled spinefoot,15,28.7,40,0.46,Galil97
+fish,Solea senegalensis,Senegalese sole,15,21,60,0.18,Campos et al.98
+fish,Solea solea,Common sole,5.7,27,50.3,0.35,Pšrtner et al.99
+fish,Sparidentex hasta,Sobaity seabream,17.8,26.3,66.5,0.35,
+fish,Sparus aurata,Gilthead seabream,11.5,22.7,70,0.3,
+fish,Takifugu rubripes,Tiger pufferfish,10,29,80,0.52,
+fish,Thunnus albacares,Yellowfin tuna,15,31,180.6,0.38,NOAA Fisheries 100
+fish,Thunnus maccoyii,Southern bluefin tuna,5,30,212.7,0.14,Patterson et al. 101; http://www.fao.org/fishery/topic/16082/en
+fish,Thunnus orientalis,Pacific bluefin tuna,13.6,29,50,0.16,
+fish,Thunnus thynnus,Atlantic bluefin tuna,2.8,31,298,0.12,www.newworldencyclopedia.org/entry/Bluefin_tuna
+fish,Tilapia guineensis,Guinean tilapia,14,33,30,2.13,http://www.fao.org/fishery/culturedspecies/search
+fish,Trachinotus blochii,Snubnose (silver) pompano,20,31,96.7,0.56,Kalidas et al. 102; Wen et al.103
+fish,Trachinotus carolinus,Florida pompano,13.2,25.9,64,0.27,
+fish,Trachinotus goodei,Great pompano,12,34,150,0.29,Jory et al. 104
+fish,Trachurus japonicus,Japanese jack mackerel,10,29,31.7,0.35,
+fish,Umbrina cirrosa,Shi drum,9.6,26,73,0.63,
+bivalve,Aequipecten opercularis,Queen scallop,4.9,19.2,11,0.74,
+bivalve,Anadara grandis (tuberculosa),Grand ark,26,37.5,63.2,0.14,Broom 105; Stern-Pirlot and Wolff 106
+bivalve,Anadara granosa,Blood cockle,25,32.8,9,1.8,Brom107; Yurimoto et al. 108
+bivalve,Anadara tuberculosa,Black ark,22,31,63.2,0.71,Nieves-Soto et al. 109; Stern-Pirlot & Wolff 106
+bivalve,Argopecten purpuratus,Peruvian calico scallop,16,20,12,2.32,Navarro et al. 110
+bivalve,Argopecten ventricosus,Pacific calico scallop,20,29,17.5,0.6,Maeda-Mart’nez et al. 111
+bivalve,Aulacomya ater,Cholga mussel,0,25.6,6.3,0.35,Urban 112
+bivalve,Cerastoderma edule,Common edible cockle,6.8,12,5.6,0.58,
+bivalve,Chamelea gallina,Striped venus,6.5,13.1,5,0.43,
+bivalve,Chlamys varia,Variegated scallop,3.5,19.2,9,0.57,
+bivalve,Choromytilus chorus,Choro mussel,20,26.3,5,0.35,Urban 112
+bivalve,Crassostrea gasar,Gasar cupped oyster,18,26,15.4,1.58,Ramos et al. 113
+bivalve,Crassostrea gigas,Pacific cupped oyster,15,30,45,1.15,
+bivalve,Crassostrea iredalei,Slipper cupped oyster,14,34,9,1.58,
+bivalve,Crassostrea madrasensis,Indian backwater oyster,30,45,11.6,1.44,Rajagopal et al. 114; Alam & Das 115
+bivalve,Crassostrea rhizophorae,Mangrove cupped oyster,24.8,24.8,12,2.79,
+bivalve,Crassostrea virginica,American cupped oyster,-1.6,24.3,30,0.88,
+bivalve,Cyclina sinensis,Oriental cyclina,20,35,5,0.87,Ying-Jie 116
+bivalve,Hippopus hippopus,Bear paw clam,24.7,29.2,40,0.15,
+bivalve,Lyropecten subnodosus,Pacific lion's paw,15.5,25.1,17.8,0.55,Arellano-Martinez et al.117
+bivalve,Mactra glabrata,Smooth mactra,10,30,27.6,0.02,
+bivalve,Mactra veneriformis,Globose clam,10,30,27.6,0.02,Yu et al. 118; Nakano et al.119
+bivalve,Mercenaria mercenaria,Northern quahog (Hard clam),9.2,24.4,13,0.33,
+bivalve,Meretrix lusoria,Japanese hard clam,5.5,15.9,5,0.47,
+bivalve,Mya arenaria,Sand gaper,4.7,23.6,10,0.29,
+bivalve,Mytilus chilensis,Chilean mussel,12,16,10.2,0.5,Duarte et al.120; Gray et al.121
+bivalve,Mytilus coruscus,Korean mussel,2.9,20,10,0.21,Wang et al. 122
+bivalve,Mytilus edulis,Blue mussel,-1.4,23.4,11,0.31,
+bivalve,Mytilus galloprovincialis,Mediterranean mussel,7.6,9,15,0.58,
+bivalve,Mytilus planulatus,Australian mussel,12.3,21.3,6,0.46,Allen123
+bivalve,Mytilus platensis,River Plata mussel,13.7,20.9,9,0.73,
+bivalve,Ostrea chilensis,Chilean flat oyster,14,14,10,1.01,
+bivalve,Ostrea conchaphila,Olympia oyster,6,20,12.5,0.47,
+bivalve,Ostrea edulis,European flat oyster,8.4,11.9,12,1.01,
+bivalve,Panopea generosa (abrupta),Pacific geoduck,8.5,10.2,12.5,0.47,Hidalgo-De-La-Toba et al. 124
+bivalve,Paphia gallus,Rooster venus,21.8,28.3,7.5,0.87,
+bivalve,Patinopecten yessoensis,Yesso scallop,5,23,25,0.93,Gosling125
+bivalve,Pecten fumatus,Southern Australia scallop,12,21,8.6,1.6,Heasman et al. 126; Gwyther and McShane127
+bivalve,Pecten maximus,Great Atlantic scallop,7.9,15.9,17,0.56,
+bivalve,Perna canaliculus,New Zealand mussel,18.2,18.2,15,0.6,
+bivalve,Perna perna,South American rock mussel,10,30,17,0.38,http://www.biosecurity.govt.nz/pests/perna-perna
+bivalve,Perna viridis,Green mussel,23.6,23.6,16.5,1.24,
+bivalve,Protothaca staminea,Pacific littleneck clam,9.2,10.2,7.5,0.17,
+bivalve,Ruditapes decussatus,Grooved carpet shell,11.8,11.8,6,0.87,
+bivalve,Ruditapes philippinarum,Japanese carpet shell,10.2,24.7,8,0.56,
+bivalve,Saccostrea commercialis,Sydney cupped oyster,10.8,19.7,22.4,0.93,http://www.fao.org/fishery/culturedspecies/search
+bivalve,Saccostrea cuccullata,Hooded oyster,18.7,25.6,20,1.58,
+bivalve,Saxidomus giganteus,Butter clam,9,11.8,13,0.47,
+bivalve,Scapharca broughtonii,Inflated ark,22,25,17.8,0.26,
+bivalve,Scrobicularia plana,Peppery furrow,9.6,12.3,17.8,0.55,
+bivalve,Sinonovacula constricta,Constricted tagelus,15,20,25.6,0.87,http://www.fao.org/fishery/culturedspecies/search
+bivalve,Soletellina diphos,Diphos sanguin,21.8,28.3,12,0.87,
+bivalve,Tresus nuttallii,Pacific horse clam,2,20,22.5,0.47,Lauzier et al.128
+bivalve,Tridacna crocea,Crocus giant clam,26.8,28.4,15,0.17,
+bivalve,Tridacna derasa,Smooth giant clam,28.5,28.5,60,0.11,
+bivalve,Tridacna squamosa,Fluted giant clam,24.5,28.9,45,0.22,
+bivalve,Venerupis aurea,Golden carpet shell,7.2,10,4.5,0.55,
+bivalve,Venerupis pullastra,Pullet carpet shell,10.3,12.3,5,0.47,
+bivalve,Venerupis rhomboides,Banded carpet shell,7.2,10,4.5,0.55,
+bivalve,Venus verrucosa,Warty venus,9.6,15.9,17.8,0.25,

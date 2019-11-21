@@ -1,0 +1,187 @@
+"","ID","LABEL","sumareafish","fishphiavg"
+"1",1,"Australian Tropical Territories",0,NA
+"2",2,"Australian Southern Ocean Territories",0,NA
+"3",3,"New Caledonia",0,NA
+"4",4,"Vanuatu",0,NA
+"5",5,"Solomon Islands",0,NA
+"6",6,"Palau",0,NA
+"7",7,"Micronesia",0,NA
+"8",8,"Nauru",0,NA
+"9",9,"Marshall Islands",0,NA
+"10",10,"Taiwan",0,NA
+"11",11,"Philippines",0,NA
+"12",12,"Australia",149539.55973,1.86724215498192
+"13",13,"Papua New Guinea",15524.47633,2.15577614987441
+"14",14,"Fiji",0,NA
+"15",15,"Tuvalu",0,NA
+"16",16,"South Korea",4198.77832,1.33529994410469
+"17",17,"North Korea",0,NA
+"18",18,"Cambodia",42407.83569,2.088186125
+"19",19,"Thailand",30970.35656,2.08832922435517
+"20",20,"Comoros",0,NA
+"21",21,"French Indian Ocean Territories",0,NA
+"22",22,"Seychelles",0,NA
+"23",23,"Mauritius",0,NA
+"24",24,"British Indian Ocean Territory",0,NA
+"25",25,"Maldives",0,NA
+"26",26,"Sri Lanka",0,NA
+"27",27,"Mozambique",0,NA
+"28",28,"Madagascar",0,NA
+"29",29,"Kenya",0,NA
+"30",30,"Somalia",0,NA
+"31",31,"Eritrea",0,NA
+"32",32,"Djibouti",0,NA
+"33",33,"Yemen",0,NA
+"34",34,"Oman",0,NA
+"35",35,"Sudan",0,NA
+"36",36,"Saudi Arabia",0,NA
+"37",37,"Kuwait",0,NA
+"38",38,"Bahrain",0,NA
+"39",39,"Pakistan",0,NA
+"40",40,"United Arab Emirates",0,NA
+"41",41,"Cape Verde",0,NA
+"42",42,"Belgium",0,NA
+"43",43,"Gibraltar",0,NA
+"44",44,"Tunisia",0,NA
+"45",45,"Morocco",93605.33523,1.95062414875104
+"46",46,"Western Sahara",257392.62131,1.94062760313235
+"47",47,"Mauritania",91929.49172,2.02142205582413
+"48",48,"Gambia",0,NA
+"49",49,"Senegal",34815.45243,2.15545068059052
+"50",50,"Libya",0,NA
+"51",51,"Malta",0,NA
+"52",52,"Latvia",5824.8443,1.87717896686027
+"53",53,"Estonia",12416.43722,1.84931716593946
+"54",54,"Bulgaria",0,NA
+"55",55,"Romania",0,NA
+"56",56,"Russia",352952.37956,2.0678265813869
+"57",57,"Georgia",0,NA
+"58",58,"Ukraine",0,NA
+"59",59,"Turkey",0,NA
+"60",60,"Syria",0,NA
+"61",61,"Lebanon",0,NA
+"62",62,"Israel",0,NA
+"63",63,"Greece",0,NA
+"64",64,"Cyprus",0,NA
+"65",65,"Albania",0,NA
+"66",66,"Algeria",0,NA
+"67",67,"French Southern Ocean Territories",0,NA
+"68",68,"British Southern Ocean Territories",206833.49676,1.79495657783107
+"69",69,"Sierra Leone",0,NA
+"70",70,"Liberia",0,NA
+"71",71,"Togo",0,NA
+"72",72,"Benin",0,NA
+"73",73,"Republic of the Congo",26280.78926,2.18788160738712
+"74",74,"Namibia",326973.74864,1.96136725433782
+"75",75,"South Africa",267729.75504,1.93094089645951
+"76",76,"Sao Tome and Principe",0,NA
+"77",77,"Equatorial Guinea",11408.66056,2.18368609564097
+"78",78,"Ghana",0,NA
+"79",79,"Clipperton Island",0,NA
+"80",80,"Bahamas",0,NA
+"81",81,"Cuba",0,NA
+"82",82,"Haiti",0,NA
+"83",83,"Dominican Republic",0,NA
+"84",84,"USA Caribbean Territories",0,NA
+"85",85,"British Caribbean Territories",0,NA
+"86",86,"Saint Kitts and Nevis",0,NA
+"87",87,"Antigua and Barbuda",0,NA
+"88",88,"Saint Lucia",0,NA
+"89",89,"Dominica",0,NA
+"90",90,"Barbados",0,NA
+"91",91,"Grenada",0,NA
+"92",92,"Trinidad and Tobago",0,NA
+"93",93,"Saint Vincent and the Grenadines",0,NA
+"94",94,"Netherlands Caribbean Territories",0,NA
+"95",95,"Panama",103890.94485,2.30288443362981
+"96",96,"Costa Rica",63672.44719,2.32754927423689
+"97",97,"Nicaragua",12427.78999,2.34877199821461
+"98",98,"Colombia",163027.52378,2.21724196250657
+"99",99,"Honduras",0,NA
+"100",100,"El Salvador",0,NA
+"101",101,"Mexico",0,NA
+"102",102,"Guatemala",0,NA
+"103",103,"Ecuador",946246.393179999,2.18129023569199
+"104",104,"Peru",800581.62118,2.03331765384095
+"105",105,"Venezuela",11754.4834,2.1299069658377
+"106",106,"French Caribbean Territories",0,NA
+"107",107,"Iceland",0,NA
+"108",108,"British Pacific Territories (Pitcairn)",0,NA
+"109",109,"French Polynesia",0,NA
+"110",110,"Jarvis Island",251554.67766,2.20845741058007
+"111",111,"USA Pacific Inhabited Territories",236772.49783,2.28153354235092
+"112",112,"Samoa",0,NA
+"113",113,"Tonga",0,NA
+"114",114,"USA Pacific Uninhabited Territories",89.07558,2.22314475937352
+"115",115,"New Zealand",262579.09062,1.81483089700077
+"116",116,"United States",791034.8149,1.88802153471513
+"117",117,"Belize",0,NA
+"118",118,"Jamaica",0,NA
+"119",119,"Guyana",19295.34255,2.23649343306856
+"120",120,"Suriname",49312.93972,2.2541875949123
+"121",121,"French Guiana",48516.49924,2.24377386244581
+"122",122,"Brazil",197906.72638,2.21078576607177
+"123",123,"Argentina",711189.03691,1.82147965196216
+"124",124,"Uruguay",12772.73954,1.49056937939517
+"125",125,"Finland",48009.99104,1.92994292955406
+"126",126,"Denmark",0,NA
+"127",127,"Germany",0,NA
+"128",128,"Netherlands",17675.3896,1.91799582737727
+"129",129,"Poland",2851.29185,1.89660741308149
+"130",130,"France",0,NA
+"131",131,"United Kingdom",18824.63924,1.92484484377024
+"132",132,"Ireland",0,NA
+"133",133,"Spain",82189.68835,2.01050715941841
+"134",134,"Portugal",0,NA
+"135",135,"Italy",0,NA
+"136",136,"Monaco",0,NA
+"137",137,"Serbia and Montenegro",0,NA
+"138",138,"Croatia",0,NA
+"139",139,"Slovenia",0,NA
+"140",140,"Lithuania",4471.2448,1.89926692052271
+"141",141,"Qatar",0,NA
+"142",142,"Iran",0,NA
+"143",143,"Iraq",0,NA
+"144",144,"Guinea-Bissau",32585.94306,2.29074291027271
+"145",145,"Guinea",43124.80678,2.31201398194676
+"146",146,"Ivory Coast",0,NA
+"147",147,"Nigeria",482.05608,2.1830679550344
+"148",148,"Cameroon",0,NA
+"149",149,"Gabon",56983.04579,2.18602113868858
+"150",150,"Democratic Republic of the Congo",0,NA
+"151",151,"Angola",952.75939,2.152204713658
+"152",152,"Tanzania",0,NA
+"153",153,"India",30583.48909,2.04844275158868
+"154",154,"Bangladesh",31816.57457,2.00944277382908
+"155",155,"Myanmar",126993.8318,2.25420444637317
+"156",156,"Malaysia",21796.44511,2.08824783383858
+"157",157,"Vietnam",30052.52877,2.08825040135678
+"158",158,"Singapore",0,NA
+"159",159,"China",251587.86268,0.845256783170055
+"160",160,"Japan",0,NA
+"161",161,"Kiribati",452861.9953,2.2221088807293
+"162",162,"Antarctica",0,NA
+"163",163,"Egypt",0,NA
+"164",164,"Jordan",0,NA
+"165",165,"Indonesia",63210.47678,2.13775748438464
+"166",166,"Canada",379753.64966,1.98319938245908
+"167",167,"Saint Pierre and Miquelon",0,NA
+"168",168,"Sweden",41717.93659,1.89591189955273
+"169",169,"Norway",0,NA
+"170",170,"Chile",1370984.95732,1.86707366149918
+"171",171,"East Timor",0,NA
+"172",172,"Bosnia and Herzegovina",0,NA
+"173",173,"Deleted",NA,NA
+"174",174,"Disputed",0,NA
+"175",175,"Arctic",0,NA
+"176",176,"Atlantic",0,NA
+"177",177,"Atlantic",0,NA
+"178",178,"Atlantic",0,NA
+"179",179,"Indian",0,NA
+"180",180,"Pacific",0,NA
+"181",181,"Pacific",0,NA
+"182",182,"Pacific",0,NA
+"183",183,"Atlantic",0,NA
+"184",184,"Indian",0,NA
+"185",185,"Pacific",0,NA
+"186",186,"Unclaimed",0,NA

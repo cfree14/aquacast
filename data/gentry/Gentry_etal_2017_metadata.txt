@@ -1,0 +1,13 @@
+
+
+https://knb.ecoinformatics.org/view/doi:10.5063/F1CF9N69
+
+CountryProdPotentialLT12.csv
+This csv gives the production potential for bivalves and fish per country. It is an output of the Calculating Areas Final R Script and is an input into the Figure Two R Script as well as the Country Production Estimate R Script.
+
+FishProdByCountryFAOSummaryHDen.csv
+This csv is an output of the Country Production Estimate R script and coincides with information displayed in Supplementary Table 3.
+
+BivalveProdByCountryFAOSummary.csv
+This csv is an output of the Country Production Estimate R script and coincides with information displayed in Supplementary Table 3.
+

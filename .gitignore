@@ -2,3 +2,8 @@
 .Rhistory
 .RData
 .Ruserdata
+data/aquamaps/data
+data/climate/data
+data/constraints/cum_impacts
+data/eezs
+data/prices
