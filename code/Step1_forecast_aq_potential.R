@@ -12,40 +12,42 @@ library(tidyverse)
 
 # Directories
 codedir <- "code"
-sppdir <- "data/species"
-outputdir <- "output/production_rasters"
+sppdir <- "data/species/data"
+outputdir <- "output/raw"
 
 # Read aquacast function
 source(file.path(codedir, "aquacast.R"))
+source(file.path(codedir, "calc_costs.R"))
 
 # Read species data
-spp <- read.csv(file.path(sppdir, "aquaculture_species_key.csv")) %>% 
-  # TEMPORARY: Remove species without data requirement
-  filter(!is.na(linf_cm) & !is.na(k) & !is.na(a) & !is.na(b) & !is.na(temp_c_min) & !is.na(temp_c_max)) %>% 
-  # TEMPORARY: Add type and harvest cm
-  mutate(type=recode(class, "Bivalvia"="bivalve", "Actinopterygii"="finfish"),
-         harvest_cm=pmin(35, linf_cm*0.7),
-         fcr=1.3,
-         price_usd_mt=7000)
+load(file.path(sppdir, "aquaculture_species_key.Rdata"))
 
 
 # Setup for testing
 ################################################################################
 
-# Put this in parallel
+# Format data
+data <- data %>%
+  mutate(type=recode(class, 
+                     "Bivalvia"="Bivalve",
+                     "Actinopterygii"="Finfish"))
+
+# Subset finfish/bivalves
+bivalves <- filter(data, class=="Bivalvia")
+finfish <- filter(data, class=="Actinopterygii" & comm_name=="Atlantic salmon")
 
 # Loop through species and run model
-i <- 2
-for(i in 1:nrow(spp)){
+i <- 1
+for(i in 1:10){
+# for(i in 1:nrow(bivalves)){
   
   # Parameters
-  species <- spp[i,]
-  years <- 2020
-  # years <- c(2020, 2050, 2100)
+  species <- finfish[i,]
+  # years <- 2021
+  years <- c(2021, 2051, 2100)
   
   # Forecast aquaculture potential
-  output <- aquacast(species=species, years=years, outdir=outputdir, plot=T)
-  
+  output <- aquacast(species=species, years=years, rcp="rcp45", outdir=outputdir, plot=T)
   
 }
 

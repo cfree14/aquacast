@@ -47,8 +47,65 @@ my_theme <- theme(axis.text=element_text(size=7),
                   axis.line = element_line(colour = "black"))
 
 
+# Harvest densities
+################################################################################
+
+# If I maintain current stocking densities, what does that mean for harvest densities?
+harv_stats <- data %>% 
+  mutate(nstocked=ifelse(class=="Bivalvia", 131200000, 4320000),
+         volume=ifelse(class=="Bivalvia", 100*4000, 24*9000),
+         harvest_kg_vol=nstocked*harvest_g/1000/volume)
+
+boxplot(harvest_kg_vol ~ class, harv_stats, outline=F)
+
+
+# Production values
+################################################################################
+
+# Set group order
+pdata_order <- data %>% 
+  group_by(class, isscaap) %>% 
+  summarize(revenue_usd_yr_median=median(revenue_usd_yr)) %>% 
+  arrange(class, revenue_usd_yr_median)
+
+# Format for plotting
+pdata <- data %>% 
+  select(class, isscaap, species, revenue_usd_yr, prod_mt_yr, edible_mt_yr) %>% 
+  mutate(revenue_usd_yr=revenue_usd_yr/1e6,
+         prod_mt_yr=prod_mt_yr/1e3,
+         edible_mt_yr=edible_mt_yr/1e3) %>% 
+  gather(key="metric", value="value", 4:ncol(.)) %>% 
+  mutate(metric=recode(metric, 
+                       "edible_mt_yr"="Edible production\n(1000s mt per yr)",
+                       "prod_mt_yr"="Total production\n(1000s mt per yr)",
+                       "revenue_usd_yr"="Revenues\n(USD millions per yr)"),
+         metric=factor(metric, levels=c("Revenues\n(USD millions per yr)",
+                                        "Total production\n(1000s mt per yr)",
+                                        "Edible production\n(1000s mt per yr)")),
+         isscaap=factor(isscaap, levels=pdata_order$isscaap)) 
+
+# Plot prouction values
+g <- ggplot(pdata, aes(x=isscaap, y=value, fill=class)) +
+  facet_wrap(~metric, scales="free_x", ncol=3) +
+  geom_boxplot(lwd=0.2, outlier.size = 0.5) + 
+  coord_flip() +
+  theme_bw() + my_theme +
+  theme(axis.title=element_blank(),
+        legend.title = element_blank(),
+        legend.position = "none")
+g
+
+# Export plots
+ggsave(g, filename=file.path(plotdir, "figure_species_harvest_production.png"), 
+       width=6.5, height=3.5, units="in", dpi=600)
+
+
 # Sample size and Von B parameters
 ################################################################################
+
+# Number of orders/families
+n_distinct(data$order)
+n_distinct(data$family)
 
 # Sample size stats
 table(data$class)
@@ -66,7 +123,7 @@ nstats$isscaap_order <- factor(nstats$isscaap, level=nstats$isscaap)
 g1 <- ggplot(nstats, aes(x=isscaap_order, y=n, fill=class_label)) +
   geom_bar(stat="identity") +
   coord_flip() +
-  labs(x="", y="Number of species") +
+  labs(x="", y="Number of species", tag="A") +
   scale_fill_discrete(name="") +
   theme_bw() + my_theme +
   theme(legend.position = c(0.8, 0.3))
@@ -75,7 +132,7 @@ g1
 # Linf (cm) density
 g2 <- ggplot(data, aes(x=linf_cm, fill=class)) +
   geom_density(alpha=0.8) +
-  labs(x="Asymptotic length (Linf, cm)", y="Density") +
+  labs(x="Asymptotic length (Linf, cm)", y="Density", tag="B") +
   theme_bw() + my_theme +
   theme(legend.position="none")
 g2
@@ -83,7 +140,7 @@ g2
 # K density
 g3 <- ggplot(data, aes(x=k, fill=class)) +
   geom_density(alpha=0.8) +
-  labs(x="Growth coefficient (K)", y="Density") +
+  labs(x="Growth coefficient (K)", y="Density", tag="C") +
   theme_bw() + my_theme +
   theme(legend.position="none")
 g3
@@ -125,6 +182,7 @@ g
 # Export figure
 ggsave(g, filename=file.path(plotdir, "figure_species_trait_sources.png"), 
        width=6.5, height=3, units="in", dpi=600)
+
 
 # Environmental tolerances
 ################################################################################

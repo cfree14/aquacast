@@ -1,0 +1,512 @@
+# Export merged data
+outfile_basename <- paste(toupper(rcp), type, "optimal", sep="_")
+writeRaster(ras_farm_spp, file=file.path(outputdir, paste0(outfile_basename, "_species.tif")), overwrite=T)
+writeRaster(ras_farm_prod, file=file.path(outputdir, paste0(outfile_basename, "_production_mt_yr.tif")), overwrite=T)
+writeRaster(ras_farm_profits, file=file.path(outputdir, paste0(outfile_basename, "_profits_usd_yr.tif")), overwrite=T)
+}
+# Run function
+calc_optimal_aqprod(rcp="rcp85", species=species, years=c(2021, 2051, 2100), type="Bivalve")
+# Functional programming approach
+################################################################################
+# # Function to read stack into R
+# read_stack <- function(rcp, species){
+#   filename <- paste(toupper(rcp), "Bivalve", gsub(" ", "_", species), "profits_usd_yr.tif", sep="_")
+#   profit_ras <- raster::brick(file.path(inputdir,  filename))
+#   return(profit_ras)
+# }
+#
+# # Build key
+# stack_key <- tibble(rcp="rcp85",
+#                     species=species) %>%
+#   mutate(stack=purrr::map2(rcp, species, read_stack)) %>%
+#   mutate(yr2021=list(magrittr::extract2(stack, 1) %>% magrittr::extract2(1)),
+#          yr2051=list(magrittr::extract2(stack, 1) %>% magrittr::extract2(2)),
+#          yr2100=list(magrittr::extract2(stack, 1) %>% magrittr::extract2(3)))
+#
+# # I used this code to figure out how to write the function above
+# # stack_key$stack[[1]][[1]]
+# # stack_key$yr2100
+#
+# # Build year stacks
+# stack_2021 <- stack(stack_key$yr2021)
+# stack_2051 <- stack(stack_key$yr2051)
+# stack_2100 <- stack(stack_key$yr2100)
+#
+#
+# # Determine which layer (species) is the most profitable
+# stack_2021_wmax <- which.max(stack_2021)
+# stack_2051_wmax <- which.max(stack_2051)
+# stack_2100_wmax <- which.max(stack_2100)
+# Clear workspace
+rm(list = ls())
+# Setup
+################################################################################
+# Packages
+library(raster)
+library(ggplot2)
+library(tidyverse)
+# Directories
+outputdir <- "output/processed"
+list.files(outputdir)
+# Read data
+prod <- raster(file.path(outputdir, "RCP85_Bivalve_optimal_production_mt_yr.tif"))
+profits <- raster(file.path(outputdir, "RCP85_Bivalve_optimal_profits_usd_yr.tif"))
+species <- raster(file.path(outputdir, "RCP85_Bivalve_optimal_species.tif"))
+# Clear workspace
+rm(list = ls())
+# Setup
+################################################################################
+# Packages
+library(raster)
+library(ggplot2)
+library(tidyverse)
+# Directories
+outputdir <- "output/processed"
+# Read data
+prod <- raster(file.path(outputdir, "RCP85_Bivalve_optimal_production_mt_yr.tif"))
+profits <- raster(file.path(outputdir, "RCP85_Bivalve_optimal_profits_usd_yr.tif"))
+species <- raster(file.path(outputdir, "RCP85_Bivalve_optimal_species.tif"))
+plot(species)
+plot(profits)
+prod <- brick(file.path(outputdir, "RCP85_Bivalve_optimal_production_mt_yr.tif"))
+profits <- brick(file.path(outputdir, "RCP85_Bivalve_optimal_profits_usd_yr.tif"))
+species <- brick(file.path(outputdir, "RCP85_Bivalve_optimal_species.tif"))
+plot(species)
+# Plot data
+plot(prod)
+# Plot data
+plot(prod/1e6)
+# Clear workspace
+rm(list = ls())
+# Setup
+################################################################################
+# Packages
+library(raster)
+library(ggplot2)
+library(tidyverse)
+# Directories
+codedir <- "code"
+sppdir <- "data/species/data"
+outputdir <- "output/raw"
+# Read aquacast function
+source(file.path(codedir, "aquacast.R"))
+source(file.path(codedir, "calc_costs.R"))
+# Read species data
+load(file.path(sppdir, "aquaculture_species_key.Rdata"))
+# Setup for testing
+################################################################################
+# Check error in following species:
+# Crassostrea rhizophorae, Crassostrea tulipa, Crassostrea virginica, Ostrea chilensis:  Error in value[j, ] : incorrect number of dimensions
+# Clear workspace
+rm(list = ls())
+# Setup
+################################################################################
+# Packages
+library(raster)
+library(ggplot2)
+library(tidyverse)
+# Directories
+codedir <- "code"
+sppdir <- "data/species/data"
+outputdir <- "output/raw"
+# Read aquacast function
+source(file.path(codedir, "aquacast.R"))
+source(file.path(codedir, "calc_costs.R"))
+# Read species data
+load(file.path(sppdir, "aquaculture_species_key.Rdata"))
+# Setup for testing
+################################################################################
+# Check error in following species:
+# Crassostrea rhizophorae, Crassostrea tulipa, Crassostrea virginica, Ostrea chilensis:  Error in value[j, ] : incorrect number of dimensions
+View(data)
+# Subset finfish
+finfish <- filter(data, class=="Actinopterygii") %>%
+mutate(type="Finfish")
+1:nrow(finfish)
+# Loop through species and run model
+i <- 1
+# Parameters
+species <- finfish[i,]
+# years <- 2021
+years <- c(2021, 2051, 2100)
+rcp="rcp85"
+# Read EEZs
+eezdir <- "data/eezs"
+eezs <- raster(file.path(eezdir, "eezs_v10_raster_10km.tif"))
+eez_key <- read.csv(file.path(eezdir, "eezs_v10_key.csv"), as.is=T)
+# Build EEZ mask
+eez_mask <- eezs
+eez_mask[!is.na(eez_mask)] <- 1
+# Read climate forecasts
+climatedir <- "data/climate/data/gfdl/GFDL-ESM2G/4rasters_scaled"
+ras_sst_c_min <- raster::brick(file.path(climatedir, paste0("GFDL_ESM2M_", rcp, "_tos_degC_annual_min_scaled.tif")))
+ras_sst_c_max <- raster::brick(file.path(climatedir, paste0("GFDL_ESM2M_", rcp, "_tos_degC_annual_max_scaled.tif")))
+ras_sal_psu_mean <- raster::brick(file.path(climatedir, paste0("GFDL_ESM2M_", rcp, "_so_psu_annual_mean_scaled.tif")))
+ras_o2_molm3_mean <- raster::brick(file.path(climatedir, paste0("GFDL_ESM2M_", rcp, "_o2_mol_m3_annual_mean_scaled.tif")))
+ras_chl_mgm3_meansubsd <- raster::brick(file.path(climatedir, paste0("GFDL_ESM2M_", rcp, "_chl_mg_m3_annual_mean_minus_sd_scaled.tif")))
+ras_arag_sat_mean <- raster::brick(file.path(climatedir, paste0("GFDL_ESM2M_", rcp, "_arag_sat_annual_mean_scaled.tif")))
+ras_layer_names <- readRDS(file.path(climatedir, "GFDL_ESM2M_rcp85_arag_sat_annual_mean_scaled_layer_names.rds"))
+# Add raster layer names
+names(ras_sst_c_min) <- names(ras_sst_c_max) <- names(ras_sal_psu_mean) <- names(ras_o2_molm3_mean) <-
+names(ras_chl_mgm3_meansubsd) <- names(ras_arag_sat_mean) <- ras_layer_names
+# Check rasters
+env_ras_check <- compareRaster(eezs, ras_sst_c_min, ras_sst_c_max, ras_sal_psu_mean, ras_o2_molm3_mean, ras_chl_mgm3_meansubsd, ras_arag_sat_mean)
+if(env_ras_check==F){print("EEZ and climate forecast rasters DO NOT have the same projection, extent, and resolution.")}
+# 1. Extract parameters
+####################################
+# Growth and harvest parameters
+spp <- species$species
+type <- species$type
+linf_cm <- species$linf_cm
+k <- species$k
+harvest_cm <- species$harvest_cm
+harvest_g <- species$harvest_g
+harvest_yr <- species$harvest_yr
+a <- species$a
+b <- species$b
+fcr <- species$fcr
+price_usd_mt <- species$price_usd_mt_isscaap
+print(spp)
+sst_c_min <- species$sst_c_min
+sst_c_max <- species$sst_c_max
+sal_psu_min <- species$sal_psu_min
+sal_psu_max <- species$sal_psu_max
+if(type=="Finfish"){
+o2_molm3_min <- 0.2757
+chl_mgm3_meansubsd_min <- NA
+arag_sat_min <- NA
+}
+if(type=="Bivalve"){
+o2_molm3_min <- 0.1244
+chl_mgm3_meansubsd_min <- 0.4
+arag_sat_min <- 1
+}
+if(type=="Finfish"){
+# Finfish farm design
+farm_design <- tibble(type="finfish",
+area_sqkm=1,
+ncages=24,
+cage_vol_m3=9000,
+juv_m3=20) %>%
+mutate(nstocked=ncages * cage_vol_m3 * juv_m3)
+}
+# Bivalve farm design
+if(type=="Bivalve"){
+farm_design <- tibble(type="bivalve",
+area_sqkm=1,
+nlines=100,
+line_m=4000,
+juv_ft=100) %>%
+mutate(line_ft=measurements::conv_unit(line_m, "m", "ft"),
+nstocked=nlines * line_ft * juv_ft)
+}
+# Calculate yield per year (kg/yr) for 1 sqkm farm
+farm_kg_yr <- harvest_g/1000 * farm_design$nstocked / harvest_yr
+farm_mt_yr <- farm_kg_yr / 1000
+yrs_available <- as.numeric(ras_layer_names)
+yrs_do_indices <- which(yrs_available %in% years)
+# Viable cells
+print("... identifying viable cells")
+sst_c_mask <- ras_sst_c_min[[yrs_do_indices]] >= sst_c_min & ras_sst_c_max[[yrs_do_indices]] <= sst_c_max
+sal_psu_mask <- ras_sal_psu_mean[[yrs_do_indices]] >= sal_psu_min & ras_sal_psu_mean[[yrs_do_indices]] <= sal_psu_max
+# Bivalve
+if(type=="Bivalve"){
+o2_molm3_mask <- ras_o2_molm3_mean[[yrs_do_indices]] >= o2_molm3_min
+chl_mgm3_meansubsd_mask <- ras_chl_mgm3_meansubsd[[yrs_do_indices]] >= chl_mgm3_meansubsd_min
+arag_sat_mask <- ras_arag_sat_mean[[yrs_do_indices]] >= arag_sat_min
+vcells <- eez_mask * sst_c_mask * sal_psu_mask * o2_molm3_mask * chl_mgm3_meansubsd_mask * arag_sat_mask
+NAvalue(vcells) <- 0
+}
+# Finfish
+if(type=="Finfish"){
+o2_molm3_mask <- o2_molm3_mean[[yrs_do_indices]] >= o2_molm3_min
+vcells <- eez_mask * sst_c_mask * sal_psu_mask * o2_molm3_mask
+NAvalue(vcells) <- 0
+}
+o2_molm3_mask <- ras_o2_molm3_mean[[yrs_do_indices]] >= o2_molm3_min
+vcells <- eez_mask * sst_c_mask * sal_psu_mask * o2_molm3_mask
+NAvalue(vcells) <- 0
+plot(vcells[[1]], main="Suitable cells")
+plot(sst_c_mask[[1]], main="SST mask")
+plot(sal_psu_mask[[1]], main="Salinity mask")
+plot(o2_molm3_mask[[1]], main="Oxygen mask")
+plot(chl_mgm3_meansubsd_mask[[1]], main="Chlorophyll mask")
+# Read EEZs
+eezdir <- "data/eezs"
+eezs <- raster(file.path(eezdir, "eezs_v10_raster_10km.tif"))
+eez_key <- read.csv(file.path(eezdir, "eezs_v10_key.csv"), as.is=T)
+# Build EEZ mask
+eez_mask <- eezs
+eez_mask[!is.na(eez_mask)] <- 1
+# Read climate forecasts
+climatedir <- "data/climate/data/gfdl/GFDL-ESM2G/4rasters_scaled"
+ras_sst_c_min <- raster::brick(file.path(climatedir, paste0("GFDL_ESM2M_", rcp, "_tos_degC_annual_min_scaled.tif")))
+ras_sst_c_max <- raster::brick(file.path(climatedir, paste0("GFDL_ESM2M_", rcp, "_tos_degC_annual_max_scaled.tif")))
+ras_sal_psu_mean <- raster::brick(file.path(climatedir, paste0("GFDL_ESM2M_", rcp, "_so_psu_annual_mean_scaled.tif")))
+ras_o2_molm3_mean <- raster::brick(file.path(climatedir, paste0("GFDL_ESM2M_", rcp, "_o2_mol_m3_annual_mean_scaled.tif")))
+ras_chl_mgm3_meansubsd <- raster::brick(file.path(climatedir, paste0("GFDL_ESM2M_", rcp, "_chl_mg_m3_annual_mean_minus_sd_scaled.tif")))
+ras_arag_sat_mean <- raster::brick(file.path(climatedir, paste0("GFDL_ESM2M_", rcp, "_arag_sat_annual_mean_scaled.tif")))
+ras_layer_names <- readRDS(file.path(climatedir, "GFDL_ESM2M_rcp85_arag_sat_annual_mean_scaled_layer_names.rds"))
+# Add raster layer names
+names(ras_sst_c_min) <- names(ras_sst_c_max) <- names(ras_sal_psu_mean) <- names(ras_o2_molm3_mean) <-
+names(ras_chl_mgm3_meansubsd) <- names(ras_arag_sat_mean) <- ras_layer_names
+# Check rasters
+env_ras_check <- compareRaster(eezs, ras_sst_c_min, ras_sst_c_max, ras_sal_psu_mean, ras_o2_molm3_mean, ras_chl_mgm3_meansubsd, ras_arag_sat_mean)
+if(env_ras_check==F){print("EEZ and climate forecast rasters DO NOT have the same projection, extent, and resolution.")}
+# 1. Extract parameters
+####################################
+# Growth and harvest parameters
+spp <- species$species
+type <- species$type
+linf_cm <- species$linf_cm
+k <- species$k
+harvest_cm <- species$harvest_cm
+harvest_g <- species$harvest_g
+harvest_yr <- species$harvest_yr
+a <- species$a
+b <- species$b
+fcr <- species$fcr
+price_usd_mt <- species$price_usd_mt_isscaap
+print(spp)
+# Environmental tolerance parameters
+sst_c_min <- species$sst_c_min
+sst_c_max <- species$sst_c_max
+sal_psu_min <- species$sal_psu_min
+sal_psu_max <- species$sal_psu_max
+if(type=="Finfish"){
+o2_molm3_min <- 0.1378
+chl_mgm3_meansubsd_min <- NA
+arag_sat_min <- NA
+}
+if(type=="Bivalve"){
+o2_molm3_min <- 0.0622
+chl_mgm3_meansubsd_min <- 0.4
+arag_sat_min <- 1
+}
+# 2. Calculate harvest/sqkm/yr
+####################################
+# Finfish farm design
+if(type=="Finfish"){
+# Finfish farm design
+farm_design <- tibble(type="finfish",
+area_sqkm=1,
+ncages=24,
+cage_vol_m3=9000,
+juv_m3=20) %>%
+mutate(nstocked=ncages * cage_vol_m3 * juv_m3)
+}
+# Bivalve farm design
+if(type=="Bivalve"){
+farm_design <- tibble(type="bivalve",
+area_sqkm=1,
+nlines=100,
+line_m=4000,
+juv_ft=100) %>%
+mutate(line_ft=measurements::conv_unit(line_m, "m", "ft"),
+nstocked=nlines * line_ft * juv_ft)
+}
+# Calculate yield per year (kg/yr) for 1 sqkm farm
+farm_kg_yr <- harvest_g/1000 * farm_design$nstocked / harvest_yr
+farm_mt_yr <- farm_kg_yr / 1000
+# 3. Identify viable cells
+####################################
+# Years to evaluate
+yrs_available <- as.numeric(ras_layer_names)
+yrs_do_indices <- which(yrs_available %in% years)
+# Viable cells
+print("... identifying viable cells")
+sst_c_mask <- ras_sst_c_min[[yrs_do_indices]] >= sst_c_min & ras_sst_c_max[[yrs_do_indices]] <= sst_c_max
+sal_psu_mask <- ras_sal_psu_mean[[yrs_do_indices]] >= sal_psu_min & ras_sal_psu_mean[[yrs_do_indices]] <= sal_psu_max
+# Bivalve
+if(type=="Bivalve"){
+o2_molm3_mask <- ras_o2_molm3_mean[[yrs_do_indices]] >= o2_molm3_min
+chl_mgm3_meansubsd_mask <- ras_chl_mgm3_meansubsd[[yrs_do_indices]] >= chl_mgm3_meansubsd_min
+arag_sat_mask <- ras_arag_sat_mean[[yrs_do_indices]] >= arag_sat_min
+vcells <- eez_mask * sst_c_mask * sal_psu_mask * o2_molm3_mask * chl_mgm3_meansubsd_mask * arag_sat_mask
+NAvalue(vcells) <- 0
+}
+# Finfish
+if(type=="Finfish"){
+o2_molm3_mask <- ras_o2_molm3_mean[[yrs_do_indices]] >= o2_molm3_min
+vcells <- eez_mask * sst_c_mask * sal_psu_mask * o2_molm3_mask
+NAvalue(vcells) <- 0
+}
+plot(vcells[[1]], main="Suitable cells")
+spp
+# Clear workspace
+rm(list = ls())
+# Setup
+################################################################################
+# Packages
+library(raster)
+library(ggplot2)
+library(tidyverse)
+# Directories
+codedir <- "code"
+sppdir <- "data/species/data"
+outputdir <- "output/raw"
+# Read aquacast function
+source(file.path(codedir, "aquacast.R"))
+source(file.path(codedir, "calc_costs.R"))
+# Read species data
+load(file.path(sppdir, "aquaculture_species_key.Rdata"))
+# Setup for testing
+################################################################################
+# Check error in following species:
+# Crassostrea rhizophorae, Crassostrea tulipa, Crassostrea virginica, Ostrea chilensis:  Error in value[j, ] : incorrect number of dimensions
+# Format data
+data <- data %>%
+mutate(type=recode(class,
+"Bivalvia"="Bivalve",
+"Actinopterygii"="Finfish"))
+# Loop through species and run model
+i <- 1
+for(i in 1:nrow(data)){
+# for(i in 1:nrow(bivalves)){
+# Parameters
+species <- data[i,]
+# years <- 2021
+years <- c(2021, 2051, 2100)
+# Forecast aquaculture potential
+output <- aquacast(species=species, years=years, rcp="rcp85", outdir=outputdir, plot=T)
+}
+# Clear
+rm(list = ls())
+# Setup
+#####################################################################################
+# Packages
+library(sf)
+library(rgeos)
+library(raster)
+library(tidyverse)
+library(ggplot2)
+library(rnaturalearth)
+library(rnaturalearthdata)
+library(fasterize)
+# Directories
+tempdir <- "data/template"
+costdir <-  "data/costs/data"
+eezdir <- "data/eezs"
+# Read raster template
+ras_temp <- raster(file.path(tempdir, "world_raster_template_10km.tif"))
+values(ras_temp) <- 1:ncell(ras_temp)
+# Read EEZ raster and key
+eezs <- raster(file.path(eezdir, "eezs_v10_raster_10km.tif"))
+eezs_sf <- readRDS(file.path(eezdir, "eezs_v10_polygons.Rds"))
+eez_key <- read.csv(file.path(eezdir, "eezs_v10_key.csv"), as.is=T)
+compareRaster(eezs, ras_temp)
+# Get coastline
+# coast1 <- rnaturalearth::ne_coastline(scale="small", returnclass="sf") %>% sf::st_transform(crs(ras_temp)) %>% sf::as_Spatial() # most coarse
+# coast2 <- rnaturalearth::ne_coastline(scale="medium", returnclass="sf") %>% sf::st_transform(crs(ras_temp))
+# coast3 <- rnaturalearth::ne_coastline(scale="large", returnclass="sf") %>% sf::st_transform(crs(ras_temp)) # most detailed
+# Get most countries
+most <- rnaturalearth::ne_countries(scale="large", returnclass="sf") %>% sf::st_transform(crs(ras_temp))
+most <- rnaturalearth::ne_countries(scale="large", returnclass="sf") %>% sf::st_transform(crs(ras_temp))
+# Get and buffer tiny countries
+tiny <- rnaturalearth::ne_countries(type="tiny_countries", returnclass="sf") %>% sf::st_transform(crs(ras_temp))
+tiny_2km <- sf::st_buffer(tiny, dist=2000) %>%
+sf::st_cast("MULTIPOLYGON")
+# Merge
+land <- rbind(most %>% select(iso_a3, geometry), tiny_2km %>% select(iso_a3, geometry))
+?rasterize
+land_ras <- rasterize(x=land, y=ras_temp, background=NA, getCover=T)
+# Distance from land
+cdist_m <- raster::distance(land_ras)
+cdist_km <- cdist_m / 1000
+# Plot distance from land
+plot(cdist_km)
+# Check against template raster
+compareRaster(cdist_km, ras_temp)
+land_ras
+hist(land_ras)
+table(getValues(land_ras))
+reclassify
+?reclassify
+land_ras_rec <- reclassify(land_ras, rcl=matrix(data=c(0,1,1), ncol=3))
+land_ras_rec
+table(getValues(land_ras_rec))
+NAvalue(land_ras_rec)
+land_ras_rec[land_ras_rec==0] <- NA
+# Distance from land
+cdist_m <- raster::distance(land_ras)
+cdist_km <- cdist_m / 1000
+# Plot distance from land
+plot(cdist_km)
+land_ras_rec[land_ras_rec==0]
+land_ras_rec <- reclassify(land_ras, rcl=matrix(data=c(0,1,1), ncol=3))
+land_ras_rec[land_ras_rec==0]
+land_ras_rec[land_ras_rec==0] <- NA
+# Distance from land
+cdist_m <- raster::distance(land_ras_rec)
+cdist_km <- cdist_m / 1000
+# Plot distance from land
+plot(cdist_km)
+# Check against template raster
+compareRaster(cdist_km, ras_temp)
+# Export
+writeRaster(cdist_km, filename=file.path(costdir, "dist_to_coast_km_10km_inhouse.grd"), format="raster", overwrite=T)
+# Setup
+#####################################################################################
+# Packages
+library(raster)
+library(tidyverse)
+library(countrycode)
+library(rnaturalearth)
+# Directories
+eezdir <- "data/eezs"
+tempdir <- "data/template"
+costdir <- "data/costs/data"
+plotdir <- "data/costs/figures"
+# Read raster template
+ras_temp <- raster(file.path(tempdir, "world_raster_template_10km.tif"))
+# Read EEZ raster and key
+eezs <- raster(file.path(eezdir, "eezs_v10_raster_10km.tif"))
+eezs_sf <- readRDS(file.path(eezdir, "eezs_v10_polygons.Rds"))
+eez_key <- read.csv(file.path(eezdir, "eezs_v10_key.csv"), as.is=T)
+compareRaster(eezs, ras_temp)
+# World layer
+world <- rnaturalearth::ne_countries(scale = "large", type = "countries", returnclass = "sf")
+# Distance to shore (m) raster
+cdist_km <- raster(file.path(costdir, "dist_to_coast_km_10km_inhouse.grd"))
+# WB data
+wb_costs <- read.csv(file.path(costdir, "eez_wb_diesel_income_costs.csv"), as.is=T)
+# Number of farms per cell
+#####################################################################################
+# Number of farms per cells
+cell_sqkm <- prod(res(eezs)/1000)
+nfarms <- cell_sqkm
+# 1. Calculate fuel costs
+#####################################################################################
+# Fuel cost parameters
+# From Lester et al. 2018
+vessel_n <- 2
+vessel_lph <- 60.6 # vessel fuel efficiency, liters per hour (from 16 g/hr in Lester et al. 2018)
+vessel_kmh <- 12.9 # vessel speed, km per hour (from 8 mph in Lester et al. 2018)
+vessel_trips_yr <- 416 # two identical vessels - one making 5 trips/week and the other 3 trips/week (from Lester et al. 2018)
+# Create fuel price raster
+fuel_usd_l_ras <- reclassify(eezs, rcl=select(wb_costs, eez_code, diesel_usd_l))
+# plot(fuel_usd_l_ras)
+# Fuel cost raster
+fuel_usd_yr_farm <- (2 * cdist_km) / vessel_kmh * vessel_lph * fuel_usd_l_ras * vessel_trips_yr
+# Quick plot
+plot(fuel_usd_yr_farm/1e6, main="Annual fuel cost per farm (USD millions)", xaxt="n", yaxt="n",
+col=freeR::colorpal(rev(RColorBrewer::brewer.pal(n=9, name="RdYlBu")), 50))
+# Export data
+writeRaster(fuel_usd_yr_farm, file.path(costdir, "fuel_cost_per_farm.tif"), overwrite=T)
+# Labor cost parameters
+# From Lester et al. 2018
+worker_n <- 8 # 8 workers per farm
+worker_hrs <- 2080 # 40 hour weeks x 52 weeks / year = 2080 hours / year (does not include transport time)
+# Create wages raster
+wb_costs$wages_usd_hr <- wb_costs$income_usd_yr / worker_hrs
+wages_usd_hr_ras <- reclassify(eezs, rcl=select(wb_costs, eez_code, wages_usd_hr))
+# Quick plot
+plot(wages_usd_hr_ras, main="Worker wages (USD per hour)", xaxt="n", yaxt="n",
+col=freeR::colorpal(RColorBrewer::brewer.pal(n=9, name="RdYlBu"), 50))
+# Calculate number of transit hours
+transit_hrs_ras <- (2 * cdist_km) / vessel_kmh * vessel_trips_yr
+# Calculate annnual wage cost per farm
+wages_usd_yr_farm <- wages_usd_hr_ras * worker_n * (worker_hrs + transit_hrs_ras)
+# Quick plot
+plot(wages_usd_yr_farm/1e6, main="Annual wage cost per farm (USD millions)", xaxt="n", yaxt="n",
+col=freeR::colorpal(rev(RColorBrewer::brewer.pal(n=9, name="RdYlBu")), 50))

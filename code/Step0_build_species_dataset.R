@@ -22,9 +22,32 @@ spp_lh <- read.csv(file.path(sppdir, "aquaculture_species_lh_data.csv"), as.is=T
 spp_env <- readRDS(file.path(aqmapdir, "aquamaps_environmental_preferences.Rds"))
 feed_key <- read.csv(file.path(feeddir, "Tacon_Metian_group_fcrs_and_fmfo_feed_percs.csv"), as.is=T)
 
+
+# Parameters
+################################################################################
+
 # Harvest size as a proportion of linf
 linf2harv_b <- 0.67
 linf2harv_f <- 0.52
+
+# Finfish farm design
+ncages <- 24
+cage_m3 <- 9000
+tot_cage_m3 <- ncages * cage_m3
+fish_harv_kg_m3 <- 15
+big_fish_linf_cm <- 140
+big_fish_harv_kg_m3 <- 5 # finfish with Linf > 140 cm
+
+# Bivalve farm design
+nlines <- 100
+line_m <- 4000
+line_ft=measurements::conv_unit(line_m, "m", "ft")
+bivalve_harv_cm_ft <- 100*4 # 100 4-cm per foot = 400 cm per foot / 8 cm bivalves = 50 bivalves
+
+# Edible meat conversions
+live2edible_biv <- 0.17
+live2edible_fin <- 0.87
+
 
 # Merge data
 ################################################################################
@@ -37,6 +60,9 @@ plot(spp_lh$linf_cm_fb_spp, spp_lh$linf_cm_gentry)
 
 # Format life history data
 data1 <- spp_lh %>% 
+  # Add type column
+  mutate(type=recode(class, "Actinopterygii"="Finfish", "Bivalvia"="Bivalve")) %>% 
+  select(type, everything()) %>% 
   # Update missing common names
   mutate(comm_name=ifelse(species=="Oplegnathus fasciatus", "Striped beakfish", comm_name)) %>% 
   # Finalize LW parameters
@@ -109,7 +135,9 @@ data1 <- spp_lh %>%
   # Add feed info
   left_join(feed_key, by="feed_group") %>% 
   # Calculate harvest size (cm and g) and time to harvest (yr)
-  mutate(harvest_linf_prop = ifelse(class=="Actinopterygii", linf2harv_f, linf2harv_b),
+  mutate(harvest_kg_m3 = ifelse(class=="Bivalvia", NA,
+                                ifelse(linf_cm >= big_fish_linf_cm, big_fish_harv_kg_m3, fish_harv_kg_m3)),
+         harvest_linf_prop = ifelse(type=="Finfish", linf2harv_f, linf2harv_b),
          harvest_cm = linf_cm * harvest_linf_prop,
          harvest_g = a * harvest_cm ^ b,
          harvest_yr = -log(1 - harvest_cm / linf_cm) / k) %>% 
@@ -118,10 +146,32 @@ data1 <- spp_lh %>%
   group_by(isscaap) %>% 
   rename(price_usd_mt_spp=price_usd_mt) %>% 
   mutate(price_usd_mt_isscaap=mean(price_usd_mt_spp, na.rm=T)) %>%
-  ungroup()
+  ungroup() %>% 
+  # Calculate harvest statistics
+  mutate(fish_juv_m3=harvest_kg_m3*1000/harvest_g,
+         harvest_cm_ft=bivalve_harv_cm_ft, 
+         bivalve_juv_ft=ifelse(type=="Bivalve", harvest_cm_ft/harvest_cm, NA),
+         nstocked=ifelse(type=="Bivalve", 
+                         bivalve_juv_ft*line_ft*nlines,
+                         tot_cage_m3*fish_juv_m3),
+         prod_mt_yr=nstocked*harvest_g/1000/1000/harvest_yr,
+         edible_mt_yr=ifelse(type=="Bivalve", prod_mt_yr*live2edible_biv, prod_mt_yr*live2edible_fin),
+         revenue_usd_yr=prod_mt_yr*price_usd_mt_isscaap)
 
 # Inspect
 freeR::complete(data1)
+
+# Make sure you calculated number of stocks individuals correctly
+nstocked_check_finfish <- data1 %>% 
+  filter(type=="Finfish") %>% 
+  select(species, harvest_kg_m3, nstocked, harvest_g) %>% 
+  mutate(harvest_kg_m3_check=nstocked*harvest_g/1000/tot_cage_m3) 
+
+# Make sure you calculated number of stocks individuals correctly
+nstocked_check_bivalves <- data1 %>% 
+  filter(type=="Bivalve") %>% 
+  select(species, nstocked, harvest_cm) %>% 
+  mutate(harvest_cm_ft_check=nstocked*harvest_cm/(nlines*line_ft)) 
 
 # Build AquaMaps environmental tolerances
 spp_temp <- spp_env %>% 
@@ -147,8 +197,10 @@ data_full <- data1 %>%
   # Arrange columns
   select(class:comm_name, # taxonomy
          fao, gentry, # inclusion source
-         feed_group:fmfo_perc, # harvest parameters
-         harvest_linf_prop:harvest_yr, # more harvest parameters
+         feed_group:fmfo_perc, # feed parameters
+         harvest_kg_m3, harvest_cm_ft, fish_juv_m3, bivalve_juv_ft, nstocked,  # stocking parameters
+         harvest_linf_prop:harvest_yr, # harvest size parameters
+         prod_mt_yr, edible_mt_yr, revenue_usd_yr, # harvest production parameters
          price_usd_mt_isscaap, price_usd_mt_spp, # prices
          a_spp:b_source, # LW parameters
          linf_cm_fl:k_gentry, linf_cm:k_source, # Von B parameters
@@ -167,8 +219,10 @@ data <- data_full %>%
   # Reduce columns
   select(class:comm_name, # taxonomy
          fao, gentry, # inclusion source
-         feed_group:fmfo_perc, # harvest parameters
-         harvest_linf_prop:harvest_yr, # more harvest parameters
+         feed_group:fmfo_perc, # feed parameters
+         harvest_kg_m3:nstocked, # stocking parameters
+         harvest_linf_prop:harvest_yr, # harvest size parameters
+         prod_mt_yr:revenue_usd_yr, # harvest production parameters
          price_usd_mt_isscaap, price_usd_mt_spp, # prices
          a, a_source, b, b_source,
          linf_cm, linf_source, k, k_source, 

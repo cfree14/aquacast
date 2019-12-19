@@ -22,56 +22,117 @@ plotdir <- "figures"
 load(file.path(datadir, "aquaculture_species_key.Rdata"))
 load(file.path(feeddir, "Tacon_Metian_2008_and_2015_fcr_fmfo_data.Rdata"))
 
-# Plot data
+
+# Build data
 ################################################################################
 
 # Feed groups in analysis
 feed_groups <- sort(unique(data$feed_group))
 
-# FCR trend from Tacon & Metian 2015 (Table 1)
-# FM/FO trend from Tacon & Metian 2008 (Table 4)
+# Merge T&M 2015 Table 1 and T&M 2008 Table 4
 
-# Format FCR time series
-fcr_ts <- tm15_t1 %>% 
-  rename(feed_group=group, value=fcr) %>% 
-  mutate(parameter="FCR",
-         reference="Tacon & Metian 2015") %>% 
-  select(reference, feed_group, year, parameter, value)
+# Groups
+sort(unique(tm08_t4$group))
+sort(unique(tm15_t1$group))
 
-# Format FM/FO time series
-fmfo_ts <- tm08_t4 %>% 
-  rename(reference=source, parameter=ingredient, feed_group=group) %>% 
-  select(reference, feed_group, year, parameter, value)
+# T&M 2008 Table 4
+tm08_t4_format <- tm08_t4 %>% 
+  spread(key="ingredient", value="value") %>% 
+  rename(fmfo_perc_source=source, fo_perc="Fish oil", fm_perc="Fishmeal") %>% 
+  select(group, year, fm_perc, fo_perc, fmfo_perc_source) %>% 
+  mutate(group=recode(group, 
+                      "Chinese carp species"="Chinese fed carps",
+                      "Milkfish (Chanos chanos)"="Milkfish"))
 
-# Merge time series
-param_ts <- rbind(fcr_ts, fmfo_ts) %>% 
-  mutate(feed_group=recode(feed_group, 
-                           "Catfishes"="Catfish",
-                           "Chinese carp species"="Chinese fed carps",
-                           "Freshwater fish"="Misc freshwater fish",
-                           "Marine fish"="Misc marine fish",
-                           "Milkfish (Chanos chanos)"="Milkfish",
-                           "Other freshwater & diadromous fishes"="Misc freshwater fish")) %>% 
-  filter(feed_group %in% feed_groups)
+# T&M 2015 Table 1
+tm15_t1_format <- tm15_t1 %>% 
+  select(group, year, percent_fed, fcr) %>% 
+  mutate(group=recode(group, 
+                      "Catfishes"="Catfish",
+                      "Other freshwater & diadromous fishes"="Freshwater fish"),
+         fcr_source="Tacon & Metian 2015") %>% 
+  select(group, year, percent_fed, fcr, fcr_source)
+  
+# Merge data
+fdata_wide <- tm15_t1_format %>% 
+  full_join(tm08_t4_format) %>% 
+  arrange(group, year) %>% 
+  mutate(fifo=fcr * ( (fm_perc/100+fo_perc/100) / (0.224 + 0.0485) ) )
+  
+
+# Convert to long for plotting
+fdata_long <- fdata_wide %>% 
+  # Remove columns
+  select(-c(fcr_source, fmfo_perc_source)) %>% 
+  # Convert wide to long
+  gather(key="parameter", value="value", 3:ncol(.)) %>% 
+  # Format groups
+  mutate(group=recode(group, 
+                      "Freshwater fish"="Misc freshwater fish",
+                      "Marine fish"="Misc marine fish")) %>% 
+  filter(group %in% feed_groups) %>% 
+  # Format parameter names
+  mutate(parameter_label=recode(parameter, 
+                          "fcr"="Feed conversion\nrate (FCR)",
+                          "fifo"="Fish In, Fish Out\n(FIFO) ratio",
+                          "fm_perc"="Percentage of feed\ncomposed of fishmeal (%)",
+                          "fo_perc"="Percentage of feed\ncomposed of fish oil (%)", 
+                          "percent_fed"="Percentage of\nproduction fed"),
+         parameter_label=factor(parameter_label, levels=c("Percentage of\nproduction fed",
+                                              "Fish In, Fish Out\n(FIFO) ratio", 
+                                              "Feed conversion\nrate (FCR)",
+                                              "Percentage of feed\ncomposed of fishmeal (%)",
+                                              "Percentage of feed\ncomposed of fish oil (%)"))) %>% 
+  # Format values
+  mutate(value_label=ifelse(parameter %in% c("fcr", "fifo"), round(value,2), paste0(round(value,2), "%"))) %>% 
+  # Remove NA values
+  filter(!is.na(value))
+
+# End point
+ts_end <- fdata_long %>% 
+  group_by(group, parameter) %>% 
+  filter(year==max(year))
+
+# Subset FIFO time series
+fifo <- fdata_long %>% 
+  filter(parameter=="fifo")
+
+
+# Plot data
+################################################################################
 
 # Setup theme
-my_theme <- theme(axis.text=element_text(size=7),
-                  axis.title=element_text(size=9),
-                  plot.title=element_text(size=11),
+my_theme <- theme(axis.text=element_text(size=5),
+                  # axis.title=element_text(size=9),
+                  strip.text = element_text(size=5),
                   panel.grid.major = element_blank(), 
                   panel.grid.minor = element_blank(),
                   panel.background = element_blank(), 
+                  axis.title = element_blank(),
                   axis.line = element_line(colour = "black"),
-                  axis.text.x = element_text(angle = 90, hjust = 0.5) )
+                  axis.text.x = element_text(angle = 90, hjust = 0.5))
 
 # Plot
-g <- ggplot(param_ts, aes(x=year, y=value)) +
-  geom_line() +
-  facet_grid(parameter ~ feed_group, scales="free") +
-  labs(x="", y="Value") +
-  theme_bw() + my_theme
-g
+g <- ggplot(fdata_long, aes(x=year, y=value, color=parameter_label)) +
+  # Facetting
+  facet_grid(parameter_label ~ group, scales="free") +
+  # Trend lines
+  geom_line(lwd=0.3) +
+  # Add and label end points
+  geom_point(data=ts_end, mapping=aes(x=year, y=value), size=0.8) +
+  ggrepel::geom_text_repel(data=ts_end, mapping=aes(x=year, y=value, label=value_label), size=2) +
+  # Horizontal line in FIFO
+  geom_hline(data = fifo, aes(yintercept = 1), linetype="dotted", color="grey70") +
+  # Small things
+  labs(x="", y="") +
+  # xlim(c(1995, 2025)) +
+  scale_x_continuous(breaks=seq(1995,2025,5)) +
+  theme_bw() + my_theme +
+  theme(legend.position = "none")
+g  
 
 # Export figure
 ggsave(g, filename=file.path(plotdir, "figure_fcr_fmfo_trends.png"), 
-       width=6.5, height=4.5, units="in", dpi=600)
+       width=6.5, height=5.5, units="in", dpi=600)
+
+

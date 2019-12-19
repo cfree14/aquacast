@@ -58,19 +58,17 @@ fuel_usd_l_ras <- reclassify(eezs, rcl=select(wb_costs, eez_code, diesel_usd_l))
 # Fuel cost raster
 fuel_usd_yr_farm <- (2 * cdist_km) / vessel_kmh * vessel_lph * fuel_usd_l_ras * vessel_trips_yr
 
-# Quick plot
-plot(fuel_usd_yr_farm/1e6, main="Annual fuel cost per farm (USD millions)", xaxt="n", yaxt="n", 
-     col=freeR::colorpal(rev(RColorBrewer::brewer.pal(n=9, name="RdYlBu")), 50))
-
-# Nicer plot
-# fuel_usd_yr_df <- as.data.frame(fuel_usd_yr_ras, xy=T)
-# g <- ggplot(fuel_usd_yr_df, aes(x=x, y=y, fill=layer/1e6)) +
-#   geom_raster() +
-#   labs(x="", y="") +
-#   scale_fill_gradientn(name="Annual fuel cost per farm\n(USD millions)", 
-#                        colors=RColorBrewer::brewer.pal(n=9, name="RdYlBu"), na.value=NA) +
-#   theme_bw()
-# g
+# Plot and export
+if(F){
+  
+  # Quick plot
+  plot(fuel_usd_yr_farm/1e6, main="Annual fuel cost per farm (USD millions)", xaxt="n", yaxt="n", 
+       col=freeR::colorpal(rev(RColorBrewer::brewer.pal(n=9, name="RdYlBu")), 50))
+  
+  # Export data
+  writeRaster(fuel_usd_yr_farm, file.path(costdir, "fuel_cost_per_farm.tif"), overwrite=T)
+  
+}
 
 
 # 2. Calculate wage costs
@@ -86,8 +84,8 @@ wb_costs$wages_usd_hr <- wb_costs$income_usd_yr / worker_hrs
 wages_usd_hr_ras <- reclassify(eezs, rcl=select(wb_costs, eez_code, wages_usd_hr))
 
 # Quick plot
-plot(wages_usd_hr_ras, main="Worker wages (USD per hour)", xaxt="n", yaxt="n",
-     col=freeR::colorpal(RColorBrewer::brewer.pal(n=9, name="RdYlBu"), 50))
+# plot(wages_usd_hr_ras, main="Worker wages (USD per hour)", xaxt="n", yaxt="n",
+#      col=freeR::colorpal(RColorBrewer::brewer.pal(n=9, name="RdYlBu"), 50))
 
 # Calculate number of transit hours
 transit_hrs_ras <- (2 * cdist_km) / vessel_kmh * vessel_trips_yr
@@ -95,9 +93,17 @@ transit_hrs_ras <- (2 * cdist_km) / vessel_kmh * vessel_trips_yr
 # Calculate annnual wage cost per farm
 wages_usd_yr_farm <- wages_usd_hr_ras * worker_n * (worker_hrs + transit_hrs_ras)
 
-# Quick plot
-plot(wages_usd_yr_farm/1e6, main="Annual wage cost per farm (USD millions)", xaxt="n", yaxt="n", 
-     col=freeR::colorpal(rev(RColorBrewer::brewer.pal(n=9, name="RdYlBu")), 50))
+# Plot and export
+if(F){
+  
+  # Quick plot
+  plot(wages_usd_yr_farm/1e6, main="Annual wage cost per farm (USD millions)", xaxt="n", yaxt="n", 
+       col=freeR::colorpal(rev(RColorBrewer::brewer.pal(n=9, name="RdYlBu")), 50))
+  
+  # Export data
+  writeRaster(wages_usd_yr_farm, file.path(costdir, "wage_cost_per_farm.tif"), overwrite=T)
+  
+}
 
 
 # Calculate variable costs
@@ -115,7 +121,7 @@ annuity <- function(c, r = 0.1, t = 10) {
 
 
 # Calculate capital costs
-calc_cap_costs <- function(farm_design){
+calc_cap_costs <- function(farm_design, harvest_yr){
   
   # Bivalve farms
   if(farm_design$type=="bivalve"){
@@ -143,18 +149,20 @@ calc_cap_costs <- function(farm_design){
     cage_m3_tot <- cage_n * cage_m3
     
     # Fingerling costs
-    # Lifespand is determined by time to reach 35 cm so annuity happens below
-    juv_m3 <- farm_design$juv_m3
-    juv_farm <- juv_m3 * cage_m3_tot
-    usd_juv <- 0.85 # NOAA 2008
-    juv_cost <- juv_farm * usd_juv
+    # Amoretized over lifespan of juvenile (time to harvest)
+    juv_per_farm <- farm_design$nstocked
+    usd_per_juv <- 0.85 # NOAA 2008
+    juv_cost_yr <- annuity(c=(juv_per_farm*usd_per_juv), r=disc_rate, t=harvest_yr)
     
-    # Finfish capital costs
-    # From NOAA 2008
+    # Cage capital costs (NOAA 2008)
+    # Amoretized over life span of cages
     cage_usd_m3 <- 15
     cage_install_usd_m3 <- 3
     cage_life_yr <- 10
-    cap_cost_yr <- annuity(c=(cage_m3_tot*cage_usd_m3)+(cage_m3_tot*cage_install_usd_m3), r=disc_rate, t=cage_life_yr)
+    cage_cost_yr <- annuity(c=(cage_m3_tot*cage_usd_m3)+(cage_m3_tot*cage_install_usd_m3), r=disc_rate, t=cage_life_yr)
+    
+    # Total capital costs
+    cap_cost_yr <- cage_cost_yr + juv_cost_yr
     
   }
   
@@ -171,19 +179,20 @@ calc_oper_costs <- function(farm_design){
     # Finfish operating costs (NOAA 2008)
     cage_m3_tot <- farm_design$ncages * farm_design$cage_vol_m3
     cage_maintain_usd_m3_yr <- 1
+    cage_maintain_usd_yr <- cage_m3_tot * cage_maintain_usd_m3_yr
     vessel_usd_yr <- 100000
     onshore_usd_yr <- 150000
     insurance_usd_yr <- 50000
-    opp_cost_yr <- vessel_usd_yr + onshore_usd_yr + insurance_usd_yr + (cage_maintain_usd_m3_yr * cage_m3_tot)
+    opp_cost_yr <- vessel_usd_yr + onshore_usd_yr + insurance_usd_yr + cage_maintain_usd_yr
   }
   
   # Bivalve farms
   if(farm_design$type=="bivalve"){
     # Bivalve operating costs (NOAA 2008)
-    misc_supp_usd <- 1700
-    vessel_upkeep_usd <-  10000 + 5000
+    misc_supp_usd <- 1700 * farm_design$nlines
+    vessel_upkeep_usd <-  (10000 + 5000) * vessel_n
     onshore_usd <- 173000
-    opp_cost_yr <- misc_supp_usd + vessel_upkeep_usd * vessel_n + onshore_usd # total
+    opp_cost_yr <- misc_supp_usd + vessel_upkeep_usd + onshore_usd # total
   }
   
   # Return
@@ -194,13 +203,13 @@ calc_oper_costs <- function(farm_design){
 
 
 # Calculate cost of production
-calc_costs <- function(farm_design, prod_mt_yr, fcr, vcells){
+calc_costs <- function(farm_design, prod_mt_yr, fcr, vcells, harvest_yr){
   
   # Number of farms per cell
   nfarms <- prod(res(prod_mt_yr)/1000)
   
   # Calculate annualized capital costs per farm
-  cap_usd_yr_farm <- calc_cap_costs(farm_design)
+  cap_usd_yr_farm <- calc_cap_costs(farm_design, harvest_yr)
   
   # Calculate annual operating costs (not fuel, wages, or feed) per farm
   oper_usd_yr_farm <- calc_oper_costs(farm_design)
