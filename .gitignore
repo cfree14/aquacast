@@ -8,7 +8,7 @@
 # Important to analysis but large
 data/eezs/eezs_v10_polygons.Rds
 
-# Large climate data not used in analysis
+# Large climate data
 data/climate/data
 
 # Intermediate step in analysis but large
