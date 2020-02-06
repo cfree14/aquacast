@@ -203,10 +203,11 @@ calc_oper_costs <- function(farm_design){
 
 
 # Calculate cost of production
-calc_costs <- function(farm_design, prod_mt_yr, fcr, vcells, harvest_yr){
+calc_costs <- function(farm_design, cell_prod_mt_yr, fcr, vcells, harvest_yr){
   
   # Number of farms per cell
-  nfarms <- prod(res(prod_mt_yr)/1000)
+  cell_sqkm <- prod(res(vcells)) / (1000^2)
+  cell_nfarms <- cell_sqkm / farm_design$area_sqkm
   
   # Calculate annualized capital costs per farm
   cap_usd_yr_farm <- calc_cap_costs(farm_design, harvest_yr)
@@ -217,12 +218,19 @@ calc_costs <- function(farm_design, prod_mt_yr, fcr, vcells, harvest_yr){
   # Calculate annual feed cost for WHOLE CELL
   feed_usd_kg <- 2 # $/kg personal communication from Thomas et al. Caribbean mariculture paper
   feed_usd_mt <- feed_usd_kg * 1000
-  feed_mt_yr <- prod_mt_yr * fcr
+  feed_mt_yr <- cell_prod_mt_yr * fcr
   feed_usd_yr <- feed_mt_yr * feed_usd_mt
   
   # Calculate final costs
-  cost_yr <- nfarms * (cap_usd_yr_farm + fuel_usd_yr_farm + wages_usd_yr_farm + oper_usd_yr_farm) + feed_usd_yr 
-  cost_yr_masked <- mask(cost_yr, vcells, maskvalue=0)
+  cost_yr <- cell_nfarms * (cap_usd_yr_farm + fuel_usd_yr_farm + wages_usd_yr_farm + oper_usd_yr_farm) + feed_usd_yr 
+  cost_yr_masked <- mask(cost_yr, vcells, maskvalue=NA)
+  
+  # Confirmt that COST raster and SUITABILITY rasters have same number of values
+  suit_ncells <- colSums(getValues(vcells), na.rm=T)
+  cost_ncells <- colSums(!is.na(getValues(cost_yr_masked)))
+  if(sum(suit_ncells!=cost_ncells)!=0){
+    stop("The cost raster does not have the same number of cells as the viable raster.")
+  }
   
   # Return costs
   return(cost_yr_masked)

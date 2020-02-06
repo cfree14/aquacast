@@ -54,9 +54,9 @@ live2edible_fin <- 0.87
 
 # Compare Von B Linf sources
 # Family is definitely a last resort -- Gentry is probably second to FB species
-plot(spp_lh$linf_cm_fb_spp, spp_lh$linf_cm_fb_gen)
-plot(spp_lh$linf_cm_fb_spp, spp_lh$linf_cm_fb_fam)
-plot(spp_lh$linf_cm_fb_spp, spp_lh$linf_cm_gentry)
+# plot(spp_lh$linf_cm_fb_spp, spp_lh$linf_cm_fb_gen)
+# plot(spp_lh$linf_cm_fb_spp, spp_lh$linf_cm_fb_fam)
+# plot(spp_lh$linf_cm_fb_spp, spp_lh$linf_cm_gentry)
 
 # Format life history data
 data1 <- spp_lh %>% 
@@ -196,7 +196,7 @@ data_full <- data1 %>%
   rename(sst_c_min_froehlich=temp_c_min, sst_c_max_froehlich=temp_c_max) %>% 
   # Arrange columns
   select(class:comm_name, # taxonomy
-         fao, gentry, # inclusion source
+         gentry, fao, fao_rank, fao_mt_yr, # inclusion source
          feed_group:fmfo_perc, # feed parameters
          harvest_kg_m3, harvest_cm_ft, fish_juv_m3, bivalve_juv_ft, nstocked,  # stocking parameters
          harvest_linf_prop:harvest_yr, # harvest size parameters
@@ -218,7 +218,7 @@ freeR::complete(data_full)
 data <- data_full %>% 
   # Reduce columns
   select(class:comm_name, # taxonomy
-         fao, gentry, # inclusion source
+         gentry, fao, fao_rank, fao_mt_yr, # inclusion source
          feed_group:fmfo_perc, # feed parameters
          harvest_kg_m3:nstocked, # stocking parameters
          harvest_linf_prop:harvest_yr, # harvest size parameters

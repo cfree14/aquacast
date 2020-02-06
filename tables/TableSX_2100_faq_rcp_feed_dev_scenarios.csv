@@ -1,0 +1,33 @@
+"feed_scen","dev_pattern","rcp","area_sqkm_t","prod_mt_ml","profits_usd_bil"
+"Business-as-usual","Current development","RCP 2.6",4.7,7.95781919946709,39.999827543299
+"Business-as-usual","Current development","RCP 4.5",4.6,7.84946844706129,39.0384590893333
+"Business-as-usual","Current development","RCP 6.0",4.6,7.14971677027255,34.2024700282843
+"Business-as-usual","Current development","RCP 8.5",3.9,6.4628147085957,29.6398642365328
+"Business-as-usual","Equal development","RCP 2.6",5.5,8.92321221755876,51.2144213709208
+"Business-as-usual","Equal development","RCP 4.5",5.3,8.5987317732839,49.3105015363419
+"Business-as-usual","Equal development","RCP 6.0",5,8.1120111068716,46.2691211764735
+"Business-as-usual","Equal development","RCP 8.5",4.5,7.30080999618444,40.6004422940261
+"Business-as-usual","Need-based development","RCP 2.6",3.1,5.02944688626039,28.6553501399735
+"Business-as-usual","Need-based development","RCP 4.5",2.8,4.5427262198481,25.8677423241051
+"Business-as-usual","Need-based development","RCP 6.0",2.7,4.26025124694228,21.1976123072306
+"Business-as-usual","Need-based development","RCP 8.5",2.2,3.72330297777742,17.9203817079613
+"Business-as-usual","Rational development","RCP 2.6",5.5,8.92321221755876,51.3286037709208
+"Business-as-usual","Rational development","RCP 4.5",5.3,8.5987317732839,49.4621124803419
+"Business-as-usual","Rational development","RCP 6.0",5,8.1120111068716,46.6623670644735
+"Business-as-usual","Rational development","RCP 8.5",4.5,7.30080999618444,41.9314766620261
+"Progressive reform","Current development","RCP 2.6",154.3,256.078179394481,1300.95967533752
+"Progressive reform","Current development","RCP 4.5",148.3,248.689146145215,1254.57297923051
+"Progressive reform","Current development","RCP 6.0",149.7,239.467391319444,1105.81903181335
+"Progressive reform","Current development","RCP 8.5",112.1,185.851233478946,815.705540555733
+"Progressive reform","Equal development","RCP 2.6",136.9,220.130637239818,1166.17311998865
+"Progressive reform","Equal development","RCP 4.5",139.3,221.390060720407,1146.29645323334
+"Progressive reform","Equal development","RCP 6.0",138.6,214.279966680663,1020.89278283608
+"Progressive reform","Equal development","RCP 8.5",98.3,160.05095512169,697.872737728736
+"Progressive reform","Need-based development","RCP 2.6",146.4,236.543501512656,1200.68034746983
+"Progressive reform","Need-based development","RCP 4.5",144.6,232.495895848162,1170.56852450695
+"Progressive reform","Need-based development","RCP 6.0",142.3,223.278163934336,1030.37736411152
+"Progressive reform","Need-based development","RCP 8.5",97.2,161.878758147597,619.469066188323
+"Progressive reform","Rational development","RCP 2.6",152.6,247.578578981721,1423.21937925573
+"Progressive reform","Rational development","RCP 4.5",148.5,240.926729874087,1384.72072536686
+"Progressive reform","Rational development","RCP 6.0",141.9,230.218875213016,1320.47887981776
+"Progressive reform","Rational development","RCP 8.5",109.3,177.328562796213,1013.51197743739

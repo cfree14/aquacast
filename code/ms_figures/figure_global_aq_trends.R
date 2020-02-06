@@ -17,6 +17,7 @@ library(rnaturalearth)
 # Read data
 data <- readRDS("/Users/cfree/Dropbox/Chris/UCSB/data/fao/aquaculture/processed/1950_2017_fao_aquaculture_data.Rds")
 plotdir <- "figures"
+outdir <- "data/feed_params/processed"
 
 
 # Time series
@@ -130,25 +131,22 @@ ggsave(g, filename=file.path(plotdir, "figure_fao_aq_time_series.png"),
        width=6.5, height=8, units="in", dpi=600)
 
 
-# Time series
-################################################################################
-
-
-# Format
-range(data_orig$year)
-data <- data_orig %>%
-  filter(year %in% 2013:2017) %>%
-  mutate(continent=countrycode(iso3, origin="iso3c", destination="continent")) %>%
-  filter(continent=="Africa") %>%
-  group_by(country, environment) %>%
-  summarize(quantity_mt=sum(quantity_mt, na.rm=T))
-
-
 # Production maps
 ################################################################################
 
+# Setup theme
+my_theme <- theme(axis.text=element_text(size=8),
+                  axis.title=element_text(size=10),
+                  plot.title=element_text(size=12),
+                  panel.grid.major = element_blank(), 
+                  panel.grid.minor = element_blank(),
+                  panel.background = element_blank(), 
+                  axis.line = element_line(colour = "black"),
+                  legend.position = "bottom")
+
 # Get world
-world <- rnaturalearth::ne_countries(scale="large", type="countries", returnclass="sf")
+world <- rnaturalearth::ne_countries(scale="small", type="countries", returnclass="sf") %>% 
+  mutate(iso3_use=countrycode(name_long, "country.name", "iso3c"))
 
 # Build data
 range(data$year)
@@ -160,23 +158,41 @@ aqprod <- data %>%
   # Calculate average
   group_by(country, iso3, major_group) %>% 
   summarize(prod_mt=mean(quantity_mt, na.rm=T),
-            prod_nyr=sum(!is.na(quantity_mt)))
+            profit_usd=mean(value_usd_t)*1000)
+
+# Export country average
+write.csv(aqprod, file=file.path(outdir, "FAO_2013_2017_maq_prod_averages_by_country.csv"), row.names=F)
 
 # Aquaculture 
-aqprod_sf <- world %>% 
-  left_join(aqprod, by=c("sov_a3"="iso3"))
-
-# This isn't working correctly.
+faq_sf <- world %>% 
+  left_join(filter(aqprod, major_group=="Pisces"), by=c("iso3_use"="iso3"))
+baq_sf <- world %>% 
+  left_join(filter(aqprod, major_group=="Mollusca"), by=c("iso3_use"="iso3"))
 
 # Plot
-# g <- ggplot() +
-#   geom_sf(aqprod_sf, mapping=aes(fill=prod_mt)) +
-#   facet_wrap(~ major_group, ncol=1) +
-#   theme_bw()
-# 
-# # Export plot
-# ggsave(g, filename=file.path(plotdir, "figure_fao_aq_prod_maps.png"), 
-#        width=6.5, height=6.5, units="in", dpi=600)
+g1 <- ggplot() +
+  geom_sf(faq_sf, mapping=aes(fill=prod_mt/1e3), lwd=0.2) +
+  labs(title="Finfish mariculture") +
+  scale_fill_gradientn(name="Production (1000s mt)", colors=RColorBrewer::brewer.pal(9, "Reds"), na.value="grey80") +
+  theme_bw() + my_theme +
+  guides(fill = guide_colorbar(ticks.colour = "black", frame.colour = "black"))
+g1
+
+# Plot
+g2 <- ggplot() +
+  geom_sf(baq_sf, mapping=aes(fill=prod_mt/1e3), lwd=0.2) +
+  labs(title="Bivalve mariculture") +
+  scale_fill_gradientn(name="Production (1000s mt)", colors=RColorBrewer::brewer.pal(9, "Blues"), na.value="grey80") +
+  theme_bw() + my_theme +
+  guides(fill = guide_colorbar(ticks.colour = "black", frame.colour = "black"))
+g2
+
+# Merge time series
+g <- grid.arrange(g1, g2, ncol=1)
+
+# Export plot
+ggsave(g, filename=file.path(plotdir, "figure_fao_aq_prod_maps.png"),
+       width=6.5, height=8, units="in", dpi=600)
 
 
 # Country-level time series

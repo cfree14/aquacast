@@ -16,7 +16,7 @@ sppdir <- "data/species/data"
 outputdir <- "output/raw"
 
 # Read aquacast function
-source(file.path(codedir, "aquacast.R"))
+source(file.path(codedir, "aquacast_v2.R"))
 source(file.path(codedir, "calc_costs.R"))
 
 # Read species data
@@ -34,20 +34,21 @@ data <- data %>%
 
 # Subset finfish/bivalves
 bivalves <- filter(data, class=="Bivalvia")
-finfish <- filter(data, class=="Actinopterygii" & comm_name=="Atlantic salmon")
+finfish <- filter(data, class=="Actinopterygii") # & comm_name=="Atlantic salmon")
 
 # Loop through species and run model
 i <- 1
-for(i in 1:10){
-# for(i in 1:nrow(bivalves)){
+# for(i in 1:10){
+for(i in 1:nrow(bivalves)){
   
   # Parameters
-  species <- finfish[i,]
+  species <- bivalves[i,]
   # years <- 2021
   years <- c(2021, 2051, 2100)
   
   # Forecast aquaculture potential
-  output <- aquacast(species=species, years=years, rcp="rcp45", outdir=outputdir, plot=T)
+  # For testing: rcp="rcp26"; outdir=outputdir
+  output <- aquacast(species=species, years=years, rcp="rcp45", outdir=outputdir, plot=F)
   
 }
 

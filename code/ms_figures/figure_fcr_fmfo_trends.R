@@ -17,6 +17,7 @@ library(gridExtra)
 datadir <- "data/species/data"
 feeddir <- "data/feed_params/processed"
 plotdir <- "figures"
+tabledir <- "tables"
 
 # Read data
 load(file.path(datadir, "aquaculture_species_key.Rdata"))
@@ -134,5 +135,85 @@ g
 # Export figure
 ggsave(g, filename=file.path(plotdir, "figure_fcr_fmfo_trends.png"), 
        width=6.5, height=5.5, units="in", dpi=600)
+
+
+# Plot data
+################################################################################
+
+# Projection year
+proj_years <- c(2030, 2050)
+
+# Subset FIFOs
+fifos <- fdata_long %>% 
+  filter(parameter=="fifo")
+
+# Plotting parameters
+par(mfrow=c(2,4))
+
+# Loop through and fit exponential decline
+groups <- sort(unique(fifos$group))
+fifo_proj <- data.frame(group=groups, fifo2030=NA, fifo2050=NA)
+for(i in 1:length(groups)){
+  
+  # Subset data
+  group_i <- groups[i]
+  sdata <- filter(fifos, group==group_i)
+  
+  # Plot data
+  plot(value ~ year, sdata, xlim=c(2000, proj_year), ylim=c(0, 5),
+       main=group_i, xlab="", ylab="FIFO")
+  abline(h=1)
+  
+  # Fit model
+  lmfit <- lm(log(value) ~ year, sdata)
+  a <- exp(coef(lmfit)[1])
+  b <- coef(lmfit)[2]
+  
+  # Plot fit
+  curve(a*exp(b*x), from=2000, to=proj_year, n=100, add=T)
+  
+  # Plot and record prediction
+  pred <- as.numeric(exp(predict(lmfit, data.frame(year=proj_years))))
+  points(x=proj_years, y=pred, pch=16, cex=2)
+  fifo_proj$fifo2030[i] <- pred[1]
+  fifo_proj$fifo2050[i] <- pred[2]
+  
+}
+
+
+# Build output table
+################################################################################
+
+my_theme <- theme(panel.grid.major = element_blank(), 
+                  panel.grid.minor = element_blank(),
+                  panel.background = element_blank(), 
+                  axis.title = element_blank(),
+                  axis.line = element_line(colour = "black"),
+                  axis.text.x = element_text(angle = 90, hjust = 0.5))
+
+g <- ggplot(fifos, aes(x=year, y=value)) +
+  facet_wrap(~group, ncol=4) +
+  geom_point() +
+  xlim(2000,2050) +
+  labs(x="", y="FIFO ratio") +
+  theme_bw() + my_theme
+g
+
+# Build output table
+################################################################################
+
+# Buildt table
+out_table <- ts_end %>% 
+  select(group, parameter, value_label) %>% 
+  spread(key="parameter", value="value_label") %>% 
+  select(fcr, fm_perc, fo_perc, fifo) %>% 
+  left_join(fifo_proj)
+
+# Export table
+write.csv(out_table, file=file.path(tabledir, "TableS2_fifo_fcr_fmfo_stats.csv"), row.names=F)
+
+
+
+
 
 

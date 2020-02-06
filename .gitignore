@@ -6,3 +6,5 @@ data/climate/data
 data/constraints/cum_impacts
 data/eezs
 data/prices
+code/Step4_build_finfish_scenario_results.R
+output/

@@ -142,7 +142,12 @@ maq_spp <- fao_aq %>%
   # Remove hybrid species
   filter(species!="Morone chrysops x M. saxatilis") %>% 
   # Remove species with no production since 2010
-  filter(prod_mt>0)
+  filter(prod_mt>0) %>% 
+  # Add production rank
+  group_by(major_group) %>% 
+  arrange(major_group, desc(prod_mt)) %>% 
+  mutate(prod_rank=1:n()) %>% 
+  ungroup()
 
 # Check species names
 freeR::check_names(maq_spp$species)
@@ -223,8 +228,11 @@ data <- freeR::taxa(all_spp) %>%
   left_join(select(maq_spp, species, comm_name), by="species") %>% 
   left_join(select(gentry_spp, species, comm_name), by="species") %>% 
   mutate(comm_name=ifelse(!is.na(comm_name.x), comm_name.x, comm_name.y)) %>% 
+  # Add historic production (2013-2017) and rank
+  left_join(select(maq_spp, species, prod_mt, prod_rank), by="species") %>% 
+  rename(fao_rank=prod_rank, fao_mt_yr=prod_mt) %>% 
   # Select final columns
-  select(class, isscaap, order:species, comm_name, fao, gentry)
+  select(class, isscaap, order:species, comm_name, gentry, fao, fao_rank, fao_mt_yr)
 
 # Stats on final sample
 freeR::complete(data)
@@ -245,12 +253,12 @@ fl <- freeR::fishlife(data$species)
 ################################################################################
 
 # Get FB data for species of interest and all species in the genera of the species of interest
-lw_spp <- freeR::fishbase("lw", data$species, "species")
-lw_gen <- freeR::fishbase("lw", data$species, "genus")
-lw_fam <- freeR::fishbase("lw", data$species, "family")
-vonb_spp <- freeR::fishbase("vonb", data$species, "species")
-vonb_gen <- freeR::fishbase("vonb", data$species, "genus")
-vonb_fam <- freeR::fishbase("vonb", data$species, "family")
+lw_spp <- freeR::fishbase("lw", data$species, "species", clean=T, add_taxa = F)
+lw_gen <- freeR::fishbase("lw", data$species, "genus", clean=T, add_taxa = F)
+lw_fam <- freeR::fishbase("lw", data$species, "family", clean=T, add_taxa = F)
+vonb_spp <- freeR::fishbase("vonb", data$species, "species", clean=T, add_taxa = F)
+vonb_gen <- freeR::fishbase("vonb", data$species, "genus", clean=T, add_taxa = F)
+vonb_fam <- freeR::fishbase("vonb", data$species, "family", clean=T, add_taxa = F)
 
 # Length-weight parameters
 ####################################
