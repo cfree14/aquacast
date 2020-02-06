@@ -1,0 +1,534 @@
+"rcp","year","eez_code","eez_name","eez_type","ter1_name","ter1_iso","ter1_continent","sov1_name","sov1_iso","sov1_continent","ncells","area_sqkm","prod_mt","profits_usd"
+"RCP 2.6","2021",3293,"Belgian Exclusive Economic Zone","200NM","Belgium","BEL","Europe","Belgium","BEL","Europe",38,3800,10396739.7070364,87311877475.2617
+"RCP 2.6","2021",5668,"Dutch Exclusive Economic Zone","200NM","Netherlands","NLD","Europe","Netherlands","NLD","Europe",590,59000,381607574.054379,2470907256275.9
+"RCP 2.6","2021",5669,"German Exclusive Economic Zone","200NM","Germany","DEU","Europe","Germany","DEU","Europe",295,29500,143107813.25444,899945290752.572
+"RCP 2.6","2021",5673,"Croatian Exclusive Economic Zone","200NM","Croatia","HRV","Europe","Croatia","HRV","Europe",241,24100,228814145.476447,1436579751079.9
+"RCP 2.6","2021",5674,"Danish Exclusive Economic Zone","200NM","Denmark","DNK","Europe","Denmark","DNK","Europe",32,3200,14353982.731778,91772840187.0381
+"RCP 2.6","2021",5677,"French Exclusive Economic Zone","200NM","France","FRA","Europe","France","FRA","Europe",1651,165100,1544540824.20891,9486214182507.26
+"RCP 2.6","2021",5679,"Greek Exclusive Economic Zone","200NM","Greece","GRC","Europe","Greece","GRC","Europe",270,27000,256347797.836683,1613061263424.69
+"RCP 2.6","2021",5680,"Icelandic Exclusive Economic Zone","200NM","Iceland","ISL","Europe","Iceland","ISL","Europe",2,200,299571.150518381,936653246.33369
+"RCP 2.6","2021",5681,"Irish Exclusive Economic Zone","200NM","Ireland","IRL","Europe","Ireland","IRL","Europe",552,55200,524088831.132774,3196720781792.87
+"RCP 2.6","2021",5682,"Italian Exclusive Economic Zone","200NM","Italy","ITA","Europe","Italy","ITA","Europe",751,75100,685838528.258448,4277593826167.62
+"RCP 2.6","2021",5688,"Portuguese Exclusive Economic Zone","200NM","Portugal","PRT","Europe","Portugal","PRT","Europe",323,32300,306667921.115735,1870939831448.46
+"RCP 2.6","2021",5690,"Russian Exclusive economic Zone","200NM","Russia","RUS","Europe","Russia","RUS","Europe",1459,145900,498224686.394996,2951267398770.86
+"RCP 2.6","2021",5693,"Spanish Exclusive Economic Zone","200NM","Spain","ESP","Europe","Spain","ESP","Europe",2517,251700,2402588904.74977,15109058686062.8
+"RCP 2.6","2021",5696,"United Kingdom Exclusive Economic Zone","200NM","United Kingdom","GBR","Europe","United Kingdom","GBR","Europe",2036,203600,1533655434.433,9696615769373.65
+"RCP 2.6","2021",5697,"Turkish Exclusive Economic Zone","200NM","Turkey","TUR","Asia","Turkey","TUR","Asia",150,15000,92037448.3220379,600213591517.865
+"RCP 2.6","2021",8311,"Australian Exclusive Economic Zone (Macquarie Island)","200NM","Macquarie Island","AUS","Oceania","Australia","AUS","Oceania",668,66800,458648124.135347,2549051094160.54
+"RCP 2.6","2021",8314,"Solomon Islands Exclusive Economic Zone","200NM","Solomon Islands","SLB","Oceania","Solomon Islands","SLB","Oceania",1607,160700,1525744115.27241,9465084521522.65
+"RCP 2.6","2021",8316,"Micronesian Exclusive Economic Zone","200NM","Micronesia","FSM","Oceania","Micronesia",NA,"Oceania",6541,654100,5404757962.40877,37278213117765.7
+"RCP 2.6","2021",8317,"Nauruan Exclusive Economic Zone","200NM","Nauru","NRU","Oceania","Nauru","NRU","Oceania",2924,292400,2776151706.94245,17132259972221.5
+"RCP 2.6","2021",8318,"Marshall Islands Exclusive Economic Zone","200NM","Marshall Islands","MHL","Oceania","Marshall Islands","MHL","Oceania",8206,820600,7776509236.38901,48272243386460
+"RCP 2.6","2021",8323,"Australian Exclusive Economic Zone","200NM","Australia","AUS","Oceania","Australia","AUS","Oceania",5494,549400,5206089918.25703,38947018903469.8
+"RCP 2.6","2021",8324,"Papua New Guinean Exclusive Economic Zone","200NM","Papua New Guinea","PNG","Oceania","Papua New Guinea","PNG","Oceania",2212,221200,1831968099.17691,12810382239081.4
+"RCP 2.6","2021",8326,"Tuvaluan Exclusive Economic Zone","200NM","Tuvalu","TUV","Oceania","Tuvalu","TUV","Oceania",3219,321900,3056235411.98623,18864516614327.1
+"RCP 2.6","2021",8327,"South Korean Exclusive Economic Zone","200NM","South Korea","KOR","Asia","South Korea","KOR","Asia",2972,297200,2737724907.32775,17121336742673.7
+"RCP 2.6","2021",8328,"North Korean Exclusive Economic Zone","200NM","North Korea","PRK","Asia","North Korea","PRK","Asia",922,92200,803858348.872021,5049739085746.82
+"RCP 2.6","2021",8332,"Thailand Exclusive Economic Zone","200NM","Thailand","THA","Asia","Thailand","THA","Asia",405,40500,384521696.755024,2423098452837.03
+"RCP 2.6","2021",8361,"Portuguese Exclusive Economic Zone (Azores)","200NM","Azores","PRT","Europe","Portugal","PRT","Europe",1856,185600,1822699186.19029,12111398418241.3
+"RCP 2.6","2021",8363,"Portuguese Exclusive Economic Zone (Madeira)","200NM","Madeira","PRT","Europe","Portugal","PRT","Europe",890,89000,844998296.57277,5237713019526.7
+"RCP 2.6","2021",8364,"Spanish Exclusive Economic Zone (Canary Islands)","200NM","Canary Islands","ESP","Europe","Spain","ESP","Europe",3676,367600,3507379989.61462,21807858552187.5
+"RCP 2.6","2021",8365,"Overlapping claim Gibraltarian Exclusive Economic Zone","Overlapping claim","Gibraltar","GIB","Europe","United Kingdom","GBR","Europe",2,200,1898872.57656802,11877199739.9162
+"RCP 2.6","2021",8366,"Tunisian Exclusive Economic Zone","200NM","Tunisia","TUN","Africa","Tunisia","TUN","Africa",317,31700,300971303.386031,1897659971820.72
+"RCP 2.6","2021",8367,"Moroccan Exclusive Economic Zone","200NM","Morocco","MAR","Africa","Morocco","MAR","Africa",1723,172300,1635878724.71335,10232059030389.8
+"RCP 2.6","2021",8368,"Overlapping claim Western Saharan Exclusive Economic Zone","Overlapping claim","Western Sahara","ESH","Africa","Western Sahara","ESH","Africa",1315,131500,1248508719.09347,7736709449550.89
+"RCP 2.6","2021",8369,"Mauritanian Exclusive Economic Zone","200NM","Mauritania","MRT","Africa","Mauritania","MRT","Africa",278,27800,263943288.142955,1660962188672.35
+"RCP 2.6","2021",8371,"Senegalese Exclusive Economic Zone","200NM","Senegal","SEN","Africa","Senegal","SEN","Africa",7,700,6646054.01798807,41979989921.7066
+"RCP 2.6","2021",8372,"Libyan Exclusive Economic Zone","200NM","Libya","LBY","Africa","Libya","LBY","Africa",31,3100,29432524.9368043,185310488100.701
+"RCP 2.6","2021",8378,"Algerian Exclusive Economic Zone","200NM","Algeria","DZA","Africa","Algeria","DZA","Africa",450,45000,427246329.727805,2693896205913.14
+"RCP 2.6","2021",8382,"Tristan Da Cunha Exclusive Economic Zone","200NM","Tristan da Cunha","TAA","S Atlantic Ocean","United Kingdom","GBR","Europe",1032,103200,1147783005.04535,9698942125757.39
+"RCP 2.6","2021",8383,"Overlapping claim South Georgia and South Sandwich Exclusive Economic Zone: UK / Argentina","Overlapping claim","South Georgia and the South Sandwich Islands","SGS","S Atlantic Ocean","United Kingdom","GBR","Europe",5366,536600,732057270.219176,4132037545247.03
+"RCP 2.6","2021",8384,"South African Exclusive Economic Zone (Prince Edward Islands)","200NM","Prince Edward Islands","ZAF","Africa","South Africa","ZAF","Africa",2966,296600,2816028031.05038,17468378374299.7
+"RCP 2.6","2021",8385,"Crozet Islands Exclusive Economic Zone","200NM","Crozet Islands","ATF","Indian Ocean","France","FRA","Europe",4045,404500,3950519069.1177,25530802696315.7
+"RCP 2.6","2021",8387,"Kerguelen Exclusive Economic Zone","200NM","Kerguélen","ATF","Indian Ocean","France","FRA","Europe",3909,390900,3209162291.38497,19248001153409.7
+"RCP 2.6","2021",8388,"Heard and McDonald Islands Exclusive Economic Zone","200NM","Heard and McDonald Islands","HMD","Indian Ocean","Australia","AUS","Oceania",1587,158700,259977520.349426,1420510473697.11
+"RCP 2.6","2021",8389,"Overlapping claim Falkland / Malvinas Islands Exclusive Economic Zone: UK / Argentina","Overlapping claim","Falkland / Malvinas Islands","FLK","Americas","United Kingdom","GBR","Europe",4646,464600,4301871012.78815,25898772043972.9
+"RCP 2.6","2021",8395,"Namibian Exclusive Economic Zone","200NM","Namibia","NAM","Africa","Namibia","NAM","Africa",105,10500,99690810.2698211,617503443021.6
+"RCP 2.6","2021",8396,"South African Exclusive Economic Zone","200NM","South Africa","ZAF","Africa","South Africa","ZAF","Africa",1939,193900,1914848434.89496,13113780706345.2
+"RCP 2.6","2021",8399,"Bouvet Exclusive Economic Zone","200NM","Bouvet","BVT","S Atlantic Ocean","Norway","NOR","Europe",1105,110500,154060479.966204,592462456511.523
+"RCP 2.6","2021",8401,"Clipperton Exclusive Economic Zone","200NM","Clipperton Island","CPT","Americas","France","FRA","Europe",157,15700,149061497.26059,861027370019.421
+"RCP 2.6","2021",8403,"Ecuadorian Exclusive Economic Zone (Galapagos)","200NM","Galapagos","ECU","Americas","Ecuador","ECU","Americas",8386,838600,7961972713.54971,49881965703644.6
+"RCP 2.6","2021",8418,"Barbados Exclusive Economic Zone","200NM","Barbados","BRB","Americas","Barbados","BRB","Americas",455,45500,431993511.169225,2660440842634.93
+"RCP 2.6","2021",8420,"Trinidad and Tobago Exclusive Economic Zone","200NM","Trinidad and Tobago","TTO","Americas","Trinidad and Tobago","TTO","Americas",90,9000,85449265.945561,530530930304.228
+"RCP 2.6","2021",8423,"Panamanian Exclusive Economic Zone","200NM","Panama","PAN","Americas","Panama","PAN","Americas",3236,323600,3072375828.88706,19190729124020.4
+"RCP 2.6","2021",8424,"Costa Rican Exclusive Economic Zone","200NM","Costa Rica","CRI","Americas","Costa Rica","CRI","Americas",5848,584800,5552303413.88489,34404443148050.9
+"RCP 2.6","2021",8425,"Nicaraguan Exclusive Economic Zone","200NM","Nicaragua","NIC","Americas","Nicaragua","NIC","Americas",1193,119300,1132677491.92282,7114839366588
+"RCP 2.6","2021",8426,"Colombian Exclusive Economic Zone","200NM","Colombia","COL","Americas","Colombia","COL","Americas",2276,227600,2160916992.13441,13511529559176.6
+"RCP 2.6","2021",8428,"El Salvador Exclusive Economic Zone","200NM","El Salvador","SLV","Americas","El Salvador","SLV","Americas",952,95200,903863346.446378,5642899234596.1
+"RCP 2.6","2021",8429,"Mexican Exclusive Economic Zone","200NM","Mexico","MEX","Americas","Mexico","MEX","Americas",115,11500,109185173.152661,670437034673.181
+"RCP 2.6","2021",8430,"Guatemalan Exclusive Economic Zone","200NM","Guatemala","GTM","Americas","Guatemala","GTM","Americas",851,85100,807970281.329693,5027577959522.34
+"RCP 2.6","2021",8431,"Ecuadorian Exclusive Economic Zone","200NM","Ecuador","ECU","Americas","Ecuador","ECU","Americas",2116,211600,1751270980.58634,12230892328115.3
+"RCP 2.6","2021",8432,"Peruvian Exclusive Economic Zone","200NM","Peru","PER","Americas","Peru","PER","Americas",3410,341000,2899734338.64315,19590212887396.3
+"RCP 2.6","2021",8439,"Pitcairn Islands Exclusive Economic Zone","200NM","Pitcairn","PCN","Oceania","United Kingdom","GBR","Europe",214,21400,203179365.692778,1147038263747.03
+"RCP 2.6","2021",8440,"French Polynesian Exclusive Economic Zone","200NM","French Polynesia","PYF","Oceania","France","FRA","Europe",18235,1823500,17312970716.8589,104987137985786
+"RCP 2.6","2021",8441,"Kiribati Exclusive Economic Zone (Line Islands)","200NM","Line Group","KIR","Oceania","Kiribati","KIR","Oceania",15724,1572400,14928936196.9778,92776123671517
+"RCP 2.6","2021",8442,"Jarvis Island Exclusive Economic Zone","200NM","Jarvis Island","UMI","Oceania","United States","USA","Americas",3259,325900,3094212863.51759,18285289711277.4
+"RCP 2.6","2021",8443,"Palmyra Atoll Exclusive Economic Zone","200NM","Palmyra Atoll","UMI","Oceania","United States","USA","Americas",3232,323200,3068578083.73392,18177421876600.6
+"RCP 2.6","2021",8446,"Cook Islands Exclusive Economic Zone","200NM","Cook Islands","COK","Oceania","New Zealand","NZL","Oceania",3428,342800,3254667596.23759,19567472301112.3
+"RCP 2.6","2021",8449,"Tokelau Exclusive Economic Zone","200NM","Tokelau","TKL","Oceania","New Zealand","NZL","Oceania",1368,136800,1298828842.37253,7854727331934.67
+"RCP 2.6","2021",8450,"Kiribati Exclusive Economic Zone (Phoenix Islands)","200NM","Phoenix Group","KIR","Oceania","Kiribati","KIR","Oceania",7430,743000,7054311621.9502,43945415523732.6
+"RCP 2.6","2021",8451,"Howland and Baker Islands Exclusive Economic Zone","200NM","Howland and Baker islands","UMI","Oceania","United States","USA","Americas",4371,437100,4149986016.08941,24391951011566.8
+"RCP 2.6","2021",8455,"New Zealand Exclusive Economic Zone","200NM","New Zealand","NZL","Oceania","New Zealand","NZL","Oceania",12753,1275300,13264546244.2584,99918826726142.7
+"RCP 2.6","2021",8456,"United States Exclusive Economic Zone","200NM","United States","USA","Americas","United States","USA","Americas",2774,277400,2215968194.9199,13618283503539.9
+"RCP 2.6","2021",8460,"Guyanese Exclusive Economic Zone","200NM","Guyana","GUY","Americas","Guyana","GUY","Americas",337,33700,319960029.151712,1979919626195.88
+"RCP 2.6","2021",8461,"Surinamese Exclusive Economic Zone","200NM","Suriname","SUR","Americas","Suriname","SUR","Americas",387,38700,367431843.565912,2268400802741.78
+"RCP 2.6","2021",8462,"French Guiana Exclusive Economic Zone","200NM","French Guiana","GUF","Americas","France","FRA","Europe",421,42100,399712677.367568,2361902131912.36
+"RCP 2.6","2021",8463,"United States Exclusive Economic Zone (Alaska)","200NM","Alaska","USA","Americas","United States","USA","Americas",931,93100,183449282.805859,889245612294.608
+"RCP 2.6","2021",8465,"Chilean Exclusive Economic Zone","200NM","Chile","CHL","Americas","Chile","CHL","Americas",14707,1470700,14463288145.0463,98883076091357.5
+"RCP 2.6","2021",8466,"Argentinean Exclusive Economic Zone","200NM","Argentina","ARG","Americas","Argentina","ARG","Americas",6782,678200,6449500279.78298,40050671315342.2
+"RCP 2.6","2021",8467,"Uruguayan Exclusive Economic Zone","200NM","Uruguay","URY","Americas","Uruguay","URY","Americas",36,3600,34179706.3782244,205674977222.491
+"RCP 2.6","2021",8482,"Myanmar Exclusive Economic Zone","200NM","Myanmar","MMR","Asia","Myanmar","MMR","Asia",38,3800,34495432.7298377,225690636101.523
+"RCP 2.6","2021",8486,"Chinese Exclusive Economic Zone","200NM","China","CHN","Asia","China","CHN","Asia",1241,124100,967283888.291123,6146088994485.27
+"RCP 2.6","2021",8487,"Japanese Exclusive Economic Zone","200NM","Japan","JPN","Asia","Japan","JPN","Asia",2468,246800,1952267764.71819,12145983900689.6
+"RCP 2.6","2021",8488,"Kiribati Exclusive Economic Zone (Gilbert Islands)","200NM","Gilbert Islands","KIR","Oceania","Kiribati","KIR","Oceania",10619,1061900,10082063945.2879,62926507165573
+"RCP 2.6","2021",8489,"Antarctic 200NM zone beyond the coastline","200NM","Antarctica","ATA","Antarctica","Antarctica","ATA","Antarctica",803,80300,59905499.7780651,216570708574.548
+"RCP 2.6","2021",8492,"Indonesian Exclusive Economic Zone","200NM","Indonesia","IDN","Asia","Indonesia","IDN","Asia",6164,616400,3948923607.79093,33949740790903.9
+"RCP 2.6","2021",8493,"Canadian Exclusive Economic Zone","200NM","Canada","CAN","Americas","Canada","CAN","Americas",4296,429600,907699270.577109,4974037326211.87
+"RCP 2.6","2021",21788,"Guernsey Exclusive Economic Zone","200NM","Guernsey","GGY","Europe","United Kingdom","GBR","Europe",1,100,949436.288284011,5874710865.95809
+"RCP 2.6","2021",21789,"Jersey Exclusive Economic Zone","200NM","Jersey","JEY","Europe","United Kingdom","GBR","Europe",12,1200,11393235.4594081,71387211087.4971
+"RCP 2.6","2021",21796,"Joint regime area Japan / Korea","Joint regime","South Korea","KOR","Asia","South Korea","KOR","Asia",20,2000,18988725.7656802,116592869127.162
+"RCP 2.6","2021",22756,"Chilean Exclusive Economic Zone (San Felix and San Ambrosio islands)","200NM","Islas San Félix and San Ambrosio","CHL","Americas","Chile","CHL","Americas",2560,256000,2430556898.00707,14998175699908.7
+"RCP 2.6","2021",33185,"Overlapping claim: Trinidad and Tobago / Venezuela / Guyana","Overlapping claim","Guyana","GUY","Americas","Guyana","GUY","Americas",32,3200,30381961.2250883,188423182462.659
+"RCP 2.6","2021",48950,"Overlapping claim Kuril Islands: Japan / Russia","Overlapping claim","Japan","JPN","Asia","Japan","JPN","Asia",887,88700,166612230.275795,932809877035.138
+"RCP 2.6","2021",48955,"Overlapping claim Liancourt Rocks: Japan / South Korea","Overlapping claim","Japan","JPN","Asia","Japan","JPN","Asia",15,1500,14241544.3242602,87891413533.3714
+"RCP 2.6","2021",48962,"Joint regime area Peru / Ecuador","Joint regime","Peru","PER","Americas","Peru","PER","Americas",155,15500,114233183.204964,869036574941.102
+"RCP 2.6","2021",48968,"Joint regime area Costa Rica / Ecuador (Galapagos)","Joint regime","Costa Rica","CRI","Americas","Costa Rica","CRI","Americas",87,8700,82600957.0807089,503858314762.354
+"RCP 2.6","2021",48974,"Joint regime area Ecuador / Colombia","Joint regime","Ecuador","ECU","Americas","Ecuador","ECU","Americas",124,12400,117730099.747217,737231509594.803
+"RCP 2.6","2051",3293,"Belgian Exclusive Economic Zone","200NM","Belgium","BEL","Europe","Belgium","BEL","Europe",38,3800,10396739.7070364,87311877475.2617
+"RCP 2.6","2051",5668,"Dutch Exclusive Economic Zone","200NM","Netherlands","NLD","Europe","Netherlands","NLD","Europe",600,60000,253716512.567628,1579585318785.58
+"RCP 2.6","2051",5669,"German Exclusive Economic Zone","200NM","Germany","DEU","Europe","Germany","DEU","Europe",284,28400,77722851.175877,476360289008.172
+"RCP 2.6","2051",5673,"Croatian Exclusive Economic Zone","200NM","Croatia","HRV","Europe","Croatia","HRV","Europe",244,24400,231662454.341299,1454411044277.77
+"RCP 2.6","2051",5674,"Danish Exclusive Economic Zone","200NM","Denmark","DNK","Europe","Denmark","DNK","Europe",16,1600,4917694.87800313,27238800602.7697
+"RCP 2.6","2051",5677,"French Exclusive Economic Zone","200NM","France","FRA","Europe","France","FRA","Europe",1974,197400,1833229048.23633,11537210657510
+"RCP 2.6","2051",5679,"Greek Exclusive Economic Zone","200NM","Greece","GRC","Europe","Greece","GRC","Europe",385,38500,365532970.989344,2299561937249.87
+"RCP 2.6","2051",5681,"Irish Exclusive Economic Zone","200NM","Ireland","IRL","Europe","Ireland","IRL","Europe",535,53500,507948414.231946,3101366029487.58
+"RCP 2.6","2051",5682,"Italian Exclusive Economic Zone","200NM","Italy","ITA","Europe","Italy","ITA","Europe",596,59600,545872759.99165,3414803043673.24
+"RCP 2.6","2051",5688,"Portuguese Exclusive Economic Zone","200NM","Portugal","PRT","Europe","Portugal","PRT","Europe",178,17800,168999659.314554,1030599486764.54
+"RCP 2.6","2051",5690,"Russian Exclusive economic Zone","200NM","Russia","RUS","Europe","Russia","RUS","Europe",1896,189600,390012960.396801,2222258247265.44
+"RCP 2.6","2051",5693,"Spanish Exclusive Economic Zone","200NM","Spain","ESP","Europe","Spain","ESP","Europe",1298,129800,1233344841.46902,7727436880899.65
+"RCP 2.6","2051",5696,"United Kingdom Exclusive Economic Zone","200NM","United Kingdom","GBR","Europe","United Kingdom","GBR","Europe",2001,200100,1657953021.65979,10415919462712.5
+"RCP 2.6","2051",5697,"Turkish Exclusive Economic Zone","200NM","Turkey","TUR","Asia","Turkey","TUR","Asia",141,14100,99626778.7571967,640033547796.234
+"RCP 2.6","2051",8311,"Australian Exclusive Economic Zone (Macquarie Island)","200NM","Macquarie Island","AUS","Oceania","Australia","AUS","Oceania",1701,170100,836886077.150912,4394938723476.29
+"RCP 2.6","2051",8316,"Micronesian Exclusive Economic Zone","200NM","Micronesia","FSM","Oceania","Micronesia",NA,"Oceania",6376,637600,4087654791.95013,34626396410598.1
+"RCP 2.6","2051",8317,"Nauruan Exclusive Economic Zone","200NM","Nauru","NRU","Oceania","Nauru","NRU","Oceania",2759,275900,2619494719.37559,16178175243050.4
+"RCP 2.6","2051",8318,"Marshall Islands Exclusive Economic Zone","200NM","Marshall Islands","MHL","Oceania","Marshall Islands","MHL","Oceania",8079,807900,6063602354.71752,45294785853037.4
+"RCP 2.6","2051",8323,"Australian Exclusive Economic Zone","200NM","Australia","AUS","Oceania","Australia","AUS","Oceania",5965,596500,5548344820.84979,40866136124875
+"RCP 2.6","2051",8324,"Papua New Guinean Exclusive Economic Zone","200NM","Papua New Guinea","PNG","Oceania","Papua New Guinea","PNG","Oceania",11605,1160500,7591013177.75405,63923210834320.4
+"RCP 2.6","2051",8326,"Tuvaluan Exclusive Economic Zone","200NM","Tuvalu","TUV","Oceania","Tuvalu","TUV","Oceania",1751,175100,1662462940.7853,10249043861900.6
+"RCP 2.6","2051",8327,"South Korean Exclusive Economic Zone","200NM","South Korea","KOR","Asia","South Korea","KOR","Asia",2171,217100,2061226181.86459,12853566165523
+"RCP 2.6","2051",8328,"North Korean Exclusive Economic Zone","200NM","North Korea","PRK","Asia","North Korea","PRK","Asia",822,82200,550773817.005852,3560070591226
+"RCP 2.6","2051",8332,"Thailand Exclusive Economic Zone","200NM","Thailand","THA","Asia","Thailand","THA","Asia",793,79300,579390150.354188,4491284959731.8
+"RCP 2.6","2051",8354,"Omani Exclusive Economic Zone","200NM","Oman","OMN","Asia","Oman","OMN","Asia",104,10400,91458901.3467456,610094428667.572
+"RCP 2.6","2051",8361,"Portuguese Exclusive Economic Zone (Azores)","200NM","Azores","PRT","Europe","Portugal","PRT","Europe",2393,239300,2538921773.40575,19980909154328.8
+"RCP 2.6","2051",8363,"Portuguese Exclusive Economic Zone (Madeira)","200NM","Madeira","PRT","Europe","Portugal","PRT","Europe",1212,121200,1152181590.31478,7131740576690.28
+"RCP 2.6","2051",8364,"Spanish Exclusive Economic Zone (Canary Islands)","200NM","Canary Islands","ESP","Europe","Spain","ESP","Europe",3910,391000,3737197638.73801,23321250739230.4
+"RCP 2.6","2051",8366,"Tunisian Exclusive Economic Zone","200NM","Tunisia","TUN","Africa","Tunisia","TUN","Africa",276,27600,262044415.566387,1652566528232.43
+"RCP 2.6","2051",8367,"Moroccan Exclusive Economic Zone","200NM","Morocco","MAR","Africa","Morocco","MAR","Africa",1759,175900,1674127344.74313,10536814114284.2
+"RCP 2.6","2051",8368,"Overlapping claim Western Saharan Exclusive Economic Zone","Overlapping claim","Western Sahara","ESH","Africa","Western Sahara","ESH","Africa",453,45300,373734632.98427,2597662813639.52
+"RCP 2.6","2051",8369,"Mauritanian Exclusive Economic Zone","200NM","Mauritania","MRT","Africa","Mauritania","MRT","Africa",146,14600,138617698.089466,874140349693.882
+"RCP 2.6","2051",8371,"Senegalese Exclusive Economic Zone","200NM","Senegal","SEN","Africa","Senegal","SEN","Africa",5,500,4747181.44142005,29997943381.7905
+"RCP 2.6","2051",8372,"Libyan Exclusive Economic Zone","200NM","Libya","LBY","Africa","Libya","LBY","Africa",4,400,3797745.15313604,23923666583.8324
+"RCP 2.6","2051",8378,"Algerian Exclusive Economic Zone","200NM","Algeria","DZA","Africa","Algeria","DZA","Africa",58,5800,55067304.7204726,347326473025.569
+"RCP 2.6","2051",8382,"Tristan Da Cunha Exclusive Economic Zone","200NM","Tristan da Cunha","TAA","S Atlantic Ocean","United Kingdom","GBR","Europe",3768,376800,4190742599.81676,35541445878753.6
+"RCP 2.6","2051",8383,"Overlapping claim South Georgia and South Sandwich Exclusive Economic Zone: UK / Argentina","Overlapping claim","South Georgia and the South Sandwich Islands","SGS","S Atlantic Ocean","United Kingdom","GBR","Europe",7135,713500,1015081492.82361,6010795826553.13
+"RCP 2.6","2051",8384,"South African Exclusive Economic Zone (Prince Edward Islands)","200NM","Prince Edward Islands","ZAF","Africa","South Africa","ZAF","Africa",3938,393800,3745628467.61501,23345000983415.8
+"RCP 2.6","2051",8385,"Crozet Islands Exclusive Economic Zone","200NM","Crozet Islands","ATF","Indian Ocean","France","FRA","Europe",5748,574800,5412894087.71719,33684041289974.5
+"RCP 2.6","2051",8387,"Kerguelen Exclusive Economic Zone","200NM","Kerguélen","ATF","Indian Ocean","France","FRA","Europe",4019,401900,3204504147.31569,19048944180704.5
+"RCP 2.6","2051",8388,"Heard and McDonald Islands Exclusive Economic Zone","200NM","Heard and McDonald Islands","HMD","Indian Ocean","Australia","AUS","Oceania",1697,169700,266260920.903635,1493678738922.76
+"RCP 2.6","2051",8389,"Overlapping claim Falkland / Malvinas Islands Exclusive Economic Zone: UK / Argentina","Overlapping claim","Falkland / Malvinas Islands","FLK","Americas","United Kingdom","GBR","Europe",4725,472500,4479719475.34654,26937978158126.4
+"RCP 2.6","2051",8395,"Namibian Exclusive Economic Zone","200NM","Namibia","NAM","Africa","Namibia","NAM","Africa",593,59300,563015718.952418,3489519234225.15
+"RCP 2.6","2051",8396,"South African Exclusive Economic Zone","200NM","South Africa","ZAF","Africa","South Africa","ZAF","Africa",1949,194900,1947454227.31865,13708367727214.6
+"RCP 2.6","2051",8399,"Bouvet Exclusive Economic Zone","200NM","Bouvet","BVT","S Atlantic Ocean","Norway","NOR","Europe",2619,261900,385685199.414984,1818132441861.23
+"RCP 2.6","2051",8401,"Clipperton Exclusive Economic Zone","200NM","Clipperton Island","CPT","Americas","France","FRA","Europe",1927,192700,1829563727.52329,10896159568309.2
+"RCP 2.6","2051",8403,"Ecuadorian Exclusive Economic Zone (Galapagos)","200NM","Galapagos","ECU","Americas","Ecuador","ECU","Americas",8386,838600,7961972713.54971,49881965703660.6
+"RCP 2.6","2051",8418,"Barbados Exclusive Economic Zone","200NM","Barbados","BRB","Americas","Barbados","BRB","Americas",218,21800,206977110.845914,1267466205722.86
+"RCP 2.6","2051",8420,"Trinidad and Tobago Exclusive Economic Zone","200NM","Trinidad and Tobago","TTO","Americas","Trinidad and Tobago","TTO","Americas",83,8300,78803211.9275729,488984892770.522
+"RCP 2.6","2051",8423,"Panamanian Exclusive Economic Zone","200NM","Panama","PAN","Americas","Panama","PAN","Americas",2249,224900,2135282212.35074,13360780688195.8
+"RCP 2.6","2051",8424,"Costa Rican Exclusive Economic Zone","200NM","Costa Rica","CRI","Americas","Costa Rica","CRI","Americas",5713,571300,5424129514.96655,33619193462106.6
+"RCP 2.6","2051",8425,"Nicaraguan Exclusive Economic Zone","200NM","Nicaragua","NIC","Americas","Nicaragua","NIC","Americas",920,92000,856700035.23677,5457743229140.07
+"RCP 2.6","2051",8426,"Colombian Exclusive Economic Zone","200NM","Colombia","COL","Americas","Colombia","COL","Americas",1493,149300,1327585672.8306,8731782308941.18
+"RCP 2.6","2051",8427,"Honduran Exclusive Economic Zone","200NM","Honduras","HND","Americas","Honduras","HND","Americas",8,800,5379085.59133553,44773867402.4261
+"RCP 2.6","2051",8428,"El Salvador Exclusive Economic Zone","200NM","El Salvador","SLV","Americas","El Salvador","SLV","Americas",930,93000,881709231.124166,5509252878404.32
+"RCP 2.6","2051",8430,"Guatemalan Exclusive Economic Zone","200NM","Guatemala","GTM","Americas","Guatemala","GTM","Americas",669,66900,635172876.862003,3945225509285.96
+"RCP 2.6","2051",8431,"Ecuadorian Exclusive Economic Zone","200NM","Ecuador","ECU","Americas","Ecuador","ECU","Americas",617,61700,510444429.563392,3557022221662.03
+"RCP 2.6","2051",8432,"Peruvian Exclusive Economic Zone","200NM","Peru","PER","Americas","Peru","PER","Americas",2423,242300,1969606565.49663,13777730570119.6
+"RCP 2.6","2051",8440,"French Polynesian Exclusive Economic Zone","200NM","French Polynesia","PYF","Oceania","France","FRA","Europe",18092,1809200,17177201327.6343,103870271082418
+"RCP 2.6","2051",8441,"Kiribati Exclusive Economic Zone (Line Islands)","200NM","Line Group","KIR","Oceania","Kiribati","KIR","Oceania",16504,1650400,15669496501.8393,97383024891644.3
+"RCP 2.6","2051",8442,"Jarvis Island Exclusive Economic Zone","200NM","Jarvis Island","UMI","Oceania","United States","USA","Americas",3259,325900,3094212863.51759,18285289709485.4
+"RCP 2.6","2051",8443,"Palmyra Atoll Exclusive Economic Zone","200NM","Palmyra Atoll","UMI","Oceania","United States","USA","Americas",3534,353400,3355307842.79569,19805024053511.9
+"RCP 2.6","2051",8446,"Cook Islands Exclusive Economic Zone","200NM","Cook Islands","COK","Oceania","New Zealand","NZL","Oceania",5560,556000,5278865762.8591,31621169292831
+"RCP 2.6","2051",8449,"Tokelau Exclusive Economic Zone","200NM","Tokelau","TKL","Oceania","New Zealand","NZL","Oceania",1484,148400,1408963451.81347,8520189773185.81
+"RCP 2.6","2051",8450,"Kiribati Exclusive Economic Zone (Phoenix Islands)","200NM","Phoenix Group","KIR","Oceania","Kiribati","KIR","Oceania",7508,750800,7128367652.43635,44402576972733.4
+"RCP 2.6","2051",8451,"Howland and Baker Islands Exclusive Economic Zone","200NM","Howland and Baker islands","UMI","Oceania","United States","USA","Americas",4371,437100,4149986016.08941,24391951011502.8
+"RCP 2.6","2051",8452,"Johnston Atoll Exclusive Economic Zone","200NM","Johnston Atoll","UMI","Oceania","United States","USA","Americas",33,3300,31331397.5133724,174525151408.617
+"RCP 2.6","2051",8455,"New Zealand Exclusive Economic Zone","200NM","New Zealand","NZL","Oceania","New Zealand","NZL","Oceania",12273,1227300,12595442993.9944,92390993491172.9
+"RCP 2.6","2051",8456,"United States Exclusive Economic Zone","200NM","United States","USA","Americas","United States","USA","Americas",2928,292800,2370466595.23441,14514609584867.2
+"RCP 2.6","2051",8460,"Guyanese Exclusive Economic Zone","200NM","Guyana","GUY","Americas","Guyana","GUY","Americas",337,33700,319960029.151712,1979919626195.88
+"RCP 2.6","2051",8461,"Surinamese Exclusive Economic Zone","200NM","Suriname","SUR","Americas","Suriname","SUR","Americas",178,17800,168999659.314554,1042732644892.54
+"RCP 2.6","2051",8462,"French Guiana Exclusive Economic Zone","200NM","French Guiana","GUF","Americas","France","FRA","Europe",202,20200,191786130.23337,1143173017675.53
+"RCP 2.6","2051",8463,"United States Exclusive Economic Zone (Alaska)","200NM","Alaska","USA","Americas","United States","USA","Americas",13408,1340800,3890498740.15284,21760737685097.1
+"RCP 2.6","2051",8465,"Chilean Exclusive Economic Zone","200NM","Chile","CHL","Americas","Chile","CHL","Americas",14962,1496200,14742838063.9991,101006516327891
+"RCP 2.6","2051",8466,"Argentinean Exclusive Economic Zone","200NM","Argentina","ARG","Americas","Argentina","ARG","Americas",6877,687700,6527703460.4758,40305258066509.8
+"RCP 2.6","2051",8467,"Uruguayan Exclusive Economic Zone","200NM","Uruguay","URY","Americas","Uruguay","URY","Americas",81,8100,76904339.3510049,460766757550.606
+"RCP 2.6","2051",8469,"Iranian Exclusive Economic Zone","200NM","Iran","IRN","Asia","Iran","IRN","Asia",33,3300,24048924.8785808,186891371112.547
+"RCP 2.6","2051",8482,"Myanmar Exclusive Economic Zone","200NM","Myanmar","MMR","Asia","Myanmar","MMR","Asia",60,6000,37968422.5975845,332255120402.869
+"RCP 2.6","2051",8483,"Malaysian Exclusive Economic Zone","200NM","Malaysia","MYS","Asia","Malaysia","MYS","Asia",82,8200,61705684.1447511,465699374923.539
+"RCP 2.6","2051",8486,"Chinese Exclusive Economic Zone","200NM","China","CHN","Asia","China","CHN","Asia",643,64300,586498011.975874,3688754755083.32
+"RCP 2.6","2051",8487,"Japanese Exclusive Economic Zone","200NM","Japan","JPN","Asia","Japan","JPN","Asia",1335,133500,797612642.356275,4987551398238.2
+"RCP 2.6","2051",8488,"Kiribati Exclusive Economic Zone (Gilbert Islands)","200NM","Gilbert Islands","KIR","Oceania","Kiribati","KIR","Oceania",9615,961500,9128829911.85076,57025307770719.1
+"RCP 2.6","2051",8489,"Antarctic 200NM zone beyond the coastline","200NM","Antarctica","ATA","Antarctica","Antarctica","ATA","Antarctica",1386,138600,122043914.091045,599980560073.046
+"RCP 2.6","2051",8492,"Indonesian Exclusive Economic Zone","200NM","Indonesia","IDN","Asia","Indonesia","IDN","Asia",1654,165400,1045813235.18193,9069759135907.25
+"RCP 2.6","2051",8493,"Canadian Exclusive Economic Zone","200NM","Canada","CAN","Americas","Canada","CAN","Americas",3963,396300,867878928.484101,4790079222102.41
+"RCP 2.6","2051",21788,"Guernsey Exclusive Economic Zone","200NM","Guernsey","GGY","Europe","United Kingdom","GBR","Europe",1,100,949436.288284011,5874710865.95809
+"RCP 2.6","2051",21789,"Jersey Exclusive Economic Zone","200NM","Jersey","JEY","Europe","United Kingdom","GBR","Europe",12,1200,11393235.4594081,71387211087.4971
+"RCP 2.6","2051",22756,"Chilean Exclusive Economic Zone (San Felix and San Ambrosio islands)","200NM","Islas San Félix and San Ambrosio","CHL","Americas","Chile","CHL","Americas",2662,266200,2527399399.41204,15601227269364.4
+"RCP 2.6","2051",33185,"Overlapping claim: Trinidad and Tobago / Venezuela / Guyana","Overlapping claim","Guyana","GUY","Americas","Guyana","GUY","Americas",32,3200,30381961.2250883,188423182462.659
+"RCP 2.6","2051",48950,"Overlapping claim Kuril Islands: Japan / Russia","Overlapping claim","Japan","JPN","Asia","Japan","JPN","Asia",846,84600,108031153.837135,543649712239.443
+"RCP 2.6","2051",48955,"Overlapping claim Liancourt Rocks: Japan / South Korea","Overlapping claim","Japan","JPN","Asia","Japan","JPN","Asia",3,300,2848308.86485203,17613800373.8743
+"RCP 2.6","2051",48962,"Joint regime area Peru / Ecuador","Joint regime","Peru","PER","Americas","Peru","PER","Americas",150,15000,112652294.213454,843724998597.081
+"RCP 2.6","2051",48968,"Joint regime area Costa Rica / Ecuador (Galapagos)","Joint regime","Costa Rica","CRI","Americas","Costa Rica","CRI","Americas",87,8700,82600957.0807089,503858314762.354
+"RCP 2.6","2100",3293,"Belgian Exclusive Economic Zone","200NM","Belgium","BEL","Europe","Belgium","BEL","Europe",38,3800,11551835.6871866,71093400487.4362
+"RCP 2.6","2100",5668,"Dutch Exclusive Economic Zone","200NM","Netherlands","NLD","Europe","Netherlands","NLD","Europe",583,58300,175804338.414582,1059417365023.48
+"RCP 2.6","2100",5669,"German Exclusive Economic Zone","200NM","Germany","DEU","Europe","Germany","DEU","Europe",240,24000,43789317.0808996,307110657315.354
+"RCP 2.6","2100",5673,"Croatian Exclusive Economic Zone","200NM","Croatia","HRV","Europe","Croatia","HRV","Europe",248,24800,235460199.494435,1478183622013.61
+"RCP 2.6","2100",5674,"Danish Exclusive Economic Zone","200NM","Denmark","DNK","Europe","Denmark","DNK","Europe",10,1000,3066011.55633068,15250850097.9308
+"RCP 2.6","2100",5677,"French Exclusive Economic Zone","200NM","France","FRA","Europe","France","FRA","Europe",1652,165200,1514684396.58539,9287487527030.04
+"RCP 2.6","2100",5679,"Greek Exclusive Economic Zone","200NM","Greece","GRC","Europe","Greece","GRC","Europe",637,63700,604790915.636915,3805624412607.31
+"RCP 2.6","2100",5681,"Irish Exclusive Economic Zone","200NM","Ireland","IRL","Europe","Ireland","IRL","Europe",534,53400,506998977.943662,3096922718221.62
+"RCP 2.6","2100",5682,"Italian Exclusive Economic Zone","200NM","Italy","ITA","Europe","Italy","ITA","Europe",494,49400,443432703.595507,2784231118821.98
+"RCP 2.6","2100",5688,"Portuguese Exclusive Economic Zone","200NM","Portugal","PRT","Europe","Portugal","PRT","Europe",303,30300,287679195.350055,1765368140737.3
+"RCP 2.6","2100",5690,"Russian Exclusive economic Zone","200NM","Russia","RUS","Europe","Russia","RUS","Europe",3578,357800,717598199.287195,3979412434750.86
+"RCP 2.6","2100",5691,"Montenegrin Exclusive economic Zone","200NM","Montenegro","MNE","Europe","Montenegro","MNE","Europe",3,300,2848308.86485203,17856228245.8743
+"RCP 2.6","2100",5693,"Spanish Exclusive Economic Zone","200NM","Spain","ESP","Europe","Spain","ESP","Europe",1557,155700,1478272300.8582,9236188261200.75
+"RCP 2.6","2100",5696,"United Kingdom Exclusive Economic Zone","200NM","United Kingdom","GBR","Europe","United Kingdom","GBR","Europe",1940,194000,1495986472.31614,9323853058192.78
+"RCP 2.6","2100",5697,"Turkish Exclusive Economic Zone","200NM","Turkey","TUR","Asia","Turkey","TUR","Asia",163,16300,120200745.938697,770510304195.659
+"RCP 2.6","2100",8311,"Australian Exclusive Economic Zone (Macquarie Island)","200NM","Macquarie Island","AUS","Oceania","Australia","AUS","Oceania",705,70500,266554752.500921,1232796758804.78
+"RCP 2.6","2100",8314,"Solomon Islands Exclusive Economic Zone","200NM","Solomon Islands","SLB","Oceania","Solomon Islands","SLB","Oceania",1341,134100,1273194062.58886,7872390926113.8
+"RCP 2.6","2100",8316,"Micronesian Exclusive Economic Zone","200NM","Micronesia","FSM","Oceania","Micronesia",NA,"Oceania",12627,1262700,11957185716.9081,74171977557535.3
+"RCP 2.6","2100",8317,"Nauruan Exclusive Economic Zone","200NM","Nauru","NRU","Oceania","Nauru","NRU","Oceania",3111,311100,2953696292.85156,18213743389163.6
+"RCP 2.6","2100",8318,"Marshall Islands Exclusive Economic Zone","200NM","Marshall Islands","MHL","Oceania","Marshall Islands","MHL","Oceania",10133,1013300,9620637909.18188,59639103163985.3
+"RCP 2.6","2100",8322,"Philippines Exclusive Economic Zone","200NM","Philippines","PHL","Asia","Philippines","PHL","Asia",17,1700,10757719.7359823,94102559430.2795
+"RCP 2.6","2100",8323,"Australian Exclusive Economic Zone","200NM","Australia","AUS","Oceania","Australia","AUS","Oceania",4261,426100,3964116178.01902,31330794975877.2
+"RCP 2.6","2100",8324,"Papua New Guinean Exclusive Economic Zone","200NM","Papua New Guinea","PNG","Oceania","Papua New Guinea","PNG","Oceania",6268,626800,5447309526.1836,36224300434863.8
+"RCP 2.6","2100",8326,"Tuvaluan Exclusive Economic Zone","200NM","Tuvalu","TUV","Oceania","Tuvalu","TUV","Oceania",4299,429900,4081626603.33296,25125973806649.8
+"RCP 2.6","2100",8327,"South Korean Exclusive Economic Zone","200NM","South Korea","KOR","Asia","South Korea","KOR","Asia",2255,225500,2140978830.08044,13334590694567.5
+"RCP 2.6","2100",8328,"North Korean Exclusive Economic Zone","200NM","North Korea","PRK","Asia","North Korea","PRK","Asia",831,83100,637627506.5533,4032600974178.58
+"RCP 2.6","2100",8354,"Omani Exclusive Economic Zone","200NM","Oman","OMN","Asia","Oman","OMN","Asia",633,63300,600993170.483779,3753983148391.47
+"RCP 2.6","2100",8359,"Pakistani Exclusive Economic Zone","200NM","Pakistan","PAK","Asia","Pakistan","PAK","Asia",350,35000,332302700.899404,2078695336293.33
+"RCP 2.6","2100",8361,"Portuguese Exclusive Economic Zone (Azores)","200NM","Azores","PRT","Europe","Portugal","PRT","Europe",2164,216400,2307829313.51948,18388758668795.7
+"RCP 2.6","2100",8362,"Cape Verdean Exclusive Economic Zone","200NM","Cape Verde","CPV","Africa","Cape Verde","CPV","Africa",342,34200,324707210.593132,2006352978029.67
+"RCP 2.6","2100",8363,"Portuguese Exclusive Economic Zone (Madeira)","200NM","Madeira","PRT","Europe","Portugal","PRT","Europe",1328,132800,1260851390.84117,7799027686632.35
+"RCP 2.6","2100",8364,"Spanish Exclusive Economic Zone (Canary Islands)","200NM","Canary Islands","ESP","Europe","Spain","ESP","Europe",3986,398600,3784453045.10007,23175932832645
+"RCP 2.6","2100",8366,"Tunisian Exclusive Economic Zone","200NM","Tunisia","TUN","Africa","Tunisia","TUN","Africa",397,39700,376926206.448752,2376741793633.36
+"RCP 2.6","2100",8367,"Moroccan Exclusive Economic Zone","200NM","Morocco","MAR","Africa","Morocco","MAR","Africa",1671,167100,1586508037.72258,9924153722151.97
+"RCP 2.6","2100",8368,"Overlapping claim Western Saharan Exclusive Economic Zone","Overlapping claim","Western Sahara","ESH","Africa","Western Sahara","ESH","Africa",1892,189200,1796333457.43335,11114342357992.7
+"RCP 2.6","2100",8369,"Mauritanian Exclusive Economic Zone","200NM","Mauritania","MRT","Africa","Mauritania","MRT","Africa",564,56400,535482066.592182,3349928639240.36
+"RCP 2.6","2100",8371,"Senegalese Exclusive Economic Zone","200NM","Senegal","SEN","Africa","Senegal","SEN","Africa",14,1400,13292108.0359761,83935507251.4133
+"RCP 2.6","2100",8372,"Libyan Exclusive Economic Zone","200NM","Libya","LBY","Africa","Libya","LBY","Africa",46,4600,43674069.2610645,275008311010.072
+"RCP 2.6","2100",8378,"Algerian Exclusive Economic Zone","200NM","Algeria","DZA","Africa","Algeria","DZA","Africa",31,3100,29432524.9368043,185552709396.701
+"RCP 2.6","2100",8382,"Tristan Da Cunha Exclusive Economic Zone","200NM","Tristan da Cunha","TAA","S Atlantic Ocean","United Kingdom","GBR","Europe",5148,514800,5637680176.34099,46430473314382.9
+"RCP 2.6","2100",8383,"Overlapping claim South Georgia and South Sandwich Exclusive Economic Zone: UK / Argentina","Overlapping claim","South Georgia and the South Sandwich Islands","SGS","S Atlantic Ocean","United Kingdom","GBR","Europe",5695,569500,804259338.649264,4686838074905.93
+"RCP 2.6","2100",8384,"South African Exclusive Economic Zone (Prince Edward Islands)","200NM","Prince Edward Islands","ZAF","Africa","South Africa","ZAF","Africa",4303,430300,4074451273.7742,25827608803521.3
+"RCP 2.6","2100",8385,"Crozet Islands Exclusive Economic Zone","200NM","Crozet Islands","ATF","Indian Ocean","France","FRA","Europe",4808,480800,4689653478.26635,30124282514497.3
+"RCP 2.6","2100",8386,"Amsterdam Island & St. Paul Island Exclusive Economic Zone","200NM","Amsterdam and Saint Paul Islands","ATF","Indian Ocean","France","FRA","Europe",3,300,3336578.50303882,28575134372.8994
+"RCP 2.6","2100",8387,"Kerguelen Exclusive Economic Zone","200NM","Kerguélen","ATF","Indian Ocean","France","FRA","Europe",3372,337200,2910589257.59682,17387067255051.6
+"RCP 2.6","2100",8388,"Heard and McDonald Islands Exclusive Economic Zone","200NM","Heard and McDonald Islands","HMD","Indian Ocean","Australia","AUS","Oceania",1394,139400,293167874.152457,1506746161957.09
+"RCP 2.6","2100",8389,"Overlapping claim Falkland / Malvinas Islands Exclusive Economic Zone: UK / Argentina","Overlapping claim","Falkland / Malvinas Islands","FLK","Americas","United Kingdom","GBR","Europe",5078,507800,4756207063.63401,28540094179759.8
+"RCP 2.6","2100",8395,"Namibian Exclusive Economic Zone","200NM","Namibia","NAM","Africa","Namibia","NAM","Africa",627,62700,595296552.754075,3689968936587.72
+"RCP 2.6","2100",8396,"South African Exclusive Economic Zone","200NM","South Africa","ZAF","Africa","South Africa","ZAF","Africa",2081,208100,2136092113.79035,15947830760618.7
+"RCP 2.6","2100",8399,"Bouvet Exclusive Economic Zone","200NM","Bouvet","BVT","S Atlantic Ocean","Norway","NOR","Europe",2967,296700,442149839.900703,2077263198157.26
+"RCP 2.6","2100",8401,"Clipperton Exclusive Economic Zone","200NM","Clipperton Island","CPT","Americas","France","FRA","Europe",173,17300,164252477.873134,948749594434.75
+"RCP 2.6","2100",8403,"Ecuadorian Exclusive Economic Zone (Galapagos)","200NM","Galapagos","ECU","Americas","Ecuador","ECU","Americas",7349,734900,6977407282.59919,43738593946606
+"RCP 2.6","2100",8423,"Panamanian Exclusive Economic Zone","200NM","Panama","PAN","Americas","Panama","PAN","Americas",1568,156800,1488716100.02933,9296793951562.29
+"RCP 2.6","2100",8424,"Costa Rican Exclusive Economic Zone","200NM","Costa Rica","CRI","Americas","Costa Rica","CRI","Americas",3294,329400,3127443133.60753,19398495300838
+"RCP 2.6","2100",8425,"Nicaraguan Exclusive Economic Zone","200NM","Nicaragua","NIC","Americas","Nicaragua","NIC","Americas",106,10600,100006988.068123,624866296063.204
+"RCP 2.6","2100",8426,"Colombian Exclusive Economic Zone","200NM","Colombia","COL","Americas","Colombia","COL","Americas",795,79500,754801849.185789,4722204986008.68
+"RCP 2.6","2100",8428,"El Salvador Exclusive Economic Zone","200NM","El Salvador","SLV","Americas","El Salvador","SLV","Americas",181,18100,167415158.749533,1056453707799.94
+"RCP 2.6","2100",8431,"Ecuadorian Exclusive Economic Zone","200NM","Ecuador","ECU","Americas","Ecuador","ECU","Americas",1958,195800,1858996252.46009,11660049024697.9
+"RCP 2.6","2100",8432,"Peruvian Exclusive Economic Zone","200NM","Peru","PER","Americas","Peru","PER","Americas",3374,337400,3203398036.67025,19871292891486.6
+"RCP 2.6","2100",8440,"French Polynesian Exclusive Economic Zone","200NM","French Polynesia","PYF","Oceania","France","FRA","Europe",20602,2060200,19560286411.2272,118547484367629
+"RCP 2.6","2100",8441,"Kiribati Exclusive Economic Zone (Line Islands)","200NM","Line Group","KIR","Oceania","Kiribati","KIR","Oceania",16504,1650400,15669496501.8393,97383024898972.3
+"RCP 2.6","2100",8442,"Jarvis Island Exclusive Economic Zone","200NM","Jarvis Island","UMI","Oceania","United States","USA","Americas",3259,325900,3094212863.51759,18285289711277.4
+"RCP 2.6","2100",8443,"Palmyra Atoll Exclusive Economic Zone","200NM","Palmyra Atoll","UMI","Oceania","United States","USA","Americas",3561,356100,3380942622.57936,19954831760268.8
+"RCP 2.6","2100",8444,"American Samoa Exclusive Economic Zone","200NM","American Samoa","ASM","Oceania","United States","USA","Americas",201,20100,190836693.945086,1148030252601.58
+"RCP 2.6","2100",8446,"Cook Islands Exclusive Economic Zone","200NM","Cook Islands","COK","Oceania","New Zealand","NZL","Oceania",8275,827500,7856585285.55019,47277277186411.2
+"RCP 2.6","2100",8449,"Tokelau Exclusive Economic Zone","200NM","Tokelau","TKL","Oceania","New Zealand","NZL","Oceania",3050,305000,2895780679.26623,17590459228964.2
+"RCP 2.6","2100",8450,"Kiribati Exclusive Economic Zone (Phoenix Islands)","200NM","Phoenix Group","KIR","Oceania","Kiribati","KIR","Oceania",7512,751200,7132165397.58949,44425975221585.2
+"RCP 2.6","2100",8451,"Howland and Baker Islands Exclusive Economic Zone","200NM","Howland and Baker islands","UMI","Oceania","United States","USA","Americas",4371,437100,4149986016.08941,24391951016206.8
+"RCP 2.6","2100",8454,"Wallis and Futuna Exclusive Economic Zone","200NM","Wallis and Futuna","WLF","Oceania","France","FRA","Europe",2,200,1898872.57656802,10944786979.9162
+"RCP 2.6","2100",8455,"New Zealand Exclusive Economic Zone","200NM","New Zealand","NZL","Oceania","New Zealand","NZL","Oceania",13817,1381700,14324224444.9955,106908820064719
+"RCP 2.6","2100",8456,"United States Exclusive Economic Zone","200NM","United States","USA","Americas","United States","USA","Americas",2874,287400,2424183899.81721,15079167135274.4
+"RCP 2.6","2100",8460,"Guyanese Exclusive Economic Zone","200NM","Guyana","GUY","Americas","Guyana","GUY","Americas",137,13700,130072771.494909,804609528316.259
+"RCP 2.6","2100",8461,"Surinamese Exclusive Economic Zone","200NM","Suriname","SUR","Americas","Suriname","SUR","Americas",201,20100,190836693.945086,1177365700169.58
+"RCP 2.6","2100",8462,"French Guiana Exclusive Economic Zone","200NM","French Guiana","GUF","Americas","France","FRA","Europe",181,18100,171847968.179406,1025293843026.41
+"RCP 2.6","2100",8463,"United States Exclusive Economic Zone (Alaska)","200NM","Alaska","USA","Americas","United States","USA","Americas",5141,514100,767908944.101397,3396359370349.14
+"RCP 2.6","2100",8464,"Brazilian Exclusive Economic Zone","200NM","Brazil","BRA","Americas","Brazil","BRA","Americas",27,2700,25634779.7836683,158025430980.868
+"RCP 2.6","2100",8465,"Chilean Exclusive Economic Zone","200NM","Chile","CHL","Americas","Chile","CHL","Americas",14595,1459500,14480609733.239,100740869107735
+"RCP 2.6","2100",8466,"Argentinean Exclusive Economic Zone","200NM","Argentina","ARG","Americas","Argentina","ARG","Americas",7046,704600,6691665950.48755,41363058497115.6
+"RCP 2.6","2100",8467,"Uruguayan Exclusive Economic Zone","200NM","Uruguay","URY","Americas","Uruguay","URY","Americas",38,3800,36078578.9547924,217015455594.408
+"RCP 2.6","2100",8469,"Iranian Exclusive Economic Zone","200NM","Iran","IRN","Asia","Iran","IRN","Asia",30,3000,28483088.6485203,179092001906.743
+"RCP 2.6","2100",8482,"Myanmar Exclusive Economic Zone","200NM","Myanmar","MMR","Asia","Myanmar","MMR","Asia",118,11800,112033482.017513,707689407531.055
+"RCP 2.6","2100",8486,"Chinese Exclusive Economic Zone","200NM","China","CHN","Asia","China","CHN","Asia",488,48800,463324908.682597,2897784357259.55
+"RCP 2.6","2100",8487,"Japanese Exclusive Economic Zone","200NM","Japan","JPN","Asia","Japan","JPN","Asia",2372,237200,1545792958.17089,9617117976521.13
+"RCP 2.6","2100",8488,"Kiribati Exclusive Economic Zone (Gilbert Islands)","200NM","Gilbert Islands","KIR","Oceania","Kiribati","KIR","Oceania",10619,1061900,10082063945.2879,62926507167421
+"RCP 2.6","2100",8489,"Antarctic 200NM zone beyond the coastline","200NM","Antarctica","ATA","Antarctica","Antarctica","ATA","Antarctica",1558,155800,130907235.775166,624603109527.194
+"RCP 2.6","2100",8492,"Indonesian Exclusive Economic Zone","200NM","Indonesia","IDN","Asia","Indonesia","IDN","Asia",1093,109300,714587432.044069,5853646522516.09
+"RCP 2.6","2100",8493,"Canadian Exclusive Economic Zone","200NM","Canada","CAN","Americas","Canada","CAN","Americas",4217,421700,728861159.014475,4214874435103.36
+"RCP 2.6","2100",21788,"Guernsey Exclusive Economic Zone","200NM","Guernsey","GGY","Europe","United Kingdom","GBR","Europe",1,100,949436.288284011,5874710865.95809
+"RCP 2.6","2100",21789,"Jersey Exclusive Economic Zone","200NM","Jersey","JEY","Europe","United Kingdom","GBR","Europe",12,1200,11393235.4594081,71387211087.4971
+"RCP 2.6","2100",21796,"Joint regime area Japan / Korea","Joint regime","South Korea","KOR","Asia","South Korea","KOR","Asia",4,400,3797745.15313604,23274478615.8324
+"RCP 2.6","2100",22756,"Chilean Exclusive Economic Zone (San Felix and San Ambrosio islands)","200NM","Islas San Félix and San Ambrosio","CHL","Americas","Chile","CHL","Americas",2457,245700,2332764960.31381,14391798393083
+"RCP 2.6","2100",48950,"Overlapping claim Kuril Islands: Japan / Russia","Overlapping claim","Japan","JPN","Asia","Japan","JPN","Asia",907,90700,116868958.896389,668416067575.573
+"RCP 2.6","2100",48955,"Overlapping claim Liancourt Rocks: Japan / South Korea","Overlapping claim","Japan","JPN","Asia","Japan","JPN","Asia",15,1500,14241544.3242602,87891413533.3714
+"RCP 2.6","2100",48962,"Joint regime area Peru / Ecuador","Joint regime","Peru","PER","Americas","Peru","PER","Americas",155,15500,147162624.684022,917023658759.504
+"RCP 2.6","2100",48974,"Joint regime area Ecuador / Colombia","Joint regime","Ecuador","ECU","Americas","Ecuador","ECU","Americas",84,8400,79752648.2158569,498555532228.48
+"RCP 8.5","2021",3293,"Belgian Exclusive Economic Zone","200NM","Belgium","BEL","Europe","Belgium","BEL","Europe",38,3800,10396739.7070364,87311877491.2617
+"RCP 8.5","2021",5668,"Dutch Exclusive Economic Zone","200NM","Netherlands","NLD","Europe","Netherlands","NLD","Europe",619,61900,215859909.92906,1330648818915.01
+"RCP 8.5","2021",5669,"German Exclusive Economic Zone","200NM","Germany","DEU","Europe","Germany","DEU","Europe",288,28800,83910296.5718549,496488522394.872
+"RCP 8.5","2021",5673,"Croatian Exclusive Economic Zone","200NM","Croatia","HRV","Europe","Croatia","HRV","Europe",246,24600,233561326.917867,1466281422673.69
+"RCP 8.5","2021",5674,"Danish Exclusive Economic Zone","200NM","Denmark","DNK","Europe","Denmark","DNK","Europe",17,1700,4428141.74389276,24390041887.7511
+"RCP 8.5","2021",5677,"French Exclusive Economic Zone","200NM","France","FRA","Europe","France","FRA","Europe",1840,184000,1697240543.8096,10553172202174.8
+"RCP 8.5","2021",5679,"Greek Exclusive Economic Zone","200NM","Greece","GRC","Europe","Greece","GRC","Europe",434,43400,412055349.115261,2592253920745.81
+"RCP 8.5","2021",5681,"Irish Exclusive Economic Zone","200NM","Ireland","IRL","Europe","Ireland","IRL","Europe",547,54700,519341649.691354,3166759776031.08
+"RCP 8.5","2021",5682,"Italian Exclusive Economic Zone","200NM","Italy","ITA","Europe","Italy","ITA","Europe",465,46500,421496606.226444,2642541488552.73
+"RCP 8.5","2021",5688,"Portuguese Exclusive Economic Zone","200NM","Portugal","PRT","Europe","Portugal","PRT","Europe",350,35000,332302700.899404,2022691240429.33
+"RCP 8.5","2021",5690,"Russian Exclusive economic Zone","200NM","Russia","RUS","Europe","Russia","RUS","Europe",1655,165500,445485186.423453,2617419610559.38
+"RCP 8.5","2021",5693,"Spanish Exclusive Economic Zone","200NM","Spain","ESP","Europe","Spain","ESP","Europe",2921,292100,2812202212.58648,18028117031745.9
+"RCP 8.5","2021",5696,"United Kingdom Exclusive Economic Zone","200NM","United Kingdom","GBR","Europe","United Kingdom","GBR","Europe",2086,208600,1663457627.05005,10492369470754.7
+"RCP 8.5","2021",5697,"Turkish Exclusive Economic Zone","200NM","Turkey","TUR","Asia","Turkey","TUR","Asia",141,14100,89090076.7186556,579447076031.781
+"RCP 8.5","2021",8311,"Australian Exclusive Economic Zone (Macquarie Island)","200NM","Macquarie Island","AUS","Oceania","Australia","AUS","Oceania",319,31900,176309833.012922,926808879194.073
+"RCP 8.5","2021",8314,"Solomon Islands Exclusive Economic Zone","200NM","Solomon Islands","SLB","Oceania","Solomon Islands","SLB","Oceania",3774,377400,3084798120.36812,21596441192955.3
+"RCP 8.5","2021",8316,"Micronesian Exclusive Economic Zone","200NM","Micronesia","FSM","Oceania","Micronesia",NA,"Oceania",14151,1415100,10519950827.6305,78893296818919.7
+"RCP 8.5","2021",8317,"Nauruan Exclusive Economic Zone","200NM","Nauru","NRU","Oceania","Nauru","NRU","Oceania",3099,309900,2942303057.39215,18144162353188.1
+"RCP 8.5","2021",8318,"Marshall Islands Exclusive Economic Zone","200NM","Marshall Islands","MHL","Oceania","Marshall Islands","MHL","Oceania",9814,981400,9149954233.37409,57536519328162.9
+"RCP 8.5","2021",8322,"Philippines Exclusive Economic Zone","200NM","Philippines","PHL","Asia","Philippines","PHL","Asia",84,8400,53155791.6366183,464884079273.616
+"RCP 8.5","2021",8323,"Australian Exclusive Economic Zone","200NM","Australia","AUS","Oceania","Australia","AUS","Oceania",4029,402900,3771968979.67393,27569091007977.8
+"RCP 8.5","2021",8324,"Papua New Guinean Exclusive Economic Zone","200NM","Papua New Guinea","PNG","Oceania","Papua New Guinea","PNG","Oceania",7651,765100,5060080867.27906,42152191006565.6
+"RCP 8.5","2021",8326,"Tuvaluan Exclusive Economic Zone","200NM","Tuvalu","TUV","Oceania","Tuvalu","TUV","Oceania",4082,408200,3875598928.77533,23876017581624.9
+"RCP 8.5","2021",8327,"South Korean Exclusive Economic Zone","200NM","South Korea","KOR","Asia","South Korea","KOR","Asia",2860,286000,2709393579.628,17106492938622.4
+"RCP 8.5","2021",8328,"North Korean Exclusive Economic Zone","200NM","North Korea","PRK","Asia","North Korea","PRK","Asia",738,73800,651193374.465185,4084165292443.79
+"RCP 8.5","2021",8361,"Portuguese Exclusive Economic Zone (Azores)","200NM","Azores","PRT","Europe","Portugal","PRT","Europe",2696,269600,2836854631.15773,21923006655405.6
+"RCP 8.5","2021",8363,"Portuguese Exclusive Economic Zone (Madeira)","200NM","Madeira","PRT","Europe","Portugal","PRT","Europe",2027,202700,1924507356.35169,11867340749729.1
+"RCP 8.5","2021",8364,"Spanish Exclusive Economic Zone (Canary Islands)","200NM","Canary Islands","ESP","Europe","Spain","ESP","Europe",3889,388900,3729466217.63871,23484644080124.9
+"RCP 8.5","2021",8366,"Tunisian Exclusive Economic Zone","200NM","Tunisia","TUN","Africa","Tunisia","TUN","Africa",213,21300,202229929.404494,1275177805165.07
+"RCP 8.5","2021",8367,"Moroccan Exclusive Economic Zone","200NM","Morocco","MAR","Africa","Morocco","MAR","Africa",1758,175800,1734374369.77426,11950421883376
+"RCP 8.5","2021",8368,"Overlapping claim Western Saharan Exclusive Economic Zone","Overlapping claim","Western Sahara","ESH","Africa","Western Sahara","ESH","Africa",362,36200,343695936.358812,2117545996732.83
+"RCP 8.5","2021",8369,"Mauritanian Exclusive Economic Zone","200NM","Mauritania","MRT","Africa","Mauritania","MRT","Africa",252,25200,239257944.647571,1506015997845.44
+"RCP 8.5","2021",8371,"Senegalese Exclusive Economic Zone","200NM","Senegal","SEN","Africa","Senegal","SEN","Africa",7,700,6646054.01798807,41992226201.7066
+"RCP 8.5","2021",8372,"Libyan Exclusive Economic Zone","200NM","Libya","LBY","Africa","Libya","LBY","Africa",11,1100,10443799.1711241,65773583413.539
+"RCP 8.5","2021",8378,"Algerian Exclusive Economic Zone","200NM","Algeria","DZA","Africa","Algeria","DZA","Africa",14,1400,13292108.0359761,83661422299.4133
+"RCP 8.5","2021",8382,"Tristan Da Cunha Exclusive Economic Zone","200NM","Tristan da Cunha","TAA","S Atlantic Ocean","United Kingdom","GBR","Europe",2992,299200,3327680960.36405,28184100598142.3
+"RCP 8.5","2021",8383,"Overlapping claim South Georgia and South Sandwich Exclusive Economic Zone: UK / Argentina","Overlapping claim","South Georgia and the South Sandwich Islands","SGS","S Atlantic Ocean","United Kingdom","GBR","Europe",5043,504300,675092340.564972,3746536429941.98
+"RCP 8.5","2021",8384,"South African Exclusive Economic Zone (Prince Edward Islands)","200NM","Prince Edward Islands","ZAF","Africa","South Africa","ZAF","Africa",2732,273200,2593859939.59192,16102680865461.5
+"RCP 8.5","2021",8385,"Crozet Islands Exclusive Economic Zone","200NM","Crozet Islands","ATF","Indian Ocean","France","FRA","Europe",3474,347400,3418944266.13079,22477238977977.6
+"RCP 8.5","2021",8387,"Kerguelen Exclusive Economic Zone","200NM","Kerguélen","ATF","Indian Ocean","France","FRA","Europe",3659,365900,2998600307.84282,18039813819300.8
+"RCP 8.5","2021",8388,"Heard and McDonald Islands Exclusive Economic Zone","200NM","Heard and McDonald Islands","HMD","Indian Ocean","Australia","AUS","Oceania",1760,176000,285733609.288892,1594737457979.15
+"RCP 8.5","2021",8389,"Overlapping claim Falkland / Malvinas Islands Exclusive Economic Zone: UK / Argentina","Overlapping claim","Falkland / Malvinas Islands","FLK","Americas","United Kingdom","GBR","Europe",3340,334000,2932368368.48428,17653518790907
+"RCP 8.5","2021",8395,"Namibian Exclusive Economic Zone","200NM","Namibia","NAM","Africa","Namibia","NAM","Africa",130,13000,123426717.476921,764855111150.552
+"RCP 8.5","2021",8396,"South African Exclusive Economic Zone","200NM","South Africa","ZAF","Africa","South Africa","ZAF","Africa",1954,195400,1968965333.00448,14126855415047
+"RCP 8.5","2021",8399,"Bouvet Exclusive Economic Zone","200NM","Bouvet","BVT","S Atlantic Ocean","Norway","NOR","Europe",1528,152800,209571023.678259,844387589197.085
+"RCP 8.5","2021",8401,"Clipperton Exclusive Economic Zone","200NM","Clipperton Island","CPT","Americas","France","FRA","Europe",3050,305000,2895780679.26623,17332672179188.2
+"RCP 8.5","2021",8403,"Ecuadorian Exclusive Economic Zone (Galapagos)","200NM","Galapagos","ECU","Americas","Ecuador","ECU","Americas",8386,838600,7961972713.54971,49881965706552.6
+"RCP 8.5","2021",8418,"Barbados Exclusive Economic Zone","200NM","Barbados","BRB","Americas","Barbados","BRB","Americas",196,19600,186089512.503666,1137580813967.79
+"RCP 8.5","2021",8420,"Trinidad and Tobago Exclusive Economic Zone","200NM","Trinidad and Tobago","TTO","Americas","Trinidad and Tobago","TTO","Americas",70,7000,66460540.1798808,412049224457.066
+"RCP 8.5","2021",8423,"Panamanian Exclusive Economic Zone","200NM","Panama","PAN","Americas","Panama","PAN","Americas",2996,299600,2844511119.6989,17768052600266.4
+"RCP 8.5","2021",8424,"Costa Rican Exclusive Economic Zone","200NM","Costa Rica","CRI","Americas","Costa Rica","CRI","Americas",5501,550100,5222849021.85034,32344982432347.5
+"RCP 8.5","2021",8425,"Nicaraguan Exclusive Economic Zone","200NM","Nicaragua","NIC","Americas","Nicaragua","NIC","Americas",510,51000,457615650.445607,2991497340947.76
+"RCP 8.5","2021",8426,"Colombian Exclusive Economic Zone","200NM","Colombia","COL","Americas","Colombia","COL","Americas",2745,274500,2586254968.90518,16278437831107.8
+"RCP 8.5","2021",8428,"El Salvador Exclusive Economic Zone","200NM","El Salvador","SLV","Americas","El Salvador","SLV","Americas",372,37200,348124231.321797,2182344629117.58
+"RCP 8.5","2021",8430,"Guatemalan Exclusive Economic Zone","200NM","Guatemala","GTM","Americas","Guatemala","GTM","Americas",42,4200,39876324.1079284,246088918594.24
+"RCP 8.5","2021",8431,"Ecuadorian Exclusive Economic Zone","200NM","Ecuador","ECU","Americas","Ecuador","ECU","Americas",2156,215600,2046984637.54033,12846216140401.6
+"RCP 8.5","2021",8432,"Peruvian Exclusive Economic Zone","200NM","Peru","PER","Americas","Peru","PER","Americas",2504,250400,2377388465.86316,14733822573923.1
+"RCP 8.5","2021",8439,"Pitcairn Islands Exclusive Economic Zone","200NM","Pitcairn","PCN","Oceania","United Kingdom","GBR","Europe",69,6900,65511103.8915967,368971272695.108
+"RCP 8.5","2021",8440,"French Polynesian Exclusive Economic Zone","200NM","French Polynesia","PYF","Oceania","France","FRA","Europe",16430,1643000,15599238216.5063,94367976464403.5
+"RCP 8.5","2021",8441,"Kiribati Exclusive Economic Zone (Line Islands)","200NM","Line Group","KIR","Oceania","Kiribati","KIR","Oceania",15967,1596700,15159649215.0308,94212727847624.9
+"RCP 8.5","2021",8442,"Jarvis Island Exclusive Economic Zone","200NM","Jarvis Island","UMI","Oceania","United States","USA","Americas",3259,325900,3094212863.51759,18285289721613.4
+"RCP 8.5","2021",8443,"Palmyra Atoll Exclusive Economic Zone","200NM","Palmyra Atoll","UMI","Oceania","United States","USA","Americas",3561,356100,3380942622.57936,19954831760684.8
+"RCP 8.5","2021",8446,"Cook Islands Exclusive Economic Zone","200NM","Cook Islands","COK","Oceania","New Zealand","NZL","Oceania",5921,592100,5621612262.92963,33797653812049.9
+"RCP 8.5","2021",8449,"Tokelau Exclusive Economic Zone","200NM","Tokelau","TKL","Oceania","New Zealand","NZL","Oceania",2126,212600,2018501548.89181,12239557700194.9
+"RCP 8.5","2021",8450,"Kiribati Exclusive Economic Zone (Phoenix Islands)","200NM","Phoenix Group","KIR","Oceania","Kiribati","KIR","Oceania",7512,751200,7132165397.58949,44425975215977.2
+"RCP 8.5","2021",8451,"Howland and Baker Islands Exclusive Economic Zone","200NM","Howland and Baker islands","UMI","Oceania","United States","USA","Americas",4371,437100,4149986016.08941,24391951012382.8
+"RCP 8.5","2021",8455,"New Zealand Exclusive Economic Zone","200NM","New Zealand","NZL","Oceania","New Zealand","NZL","Oceania",11730,1173000,12086734864.3908,89079278461672
+"RCP 8.5","2021",8456,"United States Exclusive Economic Zone","200NM","United States","USA","Americas","United States","USA","Americas",2959,295900,2551118461.27987,15640507990413.5
+"RCP 8.5","2021",8460,"Guyanese Exclusive Economic Zone","200NM","Guyana","GUY","Americas","Guyana","GUY","Americas",337,33700,319960029.151712,1979919626243.88
+"RCP 8.5","2021",8461,"Surinamese Exclusive Economic Zone","200NM","Suriname","SUR","Americas","Suriname","SUR","Americas",387,38700,367431843.565912,2268400802821.78
+"RCP 8.5","2021",8462,"French Guiana Exclusive Economic Zone","200NM","French Guiana","GUF","Americas","France","FRA","Europe",430,43000,408257603.962125,2409649110921.98
+"RCP 8.5","2021",8463,"United States Exclusive Economic Zone (Alaska)","200NM","Alaska","USA","Americas","United States","USA","Americas",7779,777900,1376600642.62743,7125366804626.57
+"RCP 8.5","2021",8465,"Chilean Exclusive Economic Zone","200NM","Chile","CHL","Americas","Chile","CHL","Americas",15208,1520800,15092484672.697,105356861202102
+"RCP 8.5","2021",8466,"Argentinean Exclusive Economic Zone","200NM","Argentina","ARG","Americas","Argentina","ARG","Americas",6550,655000,6182125411.98912,38241255570923.8
+"RCP 8.5","2021",8467,"Uruguayan Exclusive Economic Zone","200NM","Uruguay","URY","Americas","Uruguay","URY","Americas",18,1800,17089853.1891122,103089398307.246
+"RCP 8.5","2021",8482,"Myanmar Exclusive Economic Zone","200NM","Myanmar","MMR","Asia","Myanmar","MMR","Asia",42,4200,39876324.1079284,251970524642.24
+"RCP 8.5","2021",8486,"Chinese Exclusive Economic Zone","200NM","China","CHN","Asia","China","CHN","Asia",1198,119800,941494675.862008,5974782961260.28
+"RCP 8.5","2021",8487,"Japanese Exclusive Economic Zone","200NM","Japan","JPN","Asia","Japan","JPN","Asia",1853,185300,1289831971.12999,8020029971485.04
+"RCP 8.5","2021",8488,"Kiribati Exclusive Economic Zone (Gilbert Islands)","200NM","Gilbert Islands","KIR","Oceania","Kiribati","KIR","Oceania",10619,1061900,10082063945.2879,62926507162437
+"RCP 8.5","2021",8489,"Antarctic 200NM zone beyond the coastline","200NM","Antarctica","ATA","Antarctica","Antarctica","ATA","Antarctica",443,44300,28999638.600125,78634453309.2722
+"RCP 8.5","2021",8492,"Indonesian Exclusive Economic Zone","200NM","Indonesia","IDN","Asia","Indonesia","IDN","Asia",1813,181300,1126656279.38775,9358875664726.34
+"RCP 8.5","2021",8493,"Canadian Exclusive Economic Zone","200NM","Canada","CAN","Americas","Canada","CAN","Americas",4969,496900,1603061109.57607,9032414208221.14
+"RCP 8.5","2021",21788,"Guernsey Exclusive Economic Zone","200NM","Guernsey","GGY","Europe","United Kingdom","GBR","Europe",1,100,949436.288284011,5874710865.95809
+"RCP 8.5","2021",21789,"Jersey Exclusive Economic Zone","200NM","Jersey","JEY","Europe","United Kingdom","GBR","Europe",12,1200,11393235.4594081,71387211095.4971
+"RCP 8.5","2021",21796,"Joint regime area Japan / Korea","Joint regime","South Korea","KOR","Asia","South Korea","KOR","Asia",99,9900,93994192.5401171,577499062193.851
+"RCP 8.5","2021",22756,"Chilean Exclusive Economic Zone (San Felix and San Ambrosio islands)","200NM","Islas San Félix and San Ambrosio","CHL","Americas","Chile","CHL","Americas",2689,268900,2553034179.1957,15756750813417.3
+"RCP 8.5","2021",33185,"Overlapping claim: Trinidad and Tobago / Venezuela / Guyana","Overlapping claim","Guyana","GUY","Americas","Guyana","GUY","Americas",32,3200,30381961.2250883,188423182462.659
+"RCP 8.5","2021",48950,"Overlapping claim Kuril Islands: Japan / Russia","Overlapping claim","Japan","JPN","Asia","Japan","JPN","Asia",997,99700,147218058.994027,764010654275.27
+"RCP 8.5","2021",48955,"Overlapping claim Liancourt Rocks: Japan / South Korea","Overlapping claim","Japan","JPN","Asia","Japan","JPN","Asia",15,1500,14241544.3242602,87891413565.3714
+"RCP 8.5","2021",48962,"Joint regime area Peru / Ecuador","Joint regime","Peru","PER","Americas","Peru","PER","Americas",155,15500,147162624.684022,917023658775.504
+"RCP 8.5","2021",48968,"Joint regime area Costa Rica / Ecuador (Galapagos)","Joint regime","Costa Rica","CRI","Americas","Costa Rica","CRI","Americas",87,8700,82600957.0807089,503858314762.354
+"RCP 8.5","2021",48974,"Joint regime area Ecuador / Colombia","Joint regime","Ecuador","ECU","Americas","Ecuador","ECU","Americas",182,18200,172797404.46769,1084333590796.37
+"RCP 8.5","2051",3293,"Belgian Exclusive Economic Zone","200NM","Belgium","BEL","Europe","Belgium","BEL","Europe",38,3800,10396739.7070364,87311877491.2617
+"RCP 8.5","2051",5668,"Dutch Exclusive Economic Zone","200NM","Netherlands","NLD","Europe","Netherlands","NLD","Europe",580,58000,363385363.377766,2393865195966.12
+"RCP 8.5","2051",5669,"German Exclusive Economic Zone","200NM","Germany","DEU","Europe","Germany","DEU","Europe",251,25100,117839399.551704,716422807259.034
+"RCP 8.5","2051",5673,"Croatian Exclusive Economic Zone","200NM","Croatia","HRV","Europe","Croatia","HRV","Europe",248,24800,235460199.494435,1478183622005.61
+"RCP 8.5","2051",5674,"Danish Exclusive Economic Zone","200NM","Denmark","DNK","Europe","Denmark","DNK","Europe",11,1100,10405338.5150288,61618620638.9635
+"RCP 8.5","2051",5677,"French Exclusive Economic Zone","200NM","France","FRA","Europe","France","FRA","Europe",1726,172600,1582632489.9581,9740515934582.59
+"RCP 8.5","2051",5679,"Greek Exclusive Economic Zone","200NM","Greece","GRC","Europe","Greece","GRC","Europe",16,1600,15190980.6125442,95665293007.3295
+"RCP 8.5","2051",5681,"Irish Exclusive Economic Zone","200NM","Ireland","IRL","Europe","Ireland","IRL","Europe",491,49100,466173217.547449,2847591720905.42
+"RCP 8.5","2051",5682,"Italian Exclusive Economic Zone","200NM","Italy","ITA","Europe","Italy","ITA","Europe",470,47000,426243787.667865,2674648078898.52
+"RCP 8.5","2051",5688,"Portuguese Exclusive Economic Zone","200NM","Portugal","PRT","Europe","Portugal","PRT","Europe",758,75800,719672706.51928,4419543387460.23
+"RCP 8.5","2051",5690,"Russian Exclusive economic Zone","200NM","Russia","RUS","Europe","Russia","RUS","Europe",6155,615500,549470936.037695,2158000942022.58
+"RCP 8.5","2051",5691,"Montenegrin Exclusive economic Zone","200NM","Montenegro","MNE","Europe","Montenegro","MNE","Europe",3,300,2848308.86485203,17856228237.8743
+"RCP 8.5","2051",5693,"Spanish Exclusive Economic Zone","200NM","Spain","ESP","Europe","Spain","ESP","Europe",1380,138000,1310222077.83193,8182819407942.17
+"RCP 8.5","2051",5696,"United Kingdom Exclusive Economic Zone","200NM","United Kingdom","GBR","Europe","United Kingdom","GBR","Europe",1836,183600,1568123015.67974,9834167648535.83
+"RCP 8.5","2051",5697,"Turkish Exclusive Economic Zone","200NM","Turkey","TUR","Asia","Turkey","TUR","Asia",112,11200,81547692.1840398,524205682684.778
+"RCP 8.5","2051",8311,"Australian Exclusive Economic Zone (Macquarie Island)","200NM","Macquarie Island","AUS","Oceania","Australia","AUS","Oceania",2049,204900,1155516852.43731,6190718207217.64
+"RCP 8.5","2051",8314,"Solomon Islands Exclusive Economic Zone","200NM","Solomon Islands","SLB","Oceania","Solomon Islands","SLB","Oceania",2,200,1265614.08658615,10956638443.5623
+"RCP 8.5","2051",8316,"Micronesian Exclusive Economic Zone","200NM","Micronesia","FSM","Oceania","Micronesia",NA,"Oceania",7552,755200,6519786379.90947,43193589449792.1
+"RCP 8.5","2051",8317,"Nauruan Exclusive Economic Zone","200NM","Nauru","NRU","Oceania","Nauru","NRU","Oceania",2324,232400,2206489933.97204,13652284340102.6
+"RCP 8.5","2051",8318,"Marshall Islands Exclusive Economic Zone","200NM","Marshall Islands","MHL","Oceania","Marshall Islands","MHL","Oceania",6798,679800,6454267887.7547,39941072310727.1
+"RCP 8.5","2051",8323,"Australian Exclusive Economic Zone","200NM","Australia","AUS","Oceania","Australia","AUS","Oceania",5491,549100,4999131160.44123,39271683571735.8
+"RCP 8.5","2051",8324,"Papua New Guinean Exclusive Economic Zone","200NM","Papua New Guinea","PNG","Oceania","Papua New Guinea","PNG","Oceania",10396,1039600,7216036692.24156,57727600144793
+"RCP 8.5","2051",8326,"Tuvaluan Exclusive Economic Zone","200NM","Tuvalu","TUV","Oceania","Tuvalu","TUV","Oceania",1597,159700,1516249752.38957,9365507828087.07
+"RCP 8.5","2051",8327,"South Korean Exclusive Economic Zone","200NM","South Korea","KOR","Asia","South Korea","KOR","Asia",2539,253900,2337160751.11521,14902826702706.5
+"RCP 8.5","2051",8328,"North Korean Exclusive Economic Zone","200NM","North Korea","PRK","Asia","North Korea","PRK","Asia",831,83100,744485428.664958,4672552236786.56
+"RCP 8.5","2051",8361,"Portuguese Exclusive Economic Zone (Azores)","200NM","Azores","PRT","Europe","Portugal","PRT","Europe",100,10000,109591717.974005,903275545734.563
+"RCP 8.5","2051",8363,"Portuguese Exclusive Economic Zone (Madeira)","200NM","Madeira","PRT","Europe","Portugal","PRT","Europe",1775,177500,1685249411.70412,10386150058547.6
+"RCP 8.5","2051",8364,"Spanish Exclusive Economic Zone (Canary Islands)","200NM","Canary Islands","ESP","Europe","Spain","ESP","Europe",3852,385200,3657228582.47001,22411026845342.6
+"RCP 8.5","2051",8365,"Overlapping claim Gibraltarian Exclusive Economic Zone","Overlapping claim","Gibraltar","GIB","Europe","United Kingdom","GBR","Europe",3,300,2848308.86485203,17831787541.8743
+"RCP 8.5","2051",8366,"Tunisian Exclusive Economic Zone","200NM","Tunisia","TUN","Africa","Tunisia","TUN","Africa",196,19600,186089512.503666,1173395157459.79
+"RCP 8.5","2051",8367,"Moroccan Exclusive Economic Zone","200NM","Morocco","MAR","Africa","Morocco","MAR","Africa",1774,177400,1684299975.41583,10531304993557.7
+"RCP 8.5","2051",8368,"Overlapping claim Western Saharan Exclusive Economic Zone","Overlapping claim","Western Sahara","ESH","Africa","Western Sahara","ESH","Africa",970,97000,867759486.477013,5605415433501.62
+"RCP 8.5","2051",8369,"Mauritanian Exclusive Economic Zone","200NM","Mauritania","MRT","Africa","Mauritania","MRT","Africa",294,29400,279134268.755499,1756176754567.68
+"RCP 8.5","2051",8371,"Senegalese Exclusive Economic Zone","200NM","Senegal","SEN","Africa","Senegal","SEN","Africa",13,1300,12342671.7476921,77938365829.4552
+"RCP 8.5","2051",8372,"Libyan Exclusive Economic Zone","200NM","Libya","LBY","Africa","Libya","LBY","Africa",8,800,7595490.30627209,47839673439.6647
+"RCP 8.5","2051",8378,"Algerian Exclusive Economic Zone","200NM","Algeria","DZA","Africa","Algeria","DZA","Africa",467,46700,443386746.628633,2796495765654.43
+"RCP 8.5","2051",8382,"Tristan Da Cunha Exclusive Economic Zone","200NM","Tristan da Cunha","TAA","S Atlantic Ocean","United Kingdom","GBR","Europe",3409,340900,3791465372.28644,32148998258815.4
+"RCP 8.5","2051",8383,"Overlapping claim South Georgia and South Sandwich Exclusive Economic Zone: UK / Argentina","Overlapping claim","South Georgia and the South Sandwich Islands","SGS","S Atlantic Ocean","United Kingdom","GBR","Europe",5872,587200,856146625.024378,5085955150689.8
+"RCP 8.5","2051",8384,"South African Exclusive Economic Zone (Prince Edward Islands)","200NM","Prince Edward Islands","ZAF","Africa","South Africa","ZAF","Africa",3884,388400,3689486700.93565,22913410976740.2
+"RCP 8.5","2051",8385,"Crozet Islands Exclusive Economic Zone","200NM","Crozet Islands","ATF","Indian Ocean","France","FRA","Europe",4814,481400,4621175619.54384,29034738229974.9
+"RCP 8.5","2051",8387,"Kerguelen Exclusive Economic Zone","200NM","Kerguélen","ATF","Indian Ocean","France","FRA","Europe",3724,372400,3237638499.17035,19282063831192.5
+"RCP 8.5","2051",8388,"Heard and McDonald Islands Exclusive Economic Zone","200NM","Heard and McDonald Islands","HMD","Indian Ocean","Australia","AUS","Oceania",1618,161800,308372420.106772,1637082992944.8
+"RCP 8.5","2051",8389,"Overlapping claim Falkland / Malvinas Islands Exclusive Economic Zone: UK / Argentina","Overlapping claim","Falkland / Malvinas Islands","FLK","Americas","United Kingdom","GBR","Europe",4400,440000,4172278529.95085,25132656946137
+"RCP 8.5","2051",8395,"Namibian Exclusive Economic Zone","200NM","Namibia","NAM","Africa","Namibia","NAM","Africa",963,96300,914307145.617502,5679081428917.64
+"RCP 8.5","2051",8396,"South African Exclusive Economic Zone","200NM","South Africa","ZAF","Africa","South Africa","ZAF","Africa",2105,210500,2199242208.13261,17026567894625.1
+"RCP 8.5","2051",8399,"Bouvet Exclusive Economic Zone","200NM","Bouvet","BVT","S Atlantic Ocean","Norway","NOR","Europe",3095,309500,463586355.427194,2205919597901.38
+"RCP 8.5","2051",8401,"Clipperton Exclusive Economic Zone","200NM","Clipperton Island","CPT","Americas","France","FRA","Europe",983,98300,933295871.383183,5487508849492.8
+"RCP 8.5","2051",8403,"Ecuadorian Exclusive Economic Zone (Galapagos)","200NM","Galapagos","ECU","Americas","Ecuador","ECU","Americas",4800,480000,4349585399.0492,28272487400550.8
+"RCP 8.5","2051",8423,"Panamanian Exclusive Economic Zone","200NM","Panama","PAN","Americas","Panama","PAN","Americas",2312,231200,2190663889.08276,13709043016292.6
+"RCP 8.5","2051",8424,"Costa Rican Exclusive Economic Zone","200NM","Costa Rica","CRI","Americas","Costa Rica","CRI","Americas",3963,396300,3762616010.46953,23381150811239.9
+"RCP 8.5","2051",8425,"Nicaraguan Exclusive Economic Zone","200NM","Nicaragua","NIC","Americas","Nicaragua","NIC","Americas",1208,120800,1128871169.2826,7179052878047.29
+"RCP 8.5","2051",8426,"Colombian Exclusive Economic Zone","200NM","Colombia","COL","Americas","Colombia","COL","Americas",775,77500,646840305.577655,4470856605299.8
+"RCP 8.5","2051",8427,"Honduran Exclusive Economic Zone","200NM","Honduras","HND","Americas","Honduras","HND","Americas",1,100,632807.043293075,5539056641.78115
+"RCP 8.5","2051",8428,"El Salvador Exclusive Economic Zone","200NM","El Salvador","SLV","Americas","El Salvador","SLV","Americas",949,94900,900381779.091544,5623993366385.88
+"RCP 8.5","2051",8430,"Guatemalan Exclusive Economic Zone","200NM","Guatemala","GTM","Americas","Guatemala","GTM","Americas",552,55200,524088831.132774,3255368295040.87
+"RCP 8.5","2051",8432,"Peruvian Exclusive Economic Zone","200NM","Peru","PER","Americas","Peru","PER","Americas",351,35100,290190559.868921,1989426265079.23
+"RCP 8.5","2051",8440,"French Polynesian Exclusive Economic Zone","200NM","French Polynesia","PYF","Oceania","France","FRA","Europe",18072,1807200,17158212601.8686,103869294215211
+"RCP 8.5","2051",8441,"Kiribati Exclusive Economic Zone (Line Islands)","200NM","Line Group","KIR","Oceania","Kiribati","KIR","Oceania",16504,1650400,15669496501.8393,97383024891632.3
+"RCP 8.5","2051",8442,"Jarvis Island Exclusive Economic Zone","200NM","Jarvis Island","UMI","Oceania","United States","USA","Americas",3259,325900,3094212863.51759,18285289712877.4
+"RCP 8.5","2051",8443,"Palmyra Atoll Exclusive Economic Zone","200NM","Palmyra Atoll","UMI","Oceania","United States","USA","Americas",3510,351000,3332521371.87688,19680595394488.9
+"RCP 8.5","2051",8446,"Cook Islands Exclusive Economic Zone","200NM","Cook Islands","COK","Oceania","New Zealand","NZL","Oceania",4439,443900,4214547683.69272,25309832879908
+"RCP 8.5","2051",8449,"Tokelau Exclusive Economic Zone","200NM","Tokelau","TKL","Oceania","New Zealand","NZL","Oceania",999,99900,948486851.995727,5746586509052.13
+"RCP 8.5","2051",8450,"Kiribati Exclusive Economic Zone (Phoenix Islands)","200NM","Phoenix Group","KIR","Oceania","Kiribati","KIR","Oceania",7332,733200,6961266865.69837,43369826850872.7
+"RCP 8.5","2051",8451,"Howland and Baker Islands Exclusive Economic Zone","200NM","Howland and Baker islands","UMI","Oceania","United States","USA","Americas",4371,437100,4149986016.08941,24391951012574.8
+"RCP 8.5","2051",8452,"Johnston Atoll Exclusive Economic Zone","200NM","Johnston Atoll","UMI","Oceania","United States","USA","Americas",71,7100,67409976.4681648,376709983323.025
+"RCP 8.5","2051",8455,"New Zealand Exclusive Economic Zone","200NM","New Zealand","NZL","Oceania","New Zealand","NZL","Oceania",13915,1391500,14456168015.7562,108671175725874
+"RCP 8.5","2051",8456,"United States Exclusive Economic Zone","200NM","United States","USA","Americas","United States","USA","Americas",1706,170600,1519970315.65212,9392331334529.47
+"RCP 8.5","2051",8463,"United States Exclusive Economic Zone (Alaska)","200NM","Alaska","USA","Americas","United States","USA","Americas",14271,1427100,6116128977.76951,35152024025780
+"RCP 8.5","2051",8465,"Chilean Exclusive Economic Zone","200NM","Chile","CHL","Americas","Chile","CHL","Americas",15864,1586400,15492310592.8628,104184094897393
+"RCP 8.5","2051",8466,"Argentinean Exclusive Economic Zone","200NM","Argentina","ARG","Americas","Argentina","ARG","Americas",7065,706500,6710823019.0804,41532978264717.4
+"RCP 8.5","2051",8467,"Uruguayan Exclusive Economic Zone","200NM","Uruguay","URY","Americas","Uruguay","URY","Americas",39,3900,37028015.2430764,222735715612.366
+"RCP 8.5","2051",8482,"Myanmar Exclusive Economic Zone","200NM","Myanmar","MMR","Asia","Myanmar","MMR","Asia",74,7400,46827721.2036875,409756140535.805
+"RCP 8.5","2051",8483,"Malaysian Exclusive Economic Zone","200NM","Malaysia","MYS","Asia","Malaysia","MYS","Asia",40,4000,18588653.6798596,124657754807.195
+"RCP 8.5","2051",8486,"Chinese Exclusive Economic Zone","200NM","China","CHN","Asia","China","CHN","Asia",557,55700,418553759.822244,3148809975480.79
+"RCP 8.5","2051",8487,"Japanese Exclusive Economic Zone","200NM","Japan","JPN","Asia","Japan","JPN","Asia",1580,158000,976209545.982986,6100046637088.65
+"RCP 8.5","2051",8488,"Kiribati Exclusive Economic Zone (Gilbert Islands)","200NM","Gilbert Islands","KIR","Oceania","Kiribati","KIR","Oceania",9803,980300,9307323934.04816,58133054777351.2
+"RCP 8.5","2051",8489,"Antarctic 200NM zone beyond the coastline","200NM","Antarctica","ATA","Antarctica","Antarctica","ATA","Antarctica",1409,140900,110733023.570263,464638140070.886
+"RCP 8.5","2051",8492,"Indonesian Exclusive Economic Zone","200NM","Indonesia","IDN","Asia","Indonesia","IDN","Asia",5929,592900,3649135306.41324,31298151454951.2
+"RCP 8.5","2051",8493,"Canadian Exclusive Economic Zone","200NM","Canada","CAN","Americas","Canada","CAN","Americas",3372,337200,715363123.708936,3833649579567.19
+"RCP 8.5","2051",21788,"Guernsey Exclusive Economic Zone","200NM","Guernsey","GGY","Europe","United Kingdom","GBR","Europe",1,100,949436.288284011,5874710865.95809
+"RCP 8.5","2051",21789,"Jersey Exclusive Economic Zone","200NM","Jersey","JEY","Europe","United Kingdom","GBR","Europe",12,1200,11393235.4594081,71387211095.4971
+"RCP 8.5","2051",21796,"Joint regime area Japan / Korea","Joint regime","South Korea","KOR","Asia","South Korea","KOR","Asia",5,500,3164035.21646537,26508514028.9057
+"RCP 8.5","2051",22756,"Chilean Exclusive Economic Zone (San Felix and San Ambrosio islands)","200NM","Islas San Félix and San Ambrosio","CHL","Americas","Chile","CHL","Americas",2727,272700,2589112758.1505,15983430857883.7
+"RCP 8.5","2051",48950,"Overlapping claim Kuril Islands: Japan / Russia","Overlapping claim","Japan","JPN","Asia","Japan","JPN","Asia",923,92300,111063383.358328,523502878019.438
+"RCP 8.5","2051",48955,"Overlapping claim Liancourt Rocks: Japan / South Korea","Overlapping claim","Japan","JPN","Asia","Japan","JPN","Asia",15,1500,14241544.3242602,87891413565.3714
+"RCP 8.5","2100",3293,"Belgian Exclusive Economic Zone","200NM","Belgium","BEL","Europe","Belgium","BEL","Europe",38,3800,36078578.9547924,225560789946.408
+"RCP 8.5","2100",5668,"Dutch Exclusive Economic Zone","200NM","Netherlands","NLD","Europe","Netherlands","NLD","Europe",402,40200,381673387.890172,2364785061851.15
+"RCP 8.5","2100",5669,"German Exclusive Economic Zone","200NM","Germany","DEU","Europe","Germany","DEU","Europe",2,200,1898872.57656802,11943828707.9162
+"RCP 8.5","2100",5673,"Croatian Exclusive Economic Zone","200NM","Croatia","HRV","Europe","Croatia","HRV","Europe",232,23200,220269218.88189,1383127503486.28
+"RCP 8.5","2100",5677,"French Exclusive Economic Zone","200NM","France","FRA","Europe","France","FRA","Europe",1235,123500,1232285468.4356,8566101132522.99
+"RCP 8.5","2100",5679,"Greek Exclusive Economic Zone","200NM","Greece","GRC","Europe","Greece","GRC","Europe",71,7100,67409976.4681648,424347197731.025
+"RCP 8.5","2100",5681,"Irish Exclusive Economic Zone","200NM","Ireland","IRL","Europe","Ireland","IRL","Europe",587,58700,559109423.229399,3435555759345.83
+"RCP 8.5","2100",5682,"Italian Exclusive Economic Zone","200NM","Italy","ITA","Europe","Italy","ITA","Europe",1098,109800,1042481044.53584,6487944818173.99
+"RCP 8.5","2100",5688,"Portuguese Exclusive Economic Zone","200NM","Portugal","PRT","Europe","Portugal","PRT","Europe",94,9400,89247011.098697,543450066536.061
+"RCP 8.5","2100",5690,"Russian Exclusive economic Zone","200NM","Russia","RUS","Europe","Russia","RUS","Europe",1377,137700,1175748739.31972,7359333930656.23
+"RCP 8.5","2100",5693,"Spanish Exclusive Economic Zone","200NM","Spain","ESP","Europe","Spain","ESP","Europe",1613,161300,1531440733.00211,9556022028958.4
+"RCP 8.5","2100",5696,"United Kingdom Exclusive Economic Zone","200NM","United Kingdom","GBR","Europe","United Kingdom","GBR","Europe",1826,182600,1740180924.24909,10862524698706.5
+"RCP 8.5","2100",5697,"Turkish Exclusive Economic Zone","200NM","Turkey","TUR","Asia","Turkey","TUR","Asia",56,5600,53168432.1439046,335437271709.653
+"RCP 8.5","2100",8314,"Solomon Islands Exclusive Economic Zone","200NM","Solomon Islands","SLB","Oceania","Solomon Islands","SLB","Oceania",1150,115000,727728099.787036,6252563817768.32
+"RCP 8.5","2100",8316,"Micronesian Exclusive Economic Zone","200NM","Micronesia","FSM","Oceania","Micronesia",NA,"Oceania",8157,815700,5161807052.14161,44082382523732.8
+"RCP 8.5","2100",8317,"Nauruan Exclusive Economic Zone","200NM","Nauru","NRU","Oceania","Nauru","NRU","Oceania",3111,311100,2146608347.36966,17037598418428.6
+"RCP 8.5","2100",8318,"Marshall Islands Exclusive Economic Zone","200NM","Marshall Islands","MHL","Oceania","Marshall Islands","MHL","Oceania",10925,1092500,7144556296.82022,59568882650160.2
+"RCP 8.5","2100",8323,"Australian Exclusive Economic Zone","200NM","Australia","AUS","Oceania","Australia","AUS","Oceania",3295,329500,2858328873.91177,22425980902002.9
+"RCP 8.5","2100",8324,"Papua New Guinean Exclusive Economic Zone","200NM","Papua New Guinea","PNG","Oceania","Papua New Guinea","PNG","Oceania",4225,422500,2673609757.91324,22941112248101.3
+"RCP 8.5","2100",8326,"Tuvaluan Exclusive Economic Zone","200NM","Tuvalu","TUV","Oceania","Tuvalu","TUV","Oceania",1951,195100,1234606541.46479,10423868644887
+"RCP 8.5","2100",8327,"South Korean Exclusive Economic Zone","200NM","South Korea","KOR","Asia","South Korea","KOR","Asia",1812,181200,1459011332.80749,10290182170929
+"RCP 8.5","2100",8328,"North Korean Exclusive Economic Zone","200NM","North Korea","PRK","Asia","North Korea","PRK","Asia",831,83100,774137915.79479,4859001226839.58
+"RCP 8.5","2100",8332,"Thailand Exclusive Economic Zone","200NM","Thailand","THA","Asia","Thailand","THA","Asia",678,67800,347029186.673476,2598199527947.85
+"RCP 8.5","2100",8354,"Omani Exclusive Economic Zone","200NM","Oman","OMN","Asia","Oman","OMN","Asia",255,25500,161365796.039734,1400204213154.19
+"RCP 8.5","2100",8359,"Pakistani Exclusive Economic Zone","200NM","Pakistan","PAK","Asia","Pakistan","PAK","Asia",100,10000,63280704.3293075,547993767810.115
+"RCP 8.5","2100",8363,"Portuguese Exclusive Economic Zone (Madeira)","200NM","Madeira","PRT","Europe","Portugal","PRT","Europe",942,94200,894368983.563538,5536247780044.52
+"RCP 8.5","2100",8364,"Spanish Exclusive Economic Zone (Canary Islands)","200NM","Canary Islands","ESP","Europe","Spain","ESP","Europe",3842,384200,3647417590.34218,22346364346902.8
+"RCP 8.5","2100",8366,"Tunisian Exclusive Economic Zone","200NM","Tunisia","TUN","Africa","Tunisia","TUN","Africa",336,33600,306468634.102504,1984607141404
+"RCP 8.5","2100",8367,"Moroccan Exclusive Economic Zone","200NM","Morocco","MAR","Africa","Morocco","MAR","Africa",1504,150400,1427952177.57915,8933892844740.97
+"RCP 8.5","2100",8368,"Overlapping claim Western Saharan Exclusive Economic Zone","Overlapping claim","Western Sahara","ESH","Africa","Western Sahara","ESH","Africa",109,10900,85440688.4584738,616895034903.346
+"RCP 8.5","2100",8369,"Mauritanian Exclusive Economic Zone","200NM","Mauritania","MRT","Africa","Mauritania","MRT","Africa",177,17700,112006846.662874,977498064367.263
+"RCP 8.5","2100",8371,"Senegalese Exclusive Economic Zone","200NM","Senegal","SEN","Africa","Senegal","SEN","Africa",7,700,4429649.30305152,38762326340.468
+"RCP 8.5","2100",8372,"Libyan Exclusive Economic Zone","200NM","Libya","LBY","Africa","Libya","LBY","Africa",29,2900,27533652.3602363,173360297080.785
+"RCP 8.5","2100",8378,"Algerian Exclusive Economic Zone","200NM","Algeria","DZA","Africa","Algeria","DZA","Africa",484,48400,459527163.529461,2896904197111.72
+"RCP 8.5","2100",8382,"Tristan Da Cunha Exclusive Economic Zone","200NM","Tristan da Cunha","TAA","S Atlantic Ocean","United Kingdom","GBR","Europe",3592,359200,3965212213.04242,33163509152373.7
+"RCP 8.5","2100",8384,"South African Exclusive Economic Zone (Prince Edward Islands)","200NM","Prince Edward Islands","ZAF","Africa","South Africa","ZAF","Africa",3257,325700,3227401924.1727,22317836355087.8
+"RCP 8.5","2100",8385,"Crozet Islands Exclusive Economic Zone","200NM","Crozet Islands","ATF","Indian Ocean","France","FRA","Europe",3700,370000,3716848218.86685,25646539011333.8
+"RCP 8.5","2100",8386,"Amsterdam Island & St. Paul Island Exclusive Economic Zone","200NM","Amsterdam and Saint Paul Islands","ATF","Indian Ocean","France","FRA","Europe",1,100,1112192.83434627,9391998337.63313
+"RCP 8.5","2100",8387,"Kerguelen Exclusive Economic Zone","200NM","Kerguélen","ATF","Indian Ocean","France","FRA","Europe",1643,164300,1589545513.03396,9875191120294
+"RCP 8.5","2100",8389,"Overlapping claim Falkland / Malvinas Islands Exclusive Economic Zone: UK / Argentina","Overlapping claim","Falkland / Malvinas Islands","FLK","Americas","United Kingdom","GBR","Europe",2657,265700,2522652217.97062,15274574086058.7
+"RCP 8.5","2100",8395,"Namibian Exclusive Economic Zone","200NM","Namibia","NAM","Africa","Namibia","NAM","Africa",511,51100,362626425.501637,2826281148240.11
+"RCP 8.5","2100",8396,"South African Exclusive Economic Zone","200NM","South Africa","ZAF","Africa","South Africa","ZAF","Africa",2125,212500,2019753938.87601,12727358925653.9
+"RCP 8.5","2100",8403,"Ecuadorian Exclusive Economic Zone (Galapagos)","200NM","Galapagos","ECU","Americas","Ecuador","ECU","Americas",6492,649200,4108183325.05864,35646269281331.2
+"RCP 8.5","2100",8426,"Colombian Exclusive Economic Zone","200NM","Colombia","COL","Americas","Colombia","COL","Americas",141,14100,89225793.1043236,772205045727.142
+"RCP 8.5","2100",8431,"Ecuadorian Exclusive Economic Zone","200NM","Ecuador","ECU","Americas","Ecuador","ECU","Americas",1628,162800,1030146349.48439,8941012004584.84
+"RCP 8.5","2100",8432,"Peruvian Exclusive Economic Zone","200NM","Peru","PER","Americas","Peru","PER","Americas",3063,306300,2098238823.74147,16679074686374.6
+"RCP 8.5","2100",8440,"French Polynesian Exclusive Economic Zone","200NM","French Polynesia","PYF","Oceania","France","FRA","Europe",14852,1485200,10001945547.9415,78948309501750.8
+"RCP 8.5","2100",8441,"Kiribati Exclusive Economic Zone (Line Islands)","200NM","Line Group","KIR","Oceania","Kiribati","KIR","Oceania",16493,1649300,13297315164.2808,93876598684695
+"RCP 8.5","2100",8442,"Jarvis Island Exclusive Economic Zone","200NM","Jarvis Island","UMI","Oceania","United States","USA","Americas",3259,325900,3094212863.51759,18285289707917.4
+"RCP 8.5","2100",8443,"Palmyra Atoll Exclusive Economic Zone","200NM","Palmyra Atoll","UMI","Oceania","United States","USA","Americas",3561,356100,2942094489.02192,19315311582047.5
+"RCP 8.5","2100",8444,"American Samoa Exclusive Economic Zone","200NM","American Samoa","ASM","Oceania","United States","USA","Americas",449,44900,284130362.438591,2379622533723.73
+"RCP 8.5","2100",8446,"Cook Islands Exclusive Economic Zone","200NM","Cook Islands","COK","Oceania","New Zealand","NZL","Oceania",7621,762100,4822622476.93652,40042832496778.1
+"RCP 8.5","2100",8449,"Tokelau Exclusive Economic Zone","200NM","Tokelau","TKL","Oceania","New Zealand","NZL","Oceania",3174,317400,2008529555.41222,16830167802029.4
+"RCP 8.5","2100",8450,"Kiribati Exclusive Economic Zone (Phoenix Islands)","200NM","Phoenix Group","KIR","Oceania","Kiribati","KIR","Oceania",7512,751200,5733930651.70952,42388369806887.8
+"RCP 8.5","2100",8451,"Howland and Baker Islands Exclusive Economic Zone","200NM","Howland and Baker islands","UMI","Oceania","United States","USA","Americas",4371,437100,3998953866.22873,24171856405694.4
+"RCP 8.5","2100",8454,"Wallis and Futuna Exclusive Economic Zone","200NM","Wallis and Futuna","WLF","Oceania","France","FRA","Europe",46,4600,29109123.9914814,232663703593.933
+"RCP 8.5","2100",8455,"New Zealand Exclusive Economic Zone","200NM","New Zealand","NZL","Oceania","New Zealand","NZL","Oceania",12649,1264900,13360298942.8212,103789448132927
+"RCP 8.5","2100",8456,"United States Exclusive Economic Zone","200NM","United States","USA","Americas","United States","USA","Americas",1410,141000,1340495488.48714,8250700110749.34
+"RCP 8.5","2100",8465,"Chilean Exclusive Economic Zone","200NM","Chile","CHL","Americas","Chile","CHL","Americas",13400,1340000,12679996310.2836,87854438467427.1
+"RCP 8.5","2100",8466,"Argentinean Exclusive Economic Zone","200NM","Argentina","ARG","Americas","Argentina","ARG","Americas",5562,556200,5378744076.16515,34824708736279.3
+"RCP 8.5","2100",8469,"Iranian Exclusive Economic Zone","200NM","Iran","IRN","Asia","Iran","IRN","Asia",29,2900,18351404.2554992,159725276479.653
+"RCP 8.5","2100",8482,"Myanmar Exclusive Economic Zone","200NM","Myanmar","MMR","Asia","Myanmar","MMR","Asia",58,5800,30704551.8410806,192498199098.762
+"RCP 8.5","2100",8483,"Malaysian Exclusive Economic Zone","200NM","Malaysia","MYS","Asia","Malaysia","MYS","Asia",31,3100,13660389.2564587,84172529564.7672
+"RCP 8.5","2100",8486,"Chinese Exclusive Economic Zone","200NM","China","CHN","Asia","China","CHN","Asia",344,34400,219644598.630826,1815360886610.56
+"RCP 8.5","2100",8487,"Japanese Exclusive Economic Zone","200NM","Japan","JPN","Asia","Japan","JPN","Asia",2223,222300,1770174996.35524,11900429078262.2
+"RCP 8.5","2100",8488,"Kiribati Exclusive Economic Zone (Gilbert Islands)","200NM","Gilbert Islands","KIR","Oceania","Kiribati","KIR","Oceania",10619,1061900,7483804360.89229,59140141678045
+"RCP 8.5","2100",8492,"Indonesian Exclusive Economic Zone","200NM","Indonesia","IDN","Asia","Indonesia","IDN","Asia",850,85000,452906173.32439,2806661276859.79
+"RCP 8.5","2100",21788,"Guernsey Exclusive Economic Zone","200NM","Guernsey","GGY","Europe","United Kingdom","GBR","Europe",1,100,949436.288284011,5874710865.95809
+"RCP 8.5","2100",21789,"Jersey Exclusive Economic Zone","200NM","Jersey","JEY","Europe","United Kingdom","GBR","Europe",12,1200,11393235.4594081,71387211095.4971
+"RCP 8.5","2100",22756,"Chilean Exclusive Economic Zone (San Felix and San Ambrosio islands)","200NM","Islas San Félix and San Ambrosio","CHL","Americas","Chile","CHL","Americas",2903,290300,2740698711.88393,16997331251783.7
+"RCP 8.5","2100",48950,"Overlapping claim Kuril Islands: Japan / Russia","Overlapping claim","Japan","JPN","Asia","Japan","JPN","Asia",125,12500,47977710.9993658,273011883882.127
+"RCP 8.5","2100",48955,"Overlapping claim Liancourt Rocks: Japan / South Korea","Overlapping claim","Japan","JPN","Asia","Japan","JPN","Asia",15,1500,9492105.64939612,80970199478.7172
+"RCP 8.5","2100",48962,"Joint regime area Peru / Ecuador","Joint regime","Peru","PER","Americas","Peru","PER","Americas",155,15500,98085091.7104266,845504447048.078
