@@ -160,7 +160,7 @@ for(i in 1:length(groups)){
   sdata <- filter(fifos, group==group_i)
   
   # Plot data
-  plot(value ~ year, sdata, xlim=c(2000, proj_year), ylim=c(0, 5),
+  plot(value ~ year, sdata, xlim=c(2000, max(proj_years)), ylim=c(0, 5),
        main=group_i, xlab="", ylab="FIFO")
   abline(h=1)
   
@@ -170,13 +170,19 @@ for(i in 1:length(groups)){
   b <- coef(lmfit)[2]
   
   # Plot fit
-  curve(a*exp(b*x), from=2000, to=proj_year, n=100, add=T)
+  curve(a*exp(b*x), from=2000, to=max(proj_years), n=100, add=T)
   
   # Plot and record prediction
   pred <- as.numeric(exp(predict(lmfit, data.frame(year=proj_years))))
   points(x=proj_years, y=pred, pch=16, cex=2)
   fifo_proj$fifo2030[i] <- pred[1]
   fifo_proj$fifo2050[i] <- pred[2]
+  
+  # Record predictions for GGPLOT graph
+  yrs <- 2000:2050
+  fifo_preds <- as.numeric(exp(predict(lmfit, data.frame(year=yrs))))
+  pred_df <- data.frame(group=group_i, year=yrs, fifo=fifo_preds)
+  if(i==1){pred_df1 <- pred_df}else{pred_df1 <- rbind(pred_df, pred_df1)}
   
 }
 
@@ -187,17 +193,42 @@ for(i in 1:length(groups)){
 my_theme <- theme(panel.grid.major = element_blank(), 
                   panel.grid.minor = element_blank(),
                   panel.background = element_blank(), 
-                  axis.title = element_blank(),
+                  axis.title.x=element_blank(), 
                   axis.line = element_line(colour = "black"),
-                  axis.text.x = element_text(angle = 90, hjust = 0.5))
+                  axis.text.x = element_text(angle = 90, vjust = 0.5))
 
-g <- ggplot(fifos, aes(x=year, y=value)) +
+# Reshape for plotting
+fifos_g <- fifos %>%
+  select(group, year, value) %>%
+  rename(fifo=value)
+
+fifo_proj_g <- fifo_proj %>% 
+  gather(key="year", value="fifo", 2:3) %>% 
+  mutate(year=recode(year, "fifo2030"="2030", "fifo2050"="2050") %>% as.numeric(),
+         fifo_label=round(fifo, digits=3))
+
+# Plot data
+g <- ggplot(fifos_g, aes(x=year, y=fifo)) +
   facet_wrap(~group, ncol=4) +
   geom_point() +
+  # Add regression lines
+  geom_line(data=pred_df1) +
+  # Add prediction point
+  geom_point(data=fifo_proj_g, col="red") +
+  # Add horizontal line
+  geom_hline(yintercept = 1, linetype="dotted", color="grey40") +
+  ggrepel::geom_text_repel(data=fifo_proj_g, 
+                           mapping=aes(label=fifo_label), 
+                           color="red", size=2.5) +
+  # Little things
   xlim(2000,2050) +
-  labs(x="", y="FIFO ratio") +
+  labs(x="", y='"Fish In, Fish Out"\n(FIFO) ratio') +
   theme_bw() + my_theme
 g
+
+# Export plot
+ggsave(g, filename=file.path(plotdir, "figure_fifo_projections.png"), 
+       width=6.5, height=4, units="in", dpi=600)
 
 # Build output table
 ################################################################################
