@@ -7,6 +7,8 @@
 
 # Important to analysis but large
 data/eezs/eezs_v10_polygons.Rds
+data/capture_projections/data/
+data/constraints/
 
 # Large climate data
 data/climate/data

@@ -26,13 +26,18 @@ wgs84 <- CRS("+init=epsg:4326")
 ras_temp <- raster(file.path(tempdir, "world_raster_template_10km.tif"))
 
 # Read EEZs
-eezs <- raster(file.path(eezdir, "eezs_v10_raster_10km.tif")) 
+eezs <- raster(file.path(eezdir, "eezs_v10_raster_10km_use.grd")) 
 
 # Read masks
-mpa_mask <- raster(file.path(datadir, "mpa_mask_10km.tif")) 
-shipping_mask <- raster(file.path(datadir, "shipping_mask_10km.tif")) 
-oil_mask <- raster(file.path(datadir, "oil_mask_10km.tif")) 
+mpa_mask <- raster(file.path(datadir, "mpa_mask_10km.grd")) 
+shipping_mask <- raster(file.path(datadir, "shipping_mask_10km.grd")) 
+oil_mask <- raster(file.path(datadir, "oil_mask_10km.grd")) 
+depth_mask <- raster(file.path(datadir, "depth_10km.grd"))
 
+# Format depth mask
+# By converting depths > 200 m from 0 to NA you can mask
+depth_mask[depth_mask==0] <- NA
+plot(depth_mask)
 
 # Build data
 ################################################################################
@@ -41,8 +46,11 @@ oil_mask <- raster(file.path(datadir, "oil_mask_10km.tif"))
 used <- mpa_mask==1 | shipping_mask==1 | oil_mask==1
 plot(used, main="Used area")
 
-# Clip EEZs
-mask <- eezs 
+# Clip EEZs by depth
+mask <- raster::mask(x=eezs, mask=depth_mask)
+plot(mask)
+
+# Clip masked EEZs by existing uses
 mask[!is.na(mask)] <- 1
 mask[used==1 | is.na(mask)] <- 0
 plot(mask)
@@ -51,5 +59,5 @@ plot(mask)
 raster::compareRaster(mask, ras_temp)
 
 # Export mask
-writeRaster(mask, file=file.path(datadir, "mask_10km.tif"), overwrite=T)
+writeRaster(mask, file=file.path(datadir, "mask_10km.grd"), overwrite=T)
 

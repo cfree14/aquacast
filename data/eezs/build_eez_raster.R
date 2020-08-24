@@ -23,6 +23,11 @@ wgs84 <- CRS("+init=epsg:4326")
 # Read data
 data_orig <- sf::st_read(dsn=eezdir, layer="eez_v10")
 
+# Read EEZs to ignore
+eezs_ignore <- read.csv(file.path(outputdir, "eezs_v10_uninhabited.csv"), as.is=T) %>% 
+  mutate(eez_name=recode(eez_name, "Colombian Exclusive Economic Zone (Quitasue\x96o)"="Colombian Exclusive Economic Zone (Quitasueño)"))
+eezs_ignore$eez_name[!eezs_ignore$eez_name %in% data_orig$GeoName] # manually fis
+
 # Read raster template
 ras_temp <- raster(file.path(tempdir, "world_raster_template_10km.tif"))
 
@@ -65,9 +70,20 @@ data <- data_orig %>%
          eez_code1=MRGID_EEZ,
          area_sqkm=Area_km2) %>% 
   # Add missing ISO3 columns
+  mutate(sov1_name=recode(sov1_name, 
+                          "Comores"="Comoros",
+                          "Micronesia"="Federated States of Micronesia"),
+         sov2_name=recode(sov2_name, 
+                          "Comores"="Comoros",
+                          "Micronesia"="Federated States of Micronesia"),
+         sov3_name=recode(sov3_name, 
+                          "Comores"="Comoros",
+                          "Micronesia"="Federated States of Micronesia")) %>% 
   mutate(sov1_iso=countrycode(sov1_name, "country.name", "iso3c"),
          sov2_iso=countrycode(sov2_name, "country.name", "iso3c"),
          sov3_iso=countrycode(sov3_name, "country.name", "iso3c")) %>% 
+  # Mark whether using
+  mutate(use=!eez_name %in% eezs_ignore$eez_name) %>% 
   # Rearrange columns
   select(eez_code, eez_code1, eez_name, eez_type, 
          ter1_code, ter1_name, ter1_iso,
@@ -130,42 +146,57 @@ saveRDS(eez_simple, file=file.path(outputdir, "eezs_v10_polygons_simplified.Rds"
 # Build raster
 ################################################################################
 
-# This code is, unfortunately, purposefully convoluted 
-# When I project the polygons to Mollweide and attempt to rasterize, there are band of data in the Arctic
-# So, I have to rasterize in WGS84 and then project to Mollweide
+# Function to covnert polygons to raster
+poly2raster <- function(all){
 
-# WGS84 template
-wgs84_template <- raster::raster(crs=wgs84, res=0.05,
-                                 xmn=-180, xmx=180, ymn=-90, ymx=90)
+  # This code is, unfortunately, purposefully convoluted 
+  # When I project the polygons to Mollweide and attempt to rasterize, there are band of data in the Arctic
+  # So, I have to rasterize in WGS84 and then project to Mollweide
+  
+  # WGS84 template
+  wgs84_template <- raster::raster(crs=wgs84, res=0.05,
+                                   xmn=-180, xmx=180, ymn=-90, ymx=90)
+  
+  # Rasterise in WGS84
+  if(all==T){
+    data_convert <- data
+    outfile <- "eezs_v10_raster_10km.grd"
+  }else{
+    data_convert <- data %>% 
+      filter(use==T)  
+    outfile <- "eezs_v10_raster_10km_use.grd"
+  }
+  data_ras_wgs84 <- fasterize(data_convert, wgs84_template, field="eez_code", background=NA, fun="first")
+  
+  # Project to Mollweide
+  data_ras_moll <- projectRaster(data_ras_wgs84, to=ras_temp, method="ngb")
+  
+  # Confirm that codes in raster match codes in key
+  codes_raster <- sort(unique(data_ras_moll ))
+  sum(!codes_raster %in% data_df$eez_code) # MUST BE ZERO
+  
+  # Plot raster
+  # plot(data_ras_wgs84)
+  plot(data_ras_moll, main=ifelse(all, "All EEZs", "Evaluated EEZs only"))
+  
+  # Plot raster
+  # data_ras_df <- raster::as.data.frame(data_ras_moll, xy=T) %>% 
+  #   mutate(layer=as.factor(layer))
+  # g <- ggplot(data_ras_df, aes(x=x, y=y, fill=layer)) +
+  #   scale_fill_discrete(na.value=NA) +
+  #   geom_raster() + theme_bw() + theme(legend.position="none")
+  # g
+  
+  # Compare mask to raster template
+  raster::compareRaster(data_ras_moll, ras_temp)
+  
+  # Export raster
+  writeRaster(data_ras_moll, file=file.path(outputdir, outfile), overwrite=T)
 
-# Rasterise in WGS84
-data_ras_wgs84 <- fasterize(data, wgs84_template, field="eez_code", background=NA, fun="first")
+}
 
-# Project to Mollweide
-data_ras_moll <- projectRaster(data_ras_wgs84, to=ras_temp, method="ngb")
-
-# Confirm that codes in raster match codes in key
-codes_raster <- sort(unique(data_ras_moll ))
-sum(!codes_raster %in% data_df$eez_code) # MUST BE ZERO
-
-# Plot raster
-# plot(data_ras_wgs84)
-# plot(data_ras_moll)
-
-# Plot raster
-# data_ras_df <- raster::as.data.frame(data_ras_moll, xy=T) %>% 
-#   mutate(layer=as.factor(layer))
-# g <- ggplot(data_ras_df, aes(x=x, y=y, fill=layer)) +
-#   scale_fill_discrete(na.value=NA) +
-#   geom_raster() + theme_bw() + theme(legend.position="none")
-# g
-
-# Compare mask to raster template
-raster::compareRaster(data_ras_moll, ras_temp)
-
-# Export raster
-writeRaster(data_ras_moll, file=file.path(outputdir, "eezs_v10_raster_10km.tif"), overwrite=T)
-
+poly2raster(all=T)
+poly2raster(all=F)
 
 
 

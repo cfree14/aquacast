@@ -16,7 +16,7 @@ library(countrycode)
 # Directories
 datadir <- "data/constraints/masks"
 tempdir <- "data/template"
-wdpadir <- "/Users/cfree/Dropbox/Chris/UCSB/projects/0data/wdpa/WDPA_Sep2019_Public/WDPA_Sep2019_Public.gdb/WDPA_Sep2019_Public.gdb/WDPA_Sep2019_Public.gdb"
+wdpadir <- "/Users/cfree/Dropbox/Chris/UCSB/data/wdpa/WDPA_Sep2019_Public/WDPA_Sep2019_Public.gdb/WDPA_Sep2019_Public.gdb/WDPA_Sep2019_Public.gdb"
 
 # Projections
 moll <- CRS("+proj=moll")
@@ -43,7 +43,8 @@ table(data_orig_df$IUCN_CAT)
 data <- data_orig %>% 
   filter(MARINE %in% c(1,2)) %>% 
   filter(STATUS %in% c("Designated", "Established", "Inscribed")) %>% 
-  filter(!IUCN_CAT %in% c("V", "VI")) %>% st_transform("+proj=moll")
+  filter(IUCN_CAT %in% c("Ia", "Ib", "II", "III")) %>%
+  st_transform("+proj=moll")
 
 # Rasterize data
 data_ras <- fasterize(sf=data, raster=ras_temp, background=NA)
@@ -56,7 +57,7 @@ plot(data_ras)
 ################################################################################
 
 # Export data
-writeRaster(data_ras, file=file.path(datadir, "mpa_mask_10km.tiff"))
+writeRaster(data_ras, file=file.path(datadir, "mpa_mask_10km.grd"), overwrite=T)
 
 
 

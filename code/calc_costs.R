@@ -225,9 +225,9 @@ calc_costs <- function(farm_design, cell_prod_mt_yr, fcr, vcells, harvest_yr){
   cost_yr <- cell_nfarms * (cap_usd_yr_farm + fuel_usd_yr_farm + wages_usd_yr_farm + oper_usd_yr_farm) + feed_usd_yr 
   cost_yr_masked <- mask(cost_yr, vcells, maskvalue=NA)
   
-  # Confirmt that COST raster and SUITABILITY rasters have same number of values
+  # Confirm that COST raster and SUITABILITY rasters have same number of values
   suit_ncells <- colSums(getValues(vcells), na.rm=T)
-  cost_ncells <- colSums(!is.na(getValues(cost_yr_masked)))
+  cost_ncells <- colSums(!is.na(getValues(cost_yr_masked))) 
   if(sum(suit_ncells!=cost_ncells)!=0){
     stop("The cost raster does not have the same number of cells as the viable raster.")
   }

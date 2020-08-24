@@ -32,11 +32,18 @@ ras_temp <- raster(file.path(tempdir, "world_raster_template_10km.tif"))
 # Build shipping data
 ################################################################################
 
+# Plot shipping
+plot(shipping)
+
+# Shipping values
+values_all <- getValues(shipping)
+values_nonzero <- values_all[values_all>0 & !is.na(values_all)]
+
 # Top-5th percentile of shipping
-top5 <- quantile(shipping, probs=0.95)
+# top5 <- quantile(values_nonzero, probs=0.95)
 
 # Create to-5th percentile shipping raster
-shipping_top5 <- shipping >= top5
+shipping_top5 <- shipping >= 5000
 
 # Plot shipping mask
 plot(shipping_top5)
@@ -45,7 +52,7 @@ plot(shipping_top5)
 shipping_mask <- projectRaster(from=shipping_top5, to=ras_temp)
 
 # Export data
-writeRaster(shipping_mask, file=file.path(datadir, "shipping_mask_10km.tiff"))
+writeRaster(shipping_mask, file=file.path(datadir, "shipping_mask_10km.grd"), overwrite=T)
 
 
 # Build oil data
@@ -53,7 +60,7 @@ writeRaster(shipping_mask, file=file.path(datadir, "shipping_mask_10km.tiff"))
 
 # Project to match template
 oil_mask <- projectRaster(from=oil, to=ras_temp)
-writeRaster(oil_mask, file=file.path(datadir, "oil_mask_10km.tiff"))
+writeRaster(oil_mask, file=file.path(datadir, "oil_mask_10km.grd"))
 
 
 

@@ -39,10 +39,12 @@ big_fish_linf_cm <- 140
 big_fish_harv_kg_m3 <- 5 # finfish with Linf > 140 cm
 
 # Bivalve farm design
-nlines <- 100
-line_m <- 4000
-line_ft=measurements::conv_unit(line_m, "m", "ft")
+# nlines <- 100
+line_m <- 120
+line_rope_ft <- 2109 # Lester et al. say that 210-m longline has 3,629 ft of fuzzy rope
+line_rope_m <- measurements::conv_unit(line_rope_ft, "ft", "m")
 bivalve_harv_cm_ft <- 100*4 # 100 4-cm per foot = 400 cm per foot / 8 cm bivalves = 50 bivalves
+biv_harv_mt_sqkm <- 1500 # Based on Smaal and van Duren (2019)
 
 # Edible meat conversions
 live2edible_biv <- 0.17
@@ -152,8 +154,10 @@ data1 <- spp_lh %>%
          harvest_cm_ft=bivalve_harv_cm_ft, 
          bivalve_juv_ft=ifelse(type=="Bivalve", harvest_cm_ft/harvest_cm, NA),
          nstocked=ifelse(type=="Bivalve", 
-                         bivalve_juv_ft*line_ft*nlines,
+                         biv_harv_mt_sqkm*1000*1000/harvest_g,
                          tot_cage_m3*fish_juv_m3),
+         rope_ft_req=ifelse(type=="Bivalve", nstocked/bivalve_juv_ft, NA),
+         lines_n=rope_ft_req / line_rope_ft,
          prod_mt_yr=nstocked*harvest_g/1000/1000/harvest_yr,
          edible_mt_yr=ifelse(type=="Bivalve", prod_mt_yr*live2edible_biv, prod_mt_yr*live2edible_fin),
          revenue_usd_yr=prod_mt_yr*price_usd_mt_isscaap)
@@ -170,8 +174,9 @@ nstocked_check_finfish <- data1 %>%
 # Make sure you calculated number of stocks individuals correctly
 nstocked_check_bivalves <- data1 %>% 
   filter(type=="Bivalve") %>% 
-  select(species, nstocked, harvest_cm) %>% 
-  mutate(harvest_cm_ft_check=nstocked*harvest_cm/(nlines*line_ft)) 
+  select(species, nstocked, harvest_g, harvest_cm, lines_n) %>% 
+  mutate(harvest_mt_sqkm=nstocked*harvest_g/1000/1000,
+         nstocked_check=lines_n*line_rope_ft*bivalve_harv_cm_ft/harvest_cm) 
 
 # Build AquaMaps environmental tolerances
 spp_temp <- spp_env %>% 
@@ -198,7 +203,7 @@ data_full <- data1 %>%
   select(class:comm_name, # taxonomy
          gentry, fao, fao_rank, fao_mt_yr, # inclusion source
          feed_group:fmfo_perc, # feed parameters
-         harvest_kg_m3, harvest_cm_ft, fish_juv_m3, bivalve_juv_ft, nstocked,  # stocking parameters
+         harvest_kg_m3, harvest_cm_ft, fish_juv_m3, bivalve_juv_ft, nstocked, rope_ft_req, lines_n,  # stocking parameters
          harvest_linf_prop:harvest_yr, # harvest size parameters
          prod_mt_yr, edible_mt_yr, revenue_usd_yr, # harvest production parameters
          price_usd_mt_isscaap, price_usd_mt_spp, # prices
@@ -220,7 +225,7 @@ data <- data_full %>%
   select(class:comm_name, # taxonomy
          gentry, fao, fao_rank, fao_mt_yr, # inclusion source
          feed_group:fmfo_perc, # feed parameters
-         harvest_kg_m3:nstocked, # stocking parameters
+         harvest_kg_m3:lines_n, # stocking parameters
          harvest_linf_prop:harvest_yr, # harvest size parameters
          prod_mt_yr:revenue_usd_yr, # harvest production parameters
          price_usd_mt_isscaap, price_usd_mt_spp, # prices
@@ -232,7 +237,9 @@ data <- data_full %>%
   select(-fcr08) %>% 
   rename(fcr=fcr15) %>% 
   # Reduce to species with required data
-  filter(!is.na(a) & !is.na(b) & !is.na(linf_cm) & !is.na(k) & !is.na(sst_c_min))
+  filter(!is.na(a) & !is.na(b) & !is.na(linf_cm) & !is.na(k) & !is.na(sst_c_min)) %>% 
+  # Remove really large bivalves
+  filter(!(class=="Bivalvia" & harvest_g>=200))
 
 # Inspect
 freeR::complete(data)

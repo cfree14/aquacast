@@ -230,6 +230,11 @@ g
 ggsave(g, filename=file.path(plotdir, "figure_fifo_projections.png"), 
        width=6.5, height=4, units="in", dpi=600)
 
+# Export data
+fifo_preds <- pred_df1
+save(fifos_g, fifo_proj_g, fifo_preds, file=file.path(feeddir, "fifo_trends_projections.Rdata"))
+
+
 # Build output table
 ################################################################################
 
