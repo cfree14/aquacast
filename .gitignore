@@ -5,6 +5,9 @@
 .RData
 .Ruserdata
 
+# Not public
+drafts/
+
 # Important to analysis but large
 data/eezs/eezs_v10_polygons.Rds
 data/capture_projections/data/
@@ -13,12 +16,6 @@ data/constraints/
 # Large climate data
 data/climate/data
 
-# Intermediate step in analysis but large
-output/raw
-
 # Not used in analysis and large
 data/prices/melnychuk
 data/constraints/cum_impacts
-
-# Temporarily ignore
-code/Step4_build_finfish_scenario_results.R
