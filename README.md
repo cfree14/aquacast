@@ -2,7 +2,7 @@
 
 This is the GitHub repository for a project seeking to understand whether reforms in marine fisheries management and the expansion of marine aquaculture (hereafter called "mariculture") could jointly increase seafood production per capita under climate change. This project is currently under review as: 
 
-Free CM, Cabral RB, Battista W, Ojea E, O’Reilly E, Palardy JE, Froehlich HE, Garcia Molinos J, Siegel K, Arnason R, Juinio-Meñez MA, Fabricius K, Turley C, Gaines SD. Expanding ocean food production under climate change. In first revision at *Nature*.
+* Free CM, Cabral RB, Battista W, Ojea E, O’Reilly E, Palardy JE, Froehlich HE, Garcia Molinos J, Siegel K, Arnason R, Juinio-Meñez MA, Fabricius K, Turley C, Gaines SD. Expanding ocean food production under climate change. In first revision at *Nature*.
 
 
 #### Repository structure
