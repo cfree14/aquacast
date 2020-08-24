@@ -4,6 +4,7 @@ This is the GitHub repository for a project seeking to understand whether reform
 
 Free CM, Cabral RB, Battista W, Ojea E, O’Reilly E, Palardy JE, Froehlich HE, Garcia Molinos J, Siegel K, Arnason R, Juinio-Meñez MA, Fabricius K, Turley C, Gaines SD. Expanding ocean food production under climate change. In first revision at *Nature*.
 
+
 #### Repository structure
 
 The repository is organized using the following architecture:
@@ -17,6 +18,7 @@ The repository is organized using the following architecture:
 * **figures:** figures illustrating analysis results
 
 Please contact Chris Free (cfree14@gmail.com) with any questions.
+
 
 #### Acknowledgements
 
