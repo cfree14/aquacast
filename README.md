@@ -12,7 +12,7 @@ The repository is organized using the following architecture:
 * **data:**
   + **raw:** the raw data used in the analysis
   + **processed:** cleaned data used in the analysis
-  + ... scripts for cleaning and exporting the raw data
+  + ... scripts for cleaning the raw data and exporting the processed data
 * **code:** scripts for conducting the analysis and building the tables and figures
 * **tables:** tables illustrating analysis results
 * **figures:** figures illustrating analysis results
