@@ -47,6 +47,8 @@ my_theme <- theme(axis.text=element_text(size=7),
                   axis.line = element_line(colour = "black"))
 
 
+mean(data$lines_n, na.rm=T)
+
 # Harvest densities
 ################################################################################
 
@@ -96,7 +98,7 @@ g <- ggplot(pdata, aes(x=isscaap, y=value, fill=class)) +
 g
 
 # Export plots
-ggsave(g, filename=file.path(plotdir, "figure_species_harvest_production.png"), 
+ggsave(g, filename=file.path(plotdir, "FigS20_species_harvest_production.png"), 
        width=6.5, height=3.5, units="in", dpi=600)
 
 
@@ -115,8 +117,8 @@ nstats <- data %>%
   arrange(class, n) %>% 
   mutate(class_label=recode(class, 
                             "Finfish"="Finfish (n=136)",
-                            "Bivalves"="Bivalves (n=64)"),
-         class_label=factor(class_label, levels=c("Finfish (n=136)", "Bivalves (n=64)")))
+                            "Bivalves"="Bivalves (n=53)"),
+         class_label=factor(class_label, levels=c("Finfish (n=136)", "Bivalves (n=53)")))
 nstats$isscaap_order <- factor(nstats$isscaap, level=nstats$isscaap)
 
 # Plot sample size stats
@@ -149,7 +151,7 @@ g3
 g <- grid.arrange(g1, g2, g3, layout_matrix=matrix(c(1,1,2,3), ncol=2, byrow=T))
 
 # Export plots
-ggsave(g, filename=file.path(plotdir, "figure_species_growth_params.png"), 
+ggsave(g, filename=file.path(plotdir, "FigS2_species_growth_params.png"), 
        width=6.5, height=4.5, units="in", dpi=600)
 
 
@@ -180,7 +182,7 @@ g <- ggplot(tdata, aes(x=parameter, fill=source)) +
 g  
 
 # Export figure
-ggsave(g, filename=file.path(plotdir, "figure_species_trait_sources.png"), 
+ggsave(g, filename=file.path(plotdir, "FigS3_species_trait_sources.png"), 
        width=6.5, height=3, units="in", dpi=600)
 
 
@@ -228,7 +230,7 @@ g <- ggplot(edata, aes(x=value, y=species, color=class, alpha=range)) +
 g
 
 # Export figure
-ggsave(g, filename=file.path(plotdir, "figure_species_envi_tolerances.png"), 
+ggsave(g, filename=file.path(plotdir, "FigS4_species_envi_tolerances.png"), 
        width=6.5, height=8.5, units="in", dpi=600)
 
 
@@ -252,7 +254,7 @@ g <- ggplot(data_full, aes(x=factor(isscaap, levels=spp_order_key$isscaap), y=pr
 g
 
 # Export plot
-ggsave(g, filename=file.path(plotdir, "figure_species_prices_by_isscaap.png"), 
+ggsave(g, filename=file.path(plotdir, "FigS8_species_prices_by_isscaap.png"), 
        width=6.5, height=3.5, units="in", dpi=600)
 
 
@@ -338,6 +340,6 @@ g <- grid.arrange(g1, g2, g3, g4, g5, g6, ncol=3)
 g
 
 # Export plot
-ggsave(g, filename=file.path(plotdir, "figure_species_harvest_sizes_ages.png"), 
+ggsave(g, filename=file.path(plotdir, "FigS6_species_harvest_sizes_ages.png"), 
        width=6.5, height=4.5, units="in", dpi=600)
 

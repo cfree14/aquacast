@@ -193,7 +193,7 @@ g4 <- ggplot(fifos_g, aes(x=year, y=fifo, color=group)) +
   # Limits
   scale_x_continuous(breaks=seq(2000,2050, 10), limits = c(2000, 2050)) +
   # Labels
-  labs(x="", y='FIFO ratio\n("Fish In, Fish Out")', tag="d") +
+  labs(x="", y='FIFO ratio\n("fish in, fish out")', tag="d") +
   # Reference line
   geom_hline(yintercept=1, linetype="dashed", lwd=0.4) +
   # Theme
@@ -201,8 +201,12 @@ g4 <- ggplot(fifos_g, aes(x=year, y=fifo, color=group)) +
   theme(legend.position = "none")
 g4
 
-
-
+# Number of countries
+# g7 <- ggplot(pdata_use, aes(x=period, y=ncountries, fill=rcp)) +
+#   facet_wrap(~sector, scales="free") +
+#   labs(x="Period", y="Number of countries") +
+#   geom_bar(stat="identity", position="dodge")
+# g7
 
 # Aquaculture results plots
 ############################################
@@ -294,23 +298,17 @@ g6 <- ggplot(pdata_use, aes(x=period, y=meat_mt/1e6, fill=rcp)) +
   # Add reference points
   geom_point(data=faq_limits, mapping=aes(x=period, y=meat_mt/1e6, shape=scenario, group=rcp), position=position_dodge(width=0.9), size=0.8) +
   # Labels
-  labs(x="Period", y="Production potential\n(millions of mt of meat)", tag="f") +
+  labs(x="Period", y="Production potential\n(millions of mt of meat per year)", tag="f") +
   # Legend
   scale_fill_manual(name="", values=RColorBrewer::brewer.pal(4, name="RdBu") %>% rev(), guide="none") +
   scale_linetype_manual(name="", values="dotted") +
-  scale_shape_discrete(name="Feed limitation under:", guide = guide_legend(title.position = "top")) +
+  scale_shape_manual(name="Feed limitation under:", guide = guide_legend(title.position = "top"), values=c(1,19)) +
   # Theme
   theme_bw() + big_plot_theme + 
   theme(legend.position = "bottom")
 g6
 
 
-# Number of countries
-g7 <- ggplot(pdata_use, aes(x=period, y=ncountries, fill=rcp)) +
-  facet_wrap(~sector, scales="free") +
-  labs(x="Period", y="Number of countries") +
-  geom_bar(stat="identity", position="dodge")
-g7
 
 
 # Merge and export

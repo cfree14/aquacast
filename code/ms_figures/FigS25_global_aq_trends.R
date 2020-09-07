@@ -142,7 +142,7 @@ my_theme <- theme(axis.text=element_text(size=8),
                   panel.grid.minor = element_blank(),
                   panel.background = element_blank(), 
                   axis.line = element_line(colour = "black"),
-                  legend.position = "bottom")
+                  legend.position = "right")
 
 # Get world
 world <- rnaturalearth::ne_countries(scale="small", type="countries", returnclass="sf") %>% 
@@ -156,24 +156,34 @@ aqprod <- data %>%
   filter(environment%in%c("Marine", "Brackishwater") & 
            major_group %in% c("Pisces", "Mollusca") & year%in%yrs) %>% 
   # Calculate average
-  group_by(country, iso3, major_group) %>% 
+  group_by(country_use, iso3_use, major_group) %>% 
   summarize(prod_mt=mean(quantity_mt, na.rm=T),
             profit_usd=mean(value_usd_t)*1000)
+
+# Number of producing countries
+nproducers <- aqprod %>% 
+  group_by(major_group) %>% 
+  summarise(n=sum(prod_mt!=0))
 
 # Export country average
 write.csv(aqprod, file=file.path(outdir, "FAO_2013_2017_maq_prod_averages_by_country.csv"), row.names=F)
 
 # Aquaculture 
 faq_sf <- world %>% 
-  left_join(filter(aqprod, major_group=="Pisces"), by=c("iso3_use"="iso3"))
+  left_join(filter(aqprod, major_group=="Pisces"), by=c("iso3_use"="iso3_use"))
 baq_sf <- world %>% 
-  left_join(filter(aqprod, major_group=="Mollusca"), by=c("iso3_use"="iso3"))
+  left_join(filter(aqprod, major_group=="Mollusca"), by=c("iso3_use"="iso3_use"))
 
 # Plot
 g1 <- ggplot() +
   geom_sf(faq_sf, mapping=aes(fill=prod_mt/1e3), lwd=0.2) +
   labs(title="Finfish mariculture") +
-  scale_fill_gradientn(name="Production (1000s mt)", colors=RColorBrewer::brewer.pal(9, "Reds"), na.value="grey80") +
+  # scale_fill_gradientn(name="Production (1000s mt)", colors=RColorBrewer::brewer.pal(9, "Reds"), na.value="grey80") +
+  scale_fill_gradientn(name="Production (1000s mt)", 
+                       trans = "log10", 
+                       breaks= c(0.01, 0.1, 1, 10, 100),
+                       labels = c("0.01", "0.1", "1", "10", "100"),
+                       colors=RColorBrewer::brewer.pal(9, "Reds"), na.value="grey80") +
   theme_bw() + my_theme +
   guides(fill = guide_colorbar(ticks.colour = "black", frame.colour = "black"))
 g1
@@ -182,7 +192,11 @@ g1
 g2 <- ggplot() +
   geom_sf(baq_sf, mapping=aes(fill=prod_mt/1e3), lwd=0.2) +
   labs(title="Bivalve mariculture") +
-  scale_fill_gradientn(name="Production (1000s mt)", colors=RColorBrewer::brewer.pal(9, "Blues"), na.value="grey80") +
+  scale_fill_gradientn(name="Production (1000s mt)", 
+                       trans = "log10", 
+                       breaks= c(0.01, 0.1, 1, 10, 100, 1000),
+                       labels = c("0.01", "0.1", "1", "10", "100", "1000"),
+                       colors=RColorBrewer::brewer.pal(9, "Blues"), na.value="grey80") +
   theme_bw() + my_theme +
   guides(fill = guide_colorbar(ticks.colour = "black", frame.colour = "black"))
 g2
@@ -191,50 +205,52 @@ g2
 g <- grid.arrange(g1, g2, ncol=1)
 
 # Export plot
-ggsave(g, filename=file.path(plotdir, "figure_fao_aq_prod_maps.png"),
-       width=6.5, height=8, units="in", dpi=600)
+ggsave(g, filename=file.path(plotdir, "FigS25_fao_aq_prod_maps.png"),
+       width=6.5, height=4.5, units="in", dpi=600)
 
 
 # Country-level time series
 ################################################################################
 
-# Theme
-my_theme2 <- theme(axis.text=element_text(size=8),
-                   axis.title=element_text(size=10),
-                   axis.title.x=element_blank(),
-                   legend.text = element_text(size=8),
-                   legend.title = element_blank(),
-                   legend.position="bottom",
-                   panel.grid.major = element_blank(), 
-                   panel.grid.minor = element_blank(),
-                   panel.background = element_blank(), 
-                   axis.line = element_line(colour = "black"),
-                   axis.text.x = element_text(angle = 90, vjust = 0.5))
+# Fun project for Sean
 
-
-# Format data
-data_cntry <- data %>%
-  group_by(country, environment, year) %>%
-  summarize(quantity_mt=sum(quantity_mt, na.rm=T))
-
-# Packages
-# devtools::install_github("guiastrennec/ggplus")
-library(ggplus)
-
-# Plot all
-p <- ggplot(data_cntry, aes(x=year, y=quantity_mt/1e3, fill=environment)) +
-  labs(x="", y="Production (thousands of mt)") +
-  geom_area() +
-  scale_x_continuous(breaks=seq(1950,2020,10)) +
-  scale_fill_discrete(name="") +
-  theme_bw() + my_theme2
-
-# Creat multi-page PDF
-pdf(file.path(plotdir, "appendix_fao_aq_time_series_by_country.pdf"), width=8.5, height=11)
-gg10 <- facet_multiple(plot=p, facets="country", ncol = 4, nrow = 5, scales="free")
-dev.off()
-
-
+# # Theme
+# my_theme2 <- theme(axis.text=element_text(size=8),
+#                    axis.title=element_text(size=10),
+#                    axis.title.x=element_blank(),
+#                    legend.text = element_text(size=8),
+#                    legend.title = element_blank(),
+#                    legend.position="bottom",
+#                    panel.grid.major = element_blank(), 
+#                    panel.grid.minor = element_blank(),
+#                    panel.background = element_blank(), 
+#                    axis.line = element_line(colour = "black"),
+#                    axis.text.x = element_text(angle = 90, vjust = 0.5))
+# 
+# 
+# # Format data
+# data_cntry <- data %>%
+#   group_by(country, environment, year) %>%
+#   summarize(quantity_mt=sum(quantity_mt, na.rm=T))
+# 
+# # Packages
+# # devtools::install_github("guiastrennec/ggplus")
+# library(ggplus)
+# 
+# # Plot all
+# p <- ggplot(data_cntry, aes(x=year, y=quantity_mt/1e3, fill=environment)) +
+#   labs(x="", y="Production (thousands of mt)") +
+#   geom_area() +
+#   scale_x_continuous(breaks=seq(1950,2020,10)) +
+#   scale_fill_discrete(name="") +
+#   theme_bw() + my_theme2
+# 
+# # Creat multi-page PDF
+# pdf(file.path(plotdir, "appendix_fao_aq_time_series_by_country.pdf"), width=8.5, height=11)
+# gg10 <- facet_multiple(plot=p, facets="country", ncol = 4, nrow = 5, scales="free")
+# dev.off()
+# 
+# 
 
 
 

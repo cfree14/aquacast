@@ -22,6 +22,7 @@ wc_orig <- readRDS("data/capture_projections/data/Free_etal_2020_national_projec
  
 # Read mariculture projections
 faq_orig <- readRDS(file.path(datadir, "finfish_output.Rds"))
+faq_orig_opt <- readRDS(file.path(datadir, "finfish_output_optimum.Rds"))
 baq_orig <- readRDS(file.path(datadir, "bivalve_output.Rds"))
 
 # Read historical data
@@ -83,8 +84,8 @@ wc_nat <- wc_orig %>%
   filter(!is.na(period)) %>% 
   # Summarize by period
   group_by(rcp, scenario, country, iso3, period) %>% 
-  summarize(prod_mt=mean(catch_mt),
-            meat_mt=mean(meat_mt)) %>% 
+  summarize(prod_mt=mean(catch_mt, na.rm=T),# mean is right because you're taking mean by period
+            meat_mt=mean(meat_mt, na.rm=T)) %>% 
   ungroup() %>% 
   # Simplify
   mutate(sector="Capture fisheries",
@@ -95,20 +96,20 @@ wc_nat <- wc_orig %>%
 
 
 # Calculate national statistics: finfish AQ
-faq_nat <- faq_orig %>% 
+faq_nat <- bind_rows(faq_orig, faq_orig_opt) %>% 
   # Add period
   left_join(period_key) %>% 
   filter(!is.na(period)) %>% 
   # Summarize by period
   group_by(rcp, mgmt_scenario, feed_scenario, dev_scenario, ter1_iso, ter1_name, period) %>% 
-  summarize(prod_mt=mean(prod_mt_yr), 
+  summarize(prod_mt=sum(prod_mt_yr, na.rm=T), 
             ncells=n()) %>% 
   ungroup() %>% 
   # Mark big-picture scenarios
   mutate(scenario=ifelse(mgmt_scenario=="BAU fisheries management" & feed_scenario == "BAU feed use", "Business-as-usual", NA),
          scenario=ifelse(mgmt_scenario=="Reformed fisheries management" & feed_scenario == "Reformed feed use", "Progressive reforms", scenario)) %>% 
   # Reduce to BAU or progressive reform
-  filter(!is.na(scenario) & dev_scenario %in% c("Current", "Proportional", "Need-based")) %>% 
+  filter(!is.na(scenario) & dev_scenario %in% c("Current", "Proportional", "Need-based", "Optimum")) %>% 
   # Calculate meat production
   mutate(meat_mt=prod_mt*0.87) %>% 
   # Simplify
@@ -122,7 +123,7 @@ faq_nat <- faq_orig %>%
   mutate(eez_prop=area_dev_sqkm/area_eez_sqkm)
 
 # Calculate national statistics: finfish AQ
-baq_nat_bau <- baq_orig %>% 
+baq_nat_bau1 <- baq_orig %>% 
   # Add period
   left_join(period_key) %>% 
   filter(!is.na(period)) %>% 
@@ -130,7 +131,7 @@ baq_nat_bau <- baq_orig %>%
   filter(dev_scenario %in% c("Current", "Proportional", "Need-based")) %>% 
   # Summarize by period
   group_by(rcp, dev_scenario, ter1_iso, ter1_name, period) %>% 
-  summarize(prod_mt=mean(prod_mt_yr),
+  summarize(prod_mt=sum(prod_mt_yr),
             ncells=n()) %>% 
   ungroup() %>% 
   # Calculate meat production
@@ -145,12 +146,16 @@ baq_nat_bau <- baq_orig %>%
   left_join(eez_key) %>% 
   rename(area_eez_sqkm=area_sqkm) %>% 
   mutate(eez_prop=area_dev_sqkm/area_eez_sqkm)
+baq_nat_bau2 <- baq_nat_bau1 %>% 
+  filter(dev_scenario=="Need-based") %>% 
+  mutate(dev_scenario="Optimum")
+baq_nat_bau <- bind_rows(baq_nat_bau1, baq_nat_bau2)
 baq_nat_ref <- baq_nat_bau %>% 
   mutate(scenario="Progressive reforms")
 baq_nat <- bind_rows(baq_nat_bau, baq_nat_ref)
 
 # Multiply WC to have for each dev scenario
-wc_nat_use <- purrr::map_df(c("Current", "Proportional", "Need-based"), function(x) {
+wc_nat_use <- purrr::map_df(c("Current", "Proportional", "Need-based", "Optimum"), function(x) {
   
   wc_nat_dev <- wc_nat %>% 
     mutate(dev_scenario=x) %>% 
@@ -163,12 +168,12 @@ wc_nat_use <- purrr::map_df(c("Current", "Proportional", "Need-based"), function
 data1 <- bind_rows(wc_nat_use, faq_nat, baq_nat) %>% 
   # Summarize across sectors
   group_by(rcp, scenario, dev_scenario, country, iso3, period) %>% 
-  summarize(prod_mt=sum(prod_mt), 
-            meat_mt=sum(meat_mt)) %>% 
+  summarize(prod_mt=sum(prod_mt, na.rm=T), # if problems, remove this
+            meat_mt=sum(meat_mt, na.rm=T)) %>% 
   ungroup() %>% 
   # Add population size
   left_join(pop_nat %>% select(iso3, period, npeople), by=c("iso3", "period")) %>% 
-  # Calculate per capitat meat production
+  # Calculate per capita meat production
   mutate(meat_kg_person=meat_mt*1000/npeople) %>% 
   # Add initial meat/person
   left_join(hist %>% select(iso3, meat_kg_person_2017), by="iso3") %>% 
@@ -177,7 +182,7 @@ data1 <- bind_rows(wc_nat_use, faq_nat, baq_nat) %>%
   # Cap difference for plotting
   mutate(meat_kg_person_diff_cap=pmin(10, meat_kg_person_diff) %>% pmax(., -10)) %>% 
   # Formatting
-  mutate(dev_scenario=factor(dev_scenario, levels=c("Current", "Proportional", "Need-based")))
+  mutate(dev_scenario=factor(dev_scenario, levels=c("Current", "Proportional", "Need-based", "Optimum")))
 
 # Final dataset
 # RCP, Scenario, dev scenario, country, iso3, period, delta SF

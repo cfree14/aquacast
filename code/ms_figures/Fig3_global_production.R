@@ -58,11 +58,17 @@ g1 <- ggplot(hist_use, aes(x=year, y=meat_kg_person, fill=sector)) +
   # Axes
   scale_x_continuous(breaks=seq(1960,2020,20), lim=c(1960,2020)) +
   scale_y_continuous(lim=c(0,15)) +
+  # Legend
+  scale_fill_manual(values=c("darkgreen", "salmon", "navy")) +
+  annotate(geom="text", x=2020, y=15, hjust=1, label="Capture fisheries", color="darkgreen", inherit.aes = F, size=2.5) +
+  annotate(geom="text", x=2020, y=13.9, hjust=1, label="Finfish mariculture", color="salmon", inherit.aes = F, size=2.5) +
+  annotate(geom="text", x=2020, y=12.8, hjust=1, label="Bivalve mariculture", color="navy", inherit.aes = F, size=2.5) +
   # Labels
-  labs(x="Year", y="Seafood production per capita\n(kg of meat per person)", title="\nHistorical seafood production", tag="a") +
+  labs(x="Year", y="Seafood production per capita\n(kg of meat per person per year)", title="\nHistorical seafood production", tag="a") +
   # Theme
   theme_bw() + base_theme +
-  theme(legend.position=c(0.3, 0.78))
+  theme(legend.position = "none")
+  # theme(legend.position=c(0.3, 0.78)) # when trying to plot legend
 g1
 
 # Plot forecast data (BAU)
@@ -76,6 +82,8 @@ g2 <- ggplot(proj_use %>% filter(scenario=="Business-as-usual"), aes(x=rcp, y=me
   # Labels
   labs(x="RCP climate scenario", y="", title="Future seafood production\nin a business-as-usual scenario", tag="b") +
   geom_text(data=proj_use %>% select(scenario, period) %>% unique(), mapping=aes(x=2.5, y=15, label=period), inherit.aes = F, size=2) +
+  # Legend
+  scale_fill_manual(values=c("darkgreen", "salmon", "navy")) +
   # Theme
   theme_bw() + base_theme +
   theme(axis.title.y=element_blank(),
@@ -95,6 +103,8 @@ g3 <- ggplot(proj_use %>% filter(scenario=="Progressive reforms"), aes(x=rcp, y=
   # Labels
   labs(x="RCP climate scenario", y="", title="Future seafood production\nin a progressive reform scenario", tag="c") +
   geom_text(data=proj_use %>% select(scenario, period) %>% unique(), mapping=aes(x=2.5, y=15, label=period), inherit.aes = F, size=2) +
+  # Legend
+  scale_fill_manual(values=c("darkgreen", "salmon", "navy")) +
   # Theme
   theme_bw() + base_theme +
   theme(axis.title.y=element_blank(),

@@ -246,7 +246,7 @@ out_table <- ts_end %>%
   left_join(fifo_proj)
 
 # Export table
-write.csv(out_table, file=file.path(tabledir, "TableS2_fifo_fcr_fmfo_stats.csv"), row.names=F)
+write.csv(out_table, file=file.path(tabledir, "TableS6_fifo_fcr_fmfo_stats.csv"), row.names=F)
 
 
 

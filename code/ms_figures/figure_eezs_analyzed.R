@@ -50,7 +50,7 @@ eezs_exclude <- eez_key %>%
   arrange(sov1_name, ter1_name) %>% 
   rename("Sovereign nation"=sov1_name, "Territory"=ter1_name) 
 
-write.csv(eezs_exclude, file.path(tabledir, "TableSX_eezs_uninhabited.csv"), row.names=F)
+write.csv(eezs_exclude, file.path(tabledir, "TableS10_eezs_uninhabited.csv"), row.names=F)
   
 
 # Plot data

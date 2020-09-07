@@ -108,7 +108,10 @@ free12 <- data_orig %>%
   ungroup()
 
 # Total Free et al. (2020) catch
-sum(free12$catch_mt) / 1e6
+free12_tot <- sum(free12$catch_mt) / 1e6
+
+# Percent of FAO catch !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+free12_tot / fao12_tot * 100
 
 # We are going to match the Free et al. (2020) countries to the FAO countries
 cntry_key <- free12 %>% 

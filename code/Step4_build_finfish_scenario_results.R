@@ -23,7 +23,7 @@ spp_key <- data
 rm(data_full, data)
 
 # Read feed info
-fifos <- read.csv("tables/TableS2_fifo_fcr_fmfo_stats.csv", as.is=T)
+fifos <- read.csv("tables/TableS6_fifo_fcr_fmfo_stats.csv", as.is=T)
 ffdata <- read.csv("data/feed_params/processed/forage_fish_availability.csv", as.is=T)
 maq_prod <- read.csv("data/feed_params/processed/FAO_2013_2017_maq_prod_averages_by_country.csv", as.is=T)
 
@@ -42,6 +42,24 @@ pop <- readRDS(file.path(popdir, "WB_UN_1960_2100_human_population_by_country.Rd
 wc <- readRDS("data/capture_projections/data/Free_etal_2020_national_projections_with_pop_data.Rds")
 
 
+# Historical data
+###################################
+
+# Read historical data
+hist_orig <- readRDS(file.path(datadir, "FAO_1950_2018_wc_aq_seafood_per_capita_national.Rds"))
+
+# Build today's values
+hist <- hist_orig %>% 
+  # Recent year
+  filter(year==max(year)) %>% 
+  # Sum across sectors
+  group_by(country, iso3, npeople) %>% 
+  summarize(prod_mt=sum(prod_mt),
+            meat_mt=sum(meat_mt),
+            meat_kg_person_2017=sum(meat_kg_person)) %>% 
+  ungroup()
+
+
 # Function to develop feed-constrained finfish mariculture
 ################################################################################
 
@@ -49,7 +67,7 @@ wc <- readRDS("data/capture_projections/data/Free_etal_2020_national_projections
 rcp <- "RCP 2.6"
 mgmt_scenario <- "Reformed fisheries management"
 feed_scenario <- "Reformed feed use"
-dev_scenario <- "Need-based"
+dev_scenario <- "Optimum"
 
 # Function to develop feed-constrained finfish mariculture
 expand_mariculture <- function(rcp, mgmt_scenario, feed_scenario, dev_scenario){
@@ -376,7 +394,6 @@ expand_mariculture <- function(rcp, mgmt_scenario, feed_scenario, dev_scenario){
       # Merge the two passes
       data2 <- bind_rows(pass1_use, pass2_use)
       
-      
     }
     
   }
@@ -489,11 +506,145 @@ expand_mariculture <- function(rcp, mgmt_scenario, feed_scenario, dev_scenario){
       # Merge the two passes
       data2 <- bind_rows(pass1_use, pass2_use)
       
-      
     }
-  
     
   }
+      
+ 
+  # Optimum development
+  if(dev_scenario_do=="Optimum"){
+    
+    
+    # Calculate meat/person from all sectors in 2017
+    all2017 <- hist %>% 
+      select(-prod_mt) %>% 
+      rename(npeople2017=npeople, meat_mt2017=meat_mt, meat_kg_person2017=meat_kg_person_2017)
+    
+    # Calculate meat/person from capture fisheries in 2100
+    wc2100 <- wc %>% 
+      # Reduce to climate scenario
+      filter(rcp==rcp_do & scenario=="Full Adaptation" & year %in% 2091:2100) %>% 
+      # Calculate production, meat, meat/person
+      group_by(country, iso3) %>% 
+      summarize(npeople2100=mean(npeople, na.rm=T),
+                meat_mt2100=mean(meat_mt, na.rm=T), 
+                meat_kg_person2100=mean(meat_kg_person, na.rm=T))
+    
+    # Merge
+    props <- all2017 %>% 
+      left_join(wc2100) %>% 
+      # Calculate missing meat
+      mutate(meat_mt_need=meat_kg_person2017/1000*npeople2100,
+             meat_mt_miss=meat_mt_need - meat_mt2100) %>% 
+      # Remove countries gaining seafood/capita
+      filter(meat_mt_miss>0 * !is.na(meat_mt_miss)) %>%
+      # Remove countries without aquaculture potential
+      filter(iso3 %in% unique(data_orig$ter1_iso)) %>%
+      # Arrange in order of ease
+      arrange(meat_mt_miss)
+    
+    # Old way Calculate meat/person from capture fisheries in 2100
+    # props <- wc %>% 
+    #   # Reduce to climate scenario
+    #   filter(rcp==rcp_do & scenario=="Full Adaptation") %>% 
+    #   # Calculate amount of seafood needed to break even
+    #   group_by(country, iso3) %>% 
+    #   summarize(meat_mt_need = meat_kg_person[year==2012]/1000*npeople[year==2100], 
+    #             meat_mt_avail = meat_mt[year==2100],
+    #             meat_mt_miss = meat_mt_need - meat_mt_avail) %>% 
+    #   ungroup() %>% 
+    #   # Remove countries gaining seafood/capita
+    #   filter(meat_mt_miss>0 * !is.na(meat_mt_miss)) %>% 
+    #   # Remove countries without aquaculture potential
+    #   filter(iso3 %in% unique(data_orig$ter1_iso)) %>% 
+    #   # Arrange in order of ease
+    #   arrange(meat_mt_miss)
+  
+    # Loop through countries in order of ease to fill
+    data2 <- purrr::map_df(1:nrow(props), function(i){
+      
+      # Country do
+      iso3_do <- props$iso3[i]
+      
+      # Develop cells until satisfied
+      cdata <- data1 %>% 
+        # Calculate meat
+        mutate(meat_mt_yr=0.87*prod_mt_yr) %>% 
+        # Add meat needed
+        left_join(select(props, iso3, meat_mt_miss), by=c("ter1_iso_use"="iso3")) %>% 
+        filter(!is.na(meat_mt_miss)) %>% 
+        # Reduce to country of interest
+        filter(ter1_iso_use %in% iso3_do) %>% 
+        # Arrange by profitability
+        group_by(period) %>% 
+        arrange(period, desc(profits_usd_yr)) %>% 
+        # Calculate cumulative production and see when it exceeds need
+        mutate(cum_meat_mt_yr=cumsum(meat_mt_yr),
+               over=cum_meat_mt_yr>meat_mt_miss, 
+               ncells_over=cumsum(over)) %>% 
+        # Reduce to only cells necessary
+        filter(ncells_over<=1) %>% 
+        mutate(developed="yes") %>% 
+        ungroup() %>% 
+        # Add rank
+        mutate(dev_rank=i,
+               dev_order=1:n())
+              
+    })
+    
+    # Restrict by feed then restrict by demand
+    pass1 <- data2 %>% 
+      # Arrange by period and development order (easy countries first)
+      arrange(period, dev_rank, dev_order) %>% 
+      # Calculate cumulative feed and see if there is enough feed
+      group_by(period) %>% 
+      mutate(cum_ff_mt_yr=cumsum(ff_demand_mt_yr)) %>% 
+      mutate(feed_avail=ifelse(cum_ff_mt_yr<=ff_avail_mt_yr, "yes", "no")) %>% 
+      # Calculate cumulative production and see if there is enough demand
+      mutate(cum_prod_mt_yr=cumsum(prod_mt_yr), 
+             demand_avail=ifelse(cum_prod_mt_yr<=prod_mt_cap, "yes", "no")) %>% 
+      # Developed
+      mutate(developed=ifelse(demand_avail=="yes" & feed_avail=="yes", "yes", "no")) %>% 
+      filter(developed=="yes")
+    
+    # Develop other countries to fill gap, if any
+    avail_key <- pass1 %>% 
+      group_by(period) %>% 
+      summarize(ff_mt_used=sum(ff_demand_mt_yr),
+                prod_mt_used=sum(prod_mt_yr))
+    
+    # Pass 2
+    pass2 <- data1 %>% 
+      # Remove countries already focused on
+      filter(!ter1_iso_use %in% props$iso3) %>% 
+      # Add amount of feed and production that is still available
+      left_join(avail_key) %>% 
+      mutate(ff_mt_left=ff_avail_mt_yr - ff_mt_used,
+             prod_mt_left=prod_mt_cap - prod_mt_used) %>% 
+      # Group by period, eez name
+      group_by(period, eez_name) %>% 
+      arrange(period, eez_name, desc(profits_usd_yr)) %>% 
+      mutate(rank_in_eez=1:n()) %>% 
+      ungroup() %>% 
+      # Arrange within TERRITORY-LIKE UNIT (USA (Alaska/Hawaii/Continental), Guam, Puerto Rico all seperate) - basically distribute to current producers equally
+      group_by(period) %>% 
+      arrange(period, rank_in_eez) %>% 
+      # Calculate cumulative feed and demand
+      mutate(cum_prod_mt_yr=cumsum(prod_mt_yr),
+             cum_ff_mt_yr=cumsum(ff_demand_mt_yr),
+             ff_avail=ifelse(cum_ff_mt_yr <= ff_mt_left, "yes", "no"),
+             demand_avail=ifelse(cum_prod_mt_yr <= prod_mt_left, "yes", "no")) %>% 
+      # Classify develop
+      mutate(developed=ifelse(ff_avail=="yes" & demand_avail == "yes", "yes", "no")) %>% 
+      ungroup() %>% 
+      # Only developed cells
+      filter(developed=="yes")
+    
+    # Merge pass 1 and pass 2
+    data3 <- bind_rows(pass1, pass2)
+    data2 <- data3
+    
+  } # end optimum
   
   # Perform final formatting
   ###############################################################
@@ -545,13 +696,15 @@ expand_mariculture <- function(rcp, mgmt_scenario, feed_scenario, dev_scenario){
 out1 <- expand_mariculture(rcp="RCP 2.6", mgmt_scenario = "Reformed fisheries management", feed_scenario = "Reformed feed use", dev_scenario="Rational")
 out2 <- expand_mariculture(rcp="RCP 2.6", mgmt_scenario = "Reformed fisheries management", feed_scenario = "Reformed feed use", dev_scenario="Current")
 out3 <- expand_mariculture(rcp="RCP 2.6", mgmt_scenario = "Reformed fisheries management", feed_scenario = "Reformed feed use", dev_scenario="Proportional")
-out3 <- expand_mariculture(rcp="RCP 2.6", mgmt_scenario = "Reformed fisheries management", feed_scenario = "Reformed feed use", dev_scenario="Need-based")
+out4 <- expand_mariculture(rcp="RCP 2.6", mgmt_scenario = "Reformed fisheries management", feed_scenario = "Reformed feed use", dev_scenario="Need-based")
+out5 <- expand_mariculture(rcp="RCP 2.6", mgmt_scenario = "Reformed fisheries management", feed_scenario = "Reformed feed use", dev_scenario="Optimum")
 
 # BAU tests
 out1 <- expand_mariculture(rcp="RCP 2.6", mgmt_scenario = "BAU fisheries management", feed_scenario = "BAU feed use", dev_scenario="Rational")
-out1 <- expand_mariculture(rcp="RCP 2.6", mgmt_scenario = "BAU fisheries management", feed_scenario = "BAU feed use", dev_scenario="Current")
-out1 <- expand_mariculture(rcp="RCP 2.6", mgmt_scenario = "BAU fisheries management", feed_scenario = "BAU feed use", dev_scenario="Proportional")
-out1 <- expand_mariculture(rcp="RCP 2.6", mgmt_scenario = "BAU fisheries management", feed_scenario = "BAU feed use", dev_scenario="Need-based")
+out2 <- expand_mariculture(rcp="RCP 2.6", mgmt_scenario = "BAU fisheries management", feed_scenario = "BAU feed use", dev_scenario="Current")
+out3 <- expand_mariculture(rcp="RCP 2.6", mgmt_scenario = "BAU fisheries management", feed_scenario = "BAU feed use", dev_scenario="Proportional")
+out4 <- expand_mariculture(rcp="RCP 2.6", mgmt_scenario = "BAU fisheries management", feed_scenario = "BAU feed use", dev_scenario="Need-based")
+out5 <- expand_mariculture(rcp="RCP 2.6", mgmt_scenario = "BAU fisheries management", feed_scenario = "BAU feed use", dev_scenario="Optimum")
 
 
 # Do all scenarios
@@ -561,7 +714,8 @@ out1 <- expand_mariculture(rcp="RCP 2.6", mgmt_scenario = "BAU fisheries managem
 rcps <- paste("RCP", c("2.6", "4.5", "6.0", "8.5"))
 mgmt_scens <- c("BAU fisheries management", "Reformed fisheries management")
 feed_scens <- c("BAU feed use", "Reformed feed use")
-dev_scens <- c("Current", "Proportional", "Need-based")
+# dev_scens <- c("Current", "Proportional", "Need-based")
+dev_scens <- c("Optimum")
 scen_key <- expand.grid(rcp=rcps,
                         mgmt_scenario=mgmt_scens,
                         feed_scenario=feed_scens,
@@ -583,5 +737,5 @@ output <- purrr::map_df(1:nrow(scen_key), function(x) {
 })
 
 # Export output
-saveRDS(output, file=file.path(datadir, "finfish_output.Rds"))
+saveRDS(output, file=file.path(datadir, "finfish_output_optimum.Rds"))
 

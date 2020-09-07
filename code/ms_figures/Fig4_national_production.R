@@ -26,7 +26,12 @@ data1 <- data_orig %>%
   ungroup() %>% 
   mutate(scenario=recode_factor(scenario, 
                                 "Business-as-usual"="Business-\nas-usual",
-                                "Progressive reforms"="Progressive\nreforms"))
+                                "Progressive reforms"="Progressive\nreforms"), 
+         dev_scenario=recode_factor(dev_scenario, 
+                                   "Current"="Current",
+                                   "Proportional"="Proportional",
+                                   "Need-based"="Offset-based",
+                                   "Optimum"="Optimum"))
 
 # Stats for manuscript
 data1_stats <- data1 %>% 
@@ -40,7 +45,8 @@ data2 <- bind_rows(faq_nat, baq_nat) %>%
   mutate(dev_scenario=recode_factor(dev_scenario, 
                                     "Current"="Current",
                                     "Proportional"="Proportional",
-                                    "Need-based"="Need-\nbased"))
+                                    "Need-based"="Offset-\nbased",
+                                    "Optimum"="Optimum"))
 
 
 # Plot figure
@@ -53,7 +59,7 @@ base_theme <- theme(axis.text = element_text(size=6),
                    strip.text = element_text(size=8),
                    legend.text = element_text(size=6),
                    plot.tag = element_text(size=8, face="bold"),
-                   legend.title = element_blank(),
+                   legend.title = element_text(size=8),
                    legend.background = element_rect(fill=alpha('blue', 0)),
                    panel.grid.major = element_blank(), 
                    panel.grid.minor = element_blank(),
@@ -68,33 +74,36 @@ g1 <- ggplot(data1, aes(x=scenario, y=prop, fill=dev_scenario)) +
   # Labels
   labs(x="Policy scenario", y="Percent of countries with increasing\nseafood production per capita", tag="a") +
   # Legends
-  scale_fill_discrete(name="Development scenario") + 
-  scale_y_continuous(breaks=seq(0,0.6, 0.2), labels = c("    0%", "    20%", "    40%", "    60%")) + # added padding to align with below
+  # scale_fill_discrete(name="Development scenario") + 
+  scale_fill_manual(name="Development scenario", values=RColorBrewer::brewer.pal(n=4, "Paired")) + 
+  scale_y_continuous(breaks=seq(0,1, 0.2), labels = c("    0%",  "    20%", 
+                                                      "    40%", "    60%",
+                                                      "    80%", "   100%")) + # added padding to align with below
   # Theme
   theme_bw() + base_theme +
   theme(legend.position = "bottom")
 g1
 
-
 # Plot proportion of EEZ developed in each development scenario
 log_breaks <- c(0, 0.00025, 0.0005, 0.001, 0.0025, 0.005, 0.01, 0.025, 0.05, 0.1, 0.25, 0.5, 1)
 log_labels <- paste0(log_breaks*100, "%")
 g2 <- ggplot(data2, aes(x=dev_scenario, y=eez_prop_cap, fill=sector)) +
-  geom_boxplot(outlier.size = 0.5, lwd=0.3) +
+  geom_boxplot(outlier.size = 0.5, lwd=0.3, color="black") +
   facet_wrap(~rcp, ncol=4) + 
   # Axes
   scale_y_continuous(trans="log2", breaks=log_breaks , labels = log_labels) +
   # Legend
-  scale_fill_manual(name="", values=c("lightblue", "salmon")) +
+  scale_fill_manual(name="", values=c("navy", "salmon")) +
   # Labels
   labs(x="Development scenario", y="Percent of EEZ\ndeveloped for mariculture", tag="b") +
   # Theme
   theme_bw() + base_theme +
-  theme(legend.position = "bottom")
+  theme(legend.position = "bottom",
+        axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
 g2
 
 # Merge plots
-g <- gridExtra::grid.arrange(g1, g2, nrow=2)
+g <- gridExtra::grid.arrange(g1, g2, nrow=2, heights=c(0.48, 0.52))
 
 # Export data
 ggsave(g, filename=file.path(plotdir, "Fig4_national_production.png"), 
