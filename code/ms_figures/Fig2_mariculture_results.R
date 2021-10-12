@@ -140,8 +140,8 @@ g1 <- ggplot(stats, aes(x=year, y=prod_mt/1e6, color=type)) +
   lims(y=c(0,NA)) +
   scale_x_continuous(breaks=seq(1950,2020,10)) +
   scale_color_manual(name="", values=c("salmon", "navy")) +
-  annotate(geom="text", x=1950, y=14, hjust=0, label="Bivalve mariculture", color="navy", inherit.aes = F, size=1.5) +
-  annotate(geom="text", x=1950, y=15.5, hjust=0, label="Finfish mariculture", color="salmon", inherit.aes = F, size=1.5) +
+  annotate(geom="text", x=1950, y=13.8, hjust=0, label="Bivalve mariculture", color="navy", inherit.aes = F, size=1.9) +
+  annotate(geom="text", x=1950, y=15.5, hjust=0, label="Finfish mariculture", color="salmon", inherit.aes = F, size=1.9) +
   theme_bw() + small_plot_theme +
   theme(legend.position = "none")
 g1
@@ -189,7 +189,7 @@ g4 <- ggplot(fifos_g, aes(x=year, y=fifo, color=group)) +
   # Plot points
   geom_point(size=0.3) +
   # Plot text labels
-  geom_text(data=groups, mapping=aes(x=2050, y=seq(4.6, 2.8, length.out = nrow(groups)), hjust=1, label=group, color=group), size=1.5) +
+  geom_text(data=groups, mapping=aes(x=2050, y=seq(4.6, 2.4, length.out = nrow(groups)), hjust=1, label=group, color=group), size=1.9) +
   # Limits
   scale_x_continuous(breaks=seq(2000,2050, 10), limits = c(2000, 2050)) +
   # Labels
