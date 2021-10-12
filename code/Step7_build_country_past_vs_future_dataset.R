@@ -196,7 +196,7 @@ data2 <- data1 %>%
 
 
 # Export data
-save(wc_nat_use, faq_nat, baq_nat, data2, file=file.path(datadir, "national_capture_mariculture_output_merged.Rds"))
+save(wc_nat_use, faq_nat, baq_nat, data1, data2, file=file.path(datadir, "national_capture_mariculture_output_merged.Rdata"))
 
 
 # Plot data

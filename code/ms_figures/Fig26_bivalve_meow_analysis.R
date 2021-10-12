@@ -10,6 +10,7 @@ options(scipen=999)
 ################################################################################
 
 # Packages
+library(sf)
 library(tidyverse)
 library(grid)
 library(gridExtra)
@@ -28,7 +29,7 @@ data <- readRDS(file.path(datadir, "bivalve_output.Rds")) %>%
 
 # Read template
 template <- raster::raster(file.path(tempdir, "world_raster_template_10km.tif"))
-crs_use <- crs(template)
+crs_use <- raster::crs(template)
 
 # Project MEOWS
 meows_moll <- meows %>% 
@@ -48,7 +49,7 @@ meows_df <- meows_moll %>%
 ################################################################################
 
 # If building data
-build <- T
+build <- F
 if(build==T){
   
   # Development scenarios
@@ -95,7 +96,9 @@ if(build==T){
 }else{
   
   # Read data
-  results <- readRDS(file=file.path(datadir, "bivalve_meow_mt_sqkm_by_dev_scenario.Rds"))
+  results <- readRDS(file=file.path(datadir, "bivalve_meow_mt_sqkm_by_dev_scenario.Rds")) %>% 
+    mutate(dev_scenario=recode_factor(dev_scenario,
+                                      "Current"="Current", "Proportional"="Proportional", "Need-based"="Offset-based / Optimum"))
   
 }
 
@@ -103,9 +106,22 @@ if(build==T){
 # Plot data
 ################################################################################
 
+# Setup theme
+my_theme <-  theme(axis.text=element_text(size=6),
+                   axis.title=element_text(size=8),
+                   legend.text=element_text(size=6),
+                   legend.title=element_text(size=8),
+                   strip.text=element_text(size=8),
+                   # Gridlines
+                   panel.grid.major = element_blank(), 
+                   panel.grid.minor = element_blank(),
+                   panel.background = element_blank(), 
+                   axis.line = element_line(colour = "black"),
+                   # Legend
+                   legend.position="bottom")
 
-# Plot data
-g <- ggplot(results, aes(x=biv_mt_sqkm, fill=dev_scenario)) +
+# Plot data (original approach)
+g1 <- ggplot(results, aes(x=biv_mt_sqkm, fill=dev_scenario)) +
   facet_wrap(~period) +
   geom_density(alpha=0.3) +
   # Reference line
@@ -115,13 +131,46 @@ g <- ggplot(results, aes(x=biv_mt_sqkm, fill=dev_scenario)) +
   # Legend
   scale_fill_discrete(name="Development scenario") +
   # Theme
-  theme_bw() +
-  theme(legend.position = "bottom")
-g
+  theme_bw() + my_theme
+g1
+
+# Plot data (log-scale approach)
+g2 <- ggplot(results, aes(x=biv_mt_sqkm+0.001, fill=dev_scenario)) +
+  facet_wrap(~period) +
+  geom_density(alpha=0.3) +
+  # Reference line
+  geom_vline(xintercept=57.9, linetype="solid") +
+  # Labs
+  labs(x="Cultured bivalve density (mt / sqkm)", y="Density") +
+  scale_x_continuous(trans="log10", 
+                     breaks=c(0.001, 0.01, 0.1, 1, 10,  100),
+                     labels=c("0.001", "0.01", "0.1", "1", "10",  "100")) +
+  # Legend
+  scale_fill_discrete(name="Development scenario") +
+  # Theme
+  theme_bw() + my_theme
+g2
+
+# Plot data (boxplot approach)
+g3 <- ggplot(results, aes(x=biv_mt_sqkm, fill=dev_scenario)) +
+  facet_wrap(~period) +
+  geom_boxplot() +
+  # Reference line
+  geom_vline(xintercept=57.9, linetype="solid") +
+  # Labs
+  labs(x="Cultured bivalve density (mt / sqkm)", y="Density") +
+  scale_x_continuous(trans="log10", 
+                     breaks=c(0.01, 0.1, 1, 10,  100),
+                     labels=c("0.01", "0.1", "1", "10",  "100")) +
+  # Legend
+  scale_fill_discrete(name="Development scenario") +
+  # Theme
+  theme_bw() + my_theme
+g3
   
 # Export plot
-ggsave(g, filename=file.path(plotdir, "Fig26_bivalve_meow_analysis.png"), 
-       width=6.5, height=3.5, units="in", dpi=600)
+ggsave(g2, filename=file.path(plotdir, "Fig26_bivalve_meow_analysis.png"), 
+       width=6.5, height=3.25, units="in", dpi=600)
 
 
 

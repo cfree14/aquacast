@@ -14,7 +14,7 @@ outdir <- "/Volumes/GoogleDrive/Shared drives/emlab/projects/current-projects/bl
 plotdir <- "figures"
 
 # Read data
-load(file.path(outdir, "national_capture_mariculture_output_merged.Rds"))
+load(file.path(outdir, "national_capture_mariculture_output_merged.Rdata"))
 data_orig <- data2 
 rm(data2)
 
@@ -88,7 +88,7 @@ g1
 log_breaks <- c(0, 0.00025, 0.0005, 0.001, 0.0025, 0.005, 0.01, 0.025, 0.05, 0.1, 0.25, 0.5, 1)
 log_labels <- paste0(log_breaks*100, "%")
 g2 <- ggplot(data2, aes(x=dev_scenario, y=eez_prop_cap, fill=sector)) +
-  geom_boxplot(outlier.size = 0.5, lwd=0.3, color="black") +
+  geom_boxplot(outlier.size = 0.5, lwd=0.3, color="black", alpha=0.7) +
   facet_wrap(~rcp, ncol=4) + 
   # Axes
   scale_y_continuous(trans="log2", breaks=log_breaks , labels = log_labels) +
