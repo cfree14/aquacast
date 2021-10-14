@@ -15,14 +15,14 @@ library(lubridate)
 
 # Directories
 plotdir <- "figures"
-datadir <- "data/climate/data/gfdl/GFDL-ESM2G/4rasters_scaled"
+datadir <- "/Volumes/GoogleDrive/Shared drives/emlab/projects/current-projects/blue-paper-2/data/climate/GFDL-ESM2G/4rasters_scaled"
 
 
 # Function
 ################################################################################
 
 # Variable to plot
-# var_units <- "tos_degC"; color_pal="thermal"; legend_title="SST (°C)"
+# var_units <- "tos_degC_annual_mean_scaled"; color_pal="thermal"; legend_title="SST (°C)"
 # var_units <- "chl_mg_m3"; color_pal <- "algae"; legend_title <- "Total chlorophyll (mg/m3)"
 plot_clim_proj <- function(var_units, color_pal, legend_title){
   
@@ -30,12 +30,12 @@ plot_clim_proj <- function(var_units, color_pal, legend_title){
   ########################
   
   # Read data
-  rcp85 <- brick(file.path(datadir, paste0("GFDL_ESM2M_rcp85_", var_units, ".tif")))
-  rcp60 <- brick(file.path(datadir, paste0("GFDL_ESM2M_rcp60_", var_units, ".tif")))
-  rcp45 <- brick(file.path(datadir, paste0("GFDL_ESM2M_rcp45_", var_units, ".tif")))
-  rcp26 <- brick(file.path(datadir, paste0("GFDL_ESM2M_rcp26_", var_units, ".tif")))
-  layer_names <- readRDS(file.path(datadir, paste0("GFDL_ESM2M_rcp85_", var_units, "_layer_names.Rds")))
-  names(rcp85) <- names(rcp60) <- names(rcp45) <- names(rcp26) <- layer_names
+  rcp85 <- brick(file.path(datadir, paste0("GFDL_ESM2G_rcp85_", var_units, ".grd")))
+  rcp60 <- brick(file.path(datadir, paste0("GFDL_ESM2G_rcp60_", var_units, ".grd")))
+  rcp45 <- brick(file.path(datadir, paste0("GFDL_ESM2G_rcp45_", var_units, ".grd")))
+  rcp26 <- brick(file.path(datadir, paste0("GFDL_ESM2G_rcp26_", var_units, ".grd")))
+  # layer_names <- readRDS(file.path(datadir, paste0("GFDL_ESM2MG_rcp85_", var_units, "_layer_names.Rds")))
+  # names(rcp85) <- names(rcp60) <- names(rcp45) <- names(rcp26) <- layer_names
   
   # Build data
   ########################
@@ -68,7 +68,7 @@ plot_clim_proj <- function(var_units, color_pal, legend_title){
   
   # Subset data for testing
   data_test <- data %>% 
-    sample_frac(size=0.05)
+    sample_frac(size=0.1)
   
   # Plot data
   ########################
@@ -91,21 +91,31 @@ plot_clim_proj <- function(var_units, color_pal, legend_title){
     colors <-cmocean(color_pal)(100)
   }
   
+  # World
+  world <- rnaturalearth::ne_countries(scale="small", returnclass = "sf") %>% 
+    sf::st_transform(crs( rcp26 ))
+  
   # Plot data
   g <- ggplot(data, aes(x=long_dd, y=lat_dd, fill=value)) +
-    geom_raster() +
     facet_grid(rcp ~ year) +
+    # World
+    geom_sf(data=world, fill="grey90", color="white", lwd=0.1, inherit.aes = F) +
+    # Variable
+    geom_raster() +
+    # Labels
+    labs(x="", y="") +
+    # Legend
     scale_fill_gradientn(name=legend_title, colors=colors, na.value = NA) +
     # scale_fill_gradientn(name=legend_title, colors=rev(RColorBrewer::brewer.pal(9, "RdBu")), na.value = NA) +
     guides(fill = guide_colorbar(ticks.colour = "black", frame.colour = "black")) +
-    labs(x="", y="") +
+    # Theme
     theme_bw() + my_theme
   
   # Export figure
   outfile <- paste0("figure_climate_proj_", var_units, ".png")
   ggsave(g, filename=file.path(plotdir, outfile), 
          width=6.5, height=6.5, units="in", dpi=600)
-
+  
 }
 
 

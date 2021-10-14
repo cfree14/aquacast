@@ -18,20 +18,23 @@ library(gridExtra)
 
 # Directories
 plotdir <- "figures"
-datadir <- "data/climate/data/gfdl/GFDL-ESM2G/2rasters"
+datadir <- "/Volumes/GoogleDrive/Shared drives/emlab/projects/current-projects/blue-paper-2/data/climate/GFDL-ESM2G/2rasters"
 
 # Read data
-sst <- brick(file.path(datadir, "GFDL_ESM2M_rcp85_tos_degC.tif"))
-salt <- brick(file.path(datadir, "GFDL_ESM2M_rcp85_so_psu.tif"))
-alk <- brick(file.path(datadir, "GFDL_ESM2M_rcp85_talk_mol_kg.tif"))
-dic <- brick(file.path(datadir, "GFDL_ESM2M_rcp85_dissic_mol_kg.tif"))
-si <- brick(file.path(datadir, "GFDL_ESM2M_rcp85_si_mol_kg.tif"))
-po4 <- brick(file.path(datadir, "GFDL_ESM2M_rcp85_po4_mol_kg.tif"))
-arag <- brick(file.path(datadir, "GFDL_ESM2M_rcp85_arag_sat.tif"))
+sst <- brick(file.path(datadir, "GFDL_ESM2G_rcp85_tos_degC.grd"))
+salt <- brick(file.path(datadir, "GFDL_ESM2G_rcp85_so_psu.grd"))
+alk <- brick(file.path(datadir, "GFDL_ESM2G_rcp85_talk_mol_kg.grd"))
+dic <- brick(file.path(datadir, "GFDL_ESM2G_rcp85_dissic_mol_kg.grd"))
+si <- brick(file.path(datadir, "GFDL_ESM2G_rcp85_si_mol_kg.grd"))
+po4 <- brick(file.path(datadir, "GFDL_ESM2G_rcp85_po4_mol_kg.grd"))
+arag <- brick(file.path(datadir, "GFDL_ESM2G_rcp85_arag_sat.grd"))
 
 
 # Plot data
 ################################################################################
+
+# World
+world <- rnaturalearth::ne_countries(returnclass = "sf")
 
 # Setup theme
 my_theme <- theme(axis.text=element_blank(),
@@ -54,6 +57,7 @@ sst_df <- sst[[1]] %>%
 
 sst_plot <- ggplot(sst_df, aes(x=x, y=y, fill=value)) +
   geom_raster() + 
+  geom_sf(data=world, fill="grey90", color="white", lwd=0.2, inherit.aes = F) +
   labs(x="", y="", title="SST (°C)") +
   scale_fill_gradientn(name="", 
                        colors=cmocean(name="thermal")(100), na.value="white") +
