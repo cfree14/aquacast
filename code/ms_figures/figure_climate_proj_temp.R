@@ -24,6 +24,7 @@ datadir <- "/Volumes/GoogleDrive/Shared drives/emlab/projects/current-projects/b
 # Variable to plot
 # var_units <- "tos_degC_annual_mean_scaled"; color_pal="thermal"; legend_title="SST (°C)"
 # var_units <- "chl_mg_m3"; color_pal <- "algae"; legend_title <- "Total chlorophyll (mg/m3)"
+# var_units <- "current_speed_m_s_annual_max_scaled"; color_pal <- "speed"; legend_title <- "Current speed (m/s)"
 plot_clim_proj <- function(var_units, color_pal, legend_title){
   
   # Read data
@@ -136,3 +137,4 @@ plot_clim_proj(var_units="tos_degC_annual_max_scaled", color_pal="thermal", lege
 plot_clim_proj(var_units="chl_mg_m3_annual_mean_minus_sd_scaled", color_pal="algae", legend_title="Mean minus standard deviation\nof ntotal chlorophyll (mg/m3)")
 
 
+plot_clim_proj(var_units="current_speed_m_s_annual_max_scaled", color_pal="speed", legend_title="Current speed (m/s)")
