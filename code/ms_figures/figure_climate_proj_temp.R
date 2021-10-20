@@ -62,14 +62,14 @@ plot_clim_proj <- function(var_units, color_pal, legend_title){
     mutate(year=gsub("X", "", year)) %>% 
     select(rcp, year, everything())
   
-  # Check stats
-  stats <- data %>% 
-    group_by(rcp, year) %>% 
-    summarize(mean=mean(value, na.rm=T))
-  
-  # Subset data for testing
-  data_test <- data %>% 
-    sample_frac(size=0.1)
+  # # Check stats
+  # stats <- data %>% 
+  #   group_by(rcp, year) %>% 
+  #   summarize(mean=mean(value, na.rm=T))
+  # 
+  # # Subset data for testing
+  # data_test <- data %>% 
+  #   sample_frac(size=0.1)
   
   # Plot data
   ########################
@@ -124,17 +124,12 @@ plot_clim_proj <- function(var_units, color_pal, legend_title){
 ################################################################################
 
 # Plot main
-plot_clim_proj(var_units="tos_degC_annual_mean_scaled", color_pal="thermal", legend_title="SST (°C)")
 plot_clim_proj(var_units="so_psu_annual_mean_scaled", color_pal="haline", legend_title="Salinity (psu)")
 plot_clim_proj(var_units="chl_mg_m3_annual_mean_scaled", color_pal="algae", legend_title="Total chlorophyll (mg/m3)")
 plot_clim_proj(var_units="o2_mol_m3_annual_mean_scaled", color_pal="solar", legend_title="Dissolved oxygen (mol/m3)")
-plot_clim_proj(var_units="arag_sat_annual_mean_scaled", color_pal="spectral", legend_title="Aragonite saturation (Ω)")
-
-
-# Plot secondary
+plot_clim_proj(var_units="tos_degC_annual_mean_scaled", color_pal="thermal", legend_title="SST (°C)")
 plot_clim_proj(var_units="tos_degC_annual_min_scaled", color_pal="thermal", legend_title="SST (°C)")
 plot_clim_proj(var_units="tos_degC_annual_max_scaled", color_pal="thermal", legend_title="SST (°C)")
 plot_clim_proj(var_units="chl_mg_m3_annual_mean_minus_sd_scaled", color_pal="algae", legend_title="Mean minus standard deviation\nof ntotal chlorophyll (mg/m3)")
-
-
 plot_clim_proj(var_units="current_speed_m_s_annual_max_scaled", color_pal="speed", legend_title="Current speed (m/s)")
+plot_clim_proj(var_units="arag_sat_annual_mean_scaled", color_pal="spectral", legend_title="Aragonite saturation (Ω)")

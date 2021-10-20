@@ -15,12 +15,12 @@ library(lubridate)
 
 # Directories
 plotdir <- "figures"
-datadir <- "/Volumes/GoogleDrive/Shared drives/emlab/projects/current-projects/blue-paper-2/data/climate/Song_etal_2020/3rasters_annualized"
+datadir <- "/Volumes/GoogleDrive/Shared drives/emlab/projects/current-projects/blue-paper-2/data/climate/Song_etal_2020/4rasters_scaled"
 
 # Read data
-ssp126 <- brick(file.path(datadir, "/Song_etal_2020_SSP126_sig_wave_height_annual_max.gri"))
-ssp245 <- brick(file.path(datadir, "/Song_etal_2020_SSP245_sig_wave_height_annual_max.gri"))
-ssp585 <- brick(file.path(datadir, "/Song_etal_2020_SSP585_sig_wave_height_annual_max.gri"))
+ssp126 <- brick(file.path(datadir, "/Song_etal_2020_SSP126_sig_wave_height_annual_max_scaled.gri"))
+ssp245 <- brick(file.path(datadir, "/Song_etal_2020_SSP245_sig_wave_height_annual_max_scaled.gri"))
+ssp585 <- brick(file.path(datadir, "/Song_etal_2020_SSP585_sig_wave_height_annual_max_scaled.gri"))
 
 # Wave height limit
 thresh_m <- 5
@@ -48,13 +48,13 @@ data <- rbind(ssp126_df, ssp245_df,  ssp585_df) %>%
   select(ssp, year, everything())
 
 # Check stats
-stats <- data %>% 
-  group_by(ssp, year) %>% 
-  summarize(mean=mean(value, na.rm=T))
+# stats <- data %>% 
+#   group_by(ssp, year) %>% 
+#   summarize(mean=mean(value, na.rm=T))
 
 # Subset data for testing
-data_test <- data %>% 
-  sample_frac(size=0.1)
+# data_test <- data %>% 
+#   sample_frac(size=0.1)
 
 # Plot data
 ########################
@@ -88,7 +88,7 @@ g <- ggplot(data, aes(x=long_dd, y=lat_dd, fill=value)) +
   guides(fill = guide_colorbar(ticks.colour = "black", frame.colour = "black")) +
   # Theme
   theme_bw() + my_theme
-g
+
 
 # Export figure
 outfile <- "figure_climate_proj_wave_height_m.png"

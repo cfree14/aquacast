@@ -31,10 +31,19 @@ aquacast <- function(species, periods, rcp, outdir=F, plot=T){
   ras_o2_molm3_mean <- raster::brick(file.path(climatedir, paste0("GFDL_ESM2G_", rcp, "_o2_mol_m3_annual_mean_scaled.grd")))
   ras_chl_mgm3_meansubsd <- raster::brick(file.path(climatedir, paste0("GFDL_ESM2G_", rcp, "_chl_mg_m3_annual_mean_minus_sd_scaled.grd")))
   ras_arag_sat_mean <- raster::brick(file.path(climatedir, paste0("GFDL_ESM2G_", rcp, "_arag_sat_annual_mean_scaled.grd")))
+  ras_curr_m_s_max <- raster::brick(file.path(wavedir, paste0("GFDL_ESM2G_", rcp, "_current_speed_m_s_annual_max_scaled.grd")))
+  
+  # Read wave data
+  wavedir <- "/Volumes/GoogleDrive/Shared drives/emlab/projects/current-projects/blue-paper-2/data/climate/Song_etal_2020/4rasters_scaled"
+  rcp2_ssp_key <- tibble(rcp=paste0("rcp", c("26", "45", "60", "85"))) %>% 
+    mutate(ssp=recode(rcp, "rcp26"="SSP126", "rcp45"="SSP245", "rcp60"="SSP585", "rcp85"="SSP585"))
+  rcp_do <- rcp
+  ssp <- rcp2_ssp_key$ssp[rcp2_ssp_key$rcp==rcp_do]
+  ras_waves_m_max <- raster::brick(file.path(wavedir, paste0("Song_etal_2020_", ssp, "_sig_wave_height_annual_max_scaled.grd")))
   
   # Check rasters
   env_ras_check <- compareRaster(eezs, ras_sst_c_min, ras_sst_c_max, ras_sal_psu_mean, 
-                                 ras_o2_molm3_mean, ras_chl_mgm3_meansubsd, ras_arag_sat_mean)
+                                 ras_o2_molm3_mean, ras_chl_mgm3_meansubsd, ras_arag_sat_mean, ras_curr_m_s_max, ras_waves_m_max)
   if(env_ras_check==F){stop("EEZ and climate forecast rasters DO NOT have the same projection, extent, and resolution.")}
   env_ras_check1 <- length(unique(c(nlayers(ras_sst_c_min),
                                     nlayers(ras_sst_c_max),
@@ -65,10 +74,12 @@ aquacast <- function(species, periods, rcp, outdir=F, plot=T){
   print(spp)
   
   # Environmental tolerance parameters
+  # Species-specific
   sst_c_min <- species$sst_c_min
   sst_c_max <- species$sst_c_max
   sal_psu_min <- species$sal_psu_min
   sal_psu_max <- species$sal_psu_max
+  # Category-specific
   if(type=="Finfish"){
     o2_molm3_min <- 0.1378
     chl_mgm3_meansubsd_min <- NA
@@ -79,7 +90,10 @@ aquacast <- function(species, periods, rcp, outdir=F, plot=T){
     chl_mgm3_meansubsd_min <- 0.20 # 0.40 used by Froehlich et al. (2018); 0.20 derived here
     arag_sat_min <- 1.75 # Barton et al. (2015)
   }
-  
+  # Generic
+  curr_m_s_min <- 0.04
+  curr_m_s_max <- 1.0
+  waves_m_max <- 6
   
   # 2. Calculate harvest/sqkm/yr
   ####################################
