@@ -103,9 +103,9 @@ ggsave(g, filename=file.path(plotdir, outfile),
 ########################
 
 # Read data
-rcp85 <- brick(file.path(wavedir, "Song_etal_2020_SSP585_sig_wave_height_annual_max_scaled.grd"))
-rcp45 <- brick(file.path(wavedir, "Song_etal_2020_SSP245_sig_wave_height_annual_max_scaled.grd"))
-rcp26 <- brick(file.path(wavedir, "Song_etal_2020_SSP126_sig_wave_height_annual_max_scaled.grd"))
+rcp85 <- brick(file.path(wavedir, "Song_etal_2020_SSP585_sig_wave_height_mask.grd"))
+rcp45 <- brick(file.path(wavedir, "Song_etal_2020_SSP245_sig_wave_height_mask.grd"))
+rcp26 <- brick(file.path(wavedir, "Song_etal_2020_SSP126_sig_wave_height_mask.grd"))
 
 # Build data
 ########################
