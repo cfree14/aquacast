@@ -27,10 +27,14 @@ build_mask <- function(ssp, wave_thresh_m){
   # Read data
   infile <- paste0("Song_etal_2020_", ssp, "_sig_wave_height_annual_max_scaled.grd")
   data <- brick(file.path(outdir, infile))
-  layer_names <- names(data)
-
+  names(data)
+  
+  # Subset data to years of interest
+  data_use <- data[[paste0("X", c(2021:2030, 2051:2060, 2091:2100))]]
+  layer_names <- names(data_use)
+  
   # Reproject to match template
-  data_mask <- data <= wave_thresh_m
+  data_mask <- data_use <= wave_thresh_m
   names(data_mask) <- layer_names
   
   # Plot check

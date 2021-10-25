@@ -17,7 +17,7 @@ outputdir <- "/Volumes/GoogleDrive/Shared drives/emlab/projects/current-projects
 plotdir <- "/Volumes/GoogleDrive/Shared drives/emlab/projects/current-projects/blue-paper-2/data/output/raw_plots"
 
 # Read aquacast function
-source(file.path(codedir, "aquacast_v3.R"))
+source(file.path(codedir, "aquacast_v4.R"))
 source(file.path(codedir, "calc_costs.R"))
 
 # Read species data
@@ -34,7 +34,8 @@ data <- data %>%
                      "Actinopterygii"="Finfish"))
 
 # Subset finfish/bivalves
-data_do <- filter(data, class=="Bivalvia")
+data_do <- data
+# data_do <- filter(data, class=="Bivalvia")
 # data_do <- filter(data, class=="Actinopterygii")
 
 
@@ -43,7 +44,10 @@ rcp2check <- "RCP85"
 files_should <- paste0(rcp2check, "_", gsub(" ", "_", data_do$species), ".Rds")
 files_all <- list.files(outputdir) 
 files_done <- files_all[grepl("RCP85", files_all)]
-files_missing <- files_should[!files_should%in%files_done]
+files_missing <- files_should[!files_should%in%files_done] %>% sort()
+data_do <- data_do %>% 
+  mutate(file=paste0(rcp2check, "_", gsub(" ", "_", species), ".Rds")) %>% 
+  filter(file %in% files_missing)
 
 # Run forecast (in parallel)
 ################################################################################
