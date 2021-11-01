@@ -330,16 +330,50 @@ expand_mariculture <- function(rcp, mgmt_scenario, feed_scenario, dev_scenario){
       filter(developed=="yes")
     
     # If feed isn't limiting (i.e., demand is exceeded), distribute as proportion of total global demand
-    # NOTE: THIS CODE IS IMPERFECT. IT WILL FAIL IF ONE PERIOD IS BELOW AND ANOTHER IS ABOVE. _ WROT E A STOP TO FLAG IF HAPPENS
     prod_my_yr_period <- data2 %>% 
       group_by(period) %>% 
       summarize(prod_mt_yr=sum(prod_mt_yr))
-    cap_exceeded_yn <- sum(prod_my_yr_period$prod_mt_yr > prod_mt_cap)
-    if(cap_exceeded_yn%in%c(1,2)){stop("WRONG")}
-    if(cap_exceeded_yn==3){
+    periods_cap_exceeded <- periods[prod_my_yr_period$prod_mt_yr > prod_mt_cap]
+    periods_cap_not_exceeded <- periods[!periods %in%  periods_cap_exceeded]
+    
+    # If any periods are above demand
+    if(length(periods_cap_exceeded)>0){
+      
+      # Data where not exceeded
+      if(length(periods_cap_not_exceeded)==0){
+        # Create empty dataframe with right columns
+        data_not_exceeded <- data2 %>% slice(0)
+      }else{
+        data_not_exceeded <- data1 %>% 
+          filter(period %in% periods_cap_not_exceeded) %>% 
+          # Add percent of forage fish allocated to TERRITORY-LIKE UNIT (USA (Alaska/Hawaii/Continental), Guam, Puerto Rico all seperate)
+          left_join(props, by=c("ter1_iso_use")) %>% 
+          # Calculate forage fish allocation
+          mutate(feed_prop=ifelse(is.na(feed_prop), 0, feed_prop),
+                 feed_allocated_mt_yr=ff_avail_mt_yr*feed_prop) %>% 
+          # Remove places not allocated any forage fish
+          filter(feed_prop>0) %>% 
+          # Rank by profitability within EEZ
+          group_by(period, eez_name) %>% 
+          arrange(period, eez_name, desc(profits_usd_yr)) %>% 
+          mutate(rank_in_eez=1:n()) %>% 
+          ungroup() %>% 
+          # Arrange within TERRITORY-LIKE UNIT (USA (Alaska/Hawaii/Continental), Guam, Puerto Rico all seperate)
+          group_by(period, ter1_name_use) %>% 
+          arrange(period, ter1_name_use, rank_in_eez, desc(profits_usd_yr)) %>% 
+          # Calculate cumulative forage fish and see if it exceeds ALLOCATED AMOUNT
+          mutate(cum_ff_demand_mt_yr=cumsum(ff_demand_mt_yr),
+                 developed=ifelse(cum_ff_demand_mt_yr<=feed_allocated_mt_yr, "yes", "no")) %>% 
+          filter(developed=="yes")
+      }
+        
+      
+      # Data where exceeded
+      data_exceeded <- data1 %>% 
+        filter(period %in% periods_cap_exceeded)
       
       # Pass #1 
-      pass1 <- data1 %>% 
+      pass1 <- data_exceeded %>% 
         # Add percent of forage fish allocated to TERRITORY-LIKE UNIT (USA (Alaska/Hawaii/Continental), Guam, Puerto Rico all seperate)
         left_join(props, by="ter1_iso_use") %>% 
         # Calculate production allocation
@@ -392,7 +426,7 @@ expand_mariculture <- function(rcp, mgmt_scenario, feed_scenario, dev_scenario){
         filter(developed=="yes")
       
       # Merge the two passes
-      data2 <- bind_rows(pass1_use, pass2_use)
+      data2 <- bind_rows(data_not_exceeded, pass1_use, pass2_use)
       
     }
     
@@ -416,8 +450,7 @@ expand_mariculture <- function(rcp, mgmt_scenario, feed_scenario, dev_scenario){
       # Remove countries without aquaculture potential
       filter(iso3 %in% unique(data_orig$ter1_iso)) %>% 
       # Calculate proportion of feed dedicated to this TERRITORY
-      mutate(feed_prop=meat_mt_miss/sum(meat_mt_miss),
-             feed_prop=1/n()) 
+      mutate(feed_prop=meat_mt_miss/sum(meat_mt_miss)) 
     
     # Develop profitable cells first, in countries with production
     data2 <- data1 %>% 
@@ -722,6 +755,14 @@ scen_key <- expand.grid(rcp=rcps,
                         dev_scenario=dev_scens) %>% 
   arrange(rcp, mgmt_scenario, feed_scenario, dev_scenario)
 
+# Problem one
+if(F){
+  rcp <- rcp_do <- "RCP 2.6"
+  mgmt_scenario <- mgmt_do <- "BAU fisheries management"
+  feed_scenario <- feed_do <- "Reformed feed use"
+  dev_scenario <- dev_do <- "Proportional"
+}
+  
 # Develop mariculture
 output <- purrr::map_df(1:nrow(scen_key), function(x) {
   
