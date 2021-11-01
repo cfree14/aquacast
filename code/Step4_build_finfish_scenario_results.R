@@ -714,8 +714,8 @@ out5 <- expand_mariculture(rcp="RCP 2.6", mgmt_scenario = "BAU fisheries managem
 rcps <- paste("RCP", c("2.6", "4.5", "6.0", "8.5"))
 mgmt_scens <- c("BAU fisheries management", "Reformed fisheries management")
 feed_scens <- c("BAU feed use", "Reformed feed use")
-# dev_scens <- c("Current", "Proportional", "Need-based")
-dev_scens <- c("Optimum")
+dev_scens <- c("Current", "Proportional", "Need-based")
+# dev_scens <- c("Optimum")
 scen_key <- expand.grid(rcp=rcps,
                         mgmt_scenario=mgmt_scens,
                         feed_scenario=feed_scens,
@@ -737,5 +737,5 @@ output <- purrr::map_df(1:nrow(scen_key), function(x) {
 })
 
 # Export output
-saveRDS(output, file=file.path(datadir, "finfish_output_optimum.Rds"))
+saveRDS(output, file=file.path(datadir, "finfish_output.Rds"))
 

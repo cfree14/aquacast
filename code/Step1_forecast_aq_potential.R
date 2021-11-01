@@ -40,14 +40,16 @@ data_do <- data
 
 
 # Check to see which didn't finish
-rcp2check <- "RCP85"
+rcp2check <- "RCP26"
 files_should <- paste0(rcp2check, "_", gsub(" ", "_", data_do$species), ".Rds")
 files_all <- list.files(outputdir) 
-files_done <- files_all[grepl("RCP85", files_all)]
-files_missing <- files_should[!files_should%in%files_done] %>% sort()
-data_do <- data_do %>% 
-  mutate(file=paste0(rcp2check, "_", gsub(" ", "_", species), ".Rds")) %>% 
-  filter(file %in% files_missing)
+files_done <- files_all[grepl(rcp2check, files_all)]
+files_missing <- files_should[!files_should%in%files_done]
+length(files_missing)
+# data_do <- data_do %>% 
+#   mutate(file=paste0(rcp2check, "_", gsub(" ", "_", species), ".Rds")) %>% 
+#   filter(file %in% files_missing)
+
 
 # Run forecast (in parallel)
 ################################################################################

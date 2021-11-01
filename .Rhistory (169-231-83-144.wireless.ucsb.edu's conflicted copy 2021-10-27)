@@ -1,0 +1,512 @@
+for(i in 1:nrow(data_do)){
+# foreach(i=1:nrow(data_do)) %dopar% {
+# Parameters
+species <- data_do[i,]
+# periods <- c("2021-2022", "2051-2052", "2091-2092")
+periods <- c("2021-2030", "2051-2060", "2091-2100")
+# Forecast aquaculture potential
+# For testing: rcp="rcp26"; outdir=outputdir
+output <- aquacast(species=species, periods=periods, rcp="rcp60", outdir=outputdir, plot=F)
+}
+# Clear workspace
+rm(list = ls())
+# Setup
+################################################################################
+# Packages
+library(raster)
+library(ggplot2)
+library(tidyverse)
+# Directories
+codedir <- "code"
+sppdir <- "data/species/data"
+outputdir <- "/Volumes/GoogleDrive/Shared drives/emlab/projects/current-projects/blue-paper-2/data/output/raw"
+plotdir <- "/Volumes/GoogleDrive/Shared drives/emlab/projects/current-projects/blue-paper-2/data/output/raw_plots"
+# Read aquacast function
+source(file.path(codedir, "aquacast_v4.R"))
+source(file.path(codedir, "calc_costs.R"))
+# Read species data
+load(file.path(sppdir, "aquaculture_species_key.Rdata"))
+# Setup data
+################################################################################
+# Format data
+data <- data %>%
+mutate(type=recode(class,
+"Bivalvia"="Bivalve",
+"Actinopterygii"="Finfish"))
+# Subset finfish/bivalves
+data_do <- data
+# data_do <- filter(data, class=="Bivalvia")
+# data_do <- filter(data, class=="Actinopterygii")
+# Check to see which didn't finish
+rcp2check <- "RCP85"
+files_should <- paste0(rcp2check, "_", gsub(" ", "_", data_do$species), ".Rds")
+files_all <- list.files(outputdir)
+files_done <- files_all[grepl("RCP85", files_all)]
+files_missing <- files_should[!files_should%in%files_done]
+# Run forecast (in parallel)
+################################################################################
+# Setup parallel
+# library(doParallel)
+# ncores <- detectCores()
+# registerDoParallel(cores=ncores)
+# Loop through species and forecast
+i <- 1
+for(i in 1:nrow(data_do)){
+# foreach(i=1:nrow(data_do)) %dopar% {
+# Parameters
+species <- data_do[i,]
+# periods <- c("2021-2022", "2051-2052", "2091-2092")
+periods <- c("2021-2030", "2051-2060", "2091-2100")
+# Forecast aquaculture potential
+# For testing: rcp="rcp26"; outdir=outputdir
+output <- aquacast(species=species, periods=periods, rcp="rcp26", outdir=outputdir, plot=T)
+}
+# Loop through species and forecast
+for(i in 1:nrow(data_do)){
+# foreach(i=1:nrow(data_do)) %dopar% {
+# Parameters
+species <- data_do[i,]
+# periods <- c("2021-2022", "2051-2052", "2091-2092")
+periods <- c("2021-2030", "2051-2060", "2091-2100")
+# Forecast aquaculture potential
+# For testing: rcp="rcp26"; outdir=outputdir
+output <- aquacast(species=species, periods=periods, rcp="rcp85", outdir=outputdir, plot=F)
+}
+# Loop through species and forecast
+i <- 1
+for(i in 1:nrow(data_do)){
+# foreach(i=1:nrow(data_do)) %dopar% {
+# Parameters
+species <- data_do[i,]
+# periods <- c("2021-2022", "2051-2052", "2091-2092")
+periods <- c("2021-2030", "2051-2060", "2091-2100")
+# Forecast aquaculture potential
+# For testing: rcp="rcp26"; outdir=outputdir
+output <- aquacast(species=species, periods=periods, rcp="rcp45", outdir=outputdir, plot=F)
+}
+# Loop through species and forecast
+i <- 1
+for(i in 1:nrow(data_do)){
+# foreach(i=1:nrow(data_do)) %dopar% {
+# Parameters
+species <- data_do[i,]
+# periods <- c("2021-2022", "2051-2052", "2091-2092")
+periods <- c("2021-2030", "2051-2060", "2091-2100")
+# Forecast aquaculture potential
+# For testing: rcp="rcp26"; outdir=outputdir
+output <- aquacast(species=species, periods=periods, rcp="rcp60", outdir=outputdir, plot=F)
+}
+# Clear workspace
+rm(list = ls())
+# Setup
+################################################################################
+# Packages
+library(raster)
+library(ggplot2)
+library(tidyverse)
+# Directories
+codedir <- "code"
+sppdir <- "data/species/data"
+outputdir <- "/Volumes/GoogleDrive/Shared drives/emlab/projects/current-projects/blue-paper-2/data/output/raw"
+plotdir <- "/Volumes/GoogleDrive/Shared drives/emlab/projects/current-projects/blue-paper-2/data/output/raw_plots"
+# Read aquacast function
+source(file.path(codedir, "aquacast_v4.R"))
+source(file.path(codedir, "calc_costs.R"))
+# Read species data
+load(file.path(sppdir, "aquaculture_species_key.Rdata"))
+# Setup data
+################################################################################
+# Format data
+data <- data %>%
+mutate(type=recode(class,
+"Bivalvia"="Bivalve",
+"Actinopterygii"="Finfish"))
+# Subset finfish/bivalves
+data_do <- data
+# data_do <- filter(data, class=="Bivalvia")
+# data_do <- filter(data, class=="Actinopterygii")
+# Check to see which didn't finish
+rcp2check <- "RCP85"
+files_should <- paste0(rcp2check, "_", gsub(" ", "_", data_do$species), ".Rds")
+files_all <- list.files(outputdir)
+files_done <- files_all[grepl("RCP85", files_all)]
+files_missing <- files_should[!files_should%in%files_done]
+files_missing
+# Check to see which didn't finish
+rcp2check <- "RCP26"
+files_should <- paste0(rcp2check, "_", gsub(" ", "_", data_do$species), ".Rds")
+files_all <- list.files(outputdir)
+files_done <- files_all[grepl("RCP85", files_all)]
+files_missing <- files_should[!files_should%in%files_done]
+files_missing
+files_all
+files_all <- list.files(outputdir)
+files_done <- files_all[grepl("RCP85", files_all)]
+files_missing <- files_should[!files_should%in%files_done]
+files_missing
+files_missing <- files_should[!files_should%in%files_done] %>% sort()
+files_missing
+# Check to see which didn't finish
+rcp2check <- "RCP26"
+files_should <- paste0(rcp2check, "_", gsub(" ", "_", data_do$species), ".Rds")
+files_all <- list.files(outputdir)
+files_done <- files_all[grepl(rcp2check, files_all)]
+files_missing <- files_should[!files_should%in%files_done] %>% sort()
+files_missing
+# Check to see which didn't finish
+rcp2check <- "RCP85"
+files_should <- paste0(rcp2check, "_", gsub(" ", "_", data_do$species), ".Rds")
+files_all <- list.files(outputdir)
+files_done <- files_all[grepl("RCP85", files_all)]
+files_missing <- files_should[!files_should%in%files_done] %>% sort()
+files_missing
+View(data)
+data_do <- data_do %>%
+mutate(file=paste0(rcp2check, "_", gsub(" ", "_", species), ".Rds"))
+data_do <- data_do %>%
+mutate(file=paste0(rcp2check, "_", gsub(" ", "_", species), ".Rds")) %>%
+filter(file %in% files_missing)
+data_do <- data_do %>%
+mutate(file=paste0(rcp2check, "_", gsub(" ", "_", species), ".Rds")) %>%
+filter(file %in% files_missing)
+# Loop through species and forecast
+for(i in 1:nrow(data_do)){
+# foreach(i=1:nrow(data_do)) %dopar% {
+# Parameters
+species <- data_do[i,]
+# periods <- c("2021-2022", "2051-2052", "2091-2092")
+periods <- c("2021-2030", "2051-2060", "2091-2100")
+# Forecast aquaculture potential
+# For testing: rcp="rcp26"; outdir=outputdir
+output <- aquacast(species=species, periods=periods, rcp="rcp85", outdir=outputdir, plot=F)
+}
+# Loop through species and forecast
+for(i in 1:nrow(data_do)){
+# foreach(i=1:nrow(data_do)) %dopar% {
+# Parameters
+species <- data_do[i,]
+# periods <- c("2021-2022", "2051-2052", "2091-2092")
+periods <- c("2021-2030", "2051-2060", "2091-2100")
+# Forecast aquaculture potential
+# For testing: rcp="rcp26"; outdir=outputdir
+output <- aquacast(species=species, periods=periods, rcp="rcp85", outdir=outputdir, plot=F)
+}
+# Loop through species and forecast
+for(i in 3:nrow(data_do)){
+# foreach(i=1:nrow(data_do)) %dopar% {
+# Parameters
+species <- data_do[i,]
+# periods <- c("2021-2022", "2051-2052", "2091-2092")
+periods <- c("2021-2030", "2051-2060", "2091-2100")
+# Forecast aquaculture potential
+# For testing: rcp="rcp26"; outdir=outputdir
+output <- aquacast(species=species, periods=periods, rcp="rcp85", outdir=outputdir, plot=F)
+}
+# Parameters
+species <- data_do[i,]
+# periods <- c("2021-2022", "2051-2052", "2091-2092")
+periods <- c("2021-2030", "2051-2060", "2091-2100")
+species=species
+periods=periods
+rcp="rcp85"
+# Read climate forecasts
+climatedir <- "/Volumes/GoogleDrive/Shared drives/emlab/projects/current-projects/blue-paper-2/data/climate/GFDL-ESM2G/4rasters_scaled"
+ras_sst_c_min <- raster::brick(file.path(climatedir, paste0("GFDL_ESM2G_", rcp, "_tos_degC_annual_min_scaled.grd")))
+ras_sst_c_max <- raster::brick(file.path(climatedir, paste0("GFDL_ESM2G_", rcp, "_tos_degC_annual_max_scaled.grd")))
+ras_sal_psu_mean <- raster::brick(file.path(climatedir, paste0("GFDL_ESM2G_", rcp, "_so_psu_annual_mean_scaled.grd")))
+# Read current mask
+curr_mask <- raster::brick(file.path(climatedir, paste0("GFDL_ESM2G_", rcp, "_current_speed_mask.grd")))
+arag_mask <- raster::brick(file.path(climatedir, paste0("GFDL_ESM2G_", rcp, "_arag_mask.grd")))
+chl_mask <- raster::brick(file.path(climatedir, paste0("GFDL_ESM2G_", rcp, "_chl_mask.grd")))
+do_mask_fin <- raster::brick(file.path(climatedir, paste0("GFDL_ESM2G_", rcp, "_do_mask_finfish.grd")))
+do_mask_biv <- raster::brick(file.path(climatedir, paste0("GFDL_ESM2G_", rcp, "_do_mask_bivalve.grd")))
+# Read wave height mask
+wavedir <- "/Volumes/GoogleDrive/Shared drives/emlab/projects/current-projects/blue-paper-2/data/climate/Song_etal_2020/4rasters_scaled"
+rcp2_ssp_key <- tibble(rcp=paste0("rcp", c("26", "45", "60", "85"))) %>%
+mutate(ssp=recode(rcp, "rcp26"="SSP126", "rcp45"="SSP245", "rcp60"="SSP585", "rcp85"="SSP585"))
+rcp_do <- rcp
+ssp <- rcp2_ssp_key$ssp[rcp2_ssp_key$rcp==rcp_do]
+wave_mask <- raster::brick(file.path(wavedir, paste0("Song_etal_2020_", ssp, "_sig_wave_height_mask.grd")))
+# Check rasters
+env_ras_check <- compareRaster(eezs, ras_sst_c_min, ras_sst_c_max, ras_sal_psu_mean,
+curr_mask, arag_mask, chl_mask, do_mask_fin, do_mask_biv, wave_mask)
+if(env_ras_check==F){stop("EEZ and climate forecast rasters DO NOT have the same projection, extent, and resolution.")}
+env_ras_check1 <- length(unique(c(nlayers(ras_sst_c_min),
+nlayers(ras_sst_c_max),
+nlayers(ras_sal_psu_mean),
+nlayers(do_mask_biv),
+nlayers(do_mask_fin),
+nlayers(chl_mask),
+nlayers(arag_mask),
+nlayers(curr_mask),
+nlayers(wave_mask))))
+if(env_ras_check1!=1){stop("Climate forecast rasters DO NOT have the same number of layers.")}
+# Growth and harvest parameters
+spp <- species$species
+type <- species$type
+linf_cm <- species$linf_cm
+k <- species$k
+harvest_cm <- species$harvest_cm
+harvest_g <- species$harvest_g
+harvest_yr <- species$harvest_yr
+harvest_kg_m3 <- species$harvest_kg_m3
+harvest_cm_ft <- species$harvest_cm_ft
+nstocked <- species$nstocked
+a <- species$a
+b <- species$b
+fcr <- species$fcr
+price_usd_mt <- species$price_usd_mt_isscaap
+print(spp)
+# Species-specific
+sst_c_min <- species$sst_c_min
+sst_c_max <- species$sst_c_max
+sal_psu_min <- species$sal_psu_min
+sal_psu_max <- species$sal_psu_max
+# Finfish farm design
+if(type=="Finfish"){
+# Finfish farm design
+farm_design <- tibble(type="finfish",
+area_sqkm=1,
+ncages=24,
+cage_vol_m3=9000) %>%
+# Calculate number stocked
+mutate(tot_m3=ncages * cage_vol_m3,
+tot_kg=tot_m3*harvest_kg_m3,
+nstocked=tot_kg*1000/harvest_g)
+}
+# Bivalve farm design
+if(type=="Bivalve"){
+farm_design <- tibble(type="bivalve",
+area_sqkm=1,
+nlines=species$lines_n,
+line_rope_ft=2109,
+harvest_cm_ft=harvest_cm_ft) %>%
+mutate(nstocked = nlines * line_rope_ft * (harvest_cm_ft / harvest_cm))
+}
+# Check number of stocked
+if(all.equal(nstocked, farm_design$nstocked)!=T){
+stop("Number of stocked individuals calculated doesn't match value in key.")
+}
+# Calculate yield per year (kg/yr) for 1 sqkm farm
+farm_kg_yr <- harvest_g/1000 * farm_design$nstocked / harvest_yr
+farm_mt_yr <- farm_kg_yr / 1000
+# Check farm production
+if(all.equal(species$prod_mt_yr, farm_mt_yr)!=T){
+stop("Farm production doesn't match value in key.")
+}
+# Identify years to evaluate
+yrs_df <- periods %>% purrr::map_df(function(x) {
+yr1 <- substr(x, 1, 4) %>% as.numeric()
+yr2 <- substr(x, 6, 9) %>% as.numeric()
+yrs <- yr1:yr2
+df_out <- tibble(period=x,
+year=yrs)
+}) %>%
+mutate(index=1:n())
+yrs_do <- yrs_df$year
+# Make sure we have environmental data for all years
+yrs_available <- names(ras_sst_c_min) %>% gsub("X", "", .) %>% as.numeric()
+yrs_check <- sum(!yrs_do %in% yrs_available) == 0
+if(yrs_check==F){stop("You do not have climate data for years in the provided periods.")}
+# Indices for the years to evaluate
+yrs_do_indices <- which(yrs_available %in% yrs_do)
+# Each year's viable cells
+print("... identifying viable cells per year")
+sst_c_mask <- ras_sst_c_min[[yrs_do_indices]] >= sst_c_min & ras_sst_c_max[[yrs_do_indices]] <= sst_c_max
+sal_psu_mask <- ras_sal_psu_mean[[yrs_do_indices]] >= sal_psu_min & ras_sal_psu_mean[[yrs_do_indices]] <= sal_psu_max
+# Bivalve
+if(type=="Bivalve"){
+vcells_yr <- eez_mask * sst_c_mask * sal_psu_mask * do_mask_biv * chl_mask * arag_mask * curr_mask * wave_mask
+}
+# Finfish
+if(type=="Finfish"){
+vcells_yr <- eez_mask * sst_c_mask * sal_psu_mask * do_mask_fin * curr_mask * wave_mask
+}
+# Set NAs to 0s
+NAvalue(vcells_yr) <- 0
+# Each period's viable cells
+print("... identifying viable cells per period")
+yrs_per_period <- yrs_df %>% group_by(period) %>% summarize(nyrs=n()) %>% pull(nyrs) %>% unique()
+for(i in 1:length(periods)){
+indices <- yrs_df %>% filter(period==periods[i]) %>% pull(index)
+# vcells_sum <- sum(vcells_yr[[indices]], na.rm=T) # This is slower than calc()
+vcells_sum <- calc(vcells_yr[[indices]], sum, na.rm=T)
+# plot(vcells_sum) should show gradient of 0-10 cells with 10 at core
+vcells_period <- vcells_sum==yrs_per_period
+# plot(vcells_period) # should show only the core area
+if(i==1){vcells_out <- vcells_period}else{vcells_out <- stack(vcells_out, vcells_period)}
+}
+# Convert viable cells
+vcells <- brick(vcells_out)
+names(vcells) <- periods
+vcells[vcells==0] <- NA
+# Calculate annual harvest per cell
+print("... mapping production potential")
+cell_sqkm <- prod(res(vcells)) / (1000^2)
+cell_nfarms <- cell_sqkm / farm_design$area_sqkm
+cell_prod_mt_yr <- farm_mt_yr * cell_nfarms
+# Calculate annual revenue per cell
+cell_revenue_usd_yr <-  cell_prod_mt_yr * price_usd_mt
+# Check cell revenue
+if(all.equal(species$revenue_usd_yr*cell_nfarms, cell_revenue_usd_yr)!=T){
+stop("Cell revenue doesn't match value in key.")
+}
+# Calculate costs and profits
+print("... calculating costs and profits")
+cell_cost_usd_yr <- calc_costs(farm_design, cell_prod_mt_yr, fcr, vcells, harvest_yr)
+# Build final data frame
+data_df <- as.data.frame(cell_cost_usd_yr, xy=T) %>%
+setNames(c("x", "y", periods)) %>%
+gather(key="period", value="cost_usd_yr", 3:ncol(.)) %>%
+filter(!is.na(cost_usd_yr)) %>%
+mutate(viable=1,
+prod_mt_yr=cell_prod_mt_yr,
+revenue_usd_yr=cell_revenue_usd_yr,
+profits_usd_yr=revenue_usd_yr - cost_usd_yr) %>%
+select(period, x, y, viable, prod_mt_yr, revenue_usd_yr, cost_usd_yr, profits_usd_yr)
+# If exporting
+outfile_basename <- paste(toupper(rcp), gsub(" ", "_", spp), sep="_")
+outdir=outputdir
+if(outdir!=F){
+saveRDS(data_df, file.path(outdir, paste0(outfile_basename, ".Rds")))
+}
+outdir
+paste0(outfile_basename, ".Rds")
+list.files(outdir)
+saveRDS(data_df, file.path(outdir, paste0(outfile_basename, ".Rds")))
+# If exporting
+outfile_basename <- paste(toupper(rcp), gsub(" ", "_", spp), sep="_")
+if(outdir!=F){
+saveRDS(data_df, file.path(outdir, paste0(outfile_basename, ".Rds")))
+}
+# Loop through species and forecast
+for(i in 4:nrow(data_do)){
+# foreach(i=1:nrow(data_do)) %dopar% {
+# Parameters
+species <- data_do[i,]
+# periods <- c("2021-2022", "2051-2052", "2091-2092")
+periods <- c("2021-2030", "2051-2060", "2091-2100")
+# Forecast aquaculture potential
+# For testing: rcp="rcp26"; outdir=outputdir
+output <- aquacast(species=species, periods=periods, rcp="rcp85", outdir=outputdir, plot=F)
+}
+i <- 1
+for(i in 1:nrow(data_do)){
+# foreach(i=1:nrow(data_do)) %dopar% {
+# Parameters
+species <- data_do[i,]
+# periods <- c("2021-2022", "2051-2052", "2091-2092")
+periods <- c("2021-2030", "2051-2060", "2091-2100")
+# Forecast aquaculture potential
+# For testing: rcp="rcp26"; outdir=outputdir
+output <- aquacast(species=species, periods=periods, rcp="rcp60", outdir=outputdir, plot=F)
+}
+# Clear workspace
+rm(list = ls())
+# Setup
+################################################################################
+# Packages
+library(raster)
+library(ggplot2)
+library(tidyverse)
+# Directories
+codedir <- "code"
+sppdir <- "data/species/data"
+outputdir <- "/Volumes/GoogleDrive/Shared drives/emlab/projects/current-projects/blue-paper-2/data/output/raw"
+plotdir <- "/Volumes/GoogleDrive/Shared drives/emlab/projects/current-projects/blue-paper-2/data/output/raw_plots"
+# Read aquacast function
+source(file.path(codedir, "aquacast_v4.R"))
+source(file.path(codedir, "calc_costs.R"))
+# Read species data
+load(file.path(sppdir, "aquaculture_species_key.Rdata"))
+# Setup data
+################################################################################
+# Format data
+data <- data %>%
+mutate(type=recode(class,
+"Bivalvia"="Bivalve",
+"Actinopterygii"="Finfish"))
+# Subset finfish/bivalves
+data_do <- data
+# data_do <- filter(data, class=="Bivalvia")
+# data_do <- filter(data, class=="Actinopterygii")
+# Check to see which didn't finish
+rcp2check <- "RCP85"
+files_should <- paste0(rcp2check, "_", gsub(" ", "_", data_do$species), ".Rds")
+files_all <- list.files(outputdir)
+files_done <- files_all[grepl(rcp2check , files_all)]
+files_missing <- files_should[!files_should%in%files_done] %>% sort()
+# Check to see which didn't finish
+rcp2check <- "RCP26"
+files_should <- paste0(rcp2check, "_", gsub(" ", "_", data_do$species), ".Rds")
+files_all <- list.files(outputdir)
+files_done <- files_all[grepl(rcp2check , files_all)]
+files_missing <- files_should[!files_should%in%files_done] %>% sort()
+files_missing
+# Check to see which didn't finish
+rcp2check <- "RCP45"
+files_should <- paste0(rcp2check, "_", gsub(" ", "_", data_do$species), ".Rds")
+files_all <- list.files(outputdir)
+files_done <- files_all[grepl(rcp2check , files_all)]
+files_missing <- files_should[!files_should%in%files_done] %>% sort()
+files_missing
+# Check to see which didn't finish
+rcp2check <- "RCP60"
+files_should <- paste0(rcp2check, "_", gsub(" ", "_", data_do$species), ".Rds")
+files_all <- list.files(outputdir)
+files_done <- files_all[grepl(rcp2check , files_all)]
+files_missing <- files_should[!files_should%in%files_done] %>% sort()
+files_missing
+files_missing <- files_should[!files_should%in%files_done] %>% sort()
+data_do <- data_do %>%
+mutate(file=paste0(rcp2check, "_", gsub(" ", "_", species), ".Rds")) %>%
+filter(file %in% files_missing)
+files_missing
+i <- 1
+for(i in 1:nrow(data_do)){
+# foreach(i=1:nrow(data_do)) %dopar% {
+# Parameters
+species <- data_do[i,]
+# periods <- c("2021-2022", "2051-2052", "2091-2092")
+periods <- c("2021-2030", "2051-2060", "2091-2100")
+# Forecast aquaculture potential
+# For testing: rcp="rcp26"; outdir=outputdir
+output <- aquacast(species=species, periods=periods, rcp="rcp60", outdir=outputdir, plot=F)
+}
+# Clear workspace
+rm(list = ls())
+# Setup
+################################################################################
+# Packages
+library(raster)
+library(ggplot2)
+library(tidyverse)
+# Directories
+codedir <- "code"
+sppdir <- "data/species/data"
+outputdir <- "/Volumes/GoogleDrive/Shared drives/emlab/projects/current-projects/blue-paper-2/data/output/raw"
+plotdir <- "/Volumes/GoogleDrive/Shared drives/emlab/projects/current-projects/blue-paper-2/data/output/raw_plots"
+# Read aquacast function
+source(file.path(codedir, "aquacast_v4.R"))
+source(file.path(codedir, "calc_costs.R"))
+# Read species data
+load(file.path(sppdir, "aquaculture_species_key.Rdata"))
+# Setup data
+################################################################################
+# Format data
+data <- data %>%
+mutate(type=recode(class,
+"Bivalvia"="Bivalve",
+"Actinopterygii"="Finfish"))
+# Subset finfish/bivalves
+data_do <- data
+for(i in nrow(data_do):1){
+# foreach(i=1:nrow(data_do)) %dopar% {
+# Parameters
+species <- data_do[i,]
+# periods <- c("2021-2022", "2051-2052", "2091-2092")
+periods <- c("2021-2030", "2051-2060", "2091-2100")
+# Forecast aquaculture potential
+# For testing: rcp="rcp26"; outdir=outputdir
+output <- aquacast(species=species, periods=periods, rcp="rcp45", outdir=outputdir, plot=F)
+}

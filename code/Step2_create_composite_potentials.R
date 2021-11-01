@@ -17,6 +17,8 @@ outputdir <- "/Volumes/GoogleDrive/Shared drives/emlab/projects/current-projects
 
 # Read species data
 load(file.path(sppdir, "aquaculture_species_key.Rdata"))
+spp_key_orig <- data
+rm(data_full)
 
 
 # Setup
@@ -28,7 +30,7 @@ merge_results <- function(rcp, type, outdir){
   
   # Species key
   type_do <- ifelse(type=="finfish", "Actinopterygii", "Bivalvia")
-  spp_key <- data %>% 
+  spp_key <- spp_key_orig %>% 
     filter(class==type_do) %>% 
     select(species, comm_name) %>% 
     mutate(file_name=paste0(toupper(rcp), "_", gsub(" ", "_", species), ".Rds"))
@@ -38,7 +40,7 @@ merge_results <- function(rcp, type, outdir){
   
   # Chunk files into groups of 20
   # I have to do this b/c I was using up all memory on finfish and crashing R
-  # x <- 1; y <- files_do_chunk[1]
+  # x <- 1
   files_do_chunks <- split(files_do, ceiling(seq_along(files_do)/20))
   data <- purrr::map_df(1:length(files_do_chunks), function(x){
     
@@ -46,13 +48,15 @@ merge_results <- function(rcp, type, outdir){
     files_do_chunk <- files_do_chunks[[x]]
     
     # Loop through files and merge
+    # y <- files_do_chunk[1]
     data_chunk <- purrr:::map_df(files_do_chunk, function(y){
       
       # Read one file
       # file_do <- files_do[1]
       file_do <- y
       spp_do <- file_do %>% gsub(".Rds", "", .) %>% gsub(paste0(toupper(rcp), "_"), "", .) %>% gsub("_", " ", .)
-      sdata <- readRDS(file.path(inputdir, file_do)) %>% 
+      sdata_orig <- readRDS(file.path(inputdir, file_do)) 
+      sdata <- sdata_orig %>% 
         filter(profits_usd_yr>0) %>% 
         mutate(species=spp_do) %>% 
         select(species, everything())
@@ -110,16 +114,16 @@ merge_results <- function(rcp, type, outdir){
 }
 
 # Finfish - 11 minutes each
-merge_results(rcp="RCP26", type="finfish", outdir=outdir)
-merge_results(rcp="RCP45", type="finfish", outdir=outdir)
-merge_results(rcp="RCP60", type="finfish", outdir=outdir)
-merge_results(rcp="RCP85", type="finfish", outdir=outdir)
+merge_results(rcp="RCP26", type="finfish", outdir=outputdir)
+merge_results(rcp="RCP45", type="finfish", outdir=outputdir)
+merge_results(rcp="RCP60", type="finfish", outdir=outputdir)
+merge_results(rcp="RCP85", type="finfish", outdir=outputdir)
 
 # Bivalves
-merge_results(rcp="RCP26", type="bivalve", outdir=outdir)
-merge_results(rcp="RCP45", type="bivalve", outdir=outdir)
-merge_results(rcp="RCP60", type="bivalve", outdir=outdir)
-merge_results(rcp="RCP85", type="bivalve", outdir=outdir)
+merge_results(rcp="RCP26", type="bivalve", outdir=outputdir)
+merge_results(rcp="RCP45", type="bivalve", outdir=outputdir)
+merge_results(rcp="RCP60", type="bivalve", outdir=outputdir)
+merge_results(rcp="RCP85", type="bivalve", outdir=outputdir)
 
 
 
