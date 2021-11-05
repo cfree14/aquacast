@@ -15,7 +15,7 @@ plotdir <- "figures"
 tabledir <- "tables"
 
 # Read data
-load(file.path(outdir, "national_capture_mariculture_output_merged_new_costs1.Rdata"))
+load(file.path(outdir, "national_capture_mariculture_output_merged_sens_analysis.Rdata"))
 data_orig <- data2 
 rm(data2)
 
@@ -83,7 +83,7 @@ data1_table <- data1 %>%
   spread(key="rcp", value="prop")
 
 # Export
-write.csv(data1_table, file=file.path(tabledir, "TableS16_pcounties_increasing_production.csv"), row.names=F)
+write.csv(data1_table, file=file.path(tabledir, "TableS16_pcounties_increasing_production_sens_analysis.csv"), row.names=F)
 
 
 # Plot figure
@@ -146,15 +146,6 @@ g2
 g <- gridExtra::grid.arrange(g1, g2, nrow=2, heights=c(0.48, 0.52))
 
 # Export data
-ggsave(g, filename=file.path(plotdir, "Fig4_national_production.png"), 
+ggsave(g, filename=file.path(plotdir, "Fig4_national_production_sens_analysis.png"), 
        width=6.5, height=5, units="in", dpi=600)
-
-
-
-
-
-
-
-
-
 

@@ -57,9 +57,7 @@ faq_limits <- ffdata %>%
   left_join(fifo_avgs) %>% 
   mutate(meat_mt=catch_ff_mt_maq / fifo_avg) %>% 
   # Add sector
-  mutate(sector="Finfish mariculture") %>% 
-  mutate(sector=factor(sector, levels=c("Finfish mariculture", "Bivalve mariculture")))
-
+  mutate(sector="Finfish mariculture")
   
 
 
@@ -214,7 +212,7 @@ g4
 ############################################
 
 # Build data
-aqfiles <- list.files(outputdir, pattern="rational_use_new_costs1.Rds")
+aqfiles <- list.files(outputdir, pattern="rational_use_sens_analysis.Rds")
 pdata <- purrr::map_df(aqfiles , function(x){
   
   # Read file
@@ -269,8 +267,7 @@ g5
 # Demand
 demand_df <- tibble(type="Demand limit", 
                     sector=c("Bivalve mariculture", "Finfish mariculture"),
-                    meat_mt_demand=c(103*1e6*0.17, 103*1e6*0.27)) %>% 
-  mutate(sector=factor(sector, levels=c("Finfish mariculture", "Bivalve mariculture")))
+                    meat_mt_demand=c(103*1e6*0.17, 103*1e6*0.27))
 
 # Production potential (not log scale)
 # g6 <- ggplot(pdata_use, aes(x=period, y=meat_mt/1e9, fill=rcp)) +
@@ -330,7 +327,7 @@ g <- gridExtra::grid.arrange(g1, g2, g3, g4, g5, g6,
 g
 
 # Export figure
-ggsave(g, filename=file.path(plotdir, "Fig2_mariculture_results.png"), 
+ggsave(g, filename=file.path(plotdir, "Fig2_mariculture_results_sens_analysis.png"), 
        width=6.5, height=3.5, units="in", dpi=600)
 
 

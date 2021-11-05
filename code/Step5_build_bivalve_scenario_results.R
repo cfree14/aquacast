@@ -46,9 +46,10 @@ wc <- readRDS("data/capture_projections/data/Free_etal_2020_national_projections
 # For testing
 rcp <- "RCP 2.6"
 dev_scenario <- "Need-based"
+suffix <- "new_costs"
 
 # Function to develop feed-constrained finfish mariculture
-expand_mariculture <- function(rcp,  dev_scenario){
+expand_mariculture <- function(rcp,  dev_scenario, suffix=""){
   
   # Steps
   # 1. Determine feed availability
@@ -67,7 +68,11 @@ expand_mariculture <- function(rcp,  dev_scenario){
   
   # Read finfish forecasts
   rcp_do_short <- gsub("\\.| ", "", rcp_do)
-  infile <- paste0( rcp_do_short, "_Bivalve_rational_use.Rds")
+  if(suffix==""){
+    infile <- paste0( rcp_do_short, "_Bivalve_rational_use.Rds")
+  }else{
+    infile <- paste0( rcp_do_short, "_Bivalve_rational_use_", suffix, ".Rds")
+  }
   data_orig <- readRDS(file.path(datadir, infile))
   
   # Build forecasts period key
@@ -415,22 +420,54 @@ saveRDS(output, file=file.path(datadir, "bivalve_output.Rds"))
 
 
 
+# Do all scenarios - new costs
+#####################################
+
+# Build scenario key
+rcps <- paste("RCP", c("2.6", "4.5", "6.0", "8.5"))
+dev_scens <- c("Current", "Proportional", "Need-based")
+scen_key <- expand.grid(rcp=rcps,
+                        dev_scenario=dev_scens) %>% 
+  arrange(rcp, dev_scenario)
+
+# Develop mariculture
+output <- purrr::map_df(1:nrow(scen_key), function(x) {
+  
+  # Scenario
+  rcp_do <- scen_key$rcp[x]
+  dev_do <- scen_key$dev_scenario[x]
+  
+  # Expand mariculture
+  out_df <- expand_mariculture(rcp=rcp_do, dev_scenario=dev_do, suffix="new_costs1")
+  
+})
+
+# Export output
+saveRDS(output, file=file.path(datadir, "bivalve_output_new_costs1.Rds"))
 
 
 
+# Do all scenarios - new costs
+#####################################
 
+# Build scenario key
+rcps <- paste("RCP", c("2.6", "4.5", "6.0", "8.5"))
+dev_scens <- c("Current", "Proportional", "Need-based")
+scen_key <- expand.grid(rcp=rcps,
+                        dev_scenario=dev_scens) %>% 
+  arrange(rcp, dev_scenario)
 
+# Develop mariculture
+output <- purrr::map_df(1:nrow(scen_key), function(x) {
+  
+  # Scenario
+  rcp_do <- scen_key$rcp[x]
+  dev_do <- scen_key$dev_scenario[x]
+  
+  # Expand mariculture
+  out_df <- expand_mariculture(rcp=rcp_do, dev_scenario=dev_do, suffix="sens_analysis")
+  
+})
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+# Export output
+saveRDS(output, file=file.path(datadir, "bivalve_output_sens_analysis.Rds"))

@@ -18,6 +18,7 @@ feeddir <- "data/feed_params/processed"
 saupdir <- "data/prices/seaaroundus"
 
 # Read data
+spp_m <- read.csv(file.path(sppdir, "aquaculture_species_nat_mort_data.csv"), as.is=T)
 spp_lh <- read.csv(file.path(sppdir, "aquaculture_species_lh_data.csv"), as.is=T)
 spp_env <- readRDS(file.path(aqmapdir, "aquamaps_environmental_preferences.Rds"))
 feed_key <- read.csv(file.path(feeddir, "Tacon_Metian_group_fcrs_and_fmfo_feed_percs.csv"), as.is=T)
@@ -31,7 +32,7 @@ linf2harv_b <- 0.67
 linf2harv_f <- 0.52
 
 # Finfish farm design
-ncages <- 24
+ncages <- 20
 cage_m3 <- 9000
 tot_cage_m3 <- ncages * cage_m3
 fish_harv_kg_m3 <- 15
@@ -60,8 +61,16 @@ live2edible_fin <- 0.87
 # plot(spp_lh$linf_cm_fb_spp, spp_lh$linf_cm_fb_fam)
 # plot(spp_lh$linf_cm_fb_spp, spp_lh$linf_cm_gentry)
 
+# Function to calculate number to stock given natural mortality
+calc_nstocked <- function(n_at_harvest, yrs_to_harvest, m){
+  n0 <- n_at_harvest / exp(-m*yrs_to_harvest) 
+  return(n0)
+}
+
 # Format life history data
 data1 <- spp_lh %>% 
+  # Add M
+  left_join(spp_m %>% select(species, m_source, m)) %>% 
   # Add type column
   mutate(type=recode(class, "Actinopterygii"="Finfish", "Bivalvia"="Bivalve")) %>% 
   select(type, everything()) %>% 
@@ -156,6 +165,7 @@ data1 <- spp_lh %>%
          nstocked=ifelse(type=="Bivalve", 
                          biv_harv_mt_sqkm*1000*1000/harvest_g,
                          tot_cage_m3*fish_juv_m3),
+         nstocked_adj=calc_nstocked(n_at_harvest = nstocked, yrs_to_harvest = harvest_yr, m=m ),
          rope_ft_req=ifelse(type=="Bivalve", nstocked/bivalve_juv_ft, NA),
          lines_n=rope_ft_req / line_rope_ft,
          prod_mt_yr=nstocked*harvest_g/1000/1000/harvest_yr,
@@ -203,12 +213,13 @@ data_full <- data1 %>%
   select(class:comm_name, # taxonomy
          gentry, fao, fao_rank, fao_mt_yr, # inclusion source
          feed_group:fmfo_perc, # feed parameters
-         harvest_kg_m3, harvest_cm_ft, fish_juv_m3, bivalve_juv_ft, nstocked, rope_ft_req, lines_n,  # stocking parameters
+         harvest_kg_m3, harvest_cm_ft, fish_juv_m3, bivalve_juv_ft, nstocked, nstocked_adj, rope_ft_req, lines_n,  # stocking parameters
          harvest_linf_prop:harvest_yr, # harvest size parameters
          prod_mt_yr, edible_mt_yr, revenue_usd_yr, # harvest production parameters
          price_usd_mt_isscaap, price_usd_mt_spp, # prices
          a_spp:b_source, # LW parameters
          linf_cm_fl:k_gentry, linf_cm:k_source, # Von B parameters
+         m, m_source, 
          sst_c_min_froehlich, sst_c_max_froehlich, sst_c_min:sal_psu_max,
          everything())
 
@@ -229,6 +240,7 @@ data <- data_full %>%
          harvest_linf_prop:harvest_yr, # harvest size parameters
          prod_mt_yr:revenue_usd_yr, # harvest production parameters
          price_usd_mt_isscaap, price_usd_mt_spp, # prices
+         m, m_source,
          a, a_source, b, b_source,
          linf_cm, linf_source, k, k_source, 
          sst_c_min_froehlich, sst_c_max_froehlich,
@@ -244,13 +256,21 @@ data <- data_full %>%
 # Inspect
 freeR::complete(data)
 
+# Check nstocked
+g <- ggplot(data, aes(x=nstocked, y=nstocked_adj, color=class)) +
+  geom_point() +
+  geom_abline(slope=1) +
+  scale_x_continuous(trans="log10") +
+  scale_y_continuous(trans="log10")
+g
+
 
 # Final data
 ################################################################################
 
 # Export
-save(data, data_full, file=file.path(sppdir, "aquaculture_species_key.Rdata"))
-write.csv(data, file=file.path(sppdir, "aquaculture_species_key.csv"), row.names = F)
+save(data, data_full, file=file.path(sppdir, "aquaculture_species_key_20cages.Rdata"))
+write.csv(data, file=file.path(sppdir, "aquaculture_species_key_20cages.csv"), row.names = F)
 
 
 

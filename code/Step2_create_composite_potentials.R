@@ -17,23 +17,42 @@ outputdir <- "/Volumes/GoogleDrive/Shared drives/emlab/projects/current-projects
 
 # Read species data
 load(file.path(sppdir, "aquaculture_species_key.Rdata"))
-spp_key_orig <- data
+spp_key_orig_full <- data
 rm(data_full)
+
+# Brackish ISSCAAPs
+brackish_isscaaps <- c("Freshwater molluscs", "Miscellaneous diadromous fishes", 
+                       "Miscellaneous freshwater fish", "River eels", "Shads", 
+                       "Sturgeons, paddlefishes", "Tilapias and other cichlids")
+
+# Not lonline bivalves
+bad_bivalve_isscaaps <- c("Clams, cockles, arkshells", "Pearls, mother-of-pearl, shells", "Scallops, pectens")
+
+# Remove species from species key
+spp_key_orig <- spp_key_orig_full %>% 
+  filter(!isscaap %in% c(brackish_isscaaps, bad_bivalve_isscaaps))
 
 
 # Setup
 ################################################################################
 
 # Function to merge results
-rcp <- "rcp85"; type <- "bivalve"; outdir <- outputdir
-merge_results <- function(rcp, type, outdir){
+rcp <- "rcp85"; type <- "bivalve"; outdir <- outputdir; suffix <- "new_costs"
+merge_results <- function(rcp, type, outdir, suffix=""){
   
   # Species key
   type_do <- ifelse(type=="finfish", "Actinopterygii", "Bivalvia")
-  spp_key <- spp_key_orig %>% 
-    filter(class==type_do) %>% 
-    select(species, comm_name) %>% 
-    mutate(file_name=paste0(toupper(rcp), "_", gsub(" ", "_", species), ".Rds"))
+  if(suffix==""){
+    spp_key <- spp_key_orig %>% 
+      filter(class==type_do) %>% 
+      select(species, comm_name) %>% 
+      mutate(file_name=paste0(toupper(rcp), "_", gsub(" ", "_", species), ".Rds"))
+  }else{
+    spp_key <- spp_key_orig %>% 
+      filter(class==type_do) %>% 
+      select(species, comm_name) %>% 
+      mutate(file_name=paste0(toupper(rcp), "_", gsub(" ", "_", species), "_", suffix, ".Rds"))
+  }
   
   # Identify files to merge
   files_do <- spp_key$file_name
@@ -54,7 +73,11 @@ merge_results <- function(rcp, type, outdir){
       # Read one file
       # file_do <- files_do[1]
       file_do <- y
-      spp_do <- file_do %>% gsub(".Rds", "", .) %>% gsub(paste0(toupper(rcp), "_"), "", .) %>% gsub("_", " ", .)
+      if(suffix==""){
+        spp_do <- file_do %>% gsub(".Rds", "", .) %>% gsub(paste0(toupper(rcp), "_"), "", .) %>% gsub("_", " ", .)
+      }else{
+        spp_do <- file_do %>%  gsub(suffix, "", .) %>% gsub(".Rds", "", .) %>% gsub(paste0(toupper(rcp), "_"), "", .) %>% gsub("_", " ", .) %>% stringr::str_trim()
+      }
       sdata_orig <- readRDS(file.path(inputdir, file_do)) 
       sdata <- sdata_orig %>% 
         filter(profits_usd_yr>0) %>% 
@@ -108,7 +131,11 @@ merge_results <- function(rcp, type, outdir){
   print(g2)
   
   # Export data
-  outfile <- paste(toupper(rcp), str_to_title(type), "rational.Rds", sep="_")
+  if(suffix==""){
+    outfile <- paste(toupper(rcp), str_to_title(type), "rational.Rds", sep="_")
+  }else{
+    outfile <- paste0(toupper(rcp), "_", str_to_title(type), "_rational_", suffix, ".Rds")
+  }
   saveRDS(results, file.path(outdir, outfile))
   
 }
@@ -126,5 +153,26 @@ merge_results(rcp="RCP60", type="bivalve", outdir=outputdir)
 merge_results(rcp="RCP85", type="bivalve", outdir=outputdir)
 
 
+# Finfish - 11 minutes each
+merge_results(rcp="RCP26", type="finfish", outdir=outputdir, suffix="new_costs1")
+merge_results(rcp="RCP45", type="finfish", outdir=outputdir, suffix="new_costs1")
+merge_results(rcp="RCP60", type="finfish", outdir=outputdir, suffix="new_costs1")
+merge_results(rcp="RCP85", type="finfish", outdir=outputdir, suffix="new_costs1")
 
+# Bivalves
+merge_results(rcp="RCP26", type="bivalve", outdir=outputdir, suffix="new_costs1")
+merge_results(rcp="RCP45", type="bivalve", outdir=outputdir, suffix="new_costs1")
+merge_results(rcp="RCP60", type="bivalve", outdir=outputdir, suffix="new_costs1")
+merge_results(rcp="RCP85", type="bivalve", outdir=outputdir, suffix="new_costs1")
 
+# Finfish - 11 minutes each
+merge_results(rcp="RCP26", type="finfish", outdir=outputdir, suffix="sens_analysis")
+merge_results(rcp="RCP45", type="finfish", outdir=outputdir, suffix="sens_analysis")
+merge_results(rcp="RCP60", type="finfish", outdir=outputdir, suffix="sens_analysis")
+merge_results(rcp="RCP85", type="finfish", outdir=outputdir, suffix="sens_analysis")
+
+# Bivalves
+merge_results(rcp="RCP26", type="bivalve", outdir=outputdir, suffix="sens_analysis")
+merge_results(rcp="RCP45", type="bivalve", outdir=outputdir, suffix="sens_analysis")
+merge_results(rcp="RCP60", type="bivalve", outdir=outputdir, suffix="sens_analysis")
+merge_results(rcp="RCP85", type="bivalve", outdir=outputdir, suffix="sens_analysis")

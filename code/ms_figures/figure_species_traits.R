@@ -29,13 +29,23 @@ data_full <- data_full_orig %>%
                       "Bivalvia"="Bivalves"), 
          class=factor(class, levels=c("Finfish", "Bivalves")))
 
+# Brackish ISSCAAPs
+brackish_isscaaps <- c("Freshwater molluscs", "Miscellaneous diadromous fishes", 
+                       "Miscellaneous freshwater fish", "River eels", "Shads", 
+                       "Sturgeons, paddlefishes", "Tilapias and other cichlids")
+
+# Not lonline bivalves
+bad_bivalve_isscaaps <- c("Clams, cockles, arkshells", "Pearls, mother-of-pearl, shells", "Scallops, pectens")
+
+
 # Format data for plotting
 data <- data_orig %>% 
   mutate(class=recode(class, 
                       "Actinopterygii"="Finfish",
                       "Bivalvia"="Bivalves"), 
-         class=factor(class, levels=c("Finfish", "Bivalves")))
-
+         class=factor(class, levels=c("Finfish", "Bivalves"))) %>% 
+  # Remove brackish
+  filter(!isscaap %in% c(brackish_isscaaps, bad_bivalve_isscaaps))
 
 # Setup theme
 my_theme <- theme(axis.text=element_text(size=7),
@@ -48,6 +58,7 @@ my_theme <- theme(axis.text=element_text(size=7),
 
 
 mean(data$lines_n, na.rm=T)
+table(data$class)
 
 # Harvest densities
 ################################################################################

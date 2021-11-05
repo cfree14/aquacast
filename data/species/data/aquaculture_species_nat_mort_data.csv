@@ -1,0 +1,217 @@
+"class","isscaap","order","family","genus","species","comm_name","m_source","m","m_fl","m_fb_spp","m_fb_gen","m_fb_fam","m_fb_ord"
+"Actinopterygii","Tilapias and other cichlids","Perciformes","Cichlidae","Oreochromis","Oreochromis niloticus","Nile tilapia","FishLife",0.965058071820125,0.965058071820125,0.325,0.685,0.808333333333333,NA
+"Actinopterygii","Tilapias and other cichlids","Perciformes","Cichlidae","Oreochromis","Oreochromis mossambicus","Mozambique tilapia","FishLife",0.732727893682941,0.732727893682941,0.39,0.685,0.808333333333333,NA
+"Actinopterygii","Miscellaneous pelagic fishes","Perciformes","Coryphaenidae","Coryphaena","Coryphaena hippurus","Common dolphinfish","FishLife",1.33444712644635,1.33444712644635,0.976,1.01733333333333,1.01733333333333,NA
+"Actinopterygii","Cods, hakes, haddocks","Gadiformes","Gadidae","Pollachius","Pollachius pollachius","Pollack","FishLife",0.410462839240767,0.410462839240767,0.55,0.333333333333333,0.490454545454545,0.418852272727273
+"Actinopterygii","River eels","Anguilliformes","Anguillidae","Anguilla","Anguilla anguilla","European eel","FishLife",0.262486344360762,0.262486344360762,0.26,0.393333333333333,0.393333333333333,0.41
+"Actinopterygii","Miscellaneous coastal fishes","Perciformes","Moronidae","Dicentrarchus","Dicentrarchus labrax","European seabass","FishLife",0.201184408466873,0.201184408466873,0.103333333333333,0.103333333333333,0.17,NA
+"Actinopterygii","Cods, hakes, haddocks","Gadiformes","Gadidae","Gadus","Gadus morhua","Atlantic cod","FishLife",0.272717671817489,0.272717671817489,0.278333333333333,0.36125,0.490454545454545,0.418852272727273
+"Actinopterygii","Miscellaneous pelagic fishes","Perciformes","Carangidae","Caranx","Caranx hippos","Crevalle jack","FishLife",1.0461248051256,1.0461248051256,NA,0.99,1.10033333333333,NA
+"Actinopterygii","Miscellaneous diadromous fishes","Gonorynchiformes","Chanidae","Chanos","Chanos chanos","Milkfish","FishLife",0.91126773729135,0.91126773729135,NA,NA,NA,NA
+"Actinopterygii","Miscellaneous pelagic fishes","Perciformes","Scombridae","Scomber","Scomber japonicus","Pacific chub mackerel","FishLife",0.483425306189416,0.483425306189416,0.55,0.371666666666667,1.14527659574468,NA
+"Actinopterygii","Tunas, bonitos, billfishes","Perciformes","Scombridae","Thunnus","Thunnus albacares","Yellowfin tuna","FishLife",0.554038885587575,0.554038885587575,0.525,0.3231875,1.14527659574468,NA
+"Actinopterygii","Tunas, bonitos, billfishes","Perciformes","Scombridae","Thunnus","Thunnus maccoyii","Southern bluefin tuna","FishLife",0.242425942233688,0.242425942233688,0.3525,0.3231875,1.14527659574468,NA
+"Actinopterygii","Tunas, bonitos, billfishes","Perciformes","Scombridae","Thunnus","Thunnus thynnus","Atlantic bluefin tuna","FishLife",0.157927253703989,0.157927253703989,0.2032,0.3231875,1.14527659574468,NA
+"Actinopterygii","Miscellaneous coastal fishes","Perciformes","Lutjanidae","Lutjanus","Lutjanus guttatus","Spotted rose snapper","FishLife",0.271349370297971,0.271349370297971,NA,0.391092857142857,0.408879245283019,NA
+"Actinopterygii","Miscellaneous coastal fishes","Perciformes","Lutjanidae","Lutjanus","Lutjanus malabaricus","Malabar blood snapper","FishLife",0.240765107656646,0.240765107656646,0.216666666666667,0.391092857142857,0.408879245283019,NA
+"Actinopterygii","Miscellaneous coastal fishes","Perciformes","Lutjanidae","Lutjanus","Lutjanus russellii","Russell's snapper","FishLife",0.297384405020963,0.297384405020963,NA,0.391092857142857,0.408879245283019,NA
+"Actinopterygii","Miscellaneous coastal fishes","Perciformes","Lutjanidae","Lutjanus","Lutjanus sebae","Emperor red snapper","FishLife",0.190943998497963,0.190943998497963,0.13,0.391092857142857,0.408879245283019,NA
+"Actinopterygii","Salmons, trouts, smelts","Salmoniformes","Salmonidae","Coregonus","Coregonus lavaretus","European whitefish","FishLife",0.64880859664556,0.64880859664556,0.41,0.724,0.758023255813953,0.758023255813953
+"Actinopterygii","Salmons, trouts, smelts","Salmoniformes","Salmonidae","Salmo","Salmo salar","Atlantic salmon","FishLife",0.766889208118968,0.766889208118968,1.1,0.77,0.758023255813953,0.758023255813953
+"Actinopterygii","Salmons, trouts, smelts","Salmoniformes","Salmonidae","Salmo","Salmo trutta","Sea trout","FishLife",0.63593910649133,0.63593910649133,0.6875,0.77,0.758023255813953,0.758023255813953
+"Actinopterygii","Salmons, trouts, smelts","Salmoniformes","Salmonidae","Oncorhynchus","Oncorhynchus mykiss","Rainbow trout","FishLife",1.05942721331819,1.05942721331819,1.4,1.18,0.758023255813953,0.758023255813953
+"Actinopterygii","Salmons, trouts, smelts","Salmoniformes","Salmonidae","Oncorhynchus","Oncorhynchus gorbuscha","Pink salmon","FishLife",0.933052032549931,0.933052032549931,NA,1.18,0.758023255813953,0.758023255813953
+"Actinopterygii","Salmons, trouts, smelts","Salmoniformes","Salmonidae","Oncorhynchus","Oncorhynchus keta","Chum salmon","FishLife",0.935910099272981,0.935910099272981,1.2,1.18,0.758023255813953,0.758023255813953
+"Actinopterygii","Salmons, trouts, smelts","Salmoniformes","Salmonidae","Oncorhynchus","Oncorhynchus nerka","Sockeye salmon","FishLife",0.829223650842927,0.829223650842927,0.72,1.18,0.758023255813953,0.758023255813953
+"Actinopterygii","Salmons, trouts, smelts","Salmoniformes","Salmonidae","Oncorhynchus","Oncorhynchus tshawytscha","Chinook(=Spring=King) salmon","FishLife",0.933052032549931,0.933052032549931,NA,1.18,0.758023255813953,0.758023255813953
+"Actinopterygii","Salmons, trouts, smelts","Salmoniformes","Salmonidae","Oncorhynchus","Oncorhynchus kisutch","Coho(=Silver) salmon","FishLife",1.17993107078246,1.17993107078246,1.4,1.18,0.758023255813953,0.758023255813953
+"Actinopterygii","Salmons, trouts, smelts","Salmoniformes","Salmonidae","Salvelinus","Salvelinus fontinalis","Brook trout","FishLife",0.86960887083015,0.86960887083015,1.25,0.497285714285714,0.758023255813953,0.758023255813953
+"Actinopterygii","Salmons, trouts, smelts","Salmoniformes","Salmonidae","Salvelinus","Salvelinus alpinus","Arctic char","FB-species",0.2505,NA,0.2505,0.497285714285714,0.758023255813953,0.758023255813953
+"Actinopterygii","Miscellaneous coastal fishes","Perciformes","Lutjanidae","Lutjanus","Lutjanus johnii","John's snapper","FishLife",0.255462383532498,0.255462383532498,0.146,0.391092857142857,0.408879245283019,NA
+"Actinopterygii","River eels","Anguilliformes","Anguillidae","Anguilla","Anguilla japonica","Japanese eel","FishLife",0.188605260814895,0.188605260814895,NA,0.393333333333333,0.393333333333333,0.41
+"Actinopterygii","River eels","Anguilliformes","Anguillidae","Anguilla","Anguilla rostrata","American eel","FishLife",0.201123109223271,0.201123109223271,NA,0.393333333333333,0.393333333333333,0.41
+"Actinopterygii","Miscellaneous demersal fishes","Anguilliformes","Muraenesocidae","Muraenesox","Muraenesox cinereus","Daggertooth pike conger","FishLife",0.366531976419167,0.366531976419167,NA,NA,NA,0.41
+"Actinopterygii","Miscellaneous coastal fishes","Perciformes","Polynemidae","Eleutheronema","Eleutheronema tetradactylum","Fourfinger threadfin","FishLife",0.645885986343782,0.645885986343782,NA,NA,NA,NA
+"Actinopterygii","Miscellaneous coastal fishes","Perciformes","Centropomidae","Centropomus","Centropomus undecimalis","Common snook","FishLife",0.642709640331923,0.642709640331923,0.62,0.62,0.62,NA
+"Actinopterygii","Miscellaneous diadromous fishes","Perciformes","Latidae","Lates","Lates calcarifer","Barramundi(=Giant seaperch)","FishLife",0.467594447820744,0.467594447820744,NA,0.42,0.42,NA
+"Actinopterygii","Miscellaneous diadromous fishes","Perciformes","Moronidae","Morone","Morone saxatilis","Striped bass","FishLife",0.15922029662068,0.15922029662068,0.145,0.236666666666667,0.17,NA
+"Actinopterygii","Miscellaneous pelagic fishes","Perciformes","Pomatomidae","Pomatomus","Pomatomus saltatrix","Bluefish","FishLife",0.404829965545565,0.404829965545565,0.395,0.395,0.395,NA
+"Actinopterygii","Miscellaneous pelagic fishes","Perciformes","Carangidae","Trachurus","Trachurus japonicus","Japanese jack mackerel","FishLife",0.699815174341497,0.699815174341497,1.09,0.561,1.10033333333333,NA
+"Actinopterygii","Miscellaneous pelagic fishes","Perciformes","Carangidae","Trachinotus","Trachinotus carolinus","Florida pompano","FishLife",0.92890566834527,0.92890566834527,NA,NA,1.10033333333333,NA
+"Actinopterygii","Miscellaneous pelagic fishes","Perciformes","Carangidae","Seriola","Seriola quinqueradiata","Japanese amberjack","FishLife",0.553043614726009,0.553043614726009,NA,0.516,1.10033333333333,NA
+"Actinopterygii","Miscellaneous pelagic fishes","Perciformes","Carangidae","Seriola","Seriola lalandi","Yellowtail amberjack","FishLife",0.561158249708907,0.561158249708907,0.516,0.516,1.10033333333333,NA
+"Actinopterygii","Miscellaneous coastal fishes","Perciformes","Moronidae","Dicentrarchus","Dicentrarchus punctatus","Spotted seabass","FishLife",0.210944537225846,0.210944537225846,NA,0.103333333333333,0.17,NA
+"Actinopterygii","Miscellaneous coastal fishes","Perciformes","Sciaenidae","Argyrosomus","Argyrosomus regius","Meagre","FishLife",0.169506001442041,0.169506001442041,NA,0.179,0.787461538461538,NA
+"Actinopterygii","Miscellaneous coastal fishes","Perciformes","Sciaenidae","Larimichthys","Larimichthys crocea","Large yellow croaker","FishLife",0.647682979365476,0.647682979365476,NA,NA,0.787461538461538,NA
+"Actinopterygii","Miscellaneous coastal fishes","Perciformes","Sparidae","Dentex","Dentex dentex","Common dentex","FishLife",0.241700045607961,0.241700045607961,NA,0.54,0.457348837209302,NA
+"Actinopterygii","Miscellaneous coastal fishes","Perciformes","Sparidae","Pagrus","Pagrus major","Japanese seabream","FishLife",0.323643758711758,0.323643758711758,NA,0.23,0.457348837209302,NA
+"Actinopterygii","Miscellaneous coastal fishes","Scorpaeniformes","Hexagrammidae","Pleurogrammus","Pleurogrammus azonus","Okhotsk atka mackerel","FishLife",0.505470686862502,0.505470686862502,NA,0.6,0.49,NA
+"Actinopterygii","Miscellaneous demersal fishes","Scorpaeniformes","Anoplopomatidae","Anoplopoma","Anoplopoma fimbria","Sablefish ","FishLife",0.237296227913357,0.237296227913357,NA,NA,NA,NA
+"Actinopterygii","Flounders, halibuts, soles","Pleuronectiformes","Pleuronectidae","Pseudopleuronectes","Pseudopleuronectes americanus","Winter flounder","FishLife",0.372986201911311,0.372986201911311,0.3,0.3,0.240409090909091,0.358757575757576
+"Actinopterygii","Flounders, halibuts, soles","Pleuronectiformes","Soleidae","Solea","Solea solea","Common sole","FishLife",0.311414254385696,0.311414254385696,0.425,0.425,0.4625,0.358757575757576
+"Actinopterygii","Miscellaneous coastal fishes","Mugiliformes","Mugilidae","Mugil","Mugil cephalus","Flathead grey mullet","FishLife",0.329370179562064,0.329370179562064,0.44,0.44,0.521181818181818,0.521181818181818
+"Actinopterygii","Miscellaneous coastal fishes","Perciformes","Sparidae","Pagellus","Pagellus bogaraveo","Blackspot(=red) seabream","FishLife",0.295405044164445,0.295405044164445,NA,0.463333333333333,0.457348837209302,NA
+"Actinopterygii","Miscellaneous coastal fishes","Perciformes","Sparidae","Pagellus","Pagellus erythrinus","Common pandora","FishLife",0.397028795327559,0.397028795327559,0.34,0.463333333333333,0.457348837209302,NA
+"Actinopterygii","Miscellaneous pelagic fishes","Perciformes","Carangidae","Pseudocaranx","Pseudocaranx dentex","White trevally","FishLife",0.507190488383117,0.507190488383117,NA,NA,1.10033333333333,NA
+"Actinopterygii","Miscellaneous pelagic fishes","Perciformes","Carangidae","Seriola","Seriola dumerili","Greater amberjack","FishLife",0.552096161180293,0.552096161180293,NA,0.516,1.10033333333333,NA
+"Actinopterygii","Miscellaneous pelagic fishes","Perciformes","Carangidae","Seriola","Seriola rivoliana","Longfin yellowtail","FishLife",0.628264112669868,0.628264112669868,NA,0.516,1.10033333333333,NA
+"Actinopterygii","Miscellaneous pelagic fishes","Perciformes","Carangidae","Trachinotus","Trachinotus goodei","Great pompano","FishLife",0.92890566834527,0.92890566834527,NA,NA,1.10033333333333,NA
+"Actinopterygii","Miscellaneous coastal fishes","Perciformes","Ephippidae","Chaetodipterus","Chaetodipterus faber","Atlantic spadefish","FishLife",0.55268350711278,0.55268350711278,NA,NA,NA,NA
+"Actinopterygii","Miscellaneous coastal fishes","Elopiformes","Megalopidae","Megalops","Megalops atlanticus","Tarpon","FishLife",0.105606976730247,0.105606976730247,0.08,0.08,0.08,0.08
+"Actinopterygii","Miscellaneous coastal fishes","Mugiliformes","Mugilidae","Mugil","Mugil curema","White mullet","FishLife",0.531655933475212,0.531655933475212,NA,0.44,0.521181818181818,0.521181818181818
+"Actinopterygii","Miscellaneous coastal fishes","Mugiliformes","Mugilidae","Mugil","Mugil liza","Lebranche mullet","FishLife",0.4321098138515,0.4321098138515,NA,0.44,0.521181818181818,0.521181818181818
+"Actinopterygii","Miscellaneous coastal fishes","Perciformes","Sparidae","Sparus","Sparus aurata","Gilthead seabream","FishLife",0.424863431482495,0.424863431482495,0.4325,0.4325,0.457348837209302,NA
+"Actinopterygii","Miscellaneous coastal fishes","Perciformes","Sciaenidae","Sciaenops","Sciaenops ocellatus","Red drum","FishLife",0.509906106654271,0.509906106654271,0.62,0.62,0.787461538461538,NA
+"Actinopterygii","Miscellaneous coastal fishes","Perciformes","Serranidae","Mycteroperca","Mycteroperca bonaci","Black grouper","FishLife",0.225956784620513,0.225956784620513,NA,0.356,0.316346153846154,NA
+"Actinopterygii","Miscellaneous coastal fishes","Perciformes","Sciaenidae","Umbrina","Umbrina cirrosa","Shi drum","FishLife",0.535407226586153,0.535407226586153,NA,0.207,0.787461538461538,NA
+"Actinopterygii","Flounders, halibuts, soles","Pleuronectiformes","Pleuronectidae","Platichthys","Platichthys flesus","European flounder","FishLife",0.24102791743472,0.24102791743472,0.18,0.243333333333333,0.240409090909091,0.358757575757576
+"Actinopterygii","Flounders, halibuts, soles","Pleuronectiformes","Pleuronectidae","Pleuronectes","Pleuronectes platessa","European plaice","FishLife",0.138384548061425,0.138384548061425,0.1425,0.1425,0.240409090909091,0.358757575757576
+"Actinopterygii","Flounders, halibuts, soles","Pleuronectiformes","Scophthalmidae","Scophthalmus","Scophthalmus maximus","Turbot","FishLife",0.334812545081137,0.334812545081137,NA,NA,0.39,0.358757575757576
+"Actinopterygii","Flounders, halibuts, soles","Pleuronectiformes","Paralichthyidae","Paralichthys","Paralichthys olivaceus","Bastard halibut","FishLife",0.339102800658963,0.339102800658963,NA,0.55,0.55,0.358757575757576
+"Actinopterygii","Flounders, halibuts, soles","Pleuronectiformes","Pleuronectidae","Hippoglossus","Hippoglossus hippoglossus","Atlantic halibut","FishLife",0.140623036097847,0.140623036097847,0.2,0.196,0.240409090909091,0.358757575757576
+"Actinopterygii","Cods, hakes, haddocks","Gadiformes","Gadidae","Melanogrammus","Melanogrammus aeglefinus","Haddock","FishLife",0.333964807559716,0.333964807559716,0.31,0.31,0.490454545454545,0.418852272727273
+"Actinopterygii","Tilapias and other cichlids","Perciformes","Cichlidae","Oreochromis","Oreochromis aureus","Blue tilapia","FishLife",1.04025838731596,1.04025838731596,0.4,0.685,0.808333333333333,NA
+"Actinopterygii","Miscellaneous coastal fishes","Perciformes","Lutjanidae","Lutjanus","Lutjanus erythropterus","Crimson snapper","FishLife",0.428252171902219,0.428252171902219,0.497,0.391092857142857,0.408879245283019,NA
+"Actinopterygii","Miscellaneous coastal fishes","Perciformes","Lutjanidae","Lutjanus","Lutjanus argentimaculatus","Mangrove red snapper","FishLife",0.234679199186995,0.234679199186995,0.25,0.391092857142857,0.408879245283019,NA
+"Actinopterygii","Tilapias and other cichlids","Perciformes","Cichlidae","Sarotherodon","Sarotherodon melanotheron","Blackchin tilapia","FishLife",1.1314633063459,1.1314633063459,NA,NA,0.808333333333333,NA
+"Actinopterygii","Tilapias and other cichlids","Perciformes","Cichlidae","Oreochromis","Oreochromis spilurus","Sabaki tilapia","FishLife",0.6958646496457,0.6958646496457,NA,0.685,0.808333333333333,NA
+"Actinopterygii","Miscellaneous coastal fishes","Perciformes","Lutjanidae","Lutjanus","Lutjanus goldiei","Papuan black snapper","FishLife",0.297384405020963,0.297384405020963,NA,0.391092857142857,0.408879245283019,NA
+"Actinopterygii","Shads","Clupeiformes","Clupeidae","Konosirus","Konosirus punctatus","Dotted gizzard shad","FishLife",0.594972346816735,0.594972346816735,NA,NA,0.724606060606061,1.4412
+"Actinopterygii","Miscellaneous pelagic fishes","Atheriniformes","Atherinidae","Atherina","Atherina boyeri","Big-scale sand smelt","FishLife",1.13174577021227,1.13174577021227,NA,1.1,1.1,1.43333333333333
+"Actinopterygii","Miscellaneous coastal fishes","Mugiliformes","Mugilidae","Chelon","Chelon auratus","Golden grey mullet","FB-species",0.535,NA,0.535,0.414444444444444,0.521181818181818,0.521181818181818
+"Actinopterygii","Miscellaneous coastal fishes","Mugiliformes","Mugilidae","Chelon","Chelon saliens","Leaping mullet","FB-species",0.34,NA,0.34,0.414444444444444,0.521181818181818,0.521181818181818
+"Actinopterygii","Miscellaneous coastal fishes","Perciformes","Sparidae","Diplodus","Diplodus puntazzo","Sharpsnout seabream","FishLife",0.670068428315681,0.670068428315681,NA,0.702,0.457348837209302,NA
+"Actinopterygii","Miscellaneous coastal fishes","Perciformes","Sparidae","Diplodus","Diplodus sargus","White seabream","FB-species",1.33,NA,1.33,0.702,0.457348837209302,NA
+"Actinopterygii","Miscellaneous coastal fishes","Perciformes","Sparidae","Diplodus","Diplodus vulgaris","Common two-banded seabream","FishLife",0.559259448608379,0.559259448608379,0.595,0.702,0.457348837209302,NA
+"Actinopterygii","Miscellaneous coastal fishes","Perciformes","Sparidae","Pagrus","Pagrus pagrus","Red porgy","FishLife",0.311452625188997,0.311452625188997,0.23,0.23,0.457348837209302,NA
+"Actinopterygii","Miscellaneous coastal fishes","Perciformes","Lethrinidae","Lethrinus","Lethrinus miniatus","Trumpet emperor","FishLife",0.424546015725451,0.424546015725451,0.69,0.4663125,0.4663125,NA
+"Actinopterygii","Miscellaneous pelagic fishes","Perciformes","Carangidae","Caranx","Caranx ignobilis","Giant trevally","FishLife",0.430980225327874,0.430980225327874,NA,0.99,1.10033333333333,NA
+"Actinopterygii","Miscellaneous pelagic fishes","Perciformes","Carangidae","Caranx","Caranx sexfasciatus","Bigeye trevally","FishLife",0.749899501977636,0.749899501977636,NA,0.99,1.10033333333333,NA
+"Actinopterygii","Miscellaneous pelagic fishes","Perciformes","Carangidae","Trachinotus","Trachinotus blochii","Snubnose pompano","FishLife",0.92890566834527,0.92890566834527,NA,NA,1.10033333333333,NA
+"Actinopterygii","Sturgeons, paddlefishes","Acipenseriformes","Acipenseridae","Acipenser","Acipenser stellatus","Starry sturgeon","FishLife",0.133231665227025,0.133231665227025,0.16,0.111,0.107777777777778,0.2075
+"Actinopterygii","Sturgeons, paddlefishes","Acipenseriformes","Acipenseridae","Huso","Huso huso","Beluga","FishLife",0.0610573352404428,0.0610573352404428,NA,0.082,0.107777777777778,0.2075
+"Actinopterygii","Miscellaneous freshwater fishes","Siluriformes","Claroteidae","Chrysichthys","Chrysichthys nigrodigitatus","Bagrid catfish","FishLife",0.798852172537866,0.798852172537866,NA,NA,NA,0.593285714285714
+"Actinopterygii","Tilapias and other cichlids","Perciformes","Cichlidae","Coptodon","Coptodon guineensis","Guinean tilapia","FB-genus",0.62,NA,NA,0.62,0.808333333333333,NA
+"Actinopterygii","Miscellaneous demersal fishes","Perciformes","Anarhichadidae","Anarhichas","Anarhichas lupus","Atlantic wolffish","FishLife",0.128764576835816,0.128764576835816,NA,NA,NA,NA
+"Actinopterygii","Sturgeons, paddlefishes","Acipenseriformes","Acipenseridae","Acipenser","Acipenser nudiventris","Fringebarbel sturgeon","FishLife",0.107386419310627,0.107386419310627,0.15,0.111,0.107777777777778,0.2075
+"Actinopterygii","Sturgeons, paddlefishes","Acipenseriformes","Acipenseridae","Acipenser","Acipenser transmontanus","White sturgeon","FishLife",0.0707374553420441,0.0707374553420441,0.07,0.111,0.107777777777778,0.2075
+"Actinopterygii","Miscellaneous freshwater fishes","Perciformes","Centrarchidae","Micropterus","Micropterus salmoides","Largemouth black bass","FishLife",0.382379513804757,0.382379513804757,0.49,0.406666666666667,0.44625,NA
+"Actinopterygii","Miscellaneous pelagic fishes","Perciformes","Rachycentridae","Rachycentron","Rachycentron canadum","Cobia","FishLife",0.411182912235175,0.411182912235175,0.29,0.29,0.29,NA
+"Actinopterygii","Miscellaneous demersal fishes","Perciformes","Anarhichadidae","Anarhichas","Anarhichas minor","Spotted wolffish","FishLife",0.132958065378332,0.132958065378332,NA,NA,NA,NA
+"Actinopterygii","Miscellaneous freshwater fishes","Perciformes","Eleotridae","Dormitator","Dormitator latifrons","Pacific fat sleeper","FishLife",0.638511797288664,0.638511797288664,NA,NA,NA,NA
+"Actinopterygii","Miscellaneous pelagic fishes","Perciformes","Carangidae","Carangoides","Carangoides malabaricus","Malabar trevally","FishLife",1.54337921907957,1.54337921907957,NA,NA,1.10033333333333,NA
+"Actinopterygii","Miscellaneous coastal fishes","Perciformes","Siganidae","Siganus","Siganus canaliculatus","White-spotted spinefoot","FishLife",1.18679259052449,1.18679259052449,NA,0.522,0.522,NA
+"Actinopterygii","Miscellaneous coastal fishes","Perciformes","Serranidae","Epinephelus","Epinephelus fuscoguttatus","Brown-marbled grouper","FishLife",0.280727580663427,0.280727580663427,0.1,0.224181818181818,0.316346153846154,NA
+"Actinopterygii","Miscellaneous coastal fishes","Perciformes","Serranidae","Epinephelus","Epinephelus tauvina","Greasy grouper","FishLife",0.215129379708974,0.215129379708974,NA,0.224181818181818,0.316346153846154,NA
+"Actinopterygii","Miscellaneous pelagic fishes","Perciformes","Carangidae","Gnathanodon","Gnathanodon speciosus","Golden trevally","FishLife",0.718762822643829,0.718762822643829,NA,NA,1.10033333333333,NA
+"Actinopterygii","Miscellaneous coastal fishes","Perciformes","Sparidae","Sparidentex","Sparidentex hasta","Sobaity seabream","FishLife",0.425213354998197,0.425213354998197,0.39,0.39,0.457348837209302,NA
+"Actinopterygii","Miscellaneous coastal fishes","Perciformes","Sparidae","Dentex","Dentex gibbosus","Pink dentex","FishLife",0.299322705857702,0.299322705857702,NA,0.54,0.457348837209302,NA
+"Actinopterygii","Miscellaneous coastal fishes","Perciformes","Sparidae","Pagrus","Pagrus caeruleostictus","Bluespotted seabream","FishLife",0.492145350388771,0.492145350388771,NA,0.23,0.457348837209302,NA
+"Actinopterygii","Miscellaneous coastal fishes","Perciformes","Siganidae","Siganus","Siganus rivulatus","Marbled spinefoot","FishLife",0.763762768842312,0.763762768842312,0.413,0.522,0.522,NA
+"Actinopterygii","Miscellaneous coastal fishes","Perciformes","Sciaenidae","Miichthys","Miichthys miiuy","Mi-iuy (brown) croaker","FishLife",0.645072507901653,0.645072507901653,NA,NA,0.787461538461538,NA
+"Actinopterygii","Miscellaneous coastal fishes","Mugiliformes","Mugilidae","Chelon","Chelon ramada","Thinlip grey mullet","FB-species",0.406,NA,0.406,0.414444444444444,0.521181818181818,0.521181818181818
+"Actinopterygii","Miscellaneous coastal fishes","Perciformes","Siganidae","Siganus","Siganus guttatus","Goldlined spinefoot","FishLife",1.03065478889083,1.03065478889083,NA,0.522,0.522,NA
+"Actinopterygii","Miscellaneous coastal fishes","Perciformes","Lateolabracidae","Lateolabrax","Lateolabrax japonicus","Japanese seabass","FishLife",0.288871037169685,0.288871037169685,NA,NA,NA,NA
+"Actinopterygii","Miscellaneous coastal fishes","Perciformes","Siganidae","Siganus","Siganus javus","Streaked spinefoot","FishLife",0.903371091010202,0.903371091010202,NA,0.522,0.522,NA
+"Actinopterygii","Miscellaneous coastal fishes","Perciformes","Sparidae","Dentex","Dentex tumifrons","Yellowback seabream","FishLife",0.472623276232572,0.472623276232572,NA,0.54,0.457348837209302,NA
+"Actinopterygii","Sturgeons, paddlefishes","Acipenseriformes","Acipenseridae","Acipenser","Acipenser gueldenstaedtii","Danube (diamond) sturgeon","FishLife",0.0883524245283731,0.0883524245283731,0.098,0.111,0.107777777777778,0.2075
+"Actinopterygii","Miscellaneous coastal fishes","Mugiliformes","Mugilidae","Planiliza","Planiliza macrolepis","Largescale mullet","FB-species",0.56,NA,0.56,0.641,0.521181818181818,0.521181818181818
+"Actinopterygii","Miscellaneous coastal fishes","Perciformes","Serranidae","Plectropomus","Plectropomus maculatus","Spotted coralgrouper","FishLife",0.344287015583523,0.344287015583523,0.569,0.5145,0.316346153846154,NA
+"Actinopterygii","Miscellaneous coastal fishes","Perciformes","Sparidae","Pagrus","Pagrus auriga","Redbanded seabream","FishLife",0.320633412737224,0.320633412737224,NA,0.23,0.457348837209302,NA
+"Actinopterygii","Miscellaneous coastal fishes","Perciformes","Serranidae","Epinephelus","Epinephelus akaara","Hong Kong (redspotted) grouper","FishLife",0.30713913418291,0.30713913418291,NA,0.224181818181818,0.316346153846154,NA
+"Actinopterygii","Miscellaneous coastal fishes","Perciformes","Serranidae","Epinephelus","Epinephelus areolatus","Areolate grouper","FishLife",0.424926798920885,0.424926798920885,NA,0.224181818181818,0.316346153846154,NA
+"Actinopterygii","Miscellaneous coastal fishes","Perciformes","Sparidae","Rhabdosargus","Rhabdosargus sarba","Goldlined seabream","FishLife",0.979682294057173,0.979682294057173,NA,NA,0.457348837209302,NA
+"Actinopterygii","Miscellaneous freshwater fishes","Siluriformes","Callichthyidae","Hoplosternum","Hoplosternum littorale","Atipa","FishLife",1.41209119211578,1.41209119211578,NA,NA,NA,0.593285714285714
+"Actinopterygii","Miscellaneous coastal fishes","Perciformes","Serranidae","Epinephelus","Epinephelus tukula","Potato grouper","FishLife",0.30713913418291,0.30713913418291,NA,0.224181818181818,0.316346153846154,NA
+"Actinopterygii","Miscellaneous coastal fishes","Perciformes","Sparidae","Acanthopagrus","Acanthopagrus berda","Goldsilk seabream","FishLife",0.396775042184022,0.396775042184022,0.31,0.29,0.457348837209302,NA
+"Actinopterygii","Miscellaneous coastal fishes","Perciformes","Scaridae","Bolbometopon","Bolbometopon muricatum","Green humphead parrotfish","FishLife",0.123078187379749,0.123078187379749,NA,NA,0.319611111111111,NA
+"Actinopterygii","Miscellaneous coastal fishes","Mugiliformes","Mugilidae","Ellochelon","Ellochelon vaigiensis","Squaretail mullet","FishLife",0.544310404995582,0.544310404995582,NA,NA,0.521181818181818,0.521181818181818
+"Actinopterygii","Miscellaneous coastal fishes","Perciformes","Ephippidae","Platax","Platax orbicularis","Orbicular batfish","FishLife",0.558646758394556,0.558646758394556,NA,NA,NA,NA
+"Actinopterygii","Miscellaneous coastal fishes","Perciformes","Sparidae","Acanthopagrus","Acanthopagrus latus","Yellowfin seabream","FishLife",0.305103650031841,0.305103650031841,NA,0.29,0.457348837209302,NA
+"Actinopterygii","Miscellaneous coastal fishes","Perciformes","Polynemidae","Polydactylus","Polydactylus sexfilis","Sixfinger threadfin","FishLife",0.839079508983859,0.839079508983859,NA,NA,NA,NA
+"Actinopterygii","Miscellaneous coastal fishes","Perciformes","Sparidae","Pagrus","Pagrus auratus","Silver seabream","FishLife",0.187776271331268,0.187776271331268,NA,0.23,0.457348837209302,NA
+"Actinopterygii","Miscellaneous coastal fishes","Perciformes","Serranidae","Epinephelus","Epinephelus malabaricus","Malabar grouper","FishLife",0.335566586502993,0.335566586502993,NA,0.224181818181818,0.316346153846154,NA
+"Actinopterygii","Miscellaneous coastal fishes","Perciformes","Serranidae","Cromileptes","Cromileptes altivelis","Humpback grouper","FishLife",0.307351166096457,0.307351166096457,NA,NA,0.316346153846154,NA
+"Actinopterygii","Miscellaneous coastal fishes","Perciformes","Serranidae","Epinephelus","Epinephelus coioides","Orange-spotted grouper","FishLife",0.229616348160996,0.229616348160996,0.201,0.224181818181818,0.316346153846154,NA
+"Actinopterygii","Miscellaneous coastal fishes","Perciformes","Serranidae","Epinephelus","Epinephelus lanceolatus","Giant grouper","FishLife",0.30713913418291,0.30713913418291,NA,0.224181818181818,0.316346153846154,NA
+"Actinopterygii","Miscellaneous coastal fishes","Perciformes","Sparidae","Acanthopagrus","Acanthopagrus schlegelii","Blackhead seabream","FishLife",0.316425039114782,0.316425039114782,NA,0.29,0.457348837209302,NA
+"Actinopterygii","Miscellaneous coastal fishes","Perciformes","Oplegnathidae","Oplegnathus","Oplegnathus fasciatus","","FishLife",0.563802072876551,0.563802072876551,NA,NA,NA,NA
+"Actinopterygii","Miscellaneous demersal fishes","Scorpaeniformes","Sebastidae","Sebastes","Sebastes schlegelii","Korean rockfish","FishLife",0.100567911877926,0.100567911877926,NA,0.1216,0.121538461538462,NA
+"Actinopterygii","Miscellaneous coastal fishes","Perciformes","Serranidae","Hyporthodus","Hyporthodus septemfasciatus","Convict grouper","FishLife",0.219115439847418,0.219115439847418,NA,0.185,0.316346153846154,NA
+"Actinopterygii","Miscellaneous coastal fishes","Perciformes","Sciaenidae","Micropogonias","Micropogonias furnieri","Whitemouth croaker","FishLife",0.466658125171773,0.466658125171773,NA,0.87,0.787461538461538,NA
+"Actinopterygii","Miscellaneous coastal fishes","Tetraodontiformes","Tetraodontidae","Takifugu","Takifugu rubripes","Tiger pufferfish","FishLife",0.744334055294394,0.744334055294394,NA,NA,NA,2.6
+"Actinopterygii","Miscellaneous coastal fishes","Perciformes","Latidae","Psammoperca","Psammoperca waigiensis","Waigieu seaperch","FishLife",0.542114104577412,0.542114104577412,NA,NA,0.42,NA
+"Actinopterygii","Flounders, halibuts, soles","Pleuronectiformes","Soleidae","Solea","Solea senegalensis","Senegalese sole","FishLife",0.205622871484895,0.205622871484895,NA,0.425,0.4625,0.358757575757576
+"Actinopterygii","Miscellaneous coastal fishes","Perciformes","Sciaenidae","Argyrosomus","Argyrosomus japonicus","Japanese meagre","FishLife",0.147781809276338,0.147781809276338,NA,0.179,0.787461538461538,NA
+"Actinopterygii","Miscellaneous coastal fishes","Mugiliformes","Mugilidae","Planiliza","Planiliza haematocheila","So-iuy mullet","FB-genus",0.641,NA,NA,0.641,0.521181818181818,0.521181818181818
+"Actinopterygii","Tunas, bonitos, billfishes","Perciformes","Scombridae","Thunnus","Thunnus orientalis","Pacific bluefin tuna","FishLife",0.303621303820316,0.303621303820316,NA,0.3231875,1.14527659574468,NA
+"Actinopterygii","Miscellaneous coastal fishes","Perciformes","Gobiidae","Boleophthalmus","Boleophthalmus pectinirostris","Great blue spotted mudskipper","FishLife",1.56314343827286,1.56314343827286,NA,NA,2.09122222222222,NA
+"Bivalvia","Clams, cockles, arkshells","Arcoida","Arcidae","Anadara","Anadara broughtonii","Inflated ark","FB-genus",0.14,NA,NA,0.14,0.69,0.567571428571429
+"Bivalvia","Clams, cockles, arkshells","Arcoida","Arcidae","Anadara","Anadara grandis","Grand ark","FB-genus",0.14,NA,NA,0.14,0.69,0.567571428571429
+"Bivalvia","Clams, cockles, arkshells","Arcoida","Arcidae","Anadara","Anadara tuberculosa","Black ark","FB-species",0.14,NA,0.14,0.14,0.69,0.567571428571429
+"Bivalvia","Clams, cockles, arkshells","Arcoida","Arcidae","Tegillarca","Tegillarca granosa","Blood cockle","FB-species",0.873333333333333,NA,0.873333333333333,0.873333333333333,0.69,0.567571428571429
+"Bivalvia","Clams, cockles, arkshells","Veneroida","Cardiidae","Cerastoderma","Cerastoderma edule","Common edible cockle","FB-genus",1.94,NA,NA,1.94,1.03,1.31957894736842
+"Bivalvia","Clams, cockles, arkshells","Veneroida","Cardiidae","Cerastoderma","Cerastoderma glaucum","Olive green cockle","FB-species",1.94,NA,1.94,1.94,1.03,1.31957894736842
+"Bivalvia","Clams, cockles, arkshells","Veneroida","Cardiidae","Tridacna","Tridacna crocea","Crocus giant clam","FB-family",1.03,NA,NA,NA,1.03,1.31957894736842
+"Bivalvia","Clams, cockles, arkshells","Veneroida","Cardiidae","Tridacna","Tridacna derasa","Smooth giant clam","FB-family",1.03,NA,NA,NA,1.03,1.31957894736842
+"Bivalvia","Clams, cockles, arkshells","Veneroida","Cardiidae","Tridacna","Tridacna maxima","Elongate giant clam","FB-family",1.03,NA,NA,NA,1.03,1.31957894736842
+"Bivalvia","Clams, cockles, arkshells","Veneroida","Cardiidae","Tridacna","Tridacna squamosa","Fluted giant clam","FB-family",1.03,NA,NA,NA,1.03,1.31957894736842
+"Bivalvia","Freshwater molluscs","Veneroida","Corbiculidae","Polymesoda","Polymesoda expansa","Broad geloina","FB-order",1.31957894736842,NA,NA,NA,NA,1.31957894736842
+"Bivalvia","Clams, cockles, arkshells","Myoida","Hiatellidae","Panopea","Panopea generosa","Pacific geoduck","FB-species",0.027,NA,0.027,0.118571428571429,0.118571428571429,0.12125
+"Bivalvia","Clams, cockles, arkshells","Veneroida","Mactridae","Mactra","Mactra glabrata","Smooth mactra","FB-family",1.255,NA,NA,NA,1.255,1.31957894736842
+"Bivalvia","Clams, cockles, arkshells","Veneroida","Mactridae","Mactra","Mactra quadrangularis","Globose clam","FB-family",1.255,NA,NA,NA,1.255,1.31957894736842
+"Bivalvia","Clams, cockles, arkshells","Veneroida","Mactridae","Tresus","Tresus nuttallii","Pacific horse clam","FB-family",1.255,NA,NA,NA,1.255,1.31957894736842
+"Bivalvia","Clams, cockles, arkshells","Myoida","Myidae","Mya","Mya arenaria","Sand gaper","FB-genus",0.14,NA,NA,0.14,0.14,0.12125
+"Bivalvia","Mussels","Mytiloida","Mytilidae","Aulacomya","Aulacomya ater","Cholga mussel","FB-family",1.24466666666667,NA,NA,NA,1.24466666666667,1.24466666666667
+"Bivalvia","Mussels","Mytiloida","Mytilidae","Choromytilus","Choromytilus chorus","Choro mussel","FB-family",1.24466666666667,NA,NA,NA,1.24466666666667,1.24466666666667
+"Bivalvia","Mussels","Mytiloida","Mytilidae","Mytilus","Mytilus chilensis","Chilean mussel","FB-family",1.24466666666667,NA,NA,NA,1.24466666666667,1.24466666666667
+"Bivalvia","Mussels","Mytiloida","Mytilidae","Mytilus","Mytilus coruscus","Korean mussel","FB-family",1.24466666666667,NA,NA,NA,1.24466666666667,1.24466666666667
+"Bivalvia","Mussels","Mytiloida","Mytilidae","Mytilus","Mytilus edulis","Blue mussel","FB-family",1.24466666666667,NA,NA,NA,1.24466666666667,1.24466666666667
+"Bivalvia","Mussels","Mytiloida","Mytilidae","Mytilus","Mytilus galloprovincialis","Mediterranean mussel","FB-family",1.24466666666667,NA,NA,NA,1.24466666666667,1.24466666666667
+"Bivalvia","Mussels","Mytiloida","Mytilidae","Mytilus","Mytilus planulatus","Australian mussel","FB-family",1.24466666666667,NA,NA,NA,1.24466666666667,1.24466666666667
+"Bivalvia","Mussels","Mytiloida","Mytilidae","Mytilus","Mytilus platensis","River Plata mussel","FB-family",1.24466666666667,NA,NA,NA,1.24466666666667,1.24466666666667
+"Bivalvia","Mussels","Mytiloida","Mytilidae","Perna","Perna canaliculus","New Zealand mussel","FB-genus",1.24466666666667,NA,NA,1.24466666666667,1.24466666666667,1.24466666666667
+"Bivalvia","Mussels","Mytiloida","Mytilidae","Perna","Perna perna","South American rock mussel","FB-genus",1.24466666666667,NA,NA,1.24466666666667,1.24466666666667,1.24466666666667
+"Bivalvia","Mussels","Mytiloida","Mytilidae","Perna","Perna viridis","Green mussel","FB-species",1.24466666666667,NA,1.24466666666667,1.24466666666667,1.24466666666667,1.24466666666667
+"Bivalvia","Oysters","Ostreoida","Ostreidae","Crassostrea","Crassostrea corteziensis","Cortez oyster","FB-genus",0.693333333333333,NA,NA,0.693333333333333,0.693333333333333,0.825454545454545
+"Bivalvia","Oysters","Ostreoida","Ostreidae","Crassostrea","Crassostrea gigas","Pacific cupped oyster","FB-genus",0.693333333333333,NA,NA,0.693333333333333,0.693333333333333,0.825454545454545
+"Bivalvia","Oysters","Ostreoida","Ostreidae","Crassostrea","Crassostrea iredalei","Slipper cupped oyster","FB-genus",0.693333333333333,NA,NA,0.693333333333333,0.693333333333333,0.825454545454545
+"Bivalvia","Oysters","Ostreoida","Ostreidae","Crassostrea","Crassostrea madrasensis","Indian backwater oyster","FB-species",1.01,NA,1.01,0.693333333333333,0.693333333333333,0.825454545454545
+"Bivalvia","Oysters","Ostreoida","Ostreidae","Crassostrea","Crassostrea rhizophorae","Mangrove cupped oyster","FB-genus",0.693333333333333,NA,NA,0.693333333333333,0.693333333333333,0.825454545454545
+"Bivalvia","Oysters","Ostreoida","Ostreidae","Crassostrea","Crassostrea tulipa","Gasar cupped oyster","FB-species",0.78,NA,0.78,0.693333333333333,0.693333333333333,0.825454545454545
+"Bivalvia","Oysters","Ostreoida","Ostreidae","Crassostrea","Crassostrea virginica","American cupped oyster","FB-species",0.29,NA,0.29,0.693333333333333,0.693333333333333,0.825454545454545
+"Bivalvia","Oysters","Ostreoida","Ostreidae","Ostrea","Ostrea chilensis","Chilean flat oyster","FB-family",0.693333333333333,NA,NA,NA,0.693333333333333,0.825454545454545
+"Bivalvia","Oysters","Ostreoida","Ostreidae","Ostrea","Ostrea conchaphila","Olympia oyster","FB-family",0.693333333333333,NA,NA,NA,0.693333333333333,0.825454545454545
+"Bivalvia","Oysters","Ostreoida","Ostreidae","Ostrea","Ostrea edulis","European flat oyster","FB-family",0.693333333333333,NA,NA,NA,0.693333333333333,0.825454545454545
+"Bivalvia","Oysters","Ostreoida","Ostreidae","Saccostrea","Saccostrea cucullata","Hooded oyster","FB-family",0.693333333333333,NA,NA,NA,0.693333333333333,0.825454545454545
+"Bivalvia","Oysters","Ostreoida","Ostreidae","Saccostrea","Saccostrea glomerata","Sydney cupped oyster","FB-family",0.693333333333333,NA,NA,NA,0.693333333333333,0.825454545454545
+"Bivalvia","Scallops, pectens","Ostreoida","Pectinidae","Aequipecten","Aequipecten opercularis","Queen scallop","FB-species",0.51,NA,0.51,0.51,0.875,0.825454545454545
+"Bivalvia","Scallops, pectens","Ostreoida","Pectinidae","Argopecten","Argopecten purpuratus","Peruvian calico scallop","FB-species",0.4,NA,0.4,0.4,0.875,0.825454545454545
+"Bivalvia","Scallops, pectens","Ostreoida","Pectinidae","Argopecten","Argopecten ventricosus","Pacific calico scallop","FB-genus",0.4,NA,NA,0.4,0.875,0.825454545454545
+"Bivalvia","Scallops, pectens","Ostreoida","Pectinidae","Mimachlamys","Mimachlamys varia","Variegated scallop","FB-family",0.875,NA,NA,NA,0.875,0.825454545454545
+"Bivalvia","Scallops, pectens","Ostreoida","Pectinidae","Mizuhopecten","Mizuhopecten yessoensis","Yesso scallop","FB-family",0.875,NA,NA,NA,0.875,0.825454545454545
+"Bivalvia","Scallops, pectens","Ostreoida","Pectinidae","Nodipecten","Nodipecten subnodosus","Pacific lion's paw","FB-family",0.875,NA,NA,NA,0.875,0.825454545454545
+"Bivalvia","Scallops, pectens","Ostreoida","Pectinidae","Pecten","Pecten fumatus","Southern Australia scallop","FB-family",0.875,NA,NA,NA,0.875,0.825454545454545
+"Bivalvia","Scallops, pectens","Ostreoida","Pectinidae","Pecten","Pecten jacobaeus","Great Mediterranean scallop","FB-family",0.875,NA,NA,NA,0.875,0.825454545454545
+"Bivalvia","Scallops, pectens","Ostreoida","Pectinidae","Pecten","Pecten maximus","Great Atlantic scallop","FB-family",0.875,NA,NA,NA,0.875,0.825454545454545
+"Bivalvia","Clams, cockles, arkshells","Veneroida","Pharidae","Ensis","Ensis ensis","Pod razor shell","FB-order",1.31957894736842,NA,NA,NA,NA,1.31957894736842
+"Bivalvia","Clams, cockles, arkshells","Veneroida","Psammobiidae","Asaphis","Asaphis violascens","Pacific asaphis","FB-family",2.95,NA,NA,NA,2.95,1.31957894736842
+"Bivalvia","Clams, cockles, arkshells","Veneroida","Psammobiidae","Soletellina","Soletellina diphos","Diphos sanguin","FB-family",2.95,NA,NA,NA,2.95,1.31957894736842
+"Bivalvia","Pearls, mother-of-pearl, shells","Pterioida","Pteriidae","Pinctada","Pinctada margaritifera","Blacklip pearl oyster","FB-species",0.11,NA,0.11,0.11,0.11,0.11
+"Bivalvia","Pearls, mother-of-pearl, shells","Pterioida","Pteriidae","Pteria","Pteria penguin","Penguin wing oyster","FB-family",0.11,NA,NA,NA,0.11,0.11
+"Bivalvia","Clams, cockles, arkshells","Veneroida","Semelidae","Scrobicularia","Scrobicularia plana","Peppery furrow","FB-order",1.31957894736842,NA,NA,NA,NA,1.31957894736842
+"Bivalvia","Clams, cockles, arkshells","Veneroida","Solecurtidae","Sinonovacula","Sinonovacula constricta","Constricted tagelus","FB-order",1.31957894736842,NA,NA,NA,NA,1.31957894736842
+"Bivalvia","Clams, cockles, arkshells","Veneroida","Tridacnidae","Hippopus","Hippopus hippopus","Bear paw clam","FB-order",1.31957894736842,NA,NA,NA,NA,1.31957894736842
+"Bivalvia","Clams, cockles, arkshells","Veneroida","Veneridae","Chamelea","Chamelea gallina","Striped venus","FB-family",1.28033333333333,NA,NA,NA,1.28033333333333,1.31957894736842
+"Bivalvia","Clams, cockles, arkshells","Veneroida","Veneridae","Cyclina","Cyclina sinensis","Oriental cyclina","FB-family",1.28033333333333,NA,NA,NA,1.28033333333333,1.31957894736842
+"Bivalvia","Clams, cockles, arkshells","Veneroida","Veneridae","Leukoma","Leukoma staminea","Pacific littleneck clam","FB-family",1.28033333333333,NA,NA,NA,1.28033333333333,1.31957894736842
+"Bivalvia","Clams, cockles, arkshells","Veneroida","Veneridae","Mercenaria","Mercenaria mercenaria","Northern quahog(=Hard clam)","FB-family",1.28033333333333,NA,NA,NA,1.28033333333333,1.31957894736842
+"Bivalvia","Clams, cockles, arkshells","Veneroida","Veneridae","Meretrix","Meretrix lusoria","Japanese hard clam","FB-family",1.28033333333333,NA,NA,NA,1.28033333333333,1.31957894736842
+"Bivalvia","Clams, cockles, arkshells","Veneroida","Veneridae","Paphia","Paphia gallus","Rooster venus","FB-genus",1.84333333333333,NA,NA,1.84333333333333,1.28033333333333,1.31957894736842
+"Bivalvia","Clams, cockles, arkshells","Veneroida","Veneridae","Ruditapes","Ruditapes decussatus","Grooved carpet shell","FB-species",1.28,NA,1.28,0.9095,1.28033333333333,1.31957894736842
+"Bivalvia","Clams, cockles, arkshells","Veneroida","Veneridae","Ruditapes","Ruditapes philippinarum","Japanese carpet shell","FB-species",0.539,NA,0.539,0.9095,1.28033333333333,1.31957894736842
+"Bivalvia","Clams, cockles, arkshells","Veneroida","Veneridae","Saxidomus","Saxidomus gigantea","Butter clam","FB-family",1.28033333333333,NA,NA,NA,1.28033333333333,1.31957894736842
+"Bivalvia","Clams, cockles, arkshells","Veneroida","Veneridae","Tapes","Tapes aureus","Golden carpet shell","FB-family",1.28033333333333,NA,NA,NA,1.28033333333333,1.31957894736842
+"Bivalvia","Clams, cockles, arkshells","Veneroida","Veneridae","Venerupis","Venerupis corrugata","Pullet carpet shell","FB-family",1.28033333333333,NA,NA,NA,1.28033333333333,1.31957894736842
+"Bivalvia","Clams, cockles, arkshells","Veneroida","Veneridae","Venerupis","Venerupis rhomboides","Banded carpet shell","FB-family",1.28033333333333,NA,NA,NA,1.28033333333333,1.31957894736842
+"Bivalvia","Clams, cockles, arkshells","Veneroida","Veneridae","Venus","Venus verrucosa","Warty venus","FB-family",1.28033333333333,NA,NA,NA,1.28033333333333,1.31957894736842

@@ -15,7 +15,7 @@ plotdir <- "figures"
 
 # Read data
 hist <- readRDS(file.path(outdir, "FAO_1950_2018_wc_aq_seafood_per_capita.Rds"))
-proj <- readRDS(file.path(outdir, "global_capture_mariculture_output_merged_new_costs1.Rds"))
+proj <- readRDS(file.path(outdir, "global_capture_mariculture_output_merged_sens_analysis.Rds"))
 
 # Format data
 hist_use <- hist %>% 
@@ -118,5 +118,5 @@ g <- gridExtra::grid.arrange(g1, g2, g3, nrow=1, widths=c(0.4, 0.3, 0.3))
 g
 
 # Export plot
-ggsave(g, filename=file.path(plotdir, "Fig3_global_production.png"), 
+ggsave(g, filename=file.path(plotdir, "Fig3_global_production_sens_analysis.png"), 
        width=6.5, height=2.5, units="in", dpi=600)

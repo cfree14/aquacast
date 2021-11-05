@@ -21,9 +21,9 @@ tabledir <- "tables"
 wc_orig <- readRDS("data/capture_projections/data/Free_etal_2020_national_projections_with_pop_data.Rds")
  
 # Read mariculture projections
-faq_orig <- readRDS(file.path(datadir, "finfish_output.Rds"))
-faq_orig_opt <- readRDS(file.path(datadir, "finfish_output_optimum.Rds"))
-baq_orig <- readRDS(file.path(datadir, "bivalve_output.Rds"))
+faq_orig <- readRDS(file.path(datadir, "finfish_output_sens_analysis.Rds"))
+faq_orig_opt <- readRDS(file.path(datadir, "finfish_output_optimum_sens_analysis.Rds"))
+baq_orig <- readRDS(file.path(datadir, "bivalve_output_sens_analysis.Rds"))
 
 # Read historical data
 hist_orig <- readRDS(file.path(datadir, "FAO_1950_2018_wc_aq_seafood_per_capita_national.Rds"))
@@ -196,7 +196,7 @@ data2 <- data1 %>%
 
 
 # Export data
-save(wc_nat_use, faq_nat, baq_nat, data1, data2, file=file.path(datadir, "national_capture_mariculture_output_merged.Rdata"))
+save(wc_nat_use, faq_nat, baq_nat, data1, data2, file=file.path(datadir, "national_capture_mariculture_output_merged_sens_analysis.Rdata"))
 
 
 # Plot data

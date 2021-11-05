@@ -68,9 +68,10 @@ rcp <- "RCP 2.6"
 mgmt_scenario <- "Reformed fisheries management"
 feed_scenario <- "Reformed feed use"
 dev_scenario <- "Optimum"
+suffix <- "new_costs"
 
 # Function to develop feed-constrained finfish mariculture
-expand_mariculture <- function(rcp, mgmt_scenario, feed_scenario, dev_scenario){
+expand_mariculture <- function(rcp, mgmt_scenario, feed_scenario, dev_scenario, suffix=""){
   
   # Steps
   # 1. Determine feed availability
@@ -91,7 +92,11 @@ expand_mariculture <- function(rcp, mgmt_scenario, feed_scenario, dev_scenario){
 
   # Read finfish forecasts
   rcp_do_short <- gsub("\\.| ", "", rcp_do)
-  infile <- paste0( rcp_do_short, "_Finfish_rational_use.Rds")
+  if(suffix==""){
+    infile <- paste0( rcp_do_short, "_Finfish_rational_use.Rds")
+  }else{
+    infile <- paste0( rcp_do_short, "_Finfish_rational_use_", suffix, ".Rds")
+  }
   data_orig <- readRDS(file.path(datadir, infile))
   
   # Build forecasts period key
@@ -719,6 +724,7 @@ expand_mariculture <- function(rcp, mgmt_scenario, feed_scenario, dev_scenario){
   
 }
 
+
 # Develop demand-limited finfish mariculture
 ################################################################################
 
@@ -747,8 +753,8 @@ out5 <- expand_mariculture(rcp="RCP 2.6", mgmt_scenario = "BAU fisheries managem
 rcps <- paste("RCP", c("2.6", "4.5", "6.0", "8.5"))
 mgmt_scens <- c("BAU fisheries management", "Reformed fisheries management")
 feed_scens <- c("BAU feed use", "Reformed feed use")
-dev_scens <- c("Current", "Proportional", "Need-based")
-# dev_scens <- c("Optimum")
+# dev_scens <- c("Current", "Proportional", "Need-based")
+dev_scens <- c("Optimum")
 scen_key <- expand.grid(rcp=rcps,
                         mgmt_scenario=mgmt_scens,
                         feed_scenario=feed_scens,
@@ -760,7 +766,7 @@ if(F){
   rcp <- rcp_do <- "RCP 2.6"
   mgmt_scenario <- mgmt_do <- "BAU fisheries management"
   feed_scenario <- feed_do <- "Reformed feed use"
-  dev_scenario <- dev_do <- "Proportional"
+  dev_scenario <- dev_do <- "Optimum"
 }
   
 # Develop mariculture
@@ -778,5 +784,90 @@ output <- purrr::map_df(1:nrow(scen_key), function(x) {
 })
 
 # Export output
-saveRDS(output, file=file.path(datadir, "finfish_output.Rds"))
+saveRDS(output, file=file.path(datadir, "finfish_output_optimum.Rds"))
+
+
+
+# Do all scenarios - new costs
+#####################################
+
+# Build scenario key
+rcps <- paste("RCP", c("2.6", "4.5", "6.0", "8.5"))
+mgmt_scens <- c("BAU fisheries management", "Reformed fisheries management")
+feed_scens <- c("BAU feed use", "Reformed feed use")
+# dev_scens <- c("Current", "Proportional", "Need-based")
+dev_scens <- c("Optimum")
+scen_key <- expand.grid(rcp=rcps,
+                        mgmt_scenario=mgmt_scens,
+                        feed_scenario=feed_scens,
+                        dev_scenario=dev_scens) %>% 
+  arrange(rcp, mgmt_scenario, feed_scenario, dev_scenario)
+
+# Problem one
+if(F){
+  rcp <- rcp_do <- "RCP 2.6"
+  mgmt_scenario <- mgmt_do <- "BAU fisheries management"
+  feed_scenario <- feed_do <- "Reformed feed use"
+  dev_scenario <- dev_do <- "Optimum"
+}
+
+# Develop mariculture
+output <- purrr::map_df(1:nrow(scen_key), function(x) {
+  
+  # Scenario
+  rcp_do <- scen_key$rcp[x]
+  mgmt_do <- scen_key$mgmt_scenario[x]
+  feed_do <- scen_key$feed_scenario[x]
+  dev_do <- scen_key$dev_scenario[x]
+  
+  # Expand mariculture
+  out_df <- expand_mariculture(rcp=rcp_do, mgmt_scenario = mgmt_do, feed_scenario = feed_do, dev_scenario=dev_do, suffix="new_costs1")
+  
+})
+
+# Export output
+saveRDS(output, file=file.path(datadir, "finfish_output_optimum_new_costs1.Rds"))
+
+
+
+
+# Do all scenarios - new costs
+#####################################
+
+# Build scenario key
+rcps <- paste("RCP", c("2.6", "4.5", "6.0", "8.5"))
+mgmt_scens <- c("BAU fisheries management", "Reformed fisheries management")
+feed_scens <- c("BAU feed use", "Reformed feed use")
+dev_scens <- c("Current", "Proportional", "Need-based")
+# dev_scens <- c("Optimum")
+scen_key <- expand.grid(rcp=rcps,
+                        mgmt_scenario=mgmt_scens,
+                        feed_scenario=feed_scens,
+                        dev_scenario=dev_scens) %>% 
+  arrange(rcp, mgmt_scenario, feed_scenario, dev_scenario)
+
+# Problem one
+if(F){
+  rcp <- rcp_do <- "RCP 2.6"
+  mgmt_scenario <- mgmt_do <- "BAU fisheries management"
+  feed_scenario <- feed_do <- "Reformed feed use"
+  dev_scenario <- dev_do <- "Optimum"
+}
+
+# Develop mariculture
+output <- purrr::map_df(1:nrow(scen_key), function(x) {
+  
+  # Scenario
+  rcp_do <- scen_key$rcp[x]
+  mgmt_do <- scen_key$mgmt_scenario[x]
+  feed_do <- scen_key$feed_scenario[x]
+  dev_do <- scen_key$dev_scenario[x]
+  
+  # Expand mariculture
+  out_df <- expand_mariculture(rcp=rcp_do, mgmt_scenario = mgmt_do, feed_scenario = feed_do, dev_scenario=dev_do, suffix="sens_analysis")
+  
+})
+
+# Export output
+saveRDS(output, file=file.path(datadir, "finfish_output_sens_analysis.Rds"))
 

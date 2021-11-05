@@ -21,8 +21,8 @@ tabledir <- "tables"
 wc_orig <- readRDS("data/capture_projections/data/Free_etal_2020_global_projections_with_pop_data.Rds")
  
 # Read mariculture projections
-faq_orig <- readRDS(file.path(datadir, "finfish_output.Rds"))
-baq_orig <- readRDS(file.path(datadir, "bivalve_output.Rds"))
+faq_orig <- readRDS(file.path(datadir, "finfish_output_sens_analysis.Rds"))
+baq_orig <- readRDS(file.path(datadir, "bivalve_output_sens_analysis.Rds"))
 
 
 
@@ -108,7 +108,7 @@ gdata <- bind_rows(wc_global, faq_global, baq_global) %>%
   mutate(meat_kg_person=meat_mt*1000/npeople)
 
 # Export
-saveRDS(gdata, file=file.path(datadir, "global_capture_mariculture_output_merged.Rds"))
+saveRDS(gdata, file=file.path(datadir, "global_capture_mariculture_output_merged_sens_analysis.Rds"))
 
 
 # Plot data

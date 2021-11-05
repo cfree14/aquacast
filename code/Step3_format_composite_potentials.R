@@ -77,11 +77,17 @@ eezs_df <- as.data.frame(eezs, xy=T) %>%
 ################################################################################
 
 # Function
-# rcp <- "rcp26"; type <- "finfish"
-format_data <- function(rcp, type){
+# rcp <- "rcp26"; type <- "finfish"; suffix="new_costs"
+format_data <- function(rcp, type, suffix=""){
   
   # Read data
-  infile <- paste(toupper(rcp), str_to_title(type), "rational.Rds", sep="_")
+  if(suffix==""){
+    infile <- paste(toupper(rcp), str_to_title(type), "rational.Rds", sep="_")
+    outfile <- paste(toupper(rcp), str_to_title(type), "rational_use.Rds", sep="_")
+  }else{
+    infile <- paste0(toupper(rcp), "_", str_to_title(type), "_rational_", suffix, ".Rds")
+    outfile <- paste0(toupper(rcp), "_", str_to_title(type), "_rational_use_", suffix, ".Rds")
+  }
   data_orig <- readRDS(file.path(datadir, infile))
   
   # Format data
@@ -112,12 +118,11 @@ format_data <- function(rcp, type){
   print(g)
   
   # Export data
-  outfile <- paste(toupper(rcp), str_to_title(type), "rational_use.Rds", sep="_")
   saveRDS(data, file.path(datadir, outfile))
   
 }
 
-
+# Original
 
 # Finfish
 format_data(rcp="rcp26", type="finfish")
@@ -131,7 +136,33 @@ format_data(rcp="rcp45", type="bivalve")
 format_data(rcp="rcp60", type="bivalve")
 format_data(rcp="rcp85", type="bivalve")
 
+# New cost model
 
+# Finfish
+format_data(rcp="rcp26", type="finfish", suffix="new_costs1")
+format_data(rcp="rcp45", type="finfish", suffix="new_costs1")
+format_data(rcp="rcp60", type="finfish", suffix="new_costs1")
+format_data(rcp="rcp85", type="finfish", suffix="new_costs1")
+
+# Bivalves
+format_data(rcp="rcp26", type="bivalve", suffix="new_costs1")
+format_data(rcp="rcp45", type="bivalve", suffix="new_costs1")
+format_data(rcp="rcp60", type="bivalve", suffix="new_costs1")
+format_data(rcp="rcp85", type="bivalve", suffix="new_costs1")
+
+# New cost model
+
+# Finfish
+format_data(rcp="rcp26", type="finfish", suffix="sens_analysis")
+format_data(rcp="rcp45", type="finfish", suffix="sens_analysis")
+format_data(rcp="rcp60", type="finfish", suffix="sens_analysis")
+format_data(rcp="rcp85", type="finfish", suffix="sens_analysis")
+
+# Bivalves
+format_data(rcp="rcp26", type="bivalve", suffix="sens_analysis")
+format_data(rcp="rcp45", type="bivalve", suffix="sens_analysis")
+format_data(rcp="rcp60", type="bivalve", suffix="sens_analysis")
+format_data(rcp="rcp85", type="bivalve", suffix="sens_analysis")
 
 
 
