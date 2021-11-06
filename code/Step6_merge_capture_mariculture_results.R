@@ -21,8 +21,8 @@ tabledir <- "tables"
 wc_orig <- readRDS("data/capture_projections/data/Free_etal_2020_global_projections_with_pop_data.Rds")
  
 # Read mariculture projections
-faq_orig <- readRDS(file.path(datadir, "finfish_output_sens_analysis.Rds"))
-baq_orig <- readRDS(file.path(datadir, "bivalve_output_sens_analysis.Rds"))
+faq_orig <- readRDS(file.path(datadir, "finfish_output_new_costs1.Rds"))
+baq_orig <- readRDS(file.path(datadir, "bivalve_output_new_costs1.Rds"))
 
 
 
@@ -36,7 +36,7 @@ period_key <- tibble(year=c(2021:2030, 2051:2060, 2091:2100),
 # Calculate population growth
 pop_global <- wc_orig %>% 
   # Select
-  select(year, npeople) %>% 
+  select(year, npeople, npeople05, npeople20, npeople80, npeople95) %>% 
   # Add period
   filter(year%in%c(2020, 2025, 2030,
                    2050, 2055, 2060,
@@ -46,7 +46,11 @@ pop_global <- wc_orig %>%
   mutate(period=ifelse(year<=2030, "2021-2030",
                        ifelse(year<=2060, "2051-2060", "2091-2100"))) %>% 
   group_by(period) %>% 
-  summarize(npeople=mean(npeople))
+  summarize(npeople=mean(npeople),
+            npeople05=mean(npeople05),
+            npeople20=mean(npeople20),
+            npeople80=mean(npeople80),
+            npeople95=mean(npeople95))
 
 # Calculate global statistics: capture
 wc_global <- wc_orig %>% 
@@ -105,10 +109,14 @@ gdata <- bind_rows(wc_global, faq_global, baq_global) %>%
   # Add population growth
   left_join(pop_global, by="period") %>% 
   # Calculate meat per capita
-  mutate(meat_kg_person=meat_mt*1000/npeople)
+  mutate(meat_kg_person=meat_mt*1000/npeople,
+         meat_kg_person05=meat_mt*1000/npeople05,
+         meat_kg_person20=meat_mt*1000/npeople20,
+         meat_kg_person80=meat_mt*1000/npeople80,
+         meat_kg_person95=meat_mt*1000/npeople95)
 
 # Export
-saveRDS(gdata, file=file.path(datadir, "global_capture_mariculture_output_merged_sens_analysis.Rds"))
+saveRDS(gdata, file=file.path(datadir, "global_capture_mariculture_output_merged_new_costs1.Rds"))
 
 
 # Plot data

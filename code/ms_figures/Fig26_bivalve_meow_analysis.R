@@ -24,7 +24,7 @@ datadir <- "/Volumes/GoogleDrive/Shared drives/emlab/projects/current-projects/b
 meows <- sf::st_read("/Users/cfree/Dropbox/Chris/UCSB/data/meows/Marine_Ecoregions_Of_the_World_(MEOW)-shp/Marine_Ecoregions_Of_the_World__MEOW_.shp")
 
 # Read data
-data <- readRDS(file.path(datadir, "bivalve_output.Rds")) %>% 
+data <- readRDS(file.path(datadir, "bivalve_output_new_costs1.Rds")) %>% 
   mutate(dev_scenario=as.character(dev_scenario))
 
 # Read template
@@ -91,12 +91,12 @@ if(build==T){
   })
   
   # Export data
-  saveRDS(results, file=file.path(datadir, "bivalve_meow_mt_sqkm_by_dev_scenario.Rds"))
+  saveRDS(results, file=file.path(datadir, "bivalve_meow_mt_sqkm_by_dev_scenario_new_costs1.Rds"))
   
 }else{
   
   # Read data
-  results <- readRDS(file=file.path(datadir, "bivalve_meow_mt_sqkm_by_dev_scenario.Rds")) %>% 
+  results <- readRDS(file=file.path(datadir, "bivalve_meow_mt_sqkm_by_dev_scenario_new_costs1.Rds")) %>% 
     mutate(dev_scenario=recode_factor(dev_scenario,
                                       "Current"="Current", "Proportional"="Proportional", "Need-based"="Offset-based / Optimum"))
   

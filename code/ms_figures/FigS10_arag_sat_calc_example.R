@@ -29,6 +29,7 @@ si <- brick(file.path(datadir, "GFDL_ESM2G_rcp85_si_mol_kg.grd"))
 po4 <- brick(file.path(datadir, "GFDL_ESM2G_rcp85_po4_mol_kg.grd"))
 arag <- brick(file.path(datadir, "GFDL_ESM2G_rcp85_arag_sat.grd"))
 
+options(scipen=0)
 
 # Plot data
 ################################################################################
@@ -42,6 +43,7 @@ my_theme <- theme(axis.text=element_blank(),
                   legend.position = "right",
                   legend.text=element_text(size=8),
                   legend.title=element_blank(),
+                  legend.key.size = unit(0.3, "cm"),
                   plot.title=element_text(size=9),
                   panel.grid.major = element_blank(), 
                   panel.grid.minor = element_blank(),
@@ -73,6 +75,7 @@ salt_df <- salt[[1]] %>%
 
 sal_plot <- ggplot(salt_df, aes(x=x, y=y, fill=value)) +
   geom_raster() + 
+  geom_sf(data=world, fill="grey90", color="white", lwd=0.2, inherit.aes = F) +
   labs(x="", y="", title="Salinity (psu)") +
   scale_fill_gradientn(name="", 
                        colors=cmocean(name="haline")(100), na.value="white") +
@@ -89,6 +92,7 @@ si_df <- si[[1]] %>%
 
 si_plot <- ggplot(si_df, aes(x=x, y=y, fill=value)) +
   geom_raster() + 
+  geom_sf(data=world, fill="grey90", color="white", lwd=0.2, inherit.aes = F) +
   labs(x="", y="", title="Silicate concentration (mol/kg)") +
   scale_fill_gradientn(name="", 
                        colors=RColorBrewer::brewer.pal(9, "YlGn"), na.value="white") +
@@ -105,6 +109,7 @@ po4_df <- po4[[1]] %>%
 
 po4_plot <- ggplot(po4_df, aes(x=x, y=y, fill=value)) +
   geom_raster() + 
+  geom_sf(data=world, fill="grey90", color="white", lwd=0.2, inherit.aes = F) +
   labs(x="", y="", title="Phosphate concentration (mol/kg)") +
   scale_fill_gradientn(name="", 
                        colors=RColorBrewer::brewer.pal(9, "RdPu"), na.value="white") +
@@ -120,6 +125,7 @@ alk_df <- alk[[1]] %>%
 
 alk_plot <- ggplot(alk_df, aes(x=x, y=y, fill=value)) +
   geom_raster() + 
+  geom_sf(data=world, fill="grey90", color="white", lwd=0.2, inherit.aes = F) +
   labs(x="", y="", title="Total alkalinity (mol/kg)") +
   scale_fill_gradientn(name="", 
                        colors=RColorBrewer::brewer.pal(9, "YlOrRd"), na.value="white") +
@@ -135,6 +141,7 @@ dic_df <- dic[[1]] %>%
 
 dic_plot <- ggplot(dic_df, aes(x=x, y=y, fill=value)) +
   geom_raster() + 
+  geom_sf(data=world, fill="grey90", color="white", lwd=0.2, inherit.aes = F) +
   labs(x="", y="", title="DIC concentration (mol/kg)") +
   scale_fill_gradientn(name="", 
                        colors=RColorBrewer::brewer.pal(9, "Blues"), na.value="white") +
@@ -151,6 +158,7 @@ arag_df <- arag[[1]] %>%
 
 arag_plot <- ggplot(arag_df, aes(x=x, y=y, fill=value)) +
   geom_raster() + 
+  geom_sf(data=world, fill="grey90", color="white", lwd=0.2, inherit.aes = F) +
   labs(x="", y="", title="Aragonite saturation (Ω)") +
   scale_fill_gradientn(name="", 
                       colors=RColorBrewer::brewer.pal(11, "Spectral"), na.value="white") +
@@ -163,11 +171,11 @@ arag_plot <- ggplot(arag_df, aes(x=x, y=y, fill=value)) +
 
 # Merge plots
 g <- grid.arrange(sst_plot, sal_plot, si_plot, po4_plot, alk_plot, dic_plot, arag_plot,
-             layout_matrix=matrix(c(1:6,7,7), byrow=T, ncol=2), heights=c(rep(2/3/3,3), 1/3))
+             layout_matrix=matrix(c(1:6,7,7), byrow=T, ncol=2), heights=c(rep(0.2,3), 0.4))
 
 # Export
-ggsave(g, filename=file.path(plotdir, "figure_arag_sat_calc_example.png"), 
-       width=6.5, height=8, units="in", dpi=600)
+ggsave(g, filename=file.path(plotdir, "FigS10_arag_sat_calc_example.png"), 
+       width=6.5, height=6.5, units="in", dpi=600)
 
 
 

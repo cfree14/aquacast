@@ -18,7 +18,7 @@ datadir <- "data/species/data"
 plotdir <- "figures"
 
 # Read data
-load(file.path(datadir, "aquaculture_species_key.Rdata"))
+load(file.path(datadir, "aquaculture_species_key_20cages.Rdata"))
 data_orig <- data
 data_full_orig <- data_full
 
@@ -31,7 +31,7 @@ data_full <- data_full_orig %>%
 
 # Brackish ISSCAAPs
 brackish_isscaaps <- c("Freshwater molluscs", "Miscellaneous diadromous fishes", 
-                       "Miscellaneous freshwater fish", "River eels", "Shads", 
+                       "Miscellaneous freshwater fishes", "River eels", "Shads", 
                        "Sturgeons, paddlefishes", "Tilapias and other cichlids")
 
 # Not lonline bivalves
@@ -109,7 +109,7 @@ g <- ggplot(pdata, aes(x=isscaap, y=value, fill=class)) +
 g
 
 # Export plots
-ggsave(g, filename=file.path(plotdir, "FigS20_species_harvest_production.png"), 
+ggsave(g, filename=file.path(plotdir, "FigS15_species_harvest_production.png"), 
        width=6.5, height=3.5, units="in", dpi=600)
 
 
@@ -127,9 +127,9 @@ nstats <- data %>%
   summarize(n=n()) %>% 
   arrange(class, n) %>% 
   mutate(class_label=recode(class, 
-                            "Finfish"="Finfish (n=136)",
-                            "Bivalves"="Bivalves (n=53)"),
-         class_label=factor(class_label, levels=c("Finfish (n=136)", "Bivalves (n=53)")))
+                            "Finfish"="Finfish (n=122)",
+                            "Bivalves"="Bivalves (n=22)"),
+         class_label=factor(class_label, levels=c("Finfish (n=122)", "Bivalves (n=22)")))
 nstats$isscaap_order <- factor(nstats$isscaap, level=nstats$isscaap)
 
 # Plot sample size stats
@@ -158,8 +158,16 @@ g3 <- ggplot(data, aes(x=k, fill=class)) +
   theme(legend.position="none")
 g3
 
+# Natural mortality density
+g4 <- ggplot(data, aes(x=m, fill=class)) +
+  geom_density(alpha=0.8) +
+  labs(x="Natural mortality (M)", y="Density", tag="D") +
+  theme_bw() + my_theme +
+  theme(legend.position="none")
+g4
+
 # Assemble plots
-g <- grid.arrange(g1, g2, g3, layout_matrix=matrix(c(1,1,2,3), ncol=2, byrow=T))
+g <- grid.arrange(g1, g2, g3, g4, layout_matrix=matrix(c(1,1,1,2,3,4), ncol=3, byrow=T))
 
 # Export plots
 ggsave(g, filename=file.path(plotdir, "FigS2_species_growth_params.png"), 
@@ -171,16 +179,19 @@ ggsave(g, filename=file.path(plotdir, "FigS2_species_growth_params.png"),
 
 # Reshape for plotting
 tdata <- data %>% 
-  select(class, species, a_source, b_source, linf_source, k_source) %>% 
+  select(class, species, a_source, b_source, linf_source, k_source, m_source) %>% 
+  mutate(m_source=ifelse(m_source=="FishLife", m_source, paste(gsub("-", " ", m_source), "average", sep="-"))) %>% 
   gather(key="parameter", value="source", 3:ncol(.)) %>% 
   mutate(parameter=recode(parameter, 
                    "a_source"="LW a",
                    "b_source"="LW b",
                    "linf_source"= "Linf (cm)",
-                   "k_source"="K"),
+                   "k_source"="K",
+                   "m_source"="M"),
          class=recode(class, 
-                      "Finfish"="Finfish (n=136)",
-                      "Bivalves"="Bivalves (n=64)"))
+                      "Finfish"="Finfish (n=122)",
+                      "Bivalves"="Bivalves (n=22)"),
+         source=factor(source, levels=c("FishLife", "Gentry et al. 2017", "FB species-average", "FB genus-average", "FB family-average")))
   
 
 # Plot
@@ -229,7 +240,7 @@ g <- ggplot(edata, aes(x=value, y=species, color=class, alpha=range)) +
   facet_grid(class ~ variable, scales="free", space="free_y") +
   geom_line() +
   # Axis labels and limits
-  labs(x="", y="") +
+  labs(x="Environmental tolerance", y="Mariculture species") +
   scale_alpha_manual(values = c(0.3, 1)) + # 1=solid, 0=transparent
   expand_limits(x=0) +
   # Theme
@@ -242,7 +253,7 @@ g
 
 # Export figure
 ggsave(g, filename=file.path(plotdir, "FigS4_species_envi_tolerances.png"), 
-       width=6.5, height=8.5, units="in", dpi=600)
+       width=6.5, height=6, units="in", dpi=600)
 
 
 # Prices
@@ -255,28 +266,34 @@ spp_order_key <- data_full %>%
   arrange(desc(class), price_usd_mt_isscaap)
 
 # Plot prices
-g <- ggplot(data_full, aes(x=factor(isscaap, levels=spp_order_key$isscaap), y=price_usd_mt_spp, fill=class)) +
+g <- ggplot(data, aes(x=factor(isscaap, levels=spp_order_key$isscaap), y=price_usd_mt_spp, fill=class)) +
   geom_boxplot() +
   coord_flip() +
   labs(x="", y="Price (USD/mt)") +
   theme_bw() + my_theme +
   scale_fill_discrete(name="") +
-  theme(legend.position = c(0.8, 0.2))
+  theme(legend.position = c(0.8, 0.2),
+        axis.text = element_text(size=8),
+        axis.text.x = element_text(size=8),
+        axis.text.y = element_text(size=8),
+        axis.title = element_text(size=10))
 g
 
 # Export plot
-ggsave(g, filename=file.path(plotdir, "FigS8_species_prices_by_isscaap.png"), 
-       width=6.5, height=3.5, units="in", dpi=600)
+ggsave(g, filename=file.path(plotdir, "FigS9_species_prices_by_isscaap.png"), 
+       width=6.5, height=3, units="in", dpi=600)
 
 
-# Harvest size
+ # Harvest size
 ################################################################################
 
 # Reshape for plotting
 hdata <- data %>% 
   select(class, species, linf_cm, harvest_cm, harvest_g, harvest_yr) %>% 
   gather(key="parameter", value="value", 3:ncol(.)) %>% 
-  mutate(parameter=recode(parameter, "harvest_cm"="Harvest size", "linf_cm"="Linf"))
+  mutate(parameter=recode(parameter, 
+                          "harvest_cm"="Harvest size", 
+                          "linf_cm"="Linf"))
 
 # Plot
 g <- ggplot(hdata, aes(x=value, fill=class)) +
@@ -332,7 +349,7 @@ g4 <- ggplot(filter(hdata, class=="Bivalves" & parameter %in% c("Harvest size", 
 g5 <- ggplot(filter(hdata, class=="Bivalves" & parameter %in% c("harvest_g")), aes(x=value)) +
   geom_density(aes(y=..scaled..), alpha=0.8) +
   labs(x="Harvest weight (g)", y="") +
-  xlim(0,1500) +
+  xlim(0,500) +
   theme_bw() + my_theme
 #g5
 
@@ -340,6 +357,7 @@ g5 <- ggplot(filter(hdata, class=="Bivalves" & parameter %in% c("harvest_g")), a
 g6 <- ggplot(filter(hdata, class=="Bivalves" & parameter %in% c("harvest_yr")), aes(x=value)) +
   geom_density(aes(y=..scaled..), alpha=0.8) +
   labs(x="Harvest age (yr)", y="") +
+  xlim(0,NA) +
   theme_bw() + my_theme
 #g6
 
@@ -351,6 +369,6 @@ g <- grid.arrange(g1, g2, g3, g4, g5, g6, ncol=3)
 g
 
 # Export plot
-ggsave(g, filename=file.path(plotdir, "FigS6_species_harvest_sizes_ages.png"), 
+ggsave(g, filename=file.path(plotdir, "FigS7_species_harvest_sizes_ages.png"), 
        width=6.5, height=4.5, units="in", dpi=600)
 

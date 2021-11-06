@@ -26,7 +26,11 @@ pop_orig <- readRDS(file.path(popdir, "WB_UN_1960_2100_human_population_by_count
 # Calculate global population
 gpop <- pop_orig %>% 
   group_by(year) %>% 
-  summarize(npeople=sum(pop_size_50perc))
+  summarize(npeople=sum(pop_size_50perc),
+            npeople05=sum(pop_size_05perc),
+            npeople20=sum(pop_size_20perc),
+            npeople80=sum(pop_size_80perc),
+            npeople95=sum(pop_size_95perc))
 
 # Check plot
 g <- ggplot(gpop, aes(x=year, npeople/1e9)) +
