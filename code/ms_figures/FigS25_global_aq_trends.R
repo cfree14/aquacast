@@ -19,6 +19,9 @@ data <- readRDS("/Users/cfree/Dropbox/Chris/UCSB/data/fao/aquaculture/processed/
 plotdir <- "figures"
 outdir <- "data/feed_params/processed"
 
+# Read coastlines
+
+
 
 # Time series
 ################################################################################
@@ -207,52 +210,4 @@ g <- grid.arrange(g1, g2, ncol=1)
 # Export plot
 ggsave(g, filename=file.path(plotdir, "FigS25_fao_aq_prod_maps.png"),
        width=6.5, height=4.5, units="in", dpi=600)
-
-
-# Country-level time series
-################################################################################
-
-# Fun project for Sean
-
-# # Theme
-# my_theme2 <- theme(axis.text=element_text(size=8),
-#                    axis.title=element_text(size=10),
-#                    axis.title.x=element_blank(),
-#                    legend.text = element_text(size=8),
-#                    legend.title = element_blank(),
-#                    legend.position="bottom",
-#                    panel.grid.major = element_blank(), 
-#                    panel.grid.minor = element_blank(),
-#                    panel.background = element_blank(), 
-#                    axis.line = element_line(colour = "black"),
-#                    axis.text.x = element_text(angle = 90, vjust = 0.5))
-# 
-# 
-# # Format data
-# data_cntry <- data %>%
-#   group_by(country, environment, year) %>%
-#   summarize(quantity_mt=sum(quantity_mt, na.rm=T))
-# 
-# # Packages
-# # devtools::install_github("guiastrennec/ggplus")
-# library(ggplus)
-# 
-# # Plot all
-# p <- ggplot(data_cntry, aes(x=year, y=quantity_mt/1e3, fill=environment)) +
-#   labs(x="", y="Production (thousands of mt)") +
-#   geom_area() +
-#   scale_x_continuous(breaks=seq(1950,2020,10)) +
-#   scale_fill_discrete(name="") +
-#   theme_bw() + my_theme2
-# 
-# # Creat multi-page PDF
-# pdf(file.path(plotdir, "appendix_fao_aq_time_series_by_country.pdf"), width=8.5, height=11)
-# gg10 <- facet_multiple(plot=p, facets="country", ncol = 4, nrow = 5, scales="free")
-# dev.off()
-# 
-# 
-
-
-
-
 

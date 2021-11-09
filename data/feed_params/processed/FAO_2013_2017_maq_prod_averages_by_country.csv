@@ -1,4 +1,4 @@
-"country","iso3","major_group","prod_mt","profit_usd"
+"country_use","iso3_use","major_group","prod_mt","profit_usd"
 "Albania","ALB","Mollusca",915,602530.2
 "Albania","ALB","Pisces",1310,6766168.5
 "Algeria","DZA","Mollusca",3.686,15353.3333333333
@@ -12,30 +12,28 @@
 "Bahrain","BHR","Pisces",1.245125,13518.9375
 "Bangladesh","BGD","Pisces",98271.6,315575975.8
 "Belize","BLZ","Pisces",0,0
-"Bonaire/S.Eustatius/Saba","BES","Pisces",0,0
-"Bosnia and Herzegovina","BIH","Mollusca",30,113733.333333333
-"Bosnia and Herzegovina","BIH","Pisces",81.27,528873
+"Bosnia & Herzegovina","BIH","Mollusca",30,113733.333333333
+"Bosnia & Herzegovina","BIH","Pisces",81.27,528873
 "Brazil","BRA","Mollusca",8698.33333333333,11552489.1666667
 "Brazil","BRA","Pisces",20,94003
-"Brunei Darussalam","BRN","Pisces",33.1810344827586,246164.75862069
+"Brunei","BRN","Pisces",33.1810344827586,246164.75862069
 "Bulgaria","BGR","Mollusca",2988.6316,2906879.4
 "Cambodia","KHM","Mollusca",2508.8,2508800
 "Cambodia","KHM","Pisces",260.3,2082400
 "Canada","CAN","Mollusca",3986.40816326531,7616569.46938775
 "Canada","CAN","Pisces",28028.8695652174,165740867.086957
+"Caribbean Netherlands","BES","Pisces",0,0
 "Channel Islands","","Mollusca",364.838421052632,1292687.42105263
 "Channel Islands","","Pisces",1,20646.8
 "Chile","CHL","Mollusca",35115.3114615385,308593120.25641
 "Chile","CHL","Pisces",149797.671111111,1111408075.03704
 "China","CHN","Mollusca",1200745.84134545,1824335106.56364
 "China","CHN","Pisces",88474.2571428571,314288491.9
-"China, Hong Kong SAR","HKG","Mollusca",621,1339181.4
-"China, Hong Kong SAR","HKG","Pisces",131.285714285714,1443698.21428571
 "Colombia","COL","Pisces",150,870000
 "Cook Islands","COK","Mollusca",1.733,5219
 "Costa Rica","CRI","Mollusca",19.2,283200
 "Costa Rica","CRI","Pisces",508,2286000
-"Côte d'Ivoire","CIV","Pisces",202.15,641771.4
+"Côte d’Ivoire","CIV","Pisces",202.15,641771.4
 "Croatia","HRV","Mollusca",330.56375,638213.3125
 "Croatia","HRV","Pisces",1414.93705882353,11865506.3529412
 "Cuba","CUB","Mollusca",1162.06,1162060
@@ -51,7 +49,7 @@
 "El Salvador","SLV","Mollusca",6.2,9666.66666666667
 "El Salvador","SLV","Pisces",2,8000
 "Eritrea","ERI","Pisces",0,0
-"Falkland Is.(Malvinas)","FLK","Mollusca",0,0
+"Falkland Islands","FLK","Mollusca",0,0
 "Faroe Islands","FRO","Pisces",68843.8333333333,413670362.333333
 "Fiji","FJI","Mollusca",0,0
 "Fiji","FJI","Pisces",0,0
@@ -69,13 +67,15 @@
 "Guadeloupe","GLP","Pisces",13.6,95239.8
 "Guam","GUM","Pisces",30,217500
 "Guyana","GUY","Pisces",14.509,34790.9230769231
+"Hong Kong SAR China","HKG","Mollusca",621,1339181.4
+"Hong Kong SAR China","HKG","Pisces",131.285714285714,1443698.21428571
 "Iceland","ISL","Mollusca",79.1,79100
 "Iceland","ISL","Pisces",1064.4,6551185.41666667
 "India","IND","Mollusca",6650,12991394.3
 "India","IND","Pisces",91380,289696493.2
 "Indonesia","IDN","Mollusca",30370.5514285714,19070660.5714286
 "Indonesia","IDN","Pisces",92354.9590892857,137777067.767857
-"Iran (Islamic Rep. of)","IRN","Pisces",6700,23450000
+"Iran","IRN","Pisces",6700,23450000
 "Ireland","IRL","Mollusca",5717.48714285714,15390312.6190476
 "Ireland","IRL","Pisces",11071.75,86270044.3333333
 "Israel","ISR","Mollusca",0,0
@@ -88,10 +88,6 @@
 "Jordan","JOR","Pisces",194,1985915.6
 "Kenya","KEN","Pisces",3,402418.5
 "Kiribati","KIR","Pisces",2.11111111111111,5058.22222222222
-"Korea, Dem. People's Rep","PRK","Mollusca",30330,19760000
-"Korea, Dem. People's Rep","PRK","Pisces",33.9285714285714,191071.428571429
-"Korea, Republic of","KOR","Mollusca",29892.0508474576,46416322.5084746
-"Korea, Republic of","KOR","Pisces",4694.52873563218,44732305.5287356
 "Kuwait","KWT","Pisces",48.5572413793103,250167
 "Libya","LBY","Pisces",0,0
 "Malaysia","MYS","Mollusca",4137.90940625,3069963.65625
@@ -104,14 +100,14 @@
 "Mayotte","MYT","Pisces",29.4727272727273,243127.181818182
 "Mexico","MEX","Mollusca",1247.73838666667,1470835.21428571
 "Mexico","MEX","Pisces",1081.79271864865,6705326.78378378
-"Micronesia, Fed.States of","FSM","Mollusca",0,0
-"Micronesia, Fed.States of","FSM","Pisces",0,0
+"Micronesia (Federated States of)","FSM","Mollusca",0,0
+"Micronesia (Federated States of)","FSM","Pisces",0,0
 "Montenegro","MNE","Mollusca",106.111111111111,193813.111111111
 "Montenegro","MNE","Pisces",55.8,405838.9
 "Morocco","MAR","Mollusca",207,554478.5
 "Morocco","MAR","Pisces",119.242857142857,1089973.14285714
 "Mozambique","MOZ","Pisces",56,108367.8
-"Myanmar","MMR","Pisces",376.443433214286,1406004.92857143
+"Myanmar (Burma)","MMR","Pisces",376.443433214286,1406004.92857143
 "Namibia","NAM","Mollusca",119.222222222222,533655.888888889
 "Nauru","NRU","Pisces",0.26,1300
 "Netherlands","NLD","Mollusca",17812.2666666667,28894620.6666667
@@ -122,12 +118,14 @@
 "New Zealand","NZL","Mollusca",30712.2233333333,168576796.266667
 "New Zealand","NZL","Pisces",11332.6,125854970.2
 "Nigeria","NGA","Pisces",0,0
+"North Korea","PRK","Mollusca",30330,19760000
+"North Korea","PRK","Pisces",33.9285714285714,191071.428571429
 "Norway","NOR","Mollusca",734.162625,802217.75
 "Norway","NOR","Pisces",219452.984433333,1173280283.36667
 "Oman","OMN","Pisces",0,0
 "Palau","PLW","Mollusca",1.07539285714286,5653.96428571429
 "Palau","PLW","Pisces",17.54,106467.8
-"Palestine","PSE","Pisces",158.75,1702875
+"Palestinian Territories","PSE","Pisces",158.75,1702875
 "Panama","PAN","Pisces",874.2,9016300
 "Papua New Guinea","PNG","Mollusca",0.5015,9585
 "Papua New Guinea","PNG","Pisces",0.41,5488.2
@@ -143,9 +141,8 @@
 "Réunion","REU","Pisces",2.22222222222222,24348.4444444444
 "Romania","ROU","Mollusca",16.0766666666667,26853.8333333333
 "Romania","ROU","Pisces",14.0575,91382.25
-"Russian Federation","RUS","Mollusca",553.285714285714,1772940
-"Russian Federation","RUS","Pisces",1953.8,7835450
-"Saint Kitts and Nevis","KNA","Pisces",1,11481
+"Russia","RUS","Mollusca",553.285714285714,1772940
+"Russia","RUS","Pisces",1953.8,7835450
 "Samoa","WSM","Mollusca",0,0
 "Samoa","WSM","Pisces",2.3465,5050
 "Saudi Arabia","SAU","Pisces",906,7023259.05714286
@@ -160,17 +157,20 @@
 "Slovenia","SVN","Pisces",48,351652
 "South Africa","ZAF","Mollusca",818.738,11404398.05
 "South Africa","ZAF","Pisces",90.5,589779
+"South Korea","KOR","Mollusca",29892.0508474576,46416322.5084746
+"South Korea","KOR","Pisces",4694.52873563218,44732305.5287356
 "Spain","ESP","Mollusca",5739.87947340425,4039341.85638298
 "Spain","ESP","Pisces",1170.5642242268,8502571.93814433
 "Sri Lanka","LKA","Mollusca",12.64,199128.5
 "Sri Lanka","LKA","Pisces",17.5454545454545,78177.2727272727
-"St. Pierre and Miquelon","SPM","Mollusca",17.5555555555556,149127
+"St. Kitts & Nevis","KNA","Pisces",1,11481
+"St. Pierre & Miquelon","SPM","Mollusca",17.5555555555556,149127
 "Suriname","SUR","Pisces",2.48,16590.8
 "Sweden","SWE","Mollusca",1550.66666666667,1210028.5
 "Sweden","SWE","Pisces",1601.875,7234461.25
-"Taiwan Province of China","TWN","Mollusca",8753.59235111111,34796696.6444444
-"Taiwan Province of China","TWN","Pisces",3520.04933420635,16545418.3888889
-"Tanzania, United Rep. of","TZA","Pisces",274.6,933909.8
+"Taiwan","TWN","Mollusca",8753.59235111111,34796696.6444444
+"Taiwan","TWN","Pisces",3520.04933420635,16545418.3888889
+"Tanzania","TZA","Pisces",274.6,933909.8
 "Thailand","THA","Mollusca",22704.7656410256,17356491.4871795
 "Thailand","THA","Pisces",3329.13793103448,13916429.0344828
 "Timor-Leste","TLS","Pisces",5,12500
@@ -179,7 +179,7 @@
 "Tunisia","TUN","Pisces",2576.77777777778,14872897.037037
 "Turkey","TUR","Mollusca",273.666666666667,409529.333333333
 "Turkey","TUR","Pisces",13052.7,66827681.6037736
-"Turks and Caicos Is.","TCA","Mollusca",0.5,4500
+"Turks & Caicos Islands","TCA","Mollusca",0.5,4500
 "Tuvalu","TUV","Pisces",2.5,5000
 "Ukraine","UKR","Mollusca",69.9,83880
 "Ukraine","UKR","Pisces",211.092307692308,552652.307692308
@@ -189,12 +189,12 @@
 "United Arab Emirates","ARE","Pisces",222.259259259259,1654929.62962963
 "United Kingdom","GBR","Mollusca",2287.10853191489,5480713.9787234
 "United Kingdom","GBR","Pisces",32759.4807407407,210502456
-"United States of America","USA","Mollusca",11476.9027777778,21035212.6388889
-"United States of America","USA","Pisces",4938.1,23101739
+"United States","USA","Mollusca",11476.9027777778,21035212.6388889
+"United States","USA","Pisces",4938.1,23101739
 "Vanuatu","VUT","Pisces",2,37582
-"Venezuela, Boliv Rep of","VEN","Mollusca",3.6625,5493.75
-"Viet Nam","VNM","Mollusca",230169.886,230169886
-"Viet Nam","VNM","Pisces",59411.4505882353,93808936.7058824
-"Yugoslavia SFR","YUG","Mollusca",0,0
-"Yugoslavia SFR","YUG","Pisces",0,0
+"Venezuela","VEN","Mollusca",3.6625,5493.75
+"Vietnam","VNM","Mollusca",230169.886,230169886
+"Vietnam","VNM","Pisces",59411.4505882353,93808936.7058824
+"Yugoslavia","YUG","Mollusca",0,0
+"Yugoslavia","YUG","Pisces",0,0
 "Zanzibar","EAZ","Pisces",6.481,10055.2
