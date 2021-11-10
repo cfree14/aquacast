@@ -174,7 +174,7 @@ g <- grid.arrange(sst_plot, sal_plot, si_plot, po4_plot, alk_plot, dic_plot, ara
              layout_matrix=matrix(c(1:6,7,7), byrow=T, ncol=2), heights=c(rep(0.2,3), 0.4))
 
 # Export
-ggsave(g, filename=file.path(plotdir, "FigS10_arag_sat_calc_example.png"), 
+ggsave(g, filename=file.path(plotdir, "FigS15_arag_sat_calc_example.png"), 
        width=6.5, height=6.5, units="in", dpi=600)
 
 

@@ -145,6 +145,6 @@ g2 <- ggplot() +
 g <- grid.arrange(g0, g1, g2, nrow=3)
 
 # Export
-ggsave(g, filename=file.path(plotdir, "figure_costs_cdist_wages_diesel.png"), 
+ggsave(g, filename=file.path(plotdir, "FigS21_costs_cdist_wages_diesel.png"), 
        width=6.5, height=11.25, units="in", dpi=600)
 

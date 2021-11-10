@@ -121,7 +121,7 @@ g4
 g <- gridExtra::grid.arrange(g1,g2,g3,g4, ncol=2)
 
 # Export
-ggsave(g, filename=file.path(plotdir, "FigS17_use constraints.png"), 
+ggsave(g, filename=file.path(plotdir, "FigS18_use constraints.png"), 
        width=6.5, height=4, units="in", dpi=600)
 
 

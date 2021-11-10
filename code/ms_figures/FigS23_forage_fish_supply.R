@@ -13,7 +13,7 @@ plotdir <- "figures"
 datadir <- "data/feed_params/processed"
 
 # Export data
-data_orig <- read.csv(file.path(outdir, "forage_fish_availability.csv"), as.is=T)
+data_orig <- read.csv(file.path(datadir, "forage_fish_availability.csv"), as.is=T)
 
 # Reduce
 data <- data_orig %>% 
@@ -58,7 +58,7 @@ g <- ggplot(data, aes(x=year, y=catch_ff_mt_maq/1e6, color=rcp, linetype=mgmt_sc
 g
 
 # Export plot
-ggsave(g, filename=file.path(plotdir, "FigS24_forage_fish_supply.png"), 
+ggsave(g, filename=file.path(plotdir, "FigS23_forage_fish_supply.png"), 
        width=6.5, height=3.5, units="in", dpi=600)
 
 

@@ -107,6 +107,6 @@ g2 <- ggplot() +
 g <- grid.arrange(g1, g2, nrow=2)
 
 # Export
-ggsave(g, filename=file.path(plotdir, "figure_farm_wage_labor_costs.png"), 
+ggsave(g, filename=file.path(plotdir, "FigS22_farm_wage_labor_costs.png"), 
        width=6.5, height=7.5, units="in", dpi=600)
 

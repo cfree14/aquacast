@@ -69,25 +69,7 @@ my_theme <-  theme(axis.text=element_text(size=6),
 
 
 # Plot three sectors
-g1 <- ggplot(data1, aes(x=period, y=meat_kg_person, fill=sector)) +
-  facet_grid(rcp~pop_size_perc) +
-  geom_bar(stat="identity", alpha=0.5) +
-  # Add reference line
-  geom_hline(yintercept=curr_kg_person, linetype="dashed", color="black", lwd=0.3) +
-  # Labels
-  labs(x="Period", y="Seafood production per capita\n(kg of meat per person per year)", title="Progressive reforms") +
-  # Legend
-  scale_fill_manual(name="", values=c("darkgreen", "salmon", "navy")) +
-  # Theme
-  theme_bw() + my_theme
-g1
-
-# Export
-ggsave(g1, filename=file.path(plotdir, "FigSX_global_pop_size_sens_analysis_reforms.png"), 
-       width=6.5, height=4.5, units="in", dpi=600)
-
-# Plot three sectors
-g2 <- ggplot(data2, aes(x=period, y=meat_kg_person, fill=sector)) +
+g1 <- ggplot(data2, aes(x=period, y=meat_kg_person, fill=sector)) +
   facet_grid(rcp~pop_size_perc) +
   geom_bar(stat="identity", alpha=0.5) +
   # Add reference line
@@ -98,9 +80,27 @@ g2 <- ggplot(data2, aes(x=period, y=meat_kg_person, fill=sector)) +
   scale_fill_manual(name="", values=c("darkgreen", "salmon", "navy")) +
   # Theme
   theme_bw() + my_theme
-g2
+g1
   
 # Export
-ggsave(g2, filename=file.path(plotdir, "FigSX_global_pop_size_sens_analysis_bau.png"), 
+ggsave(g1, filename=file.path(plotdir, "FigS4_global_pop_size_sens_analysis_bau.png"), 
+       width=6.5, height=4.5, units="in", dpi=600)
+
+# Plot three sectors
+g2 <- ggplot(data1, aes(x=period, y=meat_kg_person, fill=sector)) +
+  facet_grid(rcp~pop_size_perc) +
+  geom_bar(stat="identity", alpha=0.5) +
+  # Add reference line
+  geom_hline(yintercept=curr_kg_person, linetype="dashed", color="black", lwd=0.3) +
+  # Labels
+  labs(x="Period", y="Seafood production per capita\n(kg of meat per person per year)", title="Progressive reforms") +
+  # Legend
+  scale_fill_manual(name="", values=c("darkgreen", "salmon", "navy")) +
+  # Theme
+  theme_bw() + my_theme
+g2
+
+# Export
+ggsave(g2, filename=file.path(plotdir, "FigS5_global_pop_size_sens_analysis_reforms.png"), 
        width=6.5, height=4.5, units="in", dpi=600)
   

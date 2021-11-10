@@ -72,7 +72,7 @@ g <- ggplot(eezs) +
   scale_fill_discrete(name="") +
   theme_bw() + my_theme + 
   theme(legend.position = "bottom")
-g
+#g
 
 # Plot data (point version)
 # g <- ggplot(eezs_pts) +
@@ -84,7 +84,7 @@ g
 # g
 
 # Export plot
-ggsave(g, filename=file.path(plotdir, "figure_eezs_evaluated.png"), 
+ggsave(g, filename=file.path(plotdir, "FigS17_figure_eezs_evaluated.png"), 
        width=6.5, height=3.75, units="in", dpi=600)
 
 

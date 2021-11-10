@@ -151,10 +151,3 @@ ggsave(g, filename=file.path(plotdir, "Fig4_national_production.png"),
 
 
 
-
-
-
-
-
-
-

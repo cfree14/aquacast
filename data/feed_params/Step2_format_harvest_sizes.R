@@ -61,8 +61,8 @@ freeR::check_names(data$species)
 fl_vonb <- freeR::fishlife(data$species)
 
 # FishBase
-fb_vonb <- freeR::fishbase(dataset="vonb", species=data$species, level="species")
-fb_lw <- freeR::fishbase(dataset="lw", species=data$species, level="species")
+fb_vonb <- freeR::fishbase(dataset="vonb", species=data$species, level="species", cleaned = T)
+fb_lw <- freeR::fishbase(dataset="lw", species=data$species, level="species", cleaned = T)
 
 # FishBase species medians
 
@@ -109,6 +109,8 @@ data1 <- data %>%
 # Sample size
 table(data1$type)
 
+# Export
+write.csv(data1, file=file.path(outdir, "FAO_harvest_size_as_prop_of_linf_data.csv"), row.names=F)
 
 # Plot data
 ################################################################################
@@ -139,9 +141,7 @@ g <- ggplot(data1, aes(x=type, y=harvest_perc_linf, fill=type)) +
   theme_bw() + my_theme
 g  
 
-# Export
-ggsave(g, filename=file.path(plotdir, "figure_harvest_sizes_as_linf_perc.png"), 
-       width=4.5, height=4.5, units="in", dpi=600)
+
 
 
 

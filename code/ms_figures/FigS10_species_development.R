@@ -81,7 +81,7 @@ g <- ggplot(data, mapping=aes(x=fao_mt_yr+0.001, y=reorder(comm_name, fao_mt_yr)
 g
 
 # Export plot
-ggsave(g, filename=file.path(plotdir, "FigS5_species_development.png"), 
+ggsave(g, filename=file.path(plotdir, "FigS10_species_development.png"), 
        width=6.5, height=8.5, units="in", dpi=600)
 
 

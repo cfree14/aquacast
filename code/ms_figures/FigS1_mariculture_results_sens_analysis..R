@@ -309,8 +309,6 @@ g6 <- ggplot(pdata_use, aes(x=period, y=meat_mt/1e6, fill=rcp)) +
 g6
 
 
-
-
 # Merge and export
 ############################################
 
@@ -327,53 +325,6 @@ g <- gridExtra::grid.arrange(g1, g2, g3, g4, g5, g6,
 g
 
 # Export figure
-ggsave(g, filename=file.path(plotdir, "Fig2_mariculture_results_sens_analysis.png"), 
+ggsave(g, filename=file.path(plotdir, "FigS1_mariculture_results_sens_analysis.png"), 
        width=6.5, height=3.5, units="in", dpi=600)
-
-
-
-
-
-
-
-
-# # Read forage fish availability data
-# ffdata <- read.csv("data/feed_params/processed/forage_fish_availability.csv", as.is=T)
-
-# # WC/interaction plot
-# ############################################
-# 
-# # Format finfish data
-# ffdata_use <- ffdata %>% 
-#   # Mark big-picture scenarios
-#   mutate(scenario=ifelse(mgmt_scenario=="BAU fisheries management" & feed_scenario=="BAU feed use", "Business-as-usual", NA), 
-#          scenario=ifelse(mgmt_scenario=="BAU fisheries management" & feed_scenario=="Reformed feed use", "Fisheries limiting", scenario),
-#          scenario=ifelse(mgmt_scenario=="Reformed fisheries management" & feed_scenario=="Reformed feed use", "Progressive reforms", scenario)) %>% 
-#   # Reduce
-#   filter(!is.na(scenario)) %>% 
-#   select(rcp, scenario, year, catch_ff_mt_maq) %>% 
-#   # Factor new scenario
-#   mutate(scenario=factor(scenario, levels=c("Business-as-usual", "Fisheries limiting", "Progressive reforms")))
-# 
-# # Plot data
-# g5 <- ggplot(ffdata_use, aes(x=year, y=catch_ff_mt_maq/1e6, color=rcp, linetype=scenario)) +
-#   geom_line() +
-#   # Axis
-#   lims(y=c(0,NA)) +
-#   scale_x_continuous(breaks=c(2012, seq(2020, 2100, 10))) +
-#   # Labels
-#   labs(x="", y="Catch directed to mariculture\nfeed ingredients (millions of mt)", tag="e") +
-#   # Legends
-#   scale_color_manual(name="", values=RColorBrewer::brewer.pal(4, name="RdBu") %>% rev()) +
-#   scale_linetype_manual(name="", values=c(3,2,1)) +
-#   # Theme
-#   theme_bw() + big_plot_theme +
-#   theme(legend.position="bottom", 
-#         legend.box = "vertical",
-#         legend.spacing=unit(0.01, 'cm'),
-#         legend.box.spacing = unit(0.01, 'cm'),
-#         legend.key.size = unit(0.4, 'cm'), 
-#         legend.margin=unit(0, "cm"))
-# g5
-
 

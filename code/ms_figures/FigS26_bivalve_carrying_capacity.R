@@ -58,6 +58,6 @@ g <- ggplot(data, aes(x=log_ctrt, y=log_ctpt, size=cultured_mt_sqkm, color=impac
 g
 
 # Export plot
-ggsave(g, filename=file.path(plotdir, "FigS19_bivavle_carrying_capacity.png"), 
+ggsave(g, filename=file.path(plotdir, "FigS26_bivavle_carrying_capacity.png"), 
        width=6.5, height=4.5, units="in", dpi=600)
 

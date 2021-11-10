@@ -169,7 +169,7 @@ g3 <- ggplot(results, aes(x=biv_mt_sqkm, fill=dev_scenario)) +
 g3
   
 # Export plot
-ggsave(g2, filename=file.path(plotdir, "Fig26_bivalve_meow_analysis.png"), 
+ggsave(g2, filename=file.path(plotdir, "FigS27_bivalve_meow_analysis.png"), 
        width=6.5, height=3.25, units="in", dpi=600)
 
 
