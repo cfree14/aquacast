@@ -37,6 +37,8 @@ brackish_isscaaps <- c("Freshwater molluscs", "Miscellaneous diadromous fishes",
 # Not lonline bivalves
 bad_bivalve_isscaaps <- c("Clams, cockles, arkshells", "Pearls, mother-of-pearl, shells", "Scallops, pectens")
 
+table(data$isscaap)
+
 
 # Format data for plotting
 data <- data_orig %>% 
