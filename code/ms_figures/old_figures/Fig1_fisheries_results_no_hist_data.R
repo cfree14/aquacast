@@ -12,27 +12,17 @@ library(tidyverse)
 # Directories
 plotdir <- "figures"
 datadir <- "data/capture_projections/data"
-outdir <- "/Volumes/GoogleDrive/Shared drives/emlab/projects/current-projects/blue-paper-2/data/output/processed"
 
 # Read data
 gdata <- readRDS(file.path(datadir, "Free_etal_2020_global_projections_with_pop_data.Rds"))
 cdata <- readRDS(file.path(datadir, "Free_etal_2020_national_projections_with_pop_data.Rds"))
+
 
 # Format
 gdata <- gdata %>% 
   mutate(scenario=recode_factor(scenario, 
                                 "No Adaptation"="Business-as-usual",
                                 "Full Adaptation"="Climate-adaptive"))
-
-# Read historical data
-meat_mt_2012 <- gdata$meat_mt[gdata$year==2012] %>% unique()
-meat_kg_person_2012 <- gdata$meat_kg_person[gdata$year==2012] %>% unique()
-hist <- readRDS(file.path(outdir, "FAO_1950_2018_wc_aq_seafood_per_capita.Rds")) %>% 
-  # Reduce to capture fisheries and years of interes
-  filter(sector=="Capture fisheries" & year <= 2012 & !is.na(meat_kg_person)) %>% 
-  # Line up 2012 (very slight discrepancy)
-  mutate(meat_mt=ifelse(year==2012, meat_mt_2012, meat_mt),
-         meat_kg_person=ifelse(year==2012, meat_kg_person_2012, meat_kg_person))
 
 
 # Build data
@@ -106,11 +96,9 @@ g1 <- ggplot(gdata, aes(x=year, y=meat_mt/1e6, color=rcp, linetype=scenario)) +
   # geom_rect(xmin=2091, ymin=0, xmax=2100, ymax=max(gdata$meat_mt)/1e6, fill="grey80", color=NA, inherit.aes = F) +
   # Add lines
   geom_line() +
-  # Add historical line
-  geom_line(data=hist, mapping=aes(x=year, y=meat_mt/1e6), color="black", inherit.aes = F) +
   # Limits
   ylim(c(0,NA)) +
-  scale_x_continuous(breaks=seq(1960, 2100, 10)) +
+  scale_x_continuous(breaks=c(2012, seq(2020, 2100, 10))) +
   # Labels
   labs(x="", y="Seafood production\n(millions of mt of meat per year)", tag="a") +
   # Legend
@@ -118,7 +106,7 @@ g1 <- ggplot(gdata, aes(x=year, y=meat_mt/1e6, color=rcp, linetype=scenario)) +
   scale_linetype_manual(name="Management scenario", values=c(2,1)) +
   # Theme
   theme_bw() + base_theme + 
-  theme(legend.position=c(0.55,0.25),
+  theme(legend.position=c(0.45,0.25),
         legend.box = "horizontal",
         legend.spacing=unit(0.01, 'cm'),
         legend.box.spacing = unit(0.01, 'cm'),
@@ -136,11 +124,9 @@ g2 <- ggplot(gdata1, aes(x=year, y=meat_kg_person, color=rcp, linetype=scenario)
   # geom_rect(xmin=2051, ymin=0, xmax=2060, ymax=max(gdata1$meat_kg_person), fill="grey80", color=NA, inherit.aes = F) +
   # geom_rect(xmin=2091, ymin=0, xmax=2100, ymax=max(gdata1$meat_kg_person), fill="grey80", color=NA, inherit.aes = F) +
   geom_line() +
-  # Add historical line
-  geom_line(data=hist, mapping=aes(x=year, y=meat_kg_person), color="black", inherit.aes = F) +
   # Axes
   ylim(c(0,NA)) + 
-  scale_x_continuous(breaks=seq(1960, 2100, 10)) +
+  scale_x_continuous(breaks=c(2012, seq(2020, 2100, 10))) +
   # Labels
   labs(x="", y="Seafood production per capita\n(kg of meat per person per year)", tag="b") +
   # Legend
