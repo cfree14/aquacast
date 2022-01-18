@@ -13,8 +13,9 @@ library(tidyverse)
 # Directories
 codedir <- "code"
 sppdir <- "data/species/data"
-outputdir <- "/Volumes/GoogleDrive/Shared drives/emlab/projects/current-projects/blue-paper-2/data/output/raw"
-plotdir <- "/Volumes/GoogleDrive/Shared drives/emlab/projects/current-projects/blue-paper-2/data/output/raw_plots"
+indir <- "/Volumes/GoogleDrive/Shared drives/emlab/projects/current-projects/blue-paper-2/data/output/raw"
+outdir <- "/Volumes/GoogleDrive/Shared drives/emlab/projects/current-projects/blue-paper-2/data/output/cost_search"
+plotdir <- "/Volumes/GoogleDrive/Shared drives/emlab/projects/current-projects/blue-paper-2/data/output/cost_search_plots"
 
 # Read aquacast function
 source(file.path(codedir, "calc_costs_v2.R"))
@@ -42,10 +43,9 @@ data <- data %>%
 # Function
 rcp <- "rcp26"
 species <- data[1,]
-price_scalar <- 0.7
-cost_scalar <- 1.3
+cost_scalar <- 1.2
 periods <- c("2021-2030", "2051-2060", "2091-2100")
-reforecast <- function(species, rcp, periods, price_scalar=0.7, cost_scalar=1.3, outdir=F, plot=T){
+reforecast <- function(species, rcp, periods, price_scalar=1, cost_scalar=1, outdir=F, plot=T){
   
   # 1. Read data
   ############################
@@ -59,7 +59,7 @@ reforecast <- function(species, rcp, periods, price_scalar=0.7, cost_scalar=1.3,
   print("... reading and transforming habitat suitability")
   filename_base <- paste(toupper(rcp), gsub(" ", "_", spp), sep="_")
   filename_in <- paste0(filename_base, ".Rds")
-  vcells_orig <- readRDS(file.path(outputdir, filename_in))
+  vcells_orig <- readRDS(file.path(indir, filename_in))
   periods_avail <- sort(unique(vcells_orig$period))
   
   # Convert to raster
@@ -183,7 +183,7 @@ reforecast <- function(species, rcp, periods, price_scalar=0.7, cost_scalar=1.3,
   ####################################
   
   # If exporting
-  outfile_basename <- paste(toupper(rcp), gsub(" ", "_", spp), "sens_analysis", sep="_")
+  outfile_basename <- paste(toupper(rcp), gsub(" ", "_", spp), "cost_search", sep="_", cost_scalar)
   if(outdir!=F){
     saveRDS(data_df, file.path(outdir, paste0(outfile_basename, ".Rds")))
   }
@@ -212,17 +212,35 @@ reforecast <- function(species, rcp, periods, price_scalar=0.7, cost_scalar=1.3,
   
 }
 
+
+
 # Reforecast using function
 ################################################################################
 
-for(i in 1:nrow(data)){
-  species <- data[i,]
+# Cost scalars
+cost_scalars <- c(2.1, 2.7)
+
+# Build key
+spp_cost_key <-purrr::map_df(cost_scalars, function(x){
+  
+  # Add cost scalar
+  data1 <- data %>% 
+    mutate(cost_scalar=x)
+  
+})
+
+
+# Loop through species and cost scalars
+for(i in 1:nrow(spp_cost_key)){
+  species <- spp_cost_key[i,]
+  cost_scalar <- spp_cost_key$cost_scalar[i]
   periods <- c("2021-2030", "2051-2060", "2091-2100")
-  output <- reforecast(species=species, periods=periods, rcp="rcp26", outdir=outputdir, plot=T)
-  output <- reforecast(species=species, periods=periods, rcp="rcp45", outdir=outputdir, plot=F)
-  output <- reforecast(species=species, periods=periods, rcp="rcp60", outdir=outputdir, plot=F)
-  output <- reforecast(species=species, periods=periods, rcp="rcp85", outdir=outputdir, plot=F)
+  output <- reforecast(species=species, periods=periods, rcp="rcp26", cost_scalar=cost_scalar, outdir=outdir, plot=T)
+  output <- reforecast(species=species, periods=periods, rcp="rcp45", cost_scalar=cost_scalar, outdir=outdir, plot=F)
+  output <- reforecast(species=species, periods=periods, rcp="rcp60", cost_scalar=cost_scalar, outdir=outdir, plot=F)
+  output <- reforecast(species=species, periods=periods, rcp="rcp85", cost_scalar=cost_scalar, outdir=outdir, plot=F)
 }
+
 
 
 
