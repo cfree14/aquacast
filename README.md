@@ -1,5 +1,7 @@
 ### Expanding ocean food production under climate change
 
+[![DOI](https://zenodo.org/badge/206387817.svg)](https://zenodo.org/badge/latestdoi/206387817)
+
 This is the GitHub repository for a project seeking to understand whether reforms in marine fisheries management and the expansion of sustainable offshore marine aquaculture (hereafter called "mariculture") could jointly increase seafood production per capita under climate change. This project is currently under review as: 
 
 * Free CM, Cabral RB, Froehlich HE, Battista W, Ojea E, O’Reilly E, Palardy JE, Garcia Molinos J, Siegel K, Arnason R, Juinio-Meñez MA, Fabricius K, Turley C, Gaines SD. Expanding ocean food production under climate change. In third review at _Nature_.
