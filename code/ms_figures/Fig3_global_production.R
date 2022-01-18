@@ -118,5 +118,5 @@ g <- gridExtra::grid.arrange(g1, g2, g3, nrow=1, widths=c(0.4, 0.3, 0.3))
 g
 
 # Export plot
-ggsave(g, filename=file.path(plotdir, "Fig3_global_production.png"), 
+ggsave(g, filename=file.path(plotdir, "Fig3_global_production.pdf"), 
        width=6.5, height=2.5, units="in", dpi=600)

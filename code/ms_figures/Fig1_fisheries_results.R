@@ -8,6 +8,7 @@ rm(list = ls())
 
 # Packages
 library(tidyverse)
+library(countrycode)
 
 # Directories
 plotdir <- "figures"
@@ -249,6 +250,6 @@ layout_matrix <- matrix(data=c(1,2,3,3, 4,4), nrow=3, byrow=T)
 g <- gridExtra::grid.arrange(g1, g2, g3, g4, layout_matrix=layout_matrix, heights=c(0.25, 0.4, 0.35))
 
 # Export plots
-ggsave(g, filename=file.path(plotdir, "Fig1_fisheries_results.png"), 
+ggsave(g, filename=file.path(plotdir, "Fig1_fisheries_results.pdf"), device=cairo_pdf,
        width=6.5, height=8, units="in", dpi=600)
   
