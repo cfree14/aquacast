@@ -146,6 +146,6 @@ g2
 g <- gridExtra::grid.arrange(g1, g2, nrow=2, heights=c(0.48, 0.52))
 
 # Export data
-ggsave(g, filename=file.path(plotdir, "FigS3_national_production_sens_analysis.png"), 
+ggsave(g, filename=file.path(plotdir, "FigS3_national_production_sens_analysis.tiff"), 
        width=6.5, height=5, units="in", dpi=600)
 

@@ -325,6 +325,6 @@ g <- gridExtra::grid.arrange(g1, g2, g3, g4, g5, g6,
 g
 
 # Export figure
-ggsave(g, filename=file.path(plotdir, "FigS1_mariculture_results_sens_analysis.png"), 
+ggsave(g, filename=file.path(plotdir, "FigS1_mariculture_results_sens_analysis.tiff"), 
        width=6.5, height=3.5, units="in", dpi=600)
 

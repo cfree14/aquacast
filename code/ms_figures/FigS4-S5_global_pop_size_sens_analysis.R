@@ -83,7 +83,7 @@ g1 <- ggplot(data2, aes(x=period, y=meat_kg_person, fill=sector)) +
 g1
   
 # Export
-ggsave(g1, filename=file.path(plotdir, "FigS4_global_pop_size_sens_analysis_bau.png"), 
+ggsave(g1, filename=file.path(plotdir, "FigS4_global_pop_size_sens_analysis_bau.tiff"), 
        width=6.5, height=4.5, units="in", dpi=600)
 
 # Plot three sectors
@@ -101,6 +101,6 @@ g2 <- ggplot(data1, aes(x=period, y=meat_kg_person, fill=sector)) +
 g2
 
 # Export
-ggsave(g2, filename=file.path(plotdir, "FigS5_global_pop_size_sens_analysis_reforms.png"), 
+ggsave(g2, filename=file.path(plotdir, "FigS5_global_pop_size_sens_analysis_reforms.tiff"), 
        width=6.5, height=4.5, units="in", dpi=600)
   
